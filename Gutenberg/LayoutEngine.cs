@@ -14,7 +14,7 @@ internal class LayoutEngine<T>
     private int _lineTextLength = 0;
 
     private readonly List<IStackItem<T>> _stack = new();
-    private bool _canBacktrack = false;
+    private bool _canBacktrack = false;  // are there any ChoicePoints on the stack?
 
     public LayoutEngine(LayoutOptions options, IDocumentRenderer<T> renderer)
     {
@@ -38,15 +38,11 @@ internal class LayoutEngine<T>
             {
                 case EmptyDocument<T>:
                     break;
-                case LineDocument<T>:  // hard line break
+
+                case LineDocument<T>:
                     if (_flatten)
                     {
-                        if (!_canBacktrack)
-                        {
-                            // Shouldn't happen - FlattenDocument should only
-                            // ever appear inside a ChoiceDocument
-                            throw new InvalidOperationException("Can't backtrack from hard line break in flatten mode! Please report this as a bug in Gutenberg");
-                        }
+                        // can't write a line break in flatten mode
                         Backtrack();
                     }
                     else
@@ -55,29 +51,46 @@ internal class LayoutEngine<T>
                         await Flush(cancellationToken).ConfigureAwait(false);
                     }
                     break;
+
                 case WhiteSpaceDocument<T>(var amount):
                     _lineBuffer.Add(new WhiteSpaceInstruction<T>(amount));
                     _lineTextLength += amount;
-                    if (_canBacktrack && !Fits())
+                    if (!_canBacktrack)
+                    {
+                        await Flush(cancellationToken).ConfigureAwait(false);
+                    }
+                    else if (!Fits())
                     {
                         Backtrack();
                     }
                     break;
+
                 case TextDocument<T>(var text):
                     _lineBuffer.Add(new TextInstruction<T>(text));
                     _lineTextLength += text.Length;
-                    if (_canBacktrack && !Fits())
+                    if (!_canBacktrack)
+                    {
+                        await Flush(cancellationToken).ConfigureAwait(false);
+                    }
+                    else if (!Fits())
                     {
                         Backtrack();
                     }
                     break;
+
                 case AppendDocument<T>(var left, var right):
                     Push(right);
                     Push(left);
                     break;
+
                 case AlternativeDocument<T>(var @default, var ifFlattened):
                     Push(_flatten ? ifFlattened : @default);
                     break;
+
+                case ChoiceDocument<T>(FlattenedDocument<T> first, var second):  // Grouped()
+                    Push(WillFit(first.FlattenedWidth) ? first : second);
+                    break;
+
                 case ChoiceDocument<T>(var first, var second):
                     Push(new ChoicePoint<T>(
                         second,
@@ -91,17 +104,20 @@ internal class LayoutEngine<T>
                     _canBacktrack = true;
                     Push(first);
                     break;
+
                 case NestedDocument<T>(var n, var nestedDoc):
                     var m = n ?? _options.DefaultNesting;
                     _nestingLevel += m;
                     Push(new Unnest<T>(m));
                     Push(nestedDoc);
                     break;
+
                 case AnnotatedDocument<T>(var value, var child):
                     _lineBuffer.Add(new AnnotationInstruction<T>(value));
                     Push(PopAnnotation<T>.Instance);
                     Push(child);
                     break;
+
                 case FlattenedDocument<T>(var flattenedDoc):
                     if (!_flatten)
                     {
@@ -110,13 +126,16 @@ internal class LayoutEngine<T>
                     }
                     Push(flattenedDoc);
                     break;
-                case ColumnInfoDocument<T>(var func):
-                    Push(func(_wroteIndentation + _lineTextLength, _nestingLevel));
+
+                case AlignedDocument<T>(var doc):
+                    var delta = _wroteIndentation + _lineTextLength - _nestingLevel;
+                    Push(new NestedDocument<T>(delta, doc));
                     break;
 
                 case ChoicePoint<T>(_, _, _, _, _, _, var resumeAt) cp:
-                    if (resumeAt < 0)  // we wrote the whole document
+                    if (resumeAt < 0)
                     {
+                        // we wrote the whole document
                         await Flush(cancellationToken).ConfigureAwait(false);
                         return;
                     }
@@ -137,7 +156,7 @@ internal class LayoutEngine<T>
                     break;
             }
         }
-
+        
         await Flush(cancellationToken).ConfigureAwait(false);
     }
 
@@ -156,9 +175,13 @@ internal class LayoutEngine<T>
     }
 
     private bool Fits()
+        => WillFit(0);
+        
+    private bool WillFit(int? additionalWidth)
         => _options.PageWidth == null || (
-            _wroteIndentation + _lineTextLength <= _options.PageWidth.PageWidth
-            && _lineTextLength <= _options.PageWidth.PageWidth * _options.PageWidth.PrintableRatio
+            additionalWidth != null
+            && _wroteIndentation + _lineTextLength + additionalWidth <= _options.PageWidth.PageWidth
+            && _lineTextLength + additionalWidth <= _options.PageWidth.PageWidth * _options.PageWidth.PrintableRatio
         );
 
     private int GetResumeAt(int candidate)
@@ -172,6 +195,10 @@ internal class LayoutEngine<T>
 
     private void Backtrack()
     {
+        if (!_canBacktrack)
+        {
+            throw new InvalidOperationException("Couldn't backtrack! Please report this as a bug in Gutenberg");
+        }
         while (Pop(out var doc))
         {
             // ignore resumeAt during failure - want to resume where the choice was
@@ -207,6 +234,11 @@ internal class LayoutEngine<T>
 
         foreach (var instr in _lineBuffer)
         {
+            if (cancellationToken.IsCancellationRequested)
+            {
+                await ValueTask.FromCanceled(cancellationToken).ConfigureAwait(false);
+                return;
+            }
             switch (instr)
             {
                 case TextInstruction<T>(var text):
@@ -218,6 +250,7 @@ internal class LayoutEngine<T>
                 case NewLineInstruction<T>:
                     await _renderer.NewLine(cancellationToken).ConfigureAwait(false);
                     await _renderer.WhiteSpace(_nestingLevel, cancellationToken).ConfigureAwait(false);
+                    _lineTextLength = 0;
                     _wroteIndentation = _nestingLevel;
                     break;
                 case AnnotationInstruction<T>(var val):
@@ -229,6 +262,5 @@ internal class LayoutEngine<T>
             }
         }
         _lineBuffer.Clear();
-        _lineTextLength = 0;
     }
 }

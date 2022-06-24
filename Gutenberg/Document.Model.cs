@@ -4,6 +4,8 @@ namespace Gutenberg;
 
 internal class EmptyDocument<T> : Document<T>
 {
+    public EmptyDocument() : base(0) { }
+
     internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
         => Document<U>.Empty;
 
@@ -14,6 +16,8 @@ internal class EmptyDocument<T> : Document<T>
 [DebuggerDisplay("HardLine")]
 internal class LineDocument<T> : Document<T>
 {
+    public LineDocument() : base(null) { }
+
     internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
         => Document<U>.HardLineBreak;
 
@@ -25,7 +29,7 @@ internal class WhiteSpaceDocument<T> : Document<T>
 {
     public int Amount { get; }
 
-    public WhiteSpaceDocument(int amount)
+    public WhiteSpaceDocument(int amount) : base(amount)
     {
         Amount = amount;
     }
@@ -46,7 +50,7 @@ internal class TextDocument<T> : Document<T>
 {
     public ReadOnlyMemory<char> Text { get; }
 
-    public TextDocument(ReadOnlyMemory<char> text)
+    public TextDocument(ReadOnlyMemory<char> text) : base(text.Length)
     {
         Text = text;
     }
@@ -68,7 +72,7 @@ internal class AppendDocument<T> : Document<T>
     public Document<T> Left { get; }
     public Document<T> Right { get; }
 
-    public AppendDocument(Document<T> left, Document<T> right)
+    public AppendDocument(Document<T> left, Document<T> right) : base(AddWidths(left, right))
     {
         Left = left;
         Right = right;
@@ -91,6 +95,9 @@ internal class AppendDocument<T> : Document<T>
         await Left.RenderSimple(renderer, cancellationToken).ConfigureAwait(false);
         await Right.RenderSimple(renderer, cancellationToken).ConfigureAwait(false);
     }
+
+    private static int? AddWidths(Document<T> left, Document<T> right)
+        => left.FlattenedWidth + right.FlattenedWidth;  // propagate null
 }
 
 internal class AlternativeDocument<T> : Document<T>
@@ -98,7 +105,7 @@ internal class AlternativeDocument<T> : Document<T>
     public Document<T> Default { get; }
     public Document<T> IfFlattened { get; }
 
-    public AlternativeDocument(Document<T> @default, Document<T> ifFlattened)
+    public AlternativeDocument(Document<T> @default, Document<T> ifFlattened) : base(ifFlattened.FlattenedWidth)
     {
         Default = @default;
         IfFlattened = ifFlattened;
@@ -125,7 +132,8 @@ internal class ChoiceDocument<T> : Document<T>
     public Document<T> First { get; }
     public Document<T> Second { get; }
 
-    public ChoiceDocument(Document<T> first, Document<T> second)
+    // assume first is flatter than second
+    public ChoiceDocument(Document<T> first, Document<T> second) : base(first.FlattenedWidth)
     {
         First = first;
         Second = second;
@@ -152,7 +160,7 @@ internal class NestedDocument<T> : Document<T>
     public int? Indentation { get; }
     public Document<T> Doc { get; }
 
-    public NestedDocument(int? indentation, Document<T> doc)
+    public NestedDocument(int? indentation, Document<T> doc) : base(doc.FlattenedWidth)
     {
         Indentation = indentation;
         Doc = doc;
@@ -176,7 +184,7 @@ internal class AnnotatedDocument<T> : Document<T>
     public T Value { get; }
     public Document<T> Doc { get; }
 
-    public AnnotatedDocument(T value, Document<T> doc)
+    public AnnotatedDocument(T value, Document<T> doc) : base(doc.FlattenedWidth)
     {
         Doc = doc;
         Value = value;
@@ -201,7 +209,7 @@ internal class FlattenedDocument<T> : Document<T>
 {
     public Document<T> Document { get; }
 
-    public FlattenedDocument(Document<T> document)
+    public FlattenedDocument(Document<T> document) : base(document.FlattenedWidth)
     {
         Document = document;
     }
@@ -217,22 +225,22 @@ internal class FlattenedDocument<T> : Document<T>
         => Document.RenderSimple(renderer, cancellationToken);
 }
 
-internal class ColumnInfoDocument<T> : Document<T>
+internal class AlignedDocument<T> : Document<T>
 {
-    public Func<int, int, Document<T>> Func;
+    public Document<T> Document;
 
-    public ColumnInfoDocument(Func<int, int, Document<T>> func)
+    public AlignedDocument(Document<T> doc) : base(doc.FlattenedWidth)
     {
-        Func = func;
+        Document = doc;
     }
 
-    public void Deconstruct(out Func<int, int, Document<T>> func)
+    public void Deconstruct(out Document<T> doc)
     {
-        func = Func;
+        doc = Document;
     }
 
     internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
-        => new ColumnInfoDocument<U>((c, n) => Func(c, n).MapAnnotationsImpl(selector));
+        => new AlignedDocument<U>(Document.MapAnnotationsImpl(selector));
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
-        => Func(0, 0).RenderSimple(renderer, cancellationToken);
+        => Document.RenderSimple(renderer, cancellationToken);
 }

@@ -66,7 +66,13 @@ namespace Gutenberg;
 )]
 public abstract class Document<T> : IStackItem<T>
 {
-    private protected Document() { }
+    // null for unflattenable
+    internal int? FlattenedWidth { get; }
+
+    private protected Document(int? flattenedWidth)
+    {
+        FlattenedWidth = flattenedWidth;
+    }
 
     /// <summary>
     /// Lay out the <see cref="Document{T}"/>,
@@ -478,7 +484,7 @@ public abstract class Document<T> : IStackItem<T>
     /// </code>
     /// </example>
     public Document<T> Aligned()
-        => new ColumnInfoDocument<T>((c, n) => Nested(c - n));
+        => new AlignedDocument<T>(this);
 
     /// <summary>
     /// Aligns the current document and indents it by
