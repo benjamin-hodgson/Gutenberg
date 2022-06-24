@@ -217,6 +217,14 @@ public abstract class Document<T> : IStackItem<T>
     public Document<T> Append(Document<T> other)
     {
         ArgumentNullException.ThrowIfNull(other);
+        if (this is EmptyDocument<T>)
+        {
+            return other;
+        }
+        if (other is EmptyDocument<T>)
+        {
+            return this;
+        }
         return new AppendDocument<T>(this, other);
     }
 
