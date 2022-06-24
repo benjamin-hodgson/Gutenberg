@@ -4,6 +4,12 @@ Gutenberg
 A library for laying out text, based on [Phil Wadler's pretty printing algorithm](https://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf).
 
 
+Installing
+----------
+
+Gutenberg is [available on Nuget](https://www.nuget.org/packages/Gutenberg). API docs are hosted [on my website](https://www.benjamin.pizza/Gutenberg).
+
+
 Tutorial
 --------
 
