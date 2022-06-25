@@ -5,6 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Benjamin.Pizza.DocTest" />
         <PackageReference Include="coverlet.collector" />
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" />
