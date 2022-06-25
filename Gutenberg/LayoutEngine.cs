@@ -156,7 +156,7 @@ internal class LayoutEngine<T>
                     break;
             }
         }
-        
+
         await Flush(cancellationToken).ConfigureAwait(false);
     }
 
@@ -176,7 +176,7 @@ internal class LayoutEngine<T>
 
     private bool Fits()
         => WillFit(0);
-        
+
     private bool WillFit(int? additionalWidth)
         => _options.PageWidth == null || (
             additionalWidth != null
