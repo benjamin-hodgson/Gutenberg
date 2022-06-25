@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
@@ -5,22 +6,24 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
 
+using Xunit.Sdk;
+
 namespace Gutenberg.Tests;
 
-public class DocumentationTests
+public sealed class DocTestDataAttribute : DataAttribute
 {
-    [Theory]
-    [MemberData(nameof(DiscoverDocTests))]
-    public async Task TestXmlDocs(DocTest test)
+    public Type TypeInAssemblyToDoctest { get; }
+    public string? Preamble { get; set; }
+
+    public DocTestDataAttribute(Type typeInAssemblyToDoctest)
     {
-        var (output, error) = await RunDocTest(test);
-        Assert.Equal("", error);
-        Assert.Equal(GetExpected(test), SplitLines(output));
+        TypeInAssemblyToDoctest = typeInAssemblyToDoctest;
     }
 
-    public static IEnumerable<object[]> DiscoverDocTests()
+    public override IEnumerable<object[]> GetData(MethodInfo testMethod)
     {
-        var path = Path.ChangeExtension(typeof(Document<>).Assembly.Location, "xml");
+        var assembly = TypeInAssemblyToDoctest.Assembly;
+        var path = Path.ChangeExtension(assembly.Location, "xml");
         var xml = XDocument.Parse(File.ReadAllText(path));
         return (
             from mem in xml.Descendants()
@@ -34,26 +37,46 @@ public class DocumentationTests
             from c in codes
             let name = ex.Attribute("name")!.Value
                 + (codes.Count() > 1 ? " > " + c.ix : "")
-            select new DocTest(name, c.code)
+            select new DocTest(assembly, name, c.code, Preamble)
         ).Distinct().Select(x => new[] { x });
     }
+}
 
-    private static Task<(string output, string error)> RunDocTest(DocTest test)
+public class DocTest
+{
+    private readonly Assembly _assembly;
+    private readonly string _name;
+    private readonly string _code;
+    private readonly string? _preamble;
+
+    public DocTest(Assembly assembly, string name, string code, string? preamble)
     {
-        const string preamble = "using Doc = Gutenberg.Document<object>;";
+        _assembly = assembly;
+        _name = name;
+        _code = code;
+        _preamble = preamble;
+    }
+    
+    public override string ToString() => _name;
 
-        var options = ScriptOptions.Default.AddReferences(
-            typeof(Console).Assembly,
-            typeof(Document<>).Assembly
-        ).AddImports("Gutenberg", "System");
-
-        return RedirectConsole(() => CSharpScript.RunAsync(preamble + test.Code, options));
+    public async Task Run()
+    {
+        var (output, error) = await RunDocTest();
+        Assert.Equal("", error);
+        Assert.Equal(GetExpected(), SplitLines(output));
     }
 
-    private static IEnumerable<string> GetExpected(DocTest test)
+    private Task<(string output, string error)> RunDocTest()
     {
-        var match = new Regex(@"// Output:\s*").Match(test.Code);
-        return SplitLines(test.Code[(match.Index + match.Length)..])
+        var options = ScriptOptions.Default.AddReferences(_assembly).AddImports("System");
+
+        return RedirectConsole(() => CSharpScript.RunAsync(_preamble + _code, options));
+    }
+
+    private IEnumerable<string> GetExpected()
+    {
+        var match = new Regex(@"// Output:\s*").Match(_code);
+        return SplitLines(_code[(match.Index + match.Length)..])
             .Select(line => new Regex(@"^\s*(//( |$))?").Replace(line, ""));
     }
 
@@ -81,7 +104,13 @@ public class DocumentationTests
         => str.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None);
 }
 
-public record DocTest(string Name, string Code)
+
+public class DocumentationTests
 {
-    public override string ToString() => Name;
+    [Theory]
+    [DocTestData(typeof(Document<>), Preamble = "using Gutenberg; using Doc = Gutenberg.Document<object>;")]
+    public async Task TestXmlDocs(DocTest test)
+    {
+        await test.Run();
+    }
 }

@@ -1,6 +1,5 @@
 namespace Gutenberg;
 
-
 internal class LayoutEngine<T>
 {
     private readonly LayoutOptions _options;
