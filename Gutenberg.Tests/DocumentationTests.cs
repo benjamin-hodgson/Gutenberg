@@ -56,7 +56,7 @@ public class DocTest
         _code = code;
         _preamble = preamble;
     }
-    
+
     public override string ToString() => _name;
 
     public async Task Run()
