@@ -78,9 +78,14 @@ internal class LayoutEngine<T>
                     break;
 
                 case BoxDocument<T>(var box):
-                    if ((box.Height > 1 && _flatten) || !WillFit(box.Width))
+                    if (box.Height > 1 && _flatten)
                     {
-                        // can't write table in flatten mode
+                        // can't write box in flatten mode
+                        Backtrack();
+                        break;
+                    }
+                    if (_canBacktrack && !WillFit(box.Width))
+                    {
                         Backtrack();
                         break;
                     }
@@ -90,7 +95,7 @@ internal class LayoutEngine<T>
                         break;
                     }
 
-                    // make sure table gets aligned
+                    // make sure box gets aligned
                     var delta1 = _wroteIndentation + _lineTextLength - _nestingLevel;
                     _nestingLevel += delta1;
                     Push(new Unnest<T>(delta1));

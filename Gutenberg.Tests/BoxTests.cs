@@ -1,4 +1,5 @@
 using Box = Gutenberg.Box<object>;
+using Doc = Gutenberg.Document<object>;
 
 namespace Gutenberg.Tests;
 
@@ -125,9 +126,10 @@ public class BoxTests
         var mask = Box.Transparent(1, 1)
             .LeftOf("*").RightOf("*")
             .Above("***").Below("***");
-        Assert.Equal("***\n* *\n***\n", mask.ToString());
         var box = mask
             .InFrontOf("abcde\nfghij\nklmno", Alignment.CentreStart);
+        Assert.Equal(5, box.Width);
+        Assert.Equal(3, box.Height);
         Assert.Equal("a***e\nf*h*j\nk***o\n", box.ToString());
     }
 
@@ -137,9 +139,53 @@ public class BoxTests
         var mask = Box.Transparent(1, 1)
             .LeftOf("*").RightOf("*")
             .Above("***").Below("***");
-        Assert.Equal("***\n* *\n***\n", mask.ToString());
         var box = Box.FromString("abcde\nfghij\nklmno")
             .Behind(mask, Alignment.CentreStart);
+        Assert.Equal(5, box.Width);
+        Assert.Equal(3, box.Height);
         Assert.Equal("a***e\nf*h*j\nk***o\n", box.ToString());
+    }
+
+    [Fact]
+    public void TestBoxInDocumentWhenFits()
+    {
+        var box = Box.FromString("abc\ndef\nghi");
+        var doc = Doc.FromString("first line ").Append(box);
+        Assert.Equal(
+            "first line abc\n           def\n           ghi",
+            doc.ToString().Trim()  // todo: don't render trailing whitespace
+        );
+    }
+    [Fact]
+    public void TestBoxInDocumentWithLineBreak()
+    {
+        var box = Box.FromString("abc\ndef\nghi");
+        var doc = Doc.Concat("first line ", Doc.LineBreak, box);
+        Assert.Equal(
+            "first line \nabc\ndef\nghi",
+            doc.ToString().Trim()  // todo: don't render trailing whitespace
+        );
+    }
+    
+    [Fact]
+    public void TestBoxInDocumentWithLineBreakAndNesting()
+    {
+        var box = Box.FromString("abc\ndef\nghi");
+        var doc = Doc.Concat("first line ", Doc.LineBreak, box).Nested(2);
+        Assert.Equal(
+            "first line \n  abc\n  def\n  ghi",
+            doc.ToString().Trim()  // todo: don't render trailing whitespace
+        );
+    }
+
+    [Fact]
+    public void TestBoxInDocumentWhenOverflow()
+    {
+        var box = Box.FromString("abc\ndef\nghi");
+        var doc = Doc.Concat("first line ", box);
+        Assert.Equal(
+            "first line abc\n           def\n           ghi",
+            doc.ToString(10).Trim()  // todo: don't render trailing whitespace
+        );
     }
 }

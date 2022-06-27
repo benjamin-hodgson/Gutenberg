@@ -1013,9 +1013,13 @@ public abstract class Document<T> : IStackItem<T>
     /// <summary>
     /// Creates a document containing a <see cref="Box{T}"/>.
     /// </summary>
-    /// <param name="box">The box</param>
+    /// <param name="box">
+    /// The <see cref="Box{T}"/> from which to create the
+    /// <see cref="Document{T}"/>.
+    /// </param>
     /// <returns>
-    /// A document containing a <see cref="Box{T}"/>.
+    /// A <see cref="Document{T}"/> representing the text
+    /// containted in <paramref name="box"/>.
     /// </returns>
     public static Document<T> FromBox(Box<T> box)
     {
@@ -1139,6 +1143,24 @@ public abstract class Document<T> : IStackItem<T>
     /// </returns>
     public static implicit operator Document<T>(string value)
         => FromString(value);
+        
+    /// <summary>
+    /// Implicitly convert a <see cref="Box{T}"/> to a
+    /// <see cref="Document{T}"/>.
+    /// </summary>
+    /// <remarks>
+    /// This conversion is equivalent to <see cref="FromBox"/>.
+    /// </remarks>
+    /// <param name="value">
+    /// The <see cref="Box{T}"/> from which to create the
+    /// <see cref="Document{T}"/>.
+    /// </param>
+    /// <returns>
+    /// A <see cref="Document{T}"/> representing the text
+    /// containted in <paramref name="value"/>.
+    /// </returns>
+    public static implicit operator Document<T>(Box<T> value)
+        => FromBox(value);
 
     internal abstract Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector);
     internal abstract ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken);
