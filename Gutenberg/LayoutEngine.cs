@@ -77,6 +77,35 @@ internal class LayoutEngine<T>
                     }
                     break;
 
+                case BoxDocument<T>(var box):
+                    if ((box.Height > 1 && _flatten) || !WillFit(box.Width))
+                    {
+                        // can't write table in flatten mode
+                        Backtrack();
+                        break;
+                    }
+
+                    if (box.Width == 0 || box.Height == 0)
+                    {
+                        break;
+                    }
+
+                    // make sure table gets aligned
+                    var delta1 = _wroteIndentation + _lineTextLength - _nestingLevel;
+                    _nestingLevel += delta1;
+                    Push(new Unnest<T>(delta1));
+
+                    // need to flush the buffer, since box bypasses it
+                    await Flush(cancellationToken).ConfigureAwait(false);
+
+                    for (var i = 0; i < box.Height; i++)
+                    {
+                        await box.WriteLine(_renderer, i, cancellationToken).ConfigureAwait(false);
+                        await WriteNewLine(cancellationToken).ConfigureAwait(false);
+                    }
+                    
+                    break;
+
                 case AppendDocument<T>(var left, var right):
                     Push(right);
                     Push(left);
@@ -247,10 +276,7 @@ internal class LayoutEngine<T>
                     await _renderer.WhiteSpace(amt, cancellationToken).ConfigureAwait(false);
                     break;
                 case NewLineInstruction<T>:
-                    await _renderer.NewLine(cancellationToken).ConfigureAwait(false);
-                    await _renderer.WhiteSpace(_nestingLevel, cancellationToken).ConfigureAwait(false);
-                    _lineTextLength = 0;
-                    _wroteIndentation = _nestingLevel;
+                    await WriteNewLine(cancellationToken).ConfigureAwait(false);
                     break;
                 case AnnotationInstruction<T>(var val):
                     await _renderer.PushAnnotation(val, cancellationToken).ConfigureAwait(false);
@@ -261,5 +287,13 @@ internal class LayoutEngine<T>
             }
         }
         _lineBuffer.Clear();
+    }
+
+    private async ValueTask WriteNewLine(CancellationToken cancellationToken)
+    {
+        await _renderer.NewLine(cancellationToken).ConfigureAwait(false);
+        await _renderer.WhiteSpace(_nestingLevel, cancellationToken).ConfigureAwait(false);
+        _lineTextLength = 0;
+        _wroteIndentation = _nestingLevel;
     }
 }

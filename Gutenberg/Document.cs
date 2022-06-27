@@ -8,7 +8,7 @@ namespace Gutenberg;
 
 /// <summary>
 /// <para>
-/// Represents a textual document which can be laid out
+/// Represents an immutable textual document which can be laid out
 /// in a variety of ways. Once laid out, the document can be
 /// rendered by an <see cref="IDocumentRenderer{T}"/>.
 /// </para>
@@ -573,7 +573,7 @@ public abstract class Document<T> : IStackItem<T>
     /// with the return value of <paramref name="selector"/>
     /// </returns>
     public Document<U> MapAnnotations<U>(Func<T, U> selector)
-        => MapAnnotationsImpl(x => new[] { selector(x) });
+        => MapAnnotationsCore(x => new[] { selector(x) });
 
     /// <summary>
     /// Apply a function to all the annotations in the current document.
@@ -586,7 +586,7 @@ public abstract class Document<T> : IStackItem<T>
     /// with the return values of <paramref name="selector"/>
     /// </returns>
     public Document<U> MapAnnotations<U>(Func<T, IEnumerable<U>> selector)
-        => MapAnnotationsImpl(selector);
+        => MapAnnotationsCore(selector);
 
     /// <summary>
     /// Apply a function to all the annotations in the current document.
@@ -970,21 +970,11 @@ public abstract class Document<T> : IStackItem<T>
     public static Document<T> FromString(string value)
     {
         ArgumentNullException.ThrowIfNull(value);
-
-        IEnumerable<Document<T>> Iterator()
-        {
-            var docLength = 0;
-            for (var i = 0; i < value.Length; i++)
-            {
-                if (value[i] == '\n')
-                {
-                    yield return new TextDocument<T>(value.AsMemory()[docLength..i]);
-                    docLength = i + 1;
-                }
-            }
-            yield return new TextDocument<T>(value.AsMemory()[docLength..]);
-        }
-        return Concat(Iterator().Intersperse(LineBreak));
+        var pieces = value
+            .SplitLines()
+            .Select(l => new TextDocument<T>(l))
+            .Intersperse(LineBreak);
+        return Concat(pieces);
     }
 
     /// <summary>
@@ -1018,6 +1008,19 @@ public abstract class Document<T> : IStackItem<T>
     {
         ArgumentNullException.ThrowIfNull(value);
         return new TextDocument<T>(value.AsMemory());
+    }
+
+    /// <summary>
+    /// Creates a document containing a <see cref="Box{T}"/>.
+    /// </summary>
+    /// <param name="box">The box</param>
+    /// <returns>
+    /// A document containing a <see cref="Box{T}"/>.
+    /// </returns>
+    public static Document<T> FromBox(Box<T> box)
+    {
+        ArgumentNullException.ThrowIfNull(box);
+        return new BoxDocument<T>(box);
     }
 
     /// <summary>
@@ -1137,6 +1140,6 @@ public abstract class Document<T> : IStackItem<T>
     public static implicit operator Document<T>(string value)
         => FromString(value);
 
-    internal abstract Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector);
+    internal abstract Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector);
     internal abstract ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken);
 }

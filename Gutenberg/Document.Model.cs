@@ -1,24 +1,21 @@
-using System.Diagnostics;
-
 namespace Gutenberg;
 
 internal class EmptyDocument<T> : Document<T>
 {
     public EmptyDocument() : base(0) { }
 
-    internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => Document<U>.Empty;
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => ValueTask.CompletedTask;
 }
 
-[DebuggerDisplay("HardLine")]
 internal class LineDocument<T> : Document<T>
 {
     public LineDocument() : base(null) { }
 
-    internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => Document<U>.HardLineBreak;
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
@@ -39,7 +36,7 @@ internal class WhiteSpaceDocument<T> : Document<T>
         amount = Amount;
     }
 
-    internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => new WhiteSpaceDocument<U>(Amount);
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
@@ -60,11 +57,31 @@ internal class TextDocument<T> : Document<T>
         text = Text;
     }
 
-    internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => new TextDocument<U>(Text);
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => renderer.Text(Text, cancellationToken);
+}
+
+internal class BoxDocument<T> : Document<T>
+{
+    public Box<T> Box { get; }
+
+    public BoxDocument(Box<T> box) : base(box.Width)
+    {
+        Box = box;
+    }
+
+    public void Deconstruct(out Box<T> box)
+    {
+        box = Box;
+    }
+
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
+        => new BoxDocument<U>(Box.MapAnnotationsCore(selector));
+    internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
+        => Box.Render(renderer, cancellationToken);
 }
 
 internal class AppendDocument<T> : Document<T>
@@ -84,10 +101,10 @@ internal class AppendDocument<T> : Document<T>
         right = Right;
     }
 
-    internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => new AppendDocument<U>(
-            Left.MapAnnotationsImpl(selector),
-            Right.MapAnnotationsImpl(selector)
+            Left.MapAnnotationsCore(selector),
+            Right.MapAnnotationsCore(selector)
         );
 
     internal override async ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
@@ -117,10 +134,10 @@ internal class AlternativeDocument<T> : Document<T>
         ifFlattened = IfFlattened;
     }
 
-    internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => new AlternativeDocument<U>(
-            Default.MapAnnotationsImpl(selector),
-            IfFlattened.MapAnnotationsImpl(selector)
+            Default.MapAnnotationsCore(selector),
+            IfFlattened.MapAnnotationsCore(selector)
         );
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
@@ -145,10 +162,10 @@ internal class ChoiceDocument<T> : Document<T>
         second = Second;
     }
 
-    internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => new ChoiceDocument<U>(
-            First.MapAnnotationsImpl(selector),
-            Second.MapAnnotationsImpl(selector)
+            First.MapAnnotationsCore(selector),
+            Second.MapAnnotationsCore(selector)
         );
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
@@ -172,8 +189,8 @@ internal class NestedDocument<T> : Document<T>
         doc = Doc;
     }
 
-    internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
-        => new NestedDocument<U>(Indentation, Doc.MapAnnotationsImpl(selector));
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
+        => new NestedDocument<U>(Indentation, Doc.MapAnnotationsCore(selector));
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Doc.RenderSimple(renderer, cancellationToken);
@@ -195,10 +212,10 @@ internal class AnnotatedDocument<T> : Document<T>
         value = Value;
         doc = Doc;
     }
-    internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => selector(Value)
             .Aggregate(
-                Doc.MapAnnotationsImpl(selector),
+                Doc.MapAnnotationsCore(selector),
                 (doc, val) => new AnnotatedDocument<U>(val, doc)
             );
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
@@ -219,8 +236,8 @@ internal class FlattenedDocument<T> : Document<T>
         document = Document;
     }
 
-    internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
-        => new FlattenedDocument<U>(Document.MapAnnotationsImpl(selector));
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
+        => new FlattenedDocument<U>(Document.MapAnnotationsCore(selector));
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Document.RenderSimple(renderer, cancellationToken);
 }
@@ -239,8 +256,8 @@ internal class AlignedDocument<T> : Document<T>
         doc = Document;
     }
 
-    internal override Document<U> MapAnnotationsImpl<U>(Func<T, IEnumerable<U>> selector)
-        => new AlignedDocument<U>(Document.MapAnnotationsImpl(selector));
+    internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
+        => new AlignedDocument<U>(Document.MapAnnotationsCore(selector));
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Document.RenderSimple(renderer, cancellationToken);
 }
