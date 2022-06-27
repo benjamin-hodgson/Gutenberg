@@ -707,6 +707,15 @@ references:
   fullName.vb: Gutenberg.Document(Of T).Addition
   nameWithType: Document<T>.Addition
   nameWithType.vb: Document(Of T).Addition
+- uid: Gutenberg.Document`1.op_Implicit(Gutenberg.Box{`0})~Gutenberg.Document{`0}
+  name: Implicit(Box<T> to Document<T>)
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Implicit_Gutenberg_Box__0___Gutenberg_Document__0_
+  commentId: M:Gutenberg.Document`1.op_Implicit(Gutenberg.Box{`0})~Gutenberg.Document{`0}
+  name.vb: Widening(Box(Of T) to Document(Of T))
+  fullName: Gutenberg.Document<T>.Implicit(Gutenberg.Box<T> to Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Document(Of T).Widening(Gutenberg.Box(Of T) to Gutenberg.Document(Of T))
+  nameWithType: Document<T>.Implicit(Box<T> to Document<T>)
+  nameWithType.vb: Document(Of T).Widening(Box(Of T) to Document(Of T))
 - uid: Gutenberg.Document`1.op_Implicit(System.String)~Gutenberg.Document{`0}
   name: Implicit(String to Document<T>)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Implicit_System_String__Gutenberg_Document__0_

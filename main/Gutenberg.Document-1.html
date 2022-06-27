@@ -915,7 +915,8 @@ concatenated together.</p>
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;T&gt;</p></td>
                                     <td><p>box</p></td>
-                                    <td><p>The box</p>
+                                    <td><p>The <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> from which to create the
+<a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -932,7 +933,8 @@ concatenated together.</p>
                             <tbody>
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
-                                    <td><p>A document containing a <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a>.</p>
+                                    <td><p>A <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a> representing the text
+containted in <code data-dev-comment-type="paramref" class="paramref">box</code>.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -2362,6 +2364,64 @@ content of <code data-dev-comment-type="paramref" class="paramref">right</code>.
                 </div>
                 
                 <a id="Gutenberg_Document_1_op_Implicit_"></a>
+                <h4 id="Gutenberg_Document_1_op_Implicit_Gutenberg_Box__0___Gutenberg_Document__0_"><a href="#Gutenberg_Document_1_op_Implicit_Gutenberg_Box__0___Gutenberg_Document__0_">Implicit(Box&lt;T&gt; to Document&lt;T&gt;)</a></h4>
+                <div><p>Implicitly convert a <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> to a
+<a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>.</p>
+</div>
+                <h5>Declaration</h5>
+                    <pre><code class="lang-csharp hljs">public static implicit operator Document&lt;T&gt;(Box&lt;T&gt; value)</code></pre>
+
+                        <h5>Parameters</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;T&gt;</p></td>
+                                    <td><p>value</p></td>
+                                    <td><p>The <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> from which to create the
+<a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>.</p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+                        <h5>Returns</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
+                                    <td><p>A <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a> representing the text
+containted in <code data-dev-comment-type="paramref" class="paramref">value</code>.</p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+        
+        
+        
+        
+        
+                    <h5 id="Gutenberg_Document_1_op_Implicit_Gutenberg_Box__0___Gutenberg_Document__0__remarks"><a href="#Gutenberg_Document_1_op_Implicit_Gutenberg_Box__0___Gutenberg_Document__0__remarks">Remarks</a></h5>
+                    <div><p>This conversion is equivalent to <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_FromBox_Gutenberg_Box__0__">FromBox(Box&lt;T&gt;)</a>.</p>
+</div>
+        
+                        
+        
+                
+                <a id="Gutenberg_Document_1_op_Implicit_"></a>
                 <h4 id="Gutenberg_Document_1_op_Implicit_System_String__Gutenberg_Document__0_"><a href="#Gutenberg_Document_1_op_Implicit_System_String__Gutenberg_Document__0_">Implicit(String to Document&lt;T&gt;)</a></h4>
                 <div><p>Implicitly convert a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> to a <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>.</p>
 </div>
@@ -2491,6 +2551,7 @@ such as <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Con
 
                             <ul>
                                     <li><a href="#Gutenberg_Document_1_op_Addition_Gutenberg_Document__0__Gutenberg_Document__0__">Addition(Document&lt;T&gt;, Document&lt;T&gt;)</a></li>
+                                    <li><a href="#Gutenberg_Document_1_op_Implicit_Gutenberg_Box__0___Gutenberg_Document__0_">Implicit(Box&lt;T&gt; to Document&lt;T&gt;)</a></li>
                                     <li><a href="#Gutenberg_Document_1_op_Implicit_System_String__Gutenberg_Document__0_">Implicit(String to Document&lt;T&gt;)</a></li>
                             </ul>
                         </li>
