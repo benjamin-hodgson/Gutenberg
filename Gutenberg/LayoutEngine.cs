@@ -103,7 +103,7 @@ internal class LayoutEngine<T>
                         await box.WriteLine(_renderer, i, cancellationToken).ConfigureAwait(false);
                         await WriteNewLine(cancellationToken).ConfigureAwait(false);
                     }
-                    
+
                     break;
 
                 case AppendDocument<T>(var left, var right):

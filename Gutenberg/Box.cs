@@ -406,7 +406,7 @@ public abstract class Box<T>
         ArgumentNullException.ThrowIfNull(selector);
         return MapAnnotations(selector);
     }
-    
+
     /// <summary>
     /// Apply a function to all the annotations in the current document.
     /// </summary>

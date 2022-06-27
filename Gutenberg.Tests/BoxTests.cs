@@ -130,7 +130,7 @@ public class BoxTests
             .InFrontOf("abcde\nfghij\nklmno", Alignment.CentreStart);
         Assert.Equal("a***e\nf*h*j\nk***o\n", box.ToString());
     }
-    
+
     [Fact]
     public void TestBehind()
     {
