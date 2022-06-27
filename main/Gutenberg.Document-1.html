@@ -49,6 +49,12 @@
                                             <a href="Gutenberg.html" title="Gutenberg" class="active active-i">Gutenberg</a>
                                             <ul id="toc0_0" class="active active-i">
                                                     <li>
+                                                            <a href="Gutenberg.Alignment.html" title="Alignment" class="">Alignment</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="Gutenberg.Box-1.html" title="Box&lt;T&gt;" class="">Box&lt;T&gt;</a>
+                                                    </li>
+                                                    <li>
                                                             <a href="Gutenberg.Document-1.html" title="Document&lt;T&gt;" class="active active-i">Document&lt;T&gt;</a>
                                                     </li>
                                                     <li>
@@ -98,7 +104,7 @@
         <h1 id="Gutenberg_Document_1"><a href="#Gutenberg_Document_1">Class Document&lt;T&gt;
         </a></h1>
         <div><p>
-Represents a textual document which can be laid out
+Represents an immutable textual document which can be laid out
 in a variety of ways. Once laid out, the document can be
 rendered by an <a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
 </p>
@@ -876,6 +882,58 @@ concatenated together.</p>
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
                                     <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+        
+        
+        
+        
+        
+        
+                        
+        
+                
+                <a id="Gutenberg_Document_1_FromBox_"></a>
+                <h4 id="Gutenberg_Document_1_FromBox_Gutenberg_Box__0__"><a href="#Gutenberg_Document_1_FromBox_Gutenberg_Box__0__">FromBox(Box&lt;T&gt;)</a></h4>
+                <div><p>Creates a document containing a <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a>.</p>
+</div>
+                <h5>Declaration</h5>
+                    <pre><code class="lang-csharp hljs">public static Document&lt;T&gt; FromBox(Box&lt;T&gt; box)</code></pre>
+
+                        <h5>Parameters</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;T&gt;</p></td>
+                                    <td><p>box</p></td>
+                                    <td><p>The box</p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+                        <h5>Returns</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
+                                    <td><p>A document containing a <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a>.</p>
+</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -2405,6 +2463,7 @@ such as <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Con
                                     <li><a href="#Gutenberg_Document_1_Between_Gutenberg_Document__0__Gutenberg_Document__0__">Between(Document&lt;T&gt;, Document&lt;T&gt;)</a></li>
                                     <li><a href="#Gutenberg_Document_1_Concat_Gutenberg_Document__0____">Concat(Document&lt;T&gt;[])</a></li>
                                     <li><a href="#Gutenberg_Document_1_Concat_System_Collections_Generic_IEnumerable_Gutenberg_Document__0___">Concat(IEnumerable&lt;Document&lt;T&gt;&gt;)</a></li>
+                                    <li><a href="#Gutenberg_Document_1_FromBox_Gutenberg_Box__0__">FromBox(Box&lt;T&gt;)</a></li>
                                     <li><a href="#Gutenberg_Document_1_FromString_System_String_">FromString(String)</a></li>
                                     <li><a href="#Gutenberg_Document_1_Grouped">Grouped()</a></li>
                                     <li><a href="#Gutenberg_Document_1_Hanging_System_Int32_">Hanging(Int32)</a></li>

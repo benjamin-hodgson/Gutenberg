@@ -7,6 +7,359 @@ references:
   commentId: N:Gutenberg
   fullName: Gutenberg
   nameWithType: Gutenberg
+- uid: Gutenberg.Alignment
+  name: Alignment
+  href: Gutenberg.Alignment.html
+  commentId: T:Gutenberg.Alignment
+  fullName: Gutenberg.Alignment
+  nameWithType: Alignment
+- uid: Gutenberg.Alignment.CentreEnd
+  name: CentreEnd
+  href: Gutenberg.Alignment.html#Gutenberg_Alignment_CentreEnd
+  commentId: F:Gutenberg.Alignment.CentreEnd
+  fullName: Gutenberg.Alignment.CentreEnd
+  nameWithType: Alignment.CentreEnd
+- uid: Gutenberg.Alignment.CentreStart
+  name: CentreStart
+  href: Gutenberg.Alignment.html#Gutenberg_Alignment_CentreStart
+  commentId: F:Gutenberg.Alignment.CentreStart
+  fullName: Gutenberg.Alignment.CentreStart
+  nameWithType: Alignment.CentreStart
+- uid: Gutenberg.Alignment.End
+  name: End
+  href: Gutenberg.Alignment.html#Gutenberg_Alignment_End
+  commentId: F:Gutenberg.Alignment.End
+  fullName: Gutenberg.Alignment.End
+  nameWithType: Alignment.End
+- uid: Gutenberg.Alignment.Start
+  name: Start
+  href: Gutenberg.Alignment.html#Gutenberg_Alignment_Start
+  commentId: F:Gutenberg.Alignment.Start
+  fullName: Gutenberg.Alignment.Start
+  nameWithType: Alignment.Start
+- uid: Gutenberg.Alignment.value__
+  name: value__
+  href: Gutenberg.Alignment.html#Gutenberg_Alignment_value__
+  commentId: F:Gutenberg.Alignment.value__
+  fullName: Gutenberg.Alignment.value__
+  nameWithType: Alignment.value__
+- uid: Gutenberg.Box`1
+  name: Box<T>
+  href: Gutenberg.Box-1.html
+  commentId: T:Gutenberg.Box`1
+  name.vb: Box(Of T)
+  fullName: Gutenberg.Box<T>
+  fullName.vb: Gutenberg.Box(Of T)
+  nameWithType: Box<T>
+  nameWithType.vb: Box(Of T)
+- uid: Gutenberg.Box`1.Above(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name: Above(Box<T>, Alignment)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_
+  commentId: M:Gutenberg.Box`1.Above(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name.vb: Above(Box(Of T), Alignment)
+  fullName: Gutenberg.Box<T>.Above(Gutenberg.Box<T>, Gutenberg.Alignment)
+  fullName.vb: Gutenberg.Box(Of T).Above(Gutenberg.Box(Of T), Gutenberg.Alignment)
+  nameWithType: Box<T>.Above(Box<T>, Alignment)
+  nameWithType.vb: Box(Of T).Above(Box(Of T), Alignment)
+- uid: Gutenberg.Box`1.Above*
+  name: Above
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Above_
+  commentId: Overload:Gutenberg.Box`1.Above
+  fullName: Gutenberg.Box<T>.Above
+  fullName.vb: Gutenberg.Box(Of T).Above
+  nameWithType: Box<T>.Above
+  nameWithType.vb: Box(Of T).Above
+- uid: Gutenberg.Box`1.Annotated(`0)
+  name: Annotated(T)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Annotated__0_
+  commentId: M:Gutenberg.Box`1.Annotated(`0)
+  fullName: Gutenberg.Box<T>.Annotated(T)
+  fullName.vb: Gutenberg.Box(Of T).Annotated(T)
+  nameWithType: Box<T>.Annotated(T)
+  nameWithType.vb: Box(Of T).Annotated(T)
+- uid: Gutenberg.Box`1.Annotated*
+  name: Annotated
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Annotated_
+  commentId: Overload:Gutenberg.Box`1.Annotated
+  fullName: Gutenberg.Box<T>.Annotated
+  fullName.vb: Gutenberg.Box(Of T).Annotated
+  nameWithType: Box<T>.Annotated
+  nameWithType.vb: Box(Of T).Annotated
+- uid: Gutenberg.Box`1.Behind(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name: Behind(Box<T>, Alignment)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_
+  commentId: M:Gutenberg.Box`1.Behind(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name.vb: Behind(Box(Of T), Alignment)
+  fullName: Gutenberg.Box<T>.Behind(Gutenberg.Box<T>, Gutenberg.Alignment)
+  fullName.vb: Gutenberg.Box(Of T).Behind(Gutenberg.Box(Of T), Gutenberg.Alignment)
+  nameWithType: Box<T>.Behind(Box<T>, Alignment)
+  nameWithType.vb: Box(Of T).Behind(Box(Of T), Alignment)
+- uid: Gutenberg.Box`1.Behind*
+  name: Behind
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_
+  commentId: Overload:Gutenberg.Box`1.Behind
+  fullName: Gutenberg.Box<T>.Behind
+  fullName.vb: Gutenberg.Box(Of T).Behind
+  nameWithType: Box<T>.Behind
+  nameWithType.vb: Box(Of T).Behind
+- uid: Gutenberg.Box`1.Below(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name: Below(Box<T>, Alignment)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_
+  commentId: M:Gutenberg.Box`1.Below(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name.vb: Below(Box(Of T), Alignment)
+  fullName: Gutenberg.Box<T>.Below(Gutenberg.Box<T>, Gutenberg.Alignment)
+  fullName.vb: Gutenberg.Box(Of T).Below(Gutenberg.Box(Of T), Gutenberg.Alignment)
+  nameWithType: Box<T>.Below(Box<T>, Alignment)
+  nameWithType.vb: Box(Of T).Below(Box(Of T), Alignment)
+- uid: Gutenberg.Box`1.Below*
+  name: Below
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Below_
+  commentId: Overload:Gutenberg.Box`1.Below
+  fullName: Gutenberg.Box<T>.Below
+  fullName.vb: Gutenberg.Box(Of T).Below
+  nameWithType: Box<T>.Below
+  nameWithType.vb: Box(Of T).Below
+- uid: Gutenberg.Box`1.Empty
+  name: Empty
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Empty
+  commentId: P:Gutenberg.Box`1.Empty
+  fullName: Gutenberg.Box<T>.Empty
+  fullName.vb: Gutenberg.Box(Of T).Empty
+  nameWithType: Box<T>.Empty
+  nameWithType.vb: Box(Of T).Empty
+- uid: Gutenberg.Box`1.Empty*
+  name: Empty
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Empty_
+  commentId: Overload:Gutenberg.Box`1.Empty
+  fullName: Gutenberg.Box<T>.Empty
+  fullName.vb: Gutenberg.Box(Of T).Empty
+  nameWithType: Box<T>.Empty
+  nameWithType.vb: Box(Of T).Empty
+- uid: Gutenberg.Box`1.FromString(System.String)
+  name: FromString(String)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_FromString_System_String_
+  commentId: M:Gutenberg.Box`1.FromString(System.String)
+  fullName: Gutenberg.Box<T>.FromString(System.String)
+  fullName.vb: Gutenberg.Box(Of T).FromString(System.String)
+  nameWithType: Box<T>.FromString(String)
+  nameWithType.vb: Box(Of T).FromString(String)
+- uid: Gutenberg.Box`1.FromString*
+  name: FromString
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_FromString_
+  commentId: Overload:Gutenberg.Box`1.FromString
+  fullName: Gutenberg.Box<T>.FromString
+  fullName.vb: Gutenberg.Box(Of T).FromString
+  nameWithType: Box<T>.FromString
+  nameWithType.vb: Box(Of T).FromString
+- uid: Gutenberg.Box`1.Height
+  name: Height
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Height
+  commentId: P:Gutenberg.Box`1.Height
+  fullName: Gutenberg.Box<T>.Height
+  fullName.vb: Gutenberg.Box(Of T).Height
+  nameWithType: Box<T>.Height
+  nameWithType.vb: Box(Of T).Height
+- uid: Gutenberg.Box`1.Height*
+  name: Height
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Height_
+  commentId: Overload:Gutenberg.Box`1.Height
+  fullName: Gutenberg.Box<T>.Height
+  fullName.vb: Gutenberg.Box(Of T).Height
+  nameWithType: Box<T>.Height
+  nameWithType.vb: Box(Of T).Height
+- uid: Gutenberg.Box`1.InFrontOf(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name: InFrontOf(Box<T>, Alignment)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_
+  commentId: M:Gutenberg.Box`1.InFrontOf(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name.vb: InFrontOf(Box(Of T), Alignment)
+  fullName: Gutenberg.Box<T>.InFrontOf(Gutenberg.Box<T>, Gutenberg.Alignment)
+  fullName.vb: Gutenberg.Box(Of T).InFrontOf(Gutenberg.Box(Of T), Gutenberg.Alignment)
+  nameWithType: Box<T>.InFrontOf(Box<T>, Alignment)
+  nameWithType.vb: Box(Of T).InFrontOf(Box(Of T), Alignment)
+- uid: Gutenberg.Box`1.InFrontOf*
+  name: InFrontOf
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_
+  commentId: Overload:Gutenberg.Box`1.InFrontOf
+  fullName: Gutenberg.Box<T>.InFrontOf
+  fullName.vb: Gutenberg.Box(Of T).InFrontOf
+  nameWithType: Box<T>.InFrontOf
+  nameWithType.vb: Box(Of T).InFrontOf
+- uid: Gutenberg.Box`1.LeftOf(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name: LeftOf(Box<T>, Alignment)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_
+  commentId: M:Gutenberg.Box`1.LeftOf(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name.vb: LeftOf(Box(Of T), Alignment)
+  fullName: Gutenberg.Box<T>.LeftOf(Gutenberg.Box<T>, Gutenberg.Alignment)
+  fullName.vb: Gutenberg.Box(Of T).LeftOf(Gutenberg.Box(Of T), Gutenberg.Alignment)
+  nameWithType: Box<T>.LeftOf(Box<T>, Alignment)
+  nameWithType.vb: Box(Of T).LeftOf(Box(Of T), Alignment)
+- uid: Gutenberg.Box`1.LeftOf*
+  name: LeftOf
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_
+  commentId: Overload:Gutenberg.Box`1.LeftOf
+  fullName: Gutenberg.Box<T>.LeftOf
+  fullName.vb: Gutenberg.Box(Of T).LeftOf
+  nameWithType: Box<T>.LeftOf
+  nameWithType.vb: Box(Of T).LeftOf
+- uid: Gutenberg.Box`1.MapAnnotations*
+  name: MapAnnotations
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_MapAnnotations_
+  commentId: Overload:Gutenberg.Box`1.MapAnnotations
+  fullName: Gutenberg.Box<T>.MapAnnotations
+  fullName.vb: Gutenberg.Box(Of T).MapAnnotations
+  nameWithType: Box<T>.MapAnnotations
+  nameWithType.vb: Box(Of T).MapAnnotations
+- uid: Gutenberg.Box`1.MapAnnotations``1(System.Func{`0,``0})
+  name: MapAnnotations<U>(Func<T, U>)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_MapAnnotations__1_System_Func__0___0__
+  commentId: M:Gutenberg.Box`1.MapAnnotations``1(System.Func{`0,``0})
+  name.vb: MapAnnotations(Of U)(Func(Of T, U))
+  fullName: Gutenberg.Box<T>.MapAnnotations<U>(System.Func<T, U>)
+  fullName.vb: Gutenberg.Box(Of T).MapAnnotations(Of U)(System.Func(Of T, U))
+  nameWithType: Box<T>.MapAnnotations<U>(Func<T, U>)
+  nameWithType.vb: Box(Of T).MapAnnotations(Of U)(Func(Of T, U))
+- uid: Gutenberg.Box`1.MapAnnotations``1(System.Func{`0,System.Collections.Generic.IEnumerable{``0}})
+  name: MapAnnotations<U>(Func<T, IEnumerable<U>>)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_MapAnnotations__1_System_Func__0_System_Collections_Generic_IEnumerable___0___
+  commentId: M:Gutenberg.Box`1.MapAnnotations``1(System.Func{`0,System.Collections.Generic.IEnumerable{``0}})
+  name.vb: MapAnnotations(Of U)(Func(Of T, IEnumerable(Of U)))
+  fullName: Gutenberg.Box<T>.MapAnnotations<U>(System.Func<T, System.Collections.Generic.IEnumerable<U>>)
+  fullName.vb: Gutenberg.Box(Of T).MapAnnotations(Of U)(System.Func(Of T, System.Collections.Generic.IEnumerable(Of U)))
+  nameWithType: Box<T>.MapAnnotations<U>(Func<T, IEnumerable<U>>)
+  nameWithType.vb: Box(Of T).MapAnnotations(Of U)(Func(Of T, IEnumerable(Of U)))
+- uid: Gutenberg.Box`1.op_Implicit(System.String)~Gutenberg.Box{`0}
+  name: Implicit(String to Box<T>)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_op_Implicit_System_String__Gutenberg_Box__0_
+  commentId: M:Gutenberg.Box`1.op_Implicit(System.String)~Gutenberg.Box{`0}
+  name.vb: Widening(String to Box(Of T))
+  fullName: Gutenberg.Box<T>.Implicit(System.String to Gutenberg.Box<T>)
+  fullName.vb: Gutenberg.Box(Of T).Widening(System.String to Gutenberg.Box(Of T))
+  nameWithType: Box<T>.Implicit(String to Box<T>)
+  nameWithType.vb: Box(Of T).Widening(String to Box(Of T))
+- uid: Gutenberg.Box`1.op_Implicit*
+  name: Implicit
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_op_Implicit_
+  commentId: Overload:Gutenberg.Box`1.op_Implicit
+  name.vb: Widening
+  fullName: Gutenberg.Box<T>.Implicit
+  fullName.vb: Gutenberg.Box(Of T).Widening
+  nameWithType: Box<T>.Implicit
+  nameWithType.vb: Box(Of T).Widening
+- uid: Gutenberg.Box`1.Render(Gutenberg.IDocumentRenderer{`0},System.Threading.CancellationToken)
+  name: Render(IDocumentRenderer<T>, CancellationToken)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Render_Gutenberg_IDocumentRenderer__0__System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Box`1.Render(Gutenberg.IDocumentRenderer{`0},System.Threading.CancellationToken)
+  name.vb: Render(IDocumentRenderer(Of T), CancellationToken)
+  fullName: Gutenberg.Box<T>.Render(Gutenberg.IDocumentRenderer<T>, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Box(Of T).Render(Gutenberg.IDocumentRenderer(Of T), System.Threading.CancellationToken)
+  nameWithType: Box<T>.Render(IDocumentRenderer<T>, CancellationToken)
+  nameWithType.vb: Box(Of T).Render(IDocumentRenderer(Of T), CancellationToken)
+- uid: Gutenberg.Box`1.Render*
+  name: Render
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Render_
+  commentId: Overload:Gutenberg.Box`1.Render
+  fullName: Gutenberg.Box<T>.Render
+  fullName.vb: Gutenberg.Box(Of T).Render
+  nameWithType: Box<T>.Render
+  nameWithType.vb: Box(Of T).Render
+- uid: Gutenberg.Box`1.RightOf(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name: RightOf(Box<T>, Alignment)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_
+  commentId: M:Gutenberg.Box`1.RightOf(Gutenberg.Box{`0},Gutenberg.Alignment)
+  name.vb: RightOf(Box(Of T), Alignment)
+  fullName: Gutenberg.Box<T>.RightOf(Gutenberg.Box<T>, Gutenberg.Alignment)
+  fullName.vb: Gutenberg.Box(Of T).RightOf(Gutenberg.Box(Of T), Gutenberg.Alignment)
+  nameWithType: Box<T>.RightOf(Box<T>, Alignment)
+  nameWithType.vb: Box(Of T).RightOf(Box(Of T), Alignment)
+- uid: Gutenberg.Box`1.RightOf*
+  name: RightOf
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_
+  commentId: Overload:Gutenberg.Box`1.RightOf
+  fullName: Gutenberg.Box<T>.RightOf
+  fullName.vb: Gutenberg.Box(Of T).RightOf
+  nameWithType: Box<T>.RightOf
+  nameWithType.vb: Box(Of T).RightOf
+- uid: Gutenberg.Box`1.Select*
+  name: Select
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Select_
+  commentId: Overload:Gutenberg.Box`1.Select
+  fullName: Gutenberg.Box<T>.Select
+  fullName.vb: Gutenberg.Box(Of T).Select
+  nameWithType: Box<T>.Select
+  nameWithType.vb: Box(Of T).Select
+- uid: Gutenberg.Box`1.Select``1(System.Func{`0,``0})
+  name: Select<U>(Func<T, U>)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Select__1_System_Func__0___0__
+  commentId: M:Gutenberg.Box`1.Select``1(System.Func{`0,``0})
+  name.vb: Select(Of U)(Func(Of T, U))
+  fullName: Gutenberg.Box<T>.Select<U>(System.Func<T, U>)
+  fullName.vb: Gutenberg.Box(Of T).Select(Of U)(System.Func(Of T, U))
+  nameWithType: Box<T>.Select<U>(Func<T, U>)
+  nameWithType.vb: Box(Of T).Select(Of U)(Func(Of T, U))
+- uid: Gutenberg.Box`1.ToString
+  name: ToString()
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_ToString
+  commentId: M:Gutenberg.Box`1.ToString
+  fullName: Gutenberg.Box<T>.ToString()
+  fullName.vb: Gutenberg.Box(Of T).ToString()
+  nameWithType: Box<T>.ToString()
+  nameWithType.vb: Box(Of T).ToString()
+- uid: Gutenberg.Box`1.ToString*
+  name: ToString
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_ToString_
+  commentId: Overload:Gutenberg.Box`1.ToString
+  fullName: Gutenberg.Box<T>.ToString
+  fullName.vb: Gutenberg.Box(Of T).ToString
+  nameWithType: Box<T>.ToString
+  nameWithType.vb: Box(Of T).ToString
+- uid: Gutenberg.Box`1.Transparent(System.Int32,System.Int32)
+  name: Transparent(Int32, Int32)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_
+  commentId: M:Gutenberg.Box`1.Transparent(System.Int32,System.Int32)
+  fullName: Gutenberg.Box<T>.Transparent(System.Int32, System.Int32)
+  fullName.vb: Gutenberg.Box(Of T).Transparent(System.Int32, System.Int32)
+  nameWithType: Box<T>.Transparent(Int32, Int32)
+  nameWithType.vb: Box(Of T).Transparent(Int32, Int32)
+- uid: Gutenberg.Box`1.Transparent*
+  name: Transparent
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_
+  commentId: Overload:Gutenberg.Box`1.Transparent
+  fullName: Gutenberg.Box<T>.Transparent
+  fullName.vb: Gutenberg.Box(Of T).Transparent
+  nameWithType: Box<T>.Transparent
+  nameWithType.vb: Box(Of T).Transparent
+- uid: Gutenberg.Box`1.Width
+  name: Width
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Width
+  commentId: P:Gutenberg.Box`1.Width
+  fullName: Gutenberg.Box<T>.Width
+  fullName.vb: Gutenberg.Box(Of T).Width
+  nameWithType: Box<T>.Width
+  nameWithType.vb: Box(Of T).Width
+- uid: Gutenberg.Box`1.Width*
+  name: Width
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Width_
+  commentId: Overload:Gutenberg.Box`1.Width
+  fullName: Gutenberg.Box<T>.Width
+  fullName.vb: Gutenberg.Box(Of T).Width
+  nameWithType: Box<T>.Width
+  nameWithType.vb: Box(Of T).Width
+- uid: Gutenberg.Box`1.WithBorder
+  name: WithBorder()
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_WithBorder
+  commentId: M:Gutenberg.Box`1.WithBorder
+  fullName: Gutenberg.Box<T>.WithBorder()
+  fullName.vb: Gutenberg.Box(Of T).WithBorder()
+  nameWithType: Box<T>.WithBorder()
+  nameWithType.vb: Box(Of T).WithBorder()
+- uid: Gutenberg.Box`1.WithBorder*
+  name: WithBorder
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_WithBorder_
+  commentId: Overload:Gutenberg.Box`1.WithBorder
+  fullName: Gutenberg.Box<T>.WithBorder
+  fullName.vb: Gutenberg.Box(Of T).WithBorder
+  nameWithType: Box<T>.WithBorder
+  nameWithType.vb: Box(Of T).WithBorder
 - uid: Gutenberg.Document`1
   name: Document<T>
   href: Gutenberg.Document-1.html
@@ -124,6 +477,23 @@ references:
   fullName.vb: Gutenberg.Document(Of T).Empty
   nameWithType: Document<T>.Empty
   nameWithType.vb: Document(Of T).Empty
+- uid: Gutenberg.Document`1.FromBox(Gutenberg.Box{`0})
+  name: FromBox(Box<T>)
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_FromBox_Gutenberg_Box__0__
+  commentId: M:Gutenberg.Document`1.FromBox(Gutenberg.Box{`0})
+  name.vb: FromBox(Box(Of T))
+  fullName: Gutenberg.Document<T>.FromBox(Gutenberg.Box<T>)
+  fullName.vb: Gutenberg.Document(Of T).FromBox(Gutenberg.Box(Of T))
+  nameWithType: Document<T>.FromBox(Box<T>)
+  nameWithType.vb: Document(Of T).FromBox(Box(Of T))
+- uid: Gutenberg.Document`1.FromBox*
+  name: FromBox
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_FromBox_
+  commentId: Overload:Gutenberg.Document`1.FromBox
+  fullName: Gutenberg.Document<T>.FromBox
+  fullName.vb: Gutenberg.Document(Of T).FromBox
+  nameWithType: Document<T>.FromBox
+  nameWithType.vb: Document(Of T).FromBox
 - uid: Gutenberg.Document`1.FromString(System.String)
   name: FromString(String)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_FromString_System_String_
