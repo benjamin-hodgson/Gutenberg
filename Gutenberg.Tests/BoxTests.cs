@@ -178,7 +178,7 @@ public class BoxTests
             doc.ToString().Trim()  // todo: don't render trailing whitespace
         );
     }
-    
+
     [Fact]
     public void TestBoxInDocumentWithLineBreakHintWhenFits()
     {

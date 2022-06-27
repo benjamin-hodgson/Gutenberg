@@ -1143,7 +1143,7 @@ public abstract class Document<T> : IStackItem<T>
     /// </returns>
     public static implicit operator Document<T>(string value)
         => FromString(value);
-        
+
     /// <summary>
     /// Implicitly convert a <see cref="Box{T}"/> to a
     /// <see cref="Document{T}"/>.
