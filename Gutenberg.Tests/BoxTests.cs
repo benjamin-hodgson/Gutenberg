@@ -156,6 +156,7 @@ public class BoxTests
             doc.ToString().Trim()  // todo: don't render trailing whitespace
         );
     }
+
     [Fact]
     public void TestBoxInDocumentWithLineBreak()
     {
@@ -166,7 +167,7 @@ public class BoxTests
             doc.ToString().Trim()  // todo: don't render trailing whitespace
         );
     }
-    
+
     [Fact]
     public void TestBoxInDocumentWithLineBreakAndNesting()
     {
@@ -177,6 +178,28 @@ public class BoxTests
             doc.ToString().Trim()  // todo: don't render trailing whitespace
         );
     }
+    
+    [Fact]
+    public void TestBoxInDocumentWithLineBreakHintWhenFits()
+    {
+        var box = Box.FromString("abc\ndef\nghi");
+        var doc = Doc.Concat("first line ", Doc.ZeroWidthLineBreakHint, box);
+        Assert.Equal(
+            "first line abc\n           def\n           ghi",
+            doc.ToString().Trim()  // todo: don't render trailing whitespace
+        );
+    }
+
+    [Fact]
+    public void TestBoxInDocumentWithLineBreakHintWhenDoesntFit()
+    {
+        var box = Box.FromString("abc\ndef\nghi");
+        var doc = Doc.Concat("first line ", Doc.ZeroWidthLineBreakHint, box);
+        Assert.Equal(
+            "first line \nabc\ndef\nghi",
+            doc.ToString(12).Trim()  // todo: don't render trailing whitespace
+        );
+    }
 
     [Fact]
     public void TestBoxInDocumentWhenOverflow()
@@ -185,7 +208,7 @@ public class BoxTests
         var doc = Doc.Concat("first line ", box);
         Assert.Equal(
             "first line abc\n           def\n           ghi",
-            doc.ToString(10).Trim()  // todo: don't render trailing whitespace
+            doc.ToString(12).Trim()  // todo: don't render trailing whitespace
         );
     }
 }
