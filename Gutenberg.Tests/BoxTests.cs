@@ -39,8 +39,8 @@ public class BoxTests
 
     [Theory]
     [InlineData(Alignment.Start, "abcdef\nghi   \n")]
-    [InlineData(Alignment.CentreStart, "abcdef\n ghi  \n")]
-    [InlineData(Alignment.CentreEnd, "abcdef\n  ghi \n")]
+    [InlineData(Alignment.CenterStart, "abcdef\n ghi  \n")]
+    [InlineData(Alignment.CenterEnd, "abcdef\n  ghi \n")]
     [InlineData(Alignment.End, "abcdef\n   ghi\n")]
     public void TestAboveWithAlignment(Alignment alignment, string expected)
     {
@@ -61,8 +61,8 @@ public class BoxTests
 
     [Theory]
     [InlineData(Alignment.Start, "ghi   \nabcdef\n")]
-    [InlineData(Alignment.CentreStart, " ghi  \nabcdef\n")]
-    [InlineData(Alignment.CentreEnd, "  ghi \nabcdef\n")]
+    [InlineData(Alignment.CenterStart, " ghi  \nabcdef\n")]
+    [InlineData(Alignment.CenterEnd, "  ghi \nabcdef\n")]
     [InlineData(Alignment.End, "   ghi\nabcdef\n")]
     public void TestBelowWithAlignment(Alignment alignment, string expected)
     {
@@ -84,8 +84,8 @@ public class BoxTests
 
     [Theory]
     [InlineData(Alignment.Start, "ag\nbh\nci\nd \ne \nf \n")]
-    [InlineData(Alignment.CentreStart, "a \nbg\nch\ndi\ne \nf \n")]
-    [InlineData(Alignment.CentreEnd, "a \nb \ncg\ndh\nei\nf \n")]
+    [InlineData(Alignment.CenterStart, "a \nbg\nch\ndi\ne \nf \n")]
+    [InlineData(Alignment.CenterEnd, "a \nb \ncg\ndh\nei\nf \n")]
     [InlineData(Alignment.End, "a \nb \nc \ndg\neh\nfi\n")]
     public void TestLeftOfWithAlignment(Alignment alignment, string expected)
     {
@@ -108,8 +108,8 @@ public class BoxTests
 
     [Theory]
     [InlineData(Alignment.Start, "ga\nhb\nic\n d\n e\n f\n")]
-    [InlineData(Alignment.CentreStart, " a\ngb\nhc\nid\n e\n f\n")]
-    [InlineData(Alignment.CentreEnd, " a\n b\ngc\nhd\nie\n f\n")]
+    [InlineData(Alignment.CenterStart, " a\ngb\nhc\nid\n e\n f\n")]
+    [InlineData(Alignment.CenterEnd, " a\n b\ngc\nhd\nie\n f\n")]
     [InlineData(Alignment.End, " a\n b\n c\ngd\nhe\nif\n")]
     public void TestRightOfWithAlignment(Alignment alignment, string expected)
     {
@@ -127,7 +127,7 @@ public class BoxTests
             .LeftOf("*").RightOf("*")
             .Above("***").Below("***");
         var box = mask
-            .InFrontOf("abcde\nfghij\nklmno", Alignment.CentreStart);
+            .InFrontOf("abcde\nfghij\nklmno", Alignment.CenterStart);
         Assert.Equal(5, box.Width);
         Assert.Equal(3, box.Height);
         Assert.Equal("a***e\nf*h*j\nk***o\n", box.ToString());
@@ -140,7 +140,7 @@ public class BoxTests
             .LeftOf("*").RightOf("*")
             .Above("***").Below("***");
         var box = Box.FromString("abcde\nfghij\nklmno")
-            .Behind(mask, Alignment.CentreStart);
+            .Behind(mask, Alignment.CenterStart);
         Assert.Equal(5, box.Width);
         Assert.Equal(3, box.Height);
         Assert.Equal("a***e\nf*h*j\nk***o\n", box.ToString());

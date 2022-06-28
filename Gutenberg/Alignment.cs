@@ -55,13 +55,13 @@ public enum Alignment
     /// difference is an odd number), align it one character closer
     /// to the start.
     /// </summary>
-    /// <example name="Alignment.CentreStart - vertical">
+    /// <example name="Alignment.CenterStart - vertical">
     /// When boxes are being composed vertically,
     /// the start of the alignment axis is the
     /// left-hand side of the box.
     /// <code doctest="true">
     /// var box = Box.FromString("abcdefgh")
-    ///     .Above("ijk", Alignment.CentreStart)
+    ///     .Above("ijk", Alignment.CenterStart)
     ///     .WithBorder();
     /// Console.Write(box.ToString());
     /// // Output:
@@ -71,13 +71,13 @@ public enum Alignment
     /// // └────────┘
     /// </code>
     /// </example>
-    /// <example name="Alignment.CentreStart - horizontal">
+    /// <example name="Alignment.CenterStart - horizontal">
     /// When boxes are being composed horiztonally,
     /// the start of the alignment axis is the
     /// top of the box.
     /// <code doctest="true">
     /// var box = Box.FromString(string.Join('\n', "abcdefgh".AsEnumerable()))
-    ///     .LeftOf(string.Join('\n', "ijk".AsEnumerable()), Alignment.CentreStart)
+    ///     .LeftOf(string.Join('\n', "ijk".AsEnumerable()), Alignment.CenterStart)
     ///     .WithBorder();
     /// Console.Write(box.ToString());
     /// // Output:
@@ -93,20 +93,20 @@ public enum Alignment
     /// // └──┘
     /// </code>
     /// </example>
-    CentreStart,
+    CenterStart,
     /// <summary>
     /// Align the smaller box with the centre of the larger one.
     /// If the box can't be exactly centred (because the width
     /// difference is an odd number), align it one character closer
     /// to the end.
     /// </summary>
-    /// <example name="Alignment.CentreEnd - vertical">
+    /// <example name="Alignment.CenterEnd - vertical">
     /// When boxes are being composed vertically,
     /// the start of the alignment axis is the
     /// left-hand side of the box.
     /// <code doctest="true">
     /// var box = Box.FromString("abcdefgh")
-    ///     .Above("ijk", Alignment.CentreEnd)
+    ///     .Above("ijk", Alignment.CenterEnd)
     ///     .WithBorder();
     /// Console.Write(box.ToString());
     /// // Output:
@@ -116,13 +116,13 @@ public enum Alignment
     /// // └────────┘
     /// </code>
     /// </example>
-    /// <example name="Alignment.CentreEnd - horizontal">
+    /// <example name="Alignment.CenterEnd - horizontal">
     /// When boxes are being composed horiztonally,
     /// the start of the alignment axis is the
     /// top of the box.
     /// <code doctest="true">
     /// var box = Box.FromString(string.Join('\n', "abcdefgh".AsEnumerable()))
-    ///     .LeftOf(string.Join('\n', "ijk".AsEnumerable()), Alignment.CentreEnd)
+    ///     .LeftOf(string.Join('\n', "ijk".AsEnumerable()), Alignment.CenterEnd)
     ///     .WithBorder();
     /// Console.Write(box.ToString());
     /// // Output:
@@ -138,7 +138,7 @@ public enum Alignment
     /// // └──┘
     /// </code>
     /// </example>
-    CentreEnd,
+    CenterEnd,
     /// <summary>
     /// Align the smaller box with the end (the bottom or right)
     /// of the larger one.

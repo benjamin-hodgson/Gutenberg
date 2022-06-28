@@ -294,7 +294,7 @@ public abstract class Box<T>
     ///     .LeftOf("*").RightOf("*")
     ///     .Above("***").Below("***");
     /// var box = mask
-    ///     .InFrontOf("abcde\nfghij\nklmno", Alignment.CentreStart)
+    ///     .InFrontOf("abcde\nfghij\nklmno", Alignment.CenterStart)
     ///     .WithBorder();
     /// Console.Write(box.ToString());
     /// // Output:
@@ -354,7 +354,7 @@ public abstract class Box<T>
     ///     .LeftOf("*").RightOf("*")
     ///     .Above("***").Below("***");
     /// var box = Box.FromString("abcde\nfghij\nklmno")
-    ///     .Behind(mask, Alignment.CentreStart)
+    ///     .Behind(mask, Alignment.CenterStart)
     ///     .WithBorder();
     /// Console.Write(box.ToString());
     /// // Output:
@@ -644,14 +644,14 @@ public abstract class Box<T>
                 this,
                 new TransparentBox<T>(Width, delta)
             ),
-            Alignment.CentreStart => new VConcatBox<T>(
+            Alignment.CenterStart => new VConcatBox<T>(
                 new VConcatBox<T>(
                     new TransparentBox<T>(Width, smaller),
                     this
                 ),
                 new TransparentBox<T>(Width, larger)
             ),
-            Alignment.CentreEnd => new VConcatBox<T>(
+            Alignment.CenterEnd => new VConcatBox<T>(
                 new VConcatBox<T>(
                     new TransparentBox<T>(Width, larger),
                     this
@@ -681,14 +681,14 @@ public abstract class Box<T>
                 this,
                 new TransparentBox<T>(delta, Height)
             ),
-            Alignment.CentreStart => new HConcatBox<T>(
+            Alignment.CenterStart => new HConcatBox<T>(
                 new HConcatBox<T>(
                     new TransparentBox<T>(smaller, Height),
                     this
                 ),
                 new TransparentBox<T>(larger, Height)
             ),
-            Alignment.CentreEnd => new HConcatBox<T>(
+            Alignment.CenterEnd => new HConcatBox<T>(
                 new HConcatBox<T>(
                     new TransparentBox<T>(larger, Height),
                     this

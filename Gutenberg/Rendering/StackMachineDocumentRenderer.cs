@@ -24,16 +24,20 @@ public abstract class StackMachineDocumentRenderer<T> : IDocumentRenderer<T>
         => HasAnnotation ? Stack.Peek() : default;
 
     /// <inheritdoc cref="IDocumentRenderer{T}.PushAnnotation"/>
-    public virtual ValueTask PushAnnotation(T value, CancellationToken cancellationToken = default)
+    public virtual async ValueTask PushAnnotation(T value, CancellationToken cancellationToken = default)
     {
+        cancellationToken.ThrowIfCancellationRequested();
+        await OnBeforePushAnnotation(value, cancellationToken).ConfigureAwait(false);
         Stack.Push(value);
-        return CompletedOrCancelled(cancellationToken);
+        await OnPushAnnotation(value, cancellationToken).ConfigureAwait(false);
     }
     /// <inheritdoc cref="IDocumentRenderer{T}.PopAnnotation"/>
-    public virtual ValueTask PopAnnotation(CancellationToken cancellationToken = default)
+    public virtual async ValueTask PopAnnotation(CancellationToken cancellationToken = default)
     {
-        Stack.Pop();
-        return CompletedOrCancelled(cancellationToken);
+        cancellationToken.ThrowIfCancellationRequested();
+        await OnBeforePopAnnotation(Stack.Peek(), cancellationToken).ConfigureAwait(false);
+        var val = Stack.Pop();
+        await OnPopAnnotation(val, cancellationToken).ConfigureAwait(false);
     }
 
     /// <inheritdoc cref="IDocumentRenderer{T}.Text"/>
@@ -45,8 +49,61 @@ public abstract class StackMachineDocumentRenderer<T> : IDocumentRenderer<T>
     /// <inheritdoc cref="IDocumentRenderer{T}.WhiteSpace"/>
     public abstract ValueTask WhiteSpace(int amount, CancellationToken cancellationToken = default);
 
-    private static ValueTask CompletedOrCancelled(CancellationToken cancellationToken)
-        => cancellationToken.IsCancellationRequested
-            ? ValueTask.FromCanceled(cancellationToken)
-            : ValueTask.CompletedTask;
+    /// <summary>
+    /// Called when <paramref name="value"/> is about to be
+    /// pushed onto the <see cref="Stack"/>.
+    /// </summary>
+    /// <param name="value">The value</param>
+    /// <param name="cancellationToken">A <see cref="CancellationToken"/></param>
+    /// <returns>
+    /// A <see cref="ValueTask"/> which will be awaited before
+    /// pushing the <paramref name="value"/> on to the <see cref="Stack"/>
+    /// </returns>
+    protected virtual ValueTask OnBeforePushAnnotation(T value, CancellationToken cancellationToken = default)
+        => ValueTask.CompletedTask;
+
+    /// <summary>
+    /// Called immediately after <paramref name="value"/> has been
+    /// pushed onto the <see cref="Stack"/>.
+    /// </summary>
+    /// <param name="value">The value</param>
+    /// <param name="cancellationToken">A <see cref="CancellationToken"/></param>
+    /// <returns>
+    /// A <see cref="ValueTask"/> which will be awaited before
+    /// returning from <see cref="PushAnnotation"/>
+    /// </returns>
+    protected virtual ValueTask OnPushAnnotation(T value, CancellationToken cancellationToken = default)
+        => ValueTask.CompletedTask;
+
+    /// <summary>
+    /// Called when <paramref name="value"/> is about to be
+    /// popped off the <see cref="Stack"/>.
+    /// </summary>
+    /// <remarks>
+    /// If the stack is mutated (by an override of this method) before the returned
+    /// <see cref="ValueTask"/> completes, the value which is on top of the stack
+    /// after the <see cref="ValueTask"/> resolves will be popped (and
+    /// passed to <see cref="OnPopAnnotation"/>) instead.
+    /// </remarks>
+    /// <param name="value">The value</param>
+    /// <param name="cancellationToken">A <see cref="CancellationToken"/></param>
+    /// <returns>
+    /// A <see cref="ValueTask"/> which will be awaited before
+    /// popping the <paramref name="value"/> off the <see cref="Stack"/>
+    /// </returns>
+    protected virtual ValueTask OnBeforePopAnnotation(T value, CancellationToken cancellationToken = default)
+        => ValueTask.CompletedTask;
+
+    /// <summary>
+    /// Called immediately after <paramref name="value"/> has been
+    /// popped off the <see cref="Stack"/>.
+    /// </summary>
+    /// <param name="value">The value</param>
+    /// <param name="cancellationToken">A <see cref="CancellationToken"/></param>
+    /// <returns>
+    /// A <see cref="ValueTask"/> which will be awaited before
+    /// returning from <see cref="PopAnnotation"/>
+    /// </returns>
+    protected virtual ValueTask OnPopAnnotation(T value, CancellationToken cancellationToken = default)
+        => ValueTask.CompletedTask;
 }
