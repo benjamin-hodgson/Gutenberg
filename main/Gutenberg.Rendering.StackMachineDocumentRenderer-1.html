@@ -82,6 +82,18 @@
                                             <a href="Gutenberg.Rendering.html" title="Gutenberg.Rendering" class="active active-i">Gutenberg.Rendering</a>
                                             <ul id="toc0_1" class="active active-i">
                                                     <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleDocumentRenderer.html" title="ConsoleDocumentRenderer" class="">ConsoleDocumentRenderer</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleFormattingAnnotation.html" title="ConsoleFormattingAnnotation" class="">ConsoleFormattingAnnotation</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html" title="ConsoleFormattingAnnotation.BackgroundColor" class="">ConsoleFormattingAnnotation.BackgroundColor</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html" title="ConsoleFormattingAnnotation.ForegroundColor" class="">ConsoleFormattingAnnotation.ForegroundColor</a>
+                                                    </li>
+                                                    <li>
                                                             <a href="Gutenberg.Rendering.DocumentRendererExtensions.html" title="DocumentRendererExtensions" class="">DocumentRendererExtensions</a>
                                                     </li>
                                                     <li>
@@ -304,6 +316,252 @@ or return a default value.</p>
                                     <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
                                     <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when the
 line break has been written to the output stream</p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+        
+        
+        
+        
+        
+        
+                        
+        
+                
+                <a id="Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePopAnnotation_"></a>
+                <h4 id="Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePopAnnotation__0_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePopAnnotation__0_System_Threading_CancellationToken_">OnBeforePopAnnotation(T, CancellationToken)</a></h4>
+                <div><p>Called when <code data-dev-comment-type="paramref" class="paramref">value</code> is about to be
+popped off the <a class="xref" href="Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_Stack">Stack</a>.</p>
+</div>
+                <h5>Declaration</h5>
+                    <pre><code class="lang-csharp hljs">protected virtual ValueTask OnBeforePopAnnotation(T value, CancellationToken cancellationToken = null)</code></pre>
+
+                        <h5>Parameters</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><span class="xref">T</span></p></td>
+                                    <td><p>value</p></td>
+                                    <td><p>The value</p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
+                                    <td><p>cancellationToken</p></td>
+                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+                        <h5>Returns</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
+                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will be awaited before
+popping the <code data-dev-comment-type="paramref" class="paramref">value</code> off the <a class="xref" href="Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_Stack">Stack</a></p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+        
+        
+        
+        
+        
+                    <h5 id="Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePopAnnotation__0_System_Threading_CancellationToken__remarks"><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePopAnnotation__0_System_Threading_CancellationToken__remarks">Remarks</a></h5>
+                    <div><p>If the stack is mutated (by an override of this method) before the returned
+<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> completes, the value which is on top of the stack
+after the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> resolves will be popped (and
+passed to <a class="xref" href="Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPopAnnotation__0_System_Threading_CancellationToken_">OnPopAnnotation(T, CancellationToken)</a>) instead.</p>
+</div>
+        
+                        
+        
+                
+                <a id="Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePushAnnotation_"></a>
+                <h4 id="Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePushAnnotation__0_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePushAnnotation__0_System_Threading_CancellationToken_">OnBeforePushAnnotation(T, CancellationToken)</a></h4>
+                <div><p>Called when <code data-dev-comment-type="paramref" class="paramref">value</code> is about to be
+pushed onto the <a class="xref" href="Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_Stack">Stack</a>.</p>
+</div>
+                <h5>Declaration</h5>
+                    <pre><code class="lang-csharp hljs">protected virtual ValueTask OnBeforePushAnnotation(T value, CancellationToken cancellationToken = null)</code></pre>
+
+                        <h5>Parameters</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><span class="xref">T</span></p></td>
+                                    <td><p>value</p></td>
+                                    <td><p>The value</p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
+                                    <td><p>cancellationToken</p></td>
+                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+                        <h5>Returns</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
+                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will be awaited before
+pushing the <code data-dev-comment-type="paramref" class="paramref">value</code> on to the <a class="xref" href="Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_Stack">Stack</a></p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+        
+        
+        
+        
+        
+        
+                        
+        
+                
+                <a id="Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPopAnnotation_"></a>
+                <h4 id="Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPopAnnotation__0_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPopAnnotation__0_System_Threading_CancellationToken_">OnPopAnnotation(T, CancellationToken)</a></h4>
+                <div><p>Called immediately after <code data-dev-comment-type="paramref" class="paramref">value</code> has been
+popped off the <a class="xref" href="Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_Stack">Stack</a>.</p>
+</div>
+                <h5>Declaration</h5>
+                    <pre><code class="lang-csharp hljs">protected virtual ValueTask OnPopAnnotation(T value, CancellationToken cancellationToken = null)</code></pre>
+
+                        <h5>Parameters</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><span class="xref">T</span></p></td>
+                                    <td><p>value</p></td>
+                                    <td><p>The value</p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
+                                    <td><p>cancellationToken</p></td>
+                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+                        <h5>Returns</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
+                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will be awaited before
+returning from <a class="xref" href="Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_PopAnnotation_System_Threading_CancellationToken_">PopAnnotation(CancellationToken)</a></p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+        
+        
+        
+        
+        
+        
+                        
+        
+                
+                <a id="Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPushAnnotation_"></a>
+                <h4 id="Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPushAnnotation__0_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPushAnnotation__0_System_Threading_CancellationToken_">OnPushAnnotation(T, CancellationToken)</a></h4>
+                <div><p>Called immediately after <code data-dev-comment-type="paramref" class="paramref">value</code> has been
+pushed onto the <a class="xref" href="Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_Stack">Stack</a>.</p>
+</div>
+                <h5>Declaration</h5>
+                    <pre><code class="lang-csharp hljs">protected virtual ValueTask OnPushAnnotation(T value, CancellationToken cancellationToken = null)</code></pre>
+
+                        <h5>Parameters</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><span class="xref">T</span></p></td>
+                                    <td><p>value</p></td>
+                                    <td><p>The value</p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
+                                    <td><p>cancellationToken</p></td>
+                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+                        <h5>Returns</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
+                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will be awaited before
+returning from <a class="xref" href="Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_PushAnnotation__0_System_Threading_CancellationToken_">PushAnnotation(T, CancellationToken)</a></p>
 </td>
                                 </tr>
                             </tbody>
@@ -591,6 +849,10 @@ white space has been written to the output stream</p>
 
                             <ul>
                                     <li><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_NewLine_System_Threading_CancellationToken_">NewLine(CancellationToken)</a></li>
+                                    <li><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePopAnnotation__0_System_Threading_CancellationToken_">OnBeforePopAnnotation(T, CancellationToken)</a></li>
+                                    <li><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePushAnnotation__0_System_Threading_CancellationToken_">OnBeforePushAnnotation(T, CancellationToken)</a></li>
+                                    <li><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPopAnnotation__0_System_Threading_CancellationToken_">OnPopAnnotation(T, CancellationToken)</a></li>
+                                    <li><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPushAnnotation__0_System_Threading_CancellationToken_">OnPushAnnotation(T, CancellationToken)</a></li>
                                     <li><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_PopAnnotation_System_Threading_CancellationToken_">PopAnnotation(CancellationToken)</a></li>
                                     <li><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_PushAnnotation__0_System_Threading_CancellationToken_">PushAnnotation(T, CancellationToken)</a></li>
                                     <li><a href="#Gutenberg_Rendering_StackMachineDocumentRenderer_1_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_">Text(ReadOnlyMemory&lt;Char&gt;, CancellationToken)</a></li>

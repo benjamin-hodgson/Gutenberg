@@ -13,18 +13,18 @@ references:
   commentId: T:Gutenberg.Alignment
   fullName: Gutenberg.Alignment
   nameWithType: Alignment
-- uid: Gutenberg.Alignment.CentreEnd
-  name: CentreEnd
-  href: Gutenberg.Alignment.html#Gutenberg_Alignment_CentreEnd
-  commentId: F:Gutenberg.Alignment.CentreEnd
-  fullName: Gutenberg.Alignment.CentreEnd
-  nameWithType: Alignment.CentreEnd
-- uid: Gutenberg.Alignment.CentreStart
-  name: CentreStart
-  href: Gutenberg.Alignment.html#Gutenberg_Alignment_CentreStart
-  commentId: F:Gutenberg.Alignment.CentreStart
-  fullName: Gutenberg.Alignment.CentreStart
-  nameWithType: Alignment.CentreStart
+- uid: Gutenberg.Alignment.CenterEnd
+  name: CenterEnd
+  href: Gutenberg.Alignment.html#Gutenberg_Alignment_CenterEnd
+  commentId: F:Gutenberg.Alignment.CenterEnd
+  fullName: Gutenberg.Alignment.CenterEnd
+  nameWithType: Alignment.CenterEnd
+- uid: Gutenberg.Alignment.CenterStart
+  name: CenterStart
+  href: Gutenberg.Alignment.html#Gutenberg_Alignment_CenterStart
+  commentId: F:Gutenberg.Alignment.CenterStart
+  fullName: Gutenberg.Alignment.CenterStart
+  nameWithType: Alignment.CenterStart
 - uid: Gutenberg.Alignment.End
   name: End
   href: Gutenberg.Alignment.html#Gutenberg_Alignment_End
@@ -1417,6 +1417,525 @@ references:
   commentId: N:Gutenberg.Rendering
   fullName: Gutenberg.Rendering
   nameWithType: Gutenberg.Rendering
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer
+  name: ConsoleDocumentRenderer
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html
+  commentId: T:Gutenberg.Rendering.ConsoleDocumentRenderer
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer
+  nameWithType: ConsoleDocumentRenderer
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.#ctor
+  name: ConsoleDocumentRenderer()
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer__ctor
+  commentId: M:Gutenberg.Rendering.ConsoleDocumentRenderer.#ctor
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.ConsoleDocumentRenderer()
+  nameWithType: ConsoleDocumentRenderer.ConsoleDocumentRenderer()
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.#ctor*
+  name: ConsoleDocumentRenderer
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer__ctor_
+  commentId: Overload:Gutenberg.Rendering.ConsoleDocumentRenderer.#ctor
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.ConsoleDocumentRenderer
+  nameWithType: ConsoleDocumentRenderer.ConsoleDocumentRenderer
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.NewLine(System.Threading.CancellationToken)
+  name: NewLine(CancellationToken)
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_NewLine_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.ConsoleDocumentRenderer.NewLine(System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.NewLine(System.Threading.CancellationToken)
+  nameWithType: ConsoleDocumentRenderer.NewLine(CancellationToken)
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.NewLine*
+  name: NewLine
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_NewLine_
+  commentId: Overload:Gutenberg.Rendering.ConsoleDocumentRenderer.NewLine
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.NewLine
+  nameWithType: ConsoleDocumentRenderer.NewLine
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.PopAnnotation(System.Threading.CancellationToken)
+  name: PopAnnotation(CancellationToken)
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_PopAnnotation_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.ConsoleDocumentRenderer.PopAnnotation(System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.PopAnnotation(System.Threading.CancellationToken)
+  nameWithType: ConsoleDocumentRenderer.PopAnnotation(CancellationToken)
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.PopAnnotation*
+  name: PopAnnotation
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_PopAnnotation_
+  commentId: Overload:Gutenberg.Rendering.ConsoleDocumentRenderer.PopAnnotation
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.PopAnnotation
+  nameWithType: ConsoleDocumentRenderer.PopAnnotation
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.PushAnnotation(Gutenberg.Rendering.ConsoleFormattingAnnotation,System.Threading.CancellationToken)
+  name: PushAnnotation(ConsoleFormattingAnnotation, CancellationToken)
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_PushAnnotation_Gutenberg_Rendering_ConsoleFormattingAnnotation_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.ConsoleDocumentRenderer.PushAnnotation(Gutenberg.Rendering.ConsoleFormattingAnnotation,System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.PushAnnotation(Gutenberg.Rendering.ConsoleFormattingAnnotation, System.Threading.CancellationToken)
+  nameWithType: ConsoleDocumentRenderer.PushAnnotation(ConsoleFormattingAnnotation, CancellationToken)
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.PushAnnotation*
+  name: PushAnnotation
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_PushAnnotation_
+  commentId: Overload:Gutenberg.Rendering.ConsoleDocumentRenderer.PushAnnotation
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.PushAnnotation
+  nameWithType: ConsoleDocumentRenderer.PushAnnotation
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
+  name: Text(ReadOnlyMemory<Char>, CancellationToken)
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.ConsoleDocumentRenderer.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
+  name.vb: Text(ReadOnlyMemory(Of Char), CancellationToken)
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.Text(System.ReadOnlyMemory<System.Char>, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.ConsoleDocumentRenderer.Text(System.ReadOnlyMemory(Of System.Char), System.Threading.CancellationToken)
+  nameWithType: ConsoleDocumentRenderer.Text(ReadOnlyMemory<Char>, CancellationToken)
+  nameWithType.vb: ConsoleDocumentRenderer.Text(ReadOnlyMemory(Of Char), CancellationToken)
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.Text*
+  name: Text
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_Text_
+  commentId: Overload:Gutenberg.Rendering.ConsoleDocumentRenderer.Text
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.Text
+  nameWithType: ConsoleDocumentRenderer.Text
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace(System.Int32,System.Threading.CancellationToken)
+  name: WhiteSpace(Int32, CancellationToken)
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_WhiteSpace_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace(System.Int32,System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace(System.Int32, System.Threading.CancellationToken)
+  nameWithType: ConsoleDocumentRenderer.WhiteSpace(Int32, CancellationToken)
+- uid: Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace*
+  name: WhiteSpace
+  href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_WhiteSpace_
+  commentId: Overload:Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace
+  nameWithType: ConsoleDocumentRenderer.WhiteSpace
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation
+  name: ConsoleFormattingAnnotation
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html
+  commentId: T:Gutenberg.Rendering.ConsoleFormattingAnnotation
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation
+  nameWithType: ConsoleFormattingAnnotation
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.#ctor(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  name: ConsoleFormattingAnnotation(ConsoleFormattingAnnotation)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation__ctor_Gutenberg_Rendering_ConsoleFormattingAnnotation_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.#ctor(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ConsoleFormattingAnnotation(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  nameWithType: ConsoleFormattingAnnotation.ConsoleFormattingAnnotation(ConsoleFormattingAnnotation)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.#ctor*
+  name: ConsoleFormattingAnnotation
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation__ctor_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.#ctor
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ConsoleFormattingAnnotation
+  nameWithType: ConsoleFormattingAnnotation.ConsoleFormattingAnnotation
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$
+  name: <Clone>$()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation__Clone__
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.<Clone>$()
+  nameWithType: ConsoleFormattingAnnotation.<Clone>$()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$*
+  name: <Clone>$
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation__Clone___
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.<Clone>$
+  nameWithType: ConsoleFormattingAnnotation.<Clone>$
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor
+  name: ConsoleFormattingAnnotation.BackgroundColor
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html
+  commentId: T:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  name: BackgroundColor(ConsoleFormattingAnnotation.BackgroundColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__ctor_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor(ConsoleFormattingAnnotation.BackgroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor(System.ConsoleColor)
+  name: BackgroundColor(ConsoleColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__ctor_System_ConsoleColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor(System.ConsoleColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor(System.ConsoleColor)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor(ConsoleColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor*
+  name: BackgroundColor
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__ctor_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$
+  name: <Clone>$()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__Clone__
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.<Clone>$()
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.<Clone>$()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$*
+  name: <Clone>$
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__Clone___
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.<Clone>$
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.<Clone>$
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Color
+  name: Color
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Color
+  commentId: P:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Color
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Color
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Color
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Color*
+  name: Color
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Color_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Color
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Color
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Color
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(System.ConsoleColor@)
+  name: Deconstruct(out ConsoleColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Deconstruct_System_ConsoleColor__
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(System.ConsoleColor@)
+  name.vb: Deconstruct(ByRef ConsoleColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(out System.ConsoleColor)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(ByRef System.ConsoleColor)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(out ConsoleColor)
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(ByRef ConsoleColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct*
+  name: Deconstruct
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Deconstruct_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Deconstruct
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.EqualityContract
+  name: EqualityContract
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_EqualityContract
+  commentId: P:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.EqualityContract
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.EqualityContract
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.EqualityContract
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.EqualityContract*
+  name: EqualityContract
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_EqualityContract_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.EqualityContract
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.EqualityContract
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.EqualityContract
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  name: Equals(ConsoleFormattingAnnotation)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Equals_Gutenberg_Rendering_ConsoleFormattingAnnotation_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equals(ConsoleFormattingAnnotation)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  name: Equals(ConsoleFormattingAnnotation.BackgroundColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Equals_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equals(ConsoleFormattingAnnotation.BackgroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(System.Object)
+  name: Equals(Object)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Equals_System_Object_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(System.Object)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(System.Object)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equals(Object)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals*
+  name: Equals
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Equals_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equals
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.GetHashCode
+  name: GetHashCode()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_GetHashCode
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.GetHashCode
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.GetHashCode()
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.GetHashCode()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.GetHashCode*
+  name: GetHashCode
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_GetHashCode_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.GetHashCode
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.GetHashCode
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.GetHashCode
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  name: Equality(ConsoleFormattingAnnotation.BackgroundColor, ConsoleFormattingAnnotation.BackgroundColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Equality_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equality(ConsoleFormattingAnnotation.BackgroundColor, ConsoleFormattingAnnotation.BackgroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality*
+  name: Equality
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Equality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equality
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equality
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  name: Inequality(ConsoleFormattingAnnotation.BackgroundColor, ConsoleFormattingAnnotation.BackgroundColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Inequality_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Inequality(ConsoleFormattingAnnotation.BackgroundColor, ConsoleFormattingAnnotation.BackgroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality*
+  name: Inequality
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Inequality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Inequality
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Inequality
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.PrintMembers(System.Text.StringBuilder)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.PrintMembers(System.Text.StringBuilder)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.PrintMembers(StringBuilder)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.PrintMembers*
+  name: PrintMembers
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_PrintMembers_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.PrintMembers
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.PrintMembers
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.PrintMembers
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.ToString
+  name: ToString()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_ToString
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.ToString
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.ToString()
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.ToString()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.ToString*
+  name: ToString
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_ToString_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.ToString
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.ToString
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.ToString
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.EqualityContract
+  name: EqualityContract
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_EqualityContract
+  commentId: P:Gutenberg.Rendering.ConsoleFormattingAnnotation.EqualityContract
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.EqualityContract
+  nameWithType: ConsoleFormattingAnnotation.EqualityContract
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.EqualityContract*
+  name: EqualityContract
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_EqualityContract_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.EqualityContract
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.EqualityContract
+  nameWithType: ConsoleFormattingAnnotation.EqualityContract
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  name: Equals(ConsoleFormattingAnnotation)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_Equals_Gutenberg_Rendering_ConsoleFormattingAnnotation_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  nameWithType: ConsoleFormattingAnnotation.Equals(ConsoleFormattingAnnotation)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(System.Object)
+  name: Equals(Object)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_Equals_System_Object_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(System.Object)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(System.Object)
+  nameWithType: ConsoleFormattingAnnotation.Equals(Object)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals*
+  name: Equals
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_Equals_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals
+  nameWithType: ConsoleFormattingAnnotation.Equals
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor
+  name: ConsoleFormattingAnnotation.ForegroundColor
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html
+  commentId: T:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  name: ForegroundColor(ConsoleFormattingAnnotation.ForegroundColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__ctor_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor(ConsoleFormattingAnnotation.ForegroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor(System.ConsoleColor)
+  name: ForegroundColor(ConsoleColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__ctor_System_ConsoleColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor(System.ConsoleColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor(System.ConsoleColor)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor(ConsoleColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor*
+  name: ForegroundColor
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__ctor_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$
+  name: <Clone>$()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__Clone__
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.<Clone>$()
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.<Clone>$()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$*
+  name: <Clone>$
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__Clone___
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.<Clone>$
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.<Clone>$
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Color
+  name: Color
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Color
+  commentId: P:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Color
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Color
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Color
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Color*
+  name: Color
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Color_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Color
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Color
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Color
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(System.ConsoleColor@)
+  name: Deconstruct(out ConsoleColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Deconstruct_System_ConsoleColor__
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(System.ConsoleColor@)
+  name.vb: Deconstruct(ByRef ConsoleColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(out System.ConsoleColor)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(ByRef System.ConsoleColor)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(out ConsoleColor)
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(ByRef ConsoleColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct*
+  name: Deconstruct
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Deconstruct_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Deconstruct
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.EqualityContract
+  name: EqualityContract
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_EqualityContract
+  commentId: P:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.EqualityContract
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.EqualityContract
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.EqualityContract
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.EqualityContract*
+  name: EqualityContract
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_EqualityContract_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.EqualityContract
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.EqualityContract
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.EqualityContract
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  name: Equals(ConsoleFormattingAnnotation)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Equals_Gutenberg_Rendering_ConsoleFormattingAnnotation_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equals(ConsoleFormattingAnnotation)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  name: Equals(ConsoleFormattingAnnotation.ForegroundColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Equals_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equals(ConsoleFormattingAnnotation.ForegroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(System.Object)
+  name: Equals(Object)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Equals_System_Object_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(System.Object)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(System.Object)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equals(Object)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals*
+  name: Equals
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Equals_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equals
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.GetHashCode
+  name: GetHashCode()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_GetHashCode
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.GetHashCode
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.GetHashCode()
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.GetHashCode()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.GetHashCode*
+  name: GetHashCode
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_GetHashCode_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.GetHashCode
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.GetHashCode
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.GetHashCode
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  name: Equality(ConsoleFormattingAnnotation.ForegroundColor, ConsoleFormattingAnnotation.ForegroundColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Equality_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equality(ConsoleFormattingAnnotation.ForegroundColor, ConsoleFormattingAnnotation.ForegroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality*
+  name: Equality
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Equality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equality
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equality
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  name: Inequality(ConsoleFormattingAnnotation.ForegroundColor, ConsoleFormattingAnnotation.ForegroundColor)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Inequality_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Inequality(ConsoleFormattingAnnotation.ForegroundColor, ConsoleFormattingAnnotation.ForegroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality*
+  name: Inequality
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Inequality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Inequality
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Inequality
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.PrintMembers(System.Text.StringBuilder)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.PrintMembers(System.Text.StringBuilder)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.PrintMembers(StringBuilder)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.PrintMembers*
+  name: PrintMembers
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_PrintMembers_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.PrintMembers
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.PrintMembers
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.PrintMembers
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ToString
+  name: ToString()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_ToString
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ToString
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ToString()
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.ToString()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ToString*
+  name: ToString
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_ToString_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ToString
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ToString
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.ToString
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.GetHashCode
+  name: GetHashCode()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_GetHashCode
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.GetHashCode
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.GetHashCode()
+  nameWithType: ConsoleFormattingAnnotation.GetHashCode()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.GetHashCode*
+  name: GetHashCode
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_GetHashCode_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.GetHashCode
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.GetHashCode
+  nameWithType: ConsoleFormattingAnnotation.GetHashCode
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  name: Equality(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Equality_Gutenberg_Rendering_ConsoleFormattingAnnotation_Gutenberg_Rendering_ConsoleFormattingAnnotation_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation, Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  nameWithType: ConsoleFormattingAnnotation.Equality(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality*
+  name: Equality
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Equality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equality
+  nameWithType: ConsoleFormattingAnnotation.Equality
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  name: Inequality(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Inequality_Gutenberg_Rendering_ConsoleFormattingAnnotation_Gutenberg_Rendering_ConsoleFormattingAnnotation_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation, Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  nameWithType: ConsoleFormattingAnnotation.Inequality(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality*
+  name: Inequality
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Inequality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Inequality
+  nameWithType: ConsoleFormattingAnnotation.Inequality
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.PrintMembers(System.Text.StringBuilder)
+  name: PrintMembers(StringBuilder)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_PrintMembers_System_Text_StringBuilder_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.PrintMembers(System.Text.StringBuilder)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.PrintMembers(System.Text.StringBuilder)
+  nameWithType: ConsoleFormattingAnnotation.PrintMembers(StringBuilder)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.PrintMembers*
+  name: PrintMembers
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_PrintMembers_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.PrintMembers
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.PrintMembers
+  nameWithType: ConsoleFormattingAnnotation.PrintMembers
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ToString
+  name: ToString()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ToString
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ToString
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ToString()
+  nameWithType: ConsoleFormattingAnnotation.ToString()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ToString*
+  name: ToString
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ToString_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ToString
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ToString
+  nameWithType: ConsoleFormattingAnnotation.ToString
 - uid: Gutenberg.Rendering.DocumentRendererExtensions
   name: DocumentRendererExtensions
   href: Gutenberg.Rendering.DocumentRendererExtensions.html
@@ -1720,6 +2239,70 @@ references:
   fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).NewLine
   nameWithType: StackMachineDocumentRenderer<T>.NewLine
   nameWithType.vb: StackMachineDocumentRenderer(Of T).NewLine
+- uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnBeforePopAnnotation(`0,System.Threading.CancellationToken)
+  name: OnBeforePopAnnotation(T, CancellationToken)
+  href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePopAnnotation__0_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnBeforePopAnnotation(`0,System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.OnBeforePopAnnotation(T, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).OnBeforePopAnnotation(T, System.Threading.CancellationToken)
+  nameWithType: StackMachineDocumentRenderer<T>.OnBeforePopAnnotation(T, CancellationToken)
+  nameWithType.vb: StackMachineDocumentRenderer(Of T).OnBeforePopAnnotation(T, CancellationToken)
+- uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnBeforePopAnnotation*
+  name: OnBeforePopAnnotation
+  href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePopAnnotation_
+  commentId: Overload:Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnBeforePopAnnotation
+  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.OnBeforePopAnnotation
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).OnBeforePopAnnotation
+  nameWithType: StackMachineDocumentRenderer<T>.OnBeforePopAnnotation
+  nameWithType.vb: StackMachineDocumentRenderer(Of T).OnBeforePopAnnotation
+- uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnBeforePushAnnotation(`0,System.Threading.CancellationToken)
+  name: OnBeforePushAnnotation(T, CancellationToken)
+  href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePushAnnotation__0_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnBeforePushAnnotation(`0,System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.OnBeforePushAnnotation(T, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).OnBeforePushAnnotation(T, System.Threading.CancellationToken)
+  nameWithType: StackMachineDocumentRenderer<T>.OnBeforePushAnnotation(T, CancellationToken)
+  nameWithType.vb: StackMachineDocumentRenderer(Of T).OnBeforePushAnnotation(T, CancellationToken)
+- uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnBeforePushAnnotation*
+  name: OnBeforePushAnnotation
+  href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnBeforePushAnnotation_
+  commentId: Overload:Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnBeforePushAnnotation
+  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.OnBeforePushAnnotation
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).OnBeforePushAnnotation
+  nameWithType: StackMachineDocumentRenderer<T>.OnBeforePushAnnotation
+  nameWithType.vb: StackMachineDocumentRenderer(Of T).OnBeforePushAnnotation
+- uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnPopAnnotation(`0,System.Threading.CancellationToken)
+  name: OnPopAnnotation(T, CancellationToken)
+  href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPopAnnotation__0_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnPopAnnotation(`0,System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.OnPopAnnotation(T, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).OnPopAnnotation(T, System.Threading.CancellationToken)
+  nameWithType: StackMachineDocumentRenderer<T>.OnPopAnnotation(T, CancellationToken)
+  nameWithType.vb: StackMachineDocumentRenderer(Of T).OnPopAnnotation(T, CancellationToken)
+- uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnPopAnnotation*
+  name: OnPopAnnotation
+  href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPopAnnotation_
+  commentId: Overload:Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnPopAnnotation
+  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.OnPopAnnotation
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).OnPopAnnotation
+  nameWithType: StackMachineDocumentRenderer<T>.OnPopAnnotation
+  nameWithType.vb: StackMachineDocumentRenderer(Of T).OnPopAnnotation
+- uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnPushAnnotation(`0,System.Threading.CancellationToken)
+  name: OnPushAnnotation(T, CancellationToken)
+  href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPushAnnotation__0_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnPushAnnotation(`0,System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.OnPushAnnotation(T, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).OnPushAnnotation(T, System.Threading.CancellationToken)
+  nameWithType: StackMachineDocumentRenderer<T>.OnPushAnnotation(T, CancellationToken)
+  nameWithType.vb: StackMachineDocumentRenderer(Of T).OnPushAnnotation(T, CancellationToken)
+- uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnPushAnnotation*
+  name: OnPushAnnotation
+  href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_OnPushAnnotation_
+  commentId: Overload:Gutenberg.Rendering.StackMachineDocumentRenderer`1.OnPushAnnotation
+  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.OnPushAnnotation
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).OnPushAnnotation
+  nameWithType: StackMachineDocumentRenderer<T>.OnPushAnnotation
+  nameWithType.vb: StackMachineDocumentRenderer(Of T).OnPushAnnotation
 - uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.PopAnnotation(System.Threading.CancellationToken)
   name: PopAnnotation(CancellationToken)
   href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_PopAnnotation_System_Threading_CancellationToken_

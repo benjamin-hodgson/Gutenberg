@@ -3,10 +3,10 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class MapAnnotationsDocumentRenderer&lt;T, U&gt;
+      <title>Class ConsoleDocumentRenderer
      | Gutenberg </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class MapAnnotationsDocumentRenderer&lt;T, U&gt;
+      <meta name="title" content="Class ConsoleDocumentRenderer
      | Gutenberg ">
       <meta name="generator" content="docfx 2.59.2.0">
     
@@ -82,7 +82,7 @@
                                             <a href="Gutenberg.Rendering.html" title="Gutenberg.Rendering" class="active active-i">Gutenberg.Rendering</a>
                                             <ul id="toc0_1" class="active active-i">
                                                     <li>
-                                                            <a href="Gutenberg.Rendering.ConsoleDocumentRenderer.html" title="ConsoleDocumentRenderer" class="">ConsoleDocumentRenderer</a>
+                                                            <a href="Gutenberg.Rendering.ConsoleDocumentRenderer.html" title="ConsoleDocumentRenderer" class="active active-i">ConsoleDocumentRenderer</a>
                                                     </li>
                                                     <li>
                                                             <a href="Gutenberg.Rendering.ConsoleFormattingAnnotation.html" title="ConsoleFormattingAnnotation" class="">ConsoleFormattingAnnotation</a>
@@ -97,7 +97,7 @@
                                                             <a href="Gutenberg.Rendering.DocumentRendererExtensions.html" title="DocumentRendererExtensions" class="">DocumentRendererExtensions</a>
                                                     </li>
                                                     <li>
-                                                            <a href="Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html" title="MapAnnotationsDocumentRenderer&lt;T, U&gt;" class="active active-i">MapAnnotationsDocumentRenderer&lt;T, U&gt;</a>
+                                                            <a href="Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html" title="MapAnnotationsDocumentRenderer&lt;T, U&gt;" class="">MapAnnotationsDocumentRenderer&lt;T, U&gt;</a>
                                                     </li>
                                                     <li>
                                                             <a href="Gutenberg.Rendering.PlainTextDocumentRenderer.html" title="PlainTextDocumentRenderer" class="">PlainTextDocumentRenderer</a>
@@ -113,48 +113,23 @@
 
             <div class="col columns">
 <article class="col">
-        <h1 id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2"><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2">Class MapAnnotationsDocumentRenderer&lt;T, U&gt;
+        <h1 id="Gutenberg_Rendering_ConsoleDocumentRenderer"><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer">Class ConsoleDocumentRenderer
         </a></h1>
-        <div><p>An <a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a> which wraps an
-<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a> by applying an asynchronous
-<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func&lt;T,TResult&gt;</a> to all of the annotations in
-the input <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>.</p>
+        <div><p>An <a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a> which writes formatted text to the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.console">Console</a>.</p>
 </div>
             <h5>Inheritance</h5>
             <ul>
                     <li><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></li>
-                <li>MapAnnotationsDocumentRenderer&lt;T, U&gt;</li>
+                <li>ConsoleDocumentRenderer</li>
             </ul>
             <h5>Implements</h5>
             <ul>
-                    <li><a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer</a>&lt;T&gt;</li>
+                    <li><a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer</a>&lt;<a class="xref" href="Gutenberg.Rendering.ConsoleFormattingAnnotation.html">ConsoleFormattingAnnotation</a>&gt;</li>
             </ul>
         
         
         <h5>Declaration</h5>
-        <pre><code class="lang-csharp hljs">public class MapAnnotationsDocumentRenderer&lt;T, U&gt; : Object, IDocumentRenderer&lt;T&gt;</code></pre>
-            <h5>Type Parameters</h5>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                        <tr>
-                            <td><p>T</p></td>
-                            <td><p>The type of annotations in the input <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>.</p>
-</td>
-                        </tr>
-                        <tr>
-                            <td><p>U</p></td>
-                            <td><p>The type of annotations accepted by the wrapped
-<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.</p>
-</td>
-                        </tr>
-                </tbody>
-            </table>
+        <pre><code class="lang-csharp hljs">public class ConsoleDocumentRenderer : Object, IDocumentRenderer&lt;ConsoleFormattingAnnotation&gt;</code></pre>
         
         
         
@@ -162,37 +137,12 @@ the input <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>
         </a></h3>
 
                 
-                <a id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2__ctor_"></a>
-                <h4 id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2__ctor_System_Func__0_System_Threading_Tasks_ValueTask__1___Gutenberg_IDocumentRenderer__1__"><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2__ctor_System_Func__0_System_Threading_Tasks_ValueTask__1___Gutenberg_IDocumentRenderer__1__">MapAnnotationsDocumentRenderer(Func&lt;T, ValueTask&lt;U&gt;&gt;, IDocumentRenderer&lt;U&gt;)</a></h4>
-                <div><p>Create a <a class="xref" href="Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html">MapAnnotationsDocumentRenderer&lt;T, U&gt;</a></p>
-</div>
+                <a id="Gutenberg_Rendering_ConsoleDocumentRenderer__ctor_"></a>
+                <h4 id="Gutenberg_Rendering_ConsoleDocumentRenderer__ctor"><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer__ctor">ConsoleDocumentRenderer()</a></h4>
+                <div></div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public MapAnnotationsDocumentRenderer(Func&lt;T, ValueTask&lt;U&gt;&gt; selector, IDocumentRenderer&lt;U&gt; wrapped)</code></pre>
+                    <pre><code class="lang-csharp hljs">public ConsoleDocumentRenderer()</code></pre>
 
-                        <h5>Parameters</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;U&gt;&gt;</p></td>
-                                    <td><p>selector</p></td>
-                                    <td><p>The function to apply to the annotations</p>
-</td>
-                                </tr>
-                                <tr>
-                                    <td><p><a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer</a>&lt;U&gt;</p></td>
-                                    <td><p>wrapped</p></td>
-                                    <td><p>The wrapped document renderer</p>
-</td>
-                                </tr>
-                            </tbody>
-                        </table>
         
         
         
@@ -207,8 +157,8 @@ the input <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>
         </a></h3>
 
                 
-                <a id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_NewLine_"></a>
-                <h4 id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_NewLine_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_NewLine_System_Threading_CancellationToken_">NewLine(CancellationToken)</a></h4>
+                <a id="Gutenberg_Rendering_ConsoleDocumentRenderer_NewLine_"></a>
+                <h4 id="Gutenberg_Rendering_ConsoleDocumentRenderer_NewLine_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer_NewLine_System_Threading_CancellationToken_">NewLine(CancellationToken)</a></h4>
                 <div><p>Write a line break into the output stream.</p>
 </div>
                 <h5>Declaration</h5>
@@ -260,8 +210,8 @@ line break has been written to the output stream</p>
                         
         
                 
-                <a id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PopAnnotation_"></a>
-                <h4 id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PopAnnotation_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PopAnnotation_System_Threading_CancellationToken_">PopAnnotation(CancellationToken)</a></h4>
+                <a id="Gutenberg_Rendering_ConsoleDocumentRenderer_PopAnnotation_"></a>
+                <h4 id="Gutenberg_Rendering_ConsoleDocumentRenderer_PopAnnotation_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer_PopAnnotation_System_Threading_CancellationToken_">PopAnnotation(CancellationToken)</a></h4>
                 <div><p>Discard the value of a previous call to <a class="xref" href="Gutenberg.IDocumentRenderer-1.html#Gutenberg_IDocumentRenderer_1_PushAnnotation__0_System_Threading_CancellationToken_">PushAnnotation(T, CancellationToken)</a></p>
 </div>
                 <h5>Declaration</h5>
@@ -313,12 +263,12 @@ value has been popped from the stack</p>
                         
         
                 
-                <a id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PushAnnotation_"></a>
-                <h4 id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PushAnnotation__0_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PushAnnotation__0_System_Threading_CancellationToken_">PushAnnotation(T, CancellationToken)</a></h4>
+                <a id="Gutenberg_Rendering_ConsoleDocumentRenderer_PushAnnotation_"></a>
+                <h4 id="Gutenberg_Rendering_ConsoleDocumentRenderer_PushAnnotation_Gutenberg_Rendering_ConsoleFormattingAnnotation_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer_PushAnnotation_Gutenberg_Rendering_ConsoleFormattingAnnotation_System_Threading_CancellationToken_">PushAnnotation(ConsoleFormattingAnnotation, CancellationToken)</a></h4>
                 <div><p>Accept an annotation</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public ValueTask PushAnnotation(T value, CancellationToken cancellationToken = null)</code></pre>
+                    <pre><code class="lang-csharp hljs">public ValueTask PushAnnotation(ConsoleFormattingAnnotation value, CancellationToken cancellationToken = null)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -331,10 +281,9 @@ value has been popped from the stack</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><span class="xref">T</span></p></td>
+                                    <td><p><a class="xref" href="Gutenberg.Rendering.ConsoleFormattingAnnotation.html">ConsoleFormattingAnnotation</a></p></td>
                                     <td><p>value</p></td>
-                                    <td><p>The annotation to push onto the stack</p>
-</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
@@ -372,8 +321,8 @@ value has been pushed onto the stack</p>
                         
         
                 
-                <a id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_Text_"></a>
-                <h4 id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_">Text(ReadOnlyMemory&lt;Char&gt;, CancellationToken)</a></h4>
+                <a id="Gutenberg_Rendering_ConsoleDocumentRenderer_Text_"></a>
+                <h4 id="Gutenberg_Rendering_ConsoleDocumentRenderer_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_">Text(ReadOnlyMemory&lt;Char&gt;, CancellationToken)</a></h4>
                 <div><p>Write some text into the output stream</p>
 </div>
                 <h5>Declaration</h5>
@@ -431,8 +380,8 @@ text has been written to the output stream</p>
                         
         
                 
-                <a id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_WhiteSpace_"></a>
-                <h4 id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_WhiteSpace_System_Int32_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_WhiteSpace_System_Int32_System_Threading_CancellationToken_">WhiteSpace(Int32, CancellationToken)</a></h4>
+                <a id="Gutenberg_Rendering_ConsoleDocumentRenderer_WhiteSpace_"></a>
+                <h4 id="Gutenberg_Rendering_ConsoleDocumentRenderer_WhiteSpace_System_Int32_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer_WhiteSpace_System_Int32_System_Threading_CancellationToken_">WhiteSpace(Int32, CancellationToken)</a></h4>
                 <div><p>Write the given <code data-dev-comment-type="paramref" class="paramref">amount</code> of
 blank space into the output stream.</p>
 </div>
@@ -506,7 +455,7 @@ white space has been written to the output stream</p>
     <nav id="local-toc">
         <ul class="active">
             <li>
-                <a class="active" href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2">Class MapAnnotationsDocumentRenderer&lt;T, U&gt;
+                <a class="active" href="#Gutenberg_Rendering_ConsoleDocumentRenderer">Class ConsoleDocumentRenderer
     </a>
                 <ul class="active">
                         <li>
@@ -514,7 +463,7 @@ white space has been written to the output stream</p>
     </a>
 
                             <ul>
-                                    <li><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2__ctor_System_Func__0_System_Threading_Tasks_ValueTask__1___Gutenberg_IDocumentRenderer__1__">MapAnnotationsDocumentRenderer(Func&lt;T, ValueTask&lt;U&gt;&gt;, IDocumentRenderer&lt;U&gt;)</a></li>
+                                    <li><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer__ctor">ConsoleDocumentRenderer()</a></li>
                             </ul>
                         </li>
                         <li>
@@ -522,11 +471,11 @@ white space has been written to the output stream</p>
     </a>
 
                             <ul>
-                                    <li><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_NewLine_System_Threading_CancellationToken_">NewLine(CancellationToken)</a></li>
-                                    <li><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PopAnnotation_System_Threading_CancellationToken_">PopAnnotation(CancellationToken)</a></li>
-                                    <li><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PushAnnotation__0_System_Threading_CancellationToken_">PushAnnotation(T, CancellationToken)</a></li>
-                                    <li><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_">Text(ReadOnlyMemory&lt;Char&gt;, CancellationToken)</a></li>
-                                    <li><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_WhiteSpace_System_Int32_System_Threading_CancellationToken_">WhiteSpace(Int32, CancellationToken)</a></li>
+                                    <li><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer_NewLine_System_Threading_CancellationToken_">NewLine(CancellationToken)</a></li>
+                                    <li><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer_PopAnnotation_System_Threading_CancellationToken_">PopAnnotation(CancellationToken)</a></li>
+                                    <li><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer_PushAnnotation_Gutenberg_Rendering_ConsoleFormattingAnnotation_System_Threading_CancellationToken_">PushAnnotation(ConsoleFormattingAnnotation, CancellationToken)</a></li>
+                                    <li><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_">Text(ReadOnlyMemory&lt;Char&gt;, CancellationToken)</a></li>
+                                    <li><a href="#Gutenberg_Rendering_ConsoleDocumentRenderer_WhiteSpace_System_Int32_System_Threading_CancellationToken_">WhiteSpace(Int32, CancellationToken)</a></li>
                             </ul>
                         </li>
                 </ul>

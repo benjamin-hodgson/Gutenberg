@@ -82,6 +82,18 @@
                                             <a href="Gutenberg.Rendering.html" title="Gutenberg.Rendering" class="">Gutenberg.Rendering</a>
                                             <ul id="toc0_1" class="">
                                                     <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleDocumentRenderer.html" title="ConsoleDocumentRenderer" class="">ConsoleDocumentRenderer</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleFormattingAnnotation.html" title="ConsoleFormattingAnnotation" class="">ConsoleFormattingAnnotation</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html" title="ConsoleFormattingAnnotation.BackgroundColor" class="">ConsoleFormattingAnnotation.BackgroundColor</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html" title="ConsoleFormattingAnnotation.ForegroundColor" class="">ConsoleFormattingAnnotation.ForegroundColor</a>
+                                                    </li>
+                                                    <li>
                                                             <a href="Gutenberg.Rendering.DocumentRendererExtensions.html" title="DocumentRendererExtensions" class="">DocumentRendererExtensions</a>
                                                     </li>
                                                     <li>
@@ -496,7 +508,7 @@ var mask = Box.Transparent(1, 1)
     .LeftOf(&quot;*&quot;).RightOf(&quot;*&quot;)
     .Above(&quot;***&quot;).Below(&quot;***&quot;);
 var box = Box.FromString(&quot;abcde\nfghij\nklmno&quot;)
-    .Behind(mask, Alignment.CentreStart)
+    .Behind(mask, Alignment.CenterStart)
     .WithBorder();
 Console.Write(box.ToString());
 // Output:
@@ -747,7 +759,7 @@ var mask = Box.Transparent(1, 1)
     .LeftOf(&quot;*&quot;).RightOf(&quot;*&quot;)
     .Above(&quot;***&quot;).Below(&quot;***&quot;);
 var box = mask
-    .InFrontOf(&quot;abcde\nfghij\nklmno&quot;, Alignment.CentreStart)
+    .InFrontOf(&quot;abcde\nfghij\nklmno&quot;, Alignment.CenterStart)
     .WithBorder();
 Console.Write(box.ToString());
 // Output:

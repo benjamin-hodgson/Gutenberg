@@ -82,6 +82,18 @@
                                             <a href="Gutenberg.Rendering.html" title="Gutenberg.Rendering" class="">Gutenberg.Rendering</a>
                                             <ul id="toc0_1" class="">
                                                     <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleDocumentRenderer.html" title="ConsoleDocumentRenderer" class="">ConsoleDocumentRenderer</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleFormattingAnnotation.html" title="ConsoleFormattingAnnotation" class="">ConsoleFormattingAnnotation</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html" title="ConsoleFormattingAnnotation.BackgroundColor" class="">ConsoleFormattingAnnotation.BackgroundColor</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html" title="ConsoleFormattingAnnotation.ForegroundColor" class="">ConsoleFormattingAnnotation.ForegroundColor</a>
+                                                    </li>
+                                                    <li>
                                                             <a href="Gutenberg.Rendering.DocumentRendererExtensions.html" title="DocumentRendererExtensions" class="">DocumentRendererExtensions</a>
                                                     </li>
                                                     <li>
@@ -122,14 +134,14 @@ with mismatched sizes.</p>
         </a></h3>
 
                 
-                <h4 id="Gutenberg_Alignment_CentreEnd"><a href="#Gutenberg_Alignment_CentreEnd">CentreEnd</a></h4>
+                <h4 id="Gutenberg_Alignment_CenterEnd"><a href="#Gutenberg_Alignment_CenterEnd">CenterEnd</a></h4>
                 <div><p>Align the smaller box with the centre of the larger one.
 If the box can&apos;t be exactly centred (because the width
 difference is an odd number), align it one character closer
 to the end.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public const Alignment CentreEnd</code></pre>
+                    <pre><code class="lang-csharp hljs">public const Alignment CenterEnd</code></pre>
 
         
         
@@ -154,12 +166,12 @@ to the end.</p>
         
         
         
-                    <h5 id="Gutenberg_Alignment_CentreEnd_examples">Examples</h5>
+                    <h5 id="Gutenberg_Alignment_CenterEnd_examples">Examples</h5>
                 <p>When boxes are being composed vertically,
 the start of the alignment axis is the
 left-hand side of the box.</p>
 <pre><code>var box = Box.FromString(&quot;abcdefgh&quot;)
-    .Above(&quot;ijk&quot;, Alignment.CentreEnd)
+    .Above(&quot;ijk&quot;, Alignment.CenterEnd)
     .WithBorder();
 Console.Write(box.ToString());
 // Output:
@@ -172,7 +184,7 @@ Console.Write(box.ToString());
 the start of the alignment axis is the
 top of the box.</p>
 <pre><code>var box = Box.FromString(string.Join(&apos;\n&apos;, &quot;abcdefgh&quot;.AsEnumerable()))
-    .LeftOf(string.Join(&apos;\n&apos;, &quot;ijk&quot;.AsEnumerable()), Alignment.CentreEnd)
+    .LeftOf(string.Join(&apos;\n&apos;, &quot;ijk&quot;.AsEnumerable()), Alignment.CenterEnd)
     .WithBorder();
 Console.Write(box.ToString());
 // Output:
@@ -190,14 +202,14 @@ Console.Write(box.ToString());
                         
         
                 
-                <h4 id="Gutenberg_Alignment_CentreStart"><a href="#Gutenberg_Alignment_CentreStart">CentreStart</a></h4>
+                <h4 id="Gutenberg_Alignment_CenterStart"><a href="#Gutenberg_Alignment_CenterStart">CenterStart</a></h4>
                 <div><p>Align the smaller box with the centre of the larger one.
 If the box can&apos;t be exactly centred (because the width
 difference is an odd number), align it one character closer
 to the start.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public const Alignment CentreStart</code></pre>
+                    <pre><code class="lang-csharp hljs">public const Alignment CenterStart</code></pre>
 
         
         
@@ -222,12 +234,12 @@ to the start.</p>
         
         
         
-                    <h5 id="Gutenberg_Alignment_CentreStart_examples">Examples</h5>
+                    <h5 id="Gutenberg_Alignment_CenterStart_examples">Examples</h5>
                 <p>When boxes are being composed vertically,
 the start of the alignment axis is the
 left-hand side of the box.</p>
 <pre><code>var box = Box.FromString(&quot;abcdefgh&quot;)
-    .Above(&quot;ijk&quot;, Alignment.CentreStart)
+    .Above(&quot;ijk&quot;, Alignment.CenterStart)
     .WithBorder();
 Console.Write(box.ToString());
 // Output:
@@ -240,7 +252,7 @@ Console.Write(box.ToString());
 the start of the alignment axis is the
 top of the box.</p>
 <pre><code>var box = Box.FromString(string.Join(&apos;\n&apos;, &quot;abcdefgh&quot;.AsEnumerable()))
-    .LeftOf(string.Join(&apos;\n&apos;, &quot;ijk&quot;.AsEnumerable()), Alignment.CentreStart)
+    .LeftOf(string.Join(&apos;\n&apos;, &quot;ijk&quot;.AsEnumerable()), Alignment.CenterStart)
     .WithBorder();
 Console.Write(box.ToString());
 // Output:
@@ -440,8 +452,8 @@ Console.Write(box.ToString());
     </a>
 
                             <ul>
-                                    <li><a href="#Gutenberg_Alignment_CentreEnd">CentreEnd</a></li>
-                                    <li><a href="#Gutenberg_Alignment_CentreStart">CentreStart</a></li>
+                                    <li><a href="#Gutenberg_Alignment_CenterEnd">CenterEnd</a></li>
+                                    <li><a href="#Gutenberg_Alignment_CenterStart">CenterStart</a></li>
                                     <li><a href="#Gutenberg_Alignment_End">End</a></li>
                                     <li><a href="#Gutenberg_Alignment_Start">Start</a></li>
                                     <li><a href="#Gutenberg_Alignment_value__">value__</a></li>
