@@ -9,7 +9,7 @@ namespace Gutenberg.Rendering;
 [SuppressMessage("design", "CA1034")]  // "Do not nest types"
 public abstract record ConsoleFormattingAnnotation
 {
-    private ConsoleFormattingAnnotation() {}
+    private ConsoleFormattingAnnotation() { }
 
     /// <summary>Set the <see cref="Console.ForegroundColor"/></summary>
     /// <param name="Color">The colour</param>

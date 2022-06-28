@@ -20,7 +20,7 @@ public class ConsoleDocumentRenderer : IDocumentRenderer<ConsoleFormattingAnnota
         Console.Out.Write(memory.Span);
         return ValueTask.CompletedTask;
     }
-    
+
     /// <inheritdoc cref="IDocumentRenderer{T}.WhiteSpace"/>
     public ValueTask WhiteSpace(int amount, CancellationToken cancellationToken = default)
     {
