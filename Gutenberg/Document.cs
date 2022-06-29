@@ -1007,7 +1007,7 @@ public abstract class Document<T> : IStackItem<T>
     public static Document<T> UnsafeFromString(string value)
     {
         ArgumentNullException.ThrowIfNull(value);
-        return new TextDocument<T>(value.AsMemory());
+        return new TextDocument<T>(new StringSlice(value, 0, value.Length));
     }
 
     /// <summary>
@@ -1036,20 +1036,7 @@ public abstract class Document<T> : IStackItem<T>
     {
         ArgumentNullException.ThrowIfNull(text);
 
-        IEnumerable<Document<T>> Iterator()
-        {
-            var docLength = 0;
-            for (var i = 0; i < text.Length; i++)
-            {
-                if (char.IsWhiteSpace(text[i]) && i > docLength)
-                {
-                    yield return new TextDocument<T>(text.AsMemory()[docLength..i]);
-                    docLength = i + 1;
-                }
-            }
-            yield return new TextDocument<T>(text.AsMemory()[docLength..]);
-        }
-        return Concat(Iterator().Intersperse(LineBreakHint));
+        return Concat(text.SplitWords().Select(s => new TextDocument<T>(s)).Intersperse(LineBreakHint));
     }
 
     /// <summary>

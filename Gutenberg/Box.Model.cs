@@ -47,9 +47,9 @@ internal class TransparentBox<T> : Box<T>
 
 internal class TextBox<T> : Box<T>
 {
-    public ReadOnlyMemory<char> Line { get; }
+    public StringSlice Line { get; }
 
-    public TextBox(ReadOnlyMemory<char> line) : base(line.Length, 1)
+    public TextBox(StringSlice line) : base(line.Length, 1)
     {
         Line = line;
     }
@@ -69,7 +69,7 @@ internal class TextBox<T> : Box<T>
 
     internal override async ValueTask WriteLine(IDocumentRenderer<T> renderer, int lineNumber, CancellationToken cancellationToken)
     {
-        await renderer.Text(Line, cancellationToken).ConfigureAwait(false);
+        await renderer.Text(Line.AsMemory(), cancellationToken).ConfigureAwait(false);
     }
 
     internal override Box<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)

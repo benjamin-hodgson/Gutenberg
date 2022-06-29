@@ -45,14 +45,14 @@ internal class WhiteSpaceDocument<T> : Document<T>
 
 internal class TextDocument<T> : Document<T>
 {
-    public ReadOnlyMemory<char> Text { get; }
+    public StringSlice Text { get; }
 
-    public TextDocument(ReadOnlyMemory<char> text) : base(text.Length)
+    public TextDocument(StringSlice text) : base(text.Length)
     {
         Text = text;
     }
 
-    public void Deconstruct(out ReadOnlyMemory<char> text)
+    public void Deconstruct(out StringSlice text)
     {
         text = Text;
     }
@@ -61,7 +61,7 @@ internal class TextDocument<T> : Document<T>
         => new TextDocument<U>(Text);
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
-        => renderer.Text(Text, cancellationToken);
+        => renderer.Text(Text.AsMemory(), cancellationToken);
 }
 
 internal class BoxDocument<T> : Document<T>

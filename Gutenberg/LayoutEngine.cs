@@ -46,13 +46,13 @@ internal class LayoutEngine<T>
                     }
                     else
                     {
-                        _lineBuffer.Add(NewLineInstruction<T>.Instance);
+                        _lineBuffer.Add(LayoutInstruction<T>.NewLine);
                         await Flush(cancellationToken).ConfigureAwait(false);
                     }
                     break;
 
                 case WhiteSpaceDocument<T>(var amount):
-                    _lineBuffer.Add(new WhiteSpaceInstruction<T>(amount));
+                    _lineBuffer.Add(LayoutInstruction<T>.WhiteSpace(amount));
                     _lineTextLength += amount;
                     if (!_canBacktrack)
                     {
@@ -65,7 +65,7 @@ internal class LayoutEngine<T>
                     break;
 
                 case TextDocument<T>(var text):
-                    _lineBuffer.Add(new TextInstruction<T>(text));
+                    _lineBuffer.Add(LayoutInstruction<T>.Text(text));
                     _lineTextLength += text.Length;
                     if (!_canBacktrack)
                     {
@@ -144,7 +144,7 @@ internal class LayoutEngine<T>
                     break;
 
                 case AnnotatedDocument<T>(var value, var child):
-                    _lineBuffer.Add(new AnnotationInstruction<T>(value));
+                    _lineBuffer.Add(LayoutInstruction<T>.PushAnnotation(value));
                     Push(PopAnnotation<T>.Instance);
                     Push(child);
                     break;
@@ -184,7 +184,7 @@ internal class LayoutEngine<T>
                     break;
 
                 case PopAnnotation<T>:
-                    _lineBuffer.Add(PopAnnotationInstruction<T>.Instance);
+                    _lineBuffer.Add(LayoutInstruction<T>.PopAnnotation);
                     break;
 
                 case EndFlatten<T>:
@@ -276,21 +276,21 @@ internal class LayoutEngine<T>
                 await ValueTask.FromCanceled(cancellationToken).ConfigureAwait(false);
                 return;
             }
-            switch (instr)
+            switch (instr.GetInstructionType())
             {
-                case TextInstruction<T>(var text):
-                    await _renderer.Text(text, cancellationToken).ConfigureAwait(false);
+                case LayoutInstructionType.Text:
+                    await _renderer.Text(instr.GetText(), cancellationToken).ConfigureAwait(false);
                     break;
-                case WhiteSpaceInstruction<T>(var amt):
-                    await _renderer.WhiteSpace(amt, cancellationToken).ConfigureAwait(false);
+                case LayoutInstructionType.WhiteSpace:
+                    await _renderer.WhiteSpace(instr.GetWhitespaceAmount(), cancellationToken).ConfigureAwait(false);
                     break;
-                case NewLineInstruction<T>:
+                case LayoutInstructionType.NewLine:
                     await WriteNewLine(cancellationToken).ConfigureAwait(false);
                     break;
-                case AnnotationInstruction<T>(var val):
-                    await _renderer.PushAnnotation(val, cancellationToken).ConfigureAwait(false);
+                case LayoutInstructionType.PushAnnotation:
+                    await _renderer.PushAnnotation(instr.GetAnnotation(), cancellationToken).ConfigureAwait(false);
                     break;
-                case PopAnnotationInstruction<T>:
+                case LayoutInstructionType.PopAnnotation:
                     await _renderer.PopAnnotation(cancellationToken).ConfigureAwait(false);
                     break;
             }
