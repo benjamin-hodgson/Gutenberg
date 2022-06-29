@@ -12,7 +12,7 @@ internal record ChoicePoint<T>(
     int ResumeAt  // stack location
 ) : IStackItem<T>;
 
-internal record Unnest<T>(int Amount) : IStackItem<T>;
+internal record SetNestingLevel<T>(int NestingLevel) : IStackItem<T>;
 
 internal record PopAnnotation<T> : IStackItem<T>
 {

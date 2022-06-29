@@ -96,9 +96,8 @@ internal class LayoutEngine<T>
                     }
 
                     // make sure box gets aligned
-                    var delta1 = _wroteIndentation + _lineTextLength - _nestingLevel;
-                    _nestingLevel += delta1;
-                    Push(new Unnest<T>(delta1));
+                    Push(new SetNestingLevel<T>(_nestingLevel));
+                    _nestingLevel = _wroteIndentation + _lineTextLength;
 
                     // need to flush the buffer, since box bypasses it
                     await Flush(cancellationToken).ConfigureAwait(false);
@@ -139,9 +138,8 @@ internal class LayoutEngine<T>
                     break;
 
                 case NestedDocument<T>(var n, var nestedDoc):
-                    var m = n ?? _options.DefaultNesting;
-                    _nestingLevel += m;
-                    Push(new Unnest<T>(m));
+                    Push(new SetNestingLevel<T>(_nestingLevel));
+                    _nestingLevel += n ?? _options.DefaultNesting;
                     Push(nestedDoc);
                     break;
 
@@ -161,8 +159,13 @@ internal class LayoutEngine<T>
                     break;
 
                 case AlignedDocument<T>(var doc):
-                    var delta = _wroteIndentation + _lineTextLength - _nestingLevel;
-                    Push(new NestedDocument<T>(delta, doc));
+                    // read from bottom to top, because most recent push is popped first:
+                    // 1. set the nesting level to the current location
+                    // 2. write the doc
+                    // 3. return the nesting level to what it was
+                    Push(new SetNestingLevel<T>(_nestingLevel));
+                    Push(doc);
+                    Push(new SetNestingLevel<T>(_wroteIndentation + _lineTextLength));
                     break;
 
                 case ChoicePoint<T>(_, _, _, _, _, _, var resumeAt) cp:
@@ -176,8 +179,8 @@ internal class LayoutEngine<T>
                     Push(_stack[resumeAt]);
                     break;
 
-                case Unnest<T>(var n):
-                    _nestingLevel -= n;
+                case SetNestingLevel<T>(var nestingLevel):
+                    _nestingLevel = nestingLevel;
                     break;
 
                 case PopAnnotation<T>:
@@ -246,6 +249,7 @@ internal class LayoutEngine<T>
                 return;
             }
         }
+        throw new InvalidOperationException("Didn't find a choice point! Please report this as a bug in Gutenberg");
     }
 
     private async ValueTask Flush(CancellationToken cancellationToken)
