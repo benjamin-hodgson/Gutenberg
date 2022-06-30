@@ -96,7 +96,7 @@ internal class LayoutEngine<T>
                     }
 
                     // make sure box gets aligned
-                    Push(new SetNestingLevel<T>(_nestingLevel));
+                    Push(SetNestingLevel<T>.Create(_nestingLevel));
                     _nestingLevel = _wroteIndentation + _lineTextLength;
 
                     // need to flush the buffer, since box bypasses it
@@ -138,7 +138,7 @@ internal class LayoutEngine<T>
                     break;
 
                 case NestedDocument<T>(var n, var nestedDoc):
-                    Push(new SetNestingLevel<T>(_nestingLevel));
+                    Push(SetNestingLevel<T>.Create(_nestingLevel));
                     _nestingLevel += n ?? _options.DefaultNesting;
                     Push(nestedDoc);
                     break;
@@ -163,9 +163,9 @@ internal class LayoutEngine<T>
                     // 1. set the nesting level to the current location
                     // 2. write the doc
                     // 3. return the nesting level to what it was
-                    Push(new SetNestingLevel<T>(_nestingLevel));
+                    Push(SetNestingLevel<T>.Create(_nestingLevel));
                     Push(doc);
-                    Push(new SetNestingLevel<T>(_wroteIndentation + _lineTextLength));
+                    Push(SetNestingLevel<T>.Create(_wroteIndentation + _lineTextLength));
                     break;
 
                 case ChoicePoint<T>(_, _, _, _, _, _, var resumeAt) cp:
