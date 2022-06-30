@@ -6,6 +6,9 @@ namespace Gutenberg.Rendering;
 /// </summary>
 public class PlainTextDocumentRenderer : IDocumentRenderer<object>
 {
+    private static readonly ReadOnlyMemory<char> _whitespace
+        = new string(' ', 128).AsMemory();
+
     /// <summary>The output <see cref="TextWriter"/></summary>
     protected TextWriter Writer { get; }
 
@@ -35,7 +38,9 @@ public class PlainTextDocumentRenderer : IDocumentRenderer<object>
     public virtual async ValueTask WhiteSpace(int amount, CancellationToken cancellationToken = default)
     {
         await Writer.WriteAsync(
-            new string(' ', amount).AsMemory(),  // fixme: pool this
+            amount < _whitespace.Length
+                ? _whitespace[..amount]
+                : new string(' ', amount).AsMemory(),
             cancellationToken
         ).ConfigureAwait(false);
     }
