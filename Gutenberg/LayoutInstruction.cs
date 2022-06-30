@@ -63,7 +63,7 @@ internal readonly struct LayoutInstruction<T>
         // nullability: This should only be called if
         // GetInstructionType returned Text
         => ((string)Object!).AsMemory(Offset, Length);
-        
+
     public int GetWhitespaceAmount()
         => Length;
 
@@ -76,7 +76,7 @@ internal readonly struct LayoutInstruction<T>
 
     public static LayoutInstruction<T> WhiteSpace(int amount)
         => new(null, -1, amount);
-    
+
     public static LayoutInstruction<T> Text(StringSlice slice)
         => new(slice.String, slice.StartIndex, slice.Length);
 
