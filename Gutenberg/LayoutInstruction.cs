@@ -18,39 +18,39 @@ internal readonly struct LayoutInstruction<T>
     // x, -1, -1: push annotation x.
     // PopAnnotationInstruction.Instance, _, _: pop annotation
     // NewLineInstruction.Instance, _, _: write newline
-    public object? Object { get; }
-    public int Offset { get; }
-    public int Length { get; }
+    private readonly object? _object;
+    private readonly int _offset;
+    private readonly int _length;
 
     private LayoutInstruction(object? obj, int offset, int length)
     {
-        Object = obj;
-        Offset = offset;
-        Length = length;
+        _object = obj;
+        _offset = offset;
+        _length = length;
     }
 
     public LayoutInstructionType GetInstructionType()
     {
-        if (ReferenceEquals(Object, NewLineInstruction.Instance))
+        if (ReferenceEquals(_object, NewLineInstruction.Instance))
         {
             return LayoutInstructionType.NewLine;
         }
-        if (ReferenceEquals(Object, PopAnnotationInstruction.Instance))
+        if (ReferenceEquals(_object, PopAnnotationInstruction.Instance))
         {
             return LayoutInstructionType.PopAnnotation;
         }
-        if (Offset < 0 && Length < 0)
+        if (_offset < 0 && _length < 0)
         {
             return LayoutInstructionType.PushAnnotation;
         }
-        if (Offset < 0)
+        if (_offset < 0)
         {
-            // Length >= 0
+            // _length >= 0
             return LayoutInstructionType.WhiteSpace;
         }
-        if (Offset >= 0 && Length >= 0)
+        if (_offset >= 0 && _length >= 0)
         {
-            if (Object is not string)
+            if (_object is not string)
             {
                 ThrowError();
             }
@@ -62,17 +62,17 @@ internal readonly struct LayoutInstruction<T>
     public ReadOnlyMemory<char> GetText()
         // nullability: This should only be called if
         // GetInstructionType returned Text
-        => ((string)Object!).AsMemory(Offset, Length);
+        => ((string)_object!).AsMemory(_offset, _length);
 
     public int GetWhitespaceAmount()
-        => Length;
+        => _length;
 
     public T GetAnnotation()
         // nullability: This should only be called if
         // GetInstructionType returned PushAnnotation.
         // Any nullness will be inherited from the
         // T with which this struct was instantiated.
-        => (T)Object!;
+        => (T)_object!;
 
     public static LayoutInstruction<T> WhiteSpace(int amount)
         => new(null, -1, amount);
