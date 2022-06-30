@@ -2,15 +2,37 @@ namespace Gutenberg;
 
 internal interface IStackItem<T> { }
 
-internal record ChoicePoint<T>(
-    Document<T> Fallback,
-    int NestingLevel,
-    int BufferedInstructionCount,
-    int LineTextLength,
-    bool Flatten,
-    bool CanBacktrack,
-    int ResumeAt  // stack location
-) : IStackItem<T>;
+internal class ChoicePoint<T> : IStackItem<T>
+{
+    public Document<T> Fallback { get; }
+    public int NestingLevel { get; }
+    public int BufferedInstructionCount { get; }
+    public int LineTextLength { get; }
+    public bool Flatten { get; }
+    public bool CanBacktrack { get; }
+    // a stack location. gets updated by
+    // LayoutEngine upon popping a ChoicePoint
+    public int ResumeAt { get; set; }
+
+    public ChoicePoint(
+        Document<T> fallback,
+        int nestingLevel,
+        int bufferedInstructionCount,
+        int lineTextLength,
+        bool flatten,
+        bool canBacktrack,
+        int resumeAt
+    )
+    {
+        Fallback = fallback;
+        NestingLevel = nestingLevel;
+        BufferedInstructionCount = bufferedInstructionCount;
+        LineTextLength = lineTextLength;
+        Flatten = flatten;
+        CanBacktrack = canBacktrack;
+        ResumeAt = resumeAt;
+    }
+}
 
 internal class SetNestingLevel<T> : IStackItem<T>
 {
@@ -43,14 +65,14 @@ internal class SetNestingLevel<T> : IStackItem<T>
     }
 }
 
-internal record PopAnnotation<T> : IStackItem<T>
+internal class PopAnnotation<T> : IStackItem<T>
 {
     private PopAnnotation() { }
     public static PopAnnotation<T> Instance { get; }
         = new PopAnnotation<T>();
 }
 
-internal record EndFlatten<T> : IStackItem<T>
+internal class EndFlatten<T> : IStackItem<T>
 {
     private EndFlatten() { }
     public static EndFlatten<T> Instance { get; }

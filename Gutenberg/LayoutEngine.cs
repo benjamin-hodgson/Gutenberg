@@ -78,13 +78,11 @@ internal class LayoutEngine<T>
                     break;
 
                 case BoxDocument<T>(var box):
-                    if (box.Height > 1 && _flatten)
-                    {
-                        // can't write box in flatten mode
-                        Backtrack();
-                        break;
-                    }
-                    if (_canBacktrack && !WillFit(box.Width))
+                    var backtrack =
+                        (box.Height > 1 && _flatten)  // can't write box in flatten mode
+                        || (_canBacktrack && !WillFit(box.Width));
+
+                    if (backtrack)
                     {
                         Backtrack();
                         break;
@@ -92,6 +90,7 @@ internal class LayoutEngine<T>
 
                     if (box.Width == 0 || box.Height == 0)
                     {
+                        // empty
                         break;
                     }
 
@@ -168,15 +167,17 @@ internal class LayoutEngine<T>
                     Push(SetNestingLevel<T>.Create(_wroteIndentation + _lineTextLength));
                     break;
 
-                case ChoicePoint<T>(_, _, _, _, _, _, var resumeAt) cp:
-                    if (resumeAt < 0)
+                case ChoicePoint<T> cp:
+                    if (cp.ResumeAt < 0)
                     {
                         // we wrote the whole document
                         await Flush(cancellationToken).ConfigureAwait(false);
                         return;
                     }
-                    Push(cp with { ResumeAt = GetResumeAt(resumeAt - 1) });
-                    Push(_stack[resumeAt]);
+                    var resume = _stack[cp.ResumeAt];
+                    cp.ResumeAt -= 1;
+                    Push(cp);
+                    Push(resume);
                     break;
 
                 case SetNestingLevel<T>(var nestingLevel):
@@ -238,14 +239,14 @@ internal class LayoutEngine<T>
         while (Pop(out var doc))
         {
             // ignore resumeAt during failure - want to resume where the choice was
-            if (doc is ChoicePoint<T>(var fb, var nest, var count, var textLength, var f, var cb, _))
+            if (doc is ChoicePoint<T> cp)
             {
-                Push(fb);
-                _nestingLevel = nest;
-                _lineBuffer.RemoveRange(count, _lineBuffer.Count - count);
-                _lineTextLength = textLength;
-                _flatten = f;
-                _canBacktrack = cb;
+                Push(cp.Fallback);
+                _nestingLevel = cp.NestingLevel;
+                _lineBuffer.RemoveRange(cp.BufferedInstructionCount, _lineBuffer.Count - cp.BufferedInstructionCount);
+                _lineTextLength = cp.LineTextLength;
+                _flatten = cp.Flatten;
+                _canBacktrack = cp.CanBacktrack;
                 return;
             }
         }
