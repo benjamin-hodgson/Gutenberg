@@ -220,7 +220,7 @@ public class GroupingTests
             .Aligned();
         var expected = "some opening words "
             + string.Join("\n" + new string(' ', 19), alignedText);
-        
+
         await TestDocument(
             expected,
             Doc.Concat(
@@ -251,7 +251,7 @@ public class GroupingTests
             .Aligned();
         var expected = "some opening words "
             + string.Join("\n" + new string(' ', 19), alignedText);
-        
+
         await TestDocument(
             expected,
             Doc.Concat(
