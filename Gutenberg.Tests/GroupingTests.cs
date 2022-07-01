@@ -209,4 +209,57 @@ public class GroupingTests
             7
         );
     }
+
+    [Fact]
+    public async Task TestAligned()
+    {
+        var alignedText = new[] { "and now", "some aligned", "text" };
+        var alignedDoc = alignedText
+            .Select(Doc.FromString)
+            .Separated(Doc.LineBreak)
+            .Aligned();
+        var expected = "some opening words "
+            + string.Join("\n" + new string(' ', 19), alignedText);
+        
+        await TestDocument(
+            expected,
+            Doc.Concat(
+                "some opening words ",
+                alignedDoc
+            )
+        );
+    }
+
+    // https://github.com/benjamin-hodgson/Gutenberg/issues/4
+    [Fact]
+    public async Task Issue4_DefaultLayoutModeCanCauseOverflows()
+    {
+        var alignedText = new[]
+        {
+            "and now",
+            "some aligned",
+            "text",
+            // this line will overflow (75 + 19 = 94),
+            // even though it wouldn't overflow if the
+            // layout algorithm had taken one of the
+            // LineBreakHints in the first line
+            "with an unexpectedly long line later on in the block (after the first line)"
+        };
+        var alignedDoc = alignedText
+            .Select(Doc.FromString)
+            .Separated(Doc.LineBreak)
+            .Aligned();
+        var expected = "some opening words "
+            + string.Join("\n" + new string(' ', 19), alignedText);
+        
+        await TestDocument(
+            expected,
+            Doc.Concat(
+                // put in some optional line breaks - the layout algorithm won't use them
+                Doc.Reflow("some opening words"),
+                Doc.LineBreakHint,
+                alignedDoc
+            )
+        );
+    }
 }
