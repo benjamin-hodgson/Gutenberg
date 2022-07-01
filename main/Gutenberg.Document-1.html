@@ -604,6 +604,47 @@ Console.WriteLine(doc);
 //              second line
 //              third line</code></pre>
 
+                <p><a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Aligned">Aligned()</a> sets the nesting level to the
+current column, but the aligned document may have some
+further nesting inside it.</p>
+<pre><code>var doc = Doc.Concat(
+    &quot;leading text &quot;,
+    Doc.Concat(
+        &quot;first line&quot;, 
+        Doc.LineBreak, &quot;second line&quot;,
+        Doc.Concat (
+            Doc.LineBreak, &quot;nested line 1&quot;,
+            Doc.LineBreak, &quot;nested line 2&quot;
+        ).Nested(4),  // nested inside aligned
+        Doc.LineBreak, &quot;last line&quot;
+    ).Aligned()
+);
+Console.WriteLine(doc);
+// Output:
+// leading text first line
+//              second line
+//                  nested line 1
+//                  nested line 2
+//              last line</code></pre>
+<p>But if an aligned document appears inside a <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Nested_System_Int32_">Nested(Int32)</a>
+document, it overrides the nesting level.</p>
+<pre><code>var doc = Doc.Concat(
+    &quot;leading text &quot;,
+    new Doc[]
+    {
+        &quot;first line&quot;,
+        &quot;second line&quot;,
+        &quot;third line&quot;
+    }.Separated(Doc.LineBreak)
+        .Aligned()  // aligned inside nested
+        .Nested(4)
+);
+Console.WriteLine(doc);
+// Output:
+// leading text first line
+//              second line
+//              third line</code></pre>
+
                         
         
                 
