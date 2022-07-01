@@ -230,6 +230,71 @@ public class GroupingTests
         );
     }
 
+    [Fact]
+    public async Task TestAlignedAndGrouped_SingleLine()
+    {
+        var alignedText = new[] { "and now", "some aligned", "text" };
+        var alignedDoc = alignedText
+            .Select(Doc.FromString)
+            .Separated(Doc.LineBreak)
+            .Aligned();
+        var expected = "some opening words and now some aligned text";
+        var doc = Doc.Concat(
+            "some opening words",
+            Doc.LineBreak,
+            alignedDoc
+        ).Grouped();
+
+        await TestDocument(expected, doc);
+        await TestDocument(expected, doc, 44);
+        await TestDocument(expected, doc, LayoutOptions.Default with { PageWidth = null });
+    }
+
+    [Fact]
+    public async Task TestAlignedAndGrouped_MultiLine_AlignedBlockOnNewLine()
+    {
+        var alignedText = new[] { "and now", "some aligned", "text" };
+        var alignedDoc = alignedText
+            .Select(Doc.FromString)
+            .Separated(Doc.LineBreak)
+            .Aligned();
+        // either all line breaks in a group are taken or none of them are
+        var expected = "some opening words\nand now\nsome aligned\ntext";
+        var doc = Doc.Concat(
+            "some opening words",
+            Doc.LineBreak,
+            alignedDoc
+        ).Grouped();
+
+        await TestDocument(expected, doc, 43);
+        await TestDocument(expected, doc, 20);
+        await TestDocument(expected, doc, 18);
+        // first line overflows but not much the layout algo can do about it
+        await TestDocument(expected, doc, 17);
+    }
+
+    [Fact]
+    public async Task TestAlignedAndGrouped_MultiLine_LineBreakHintOnFirstLine()
+    {
+        var alignedText = new[] { "and now", "some aligned", "text" };
+        var alignedDoc = alignedText
+            .Select(Doc.FromString)
+            .Separated(Doc.LineBreak)
+            .Aligned();
+        var expectedAligned = "some opening words "
+            + string.Join("\n" + new string(' ', 19), alignedText);
+        var doc = Doc.Concat(
+            "some opening words",
+            Doc.LineBreakHint,
+            alignedDoc
+        ).Grouped();
+
+        await TestDocument(expectedAligned, doc, 43);
+        await TestDocument(expectedAligned, doc, 26);
+        // no indentation if the LineBreakHint is taken
+        await TestDocument("some opening words\nand now\nsome aligned\ntext", doc, 25);
+    }
+
     // https://github.com/benjamin-hodgson/Gutenberg/issues/4
     [Fact]
     public async Task Issue4_DefaultLayoutModeCanCauseOverflows()
