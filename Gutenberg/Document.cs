@@ -483,6 +483,52 @@ public abstract class Document<T> : IStackItem<T>
     /// //              third line
     /// </code>
     /// </example>
+    /// <example name="Aligned and nested">
+    /// <see cref="Aligned"/> sets the nesting level to the
+    /// current column, but the aligned document may have some
+    /// further nesting inside it.
+    /// <code doctest="true">
+    /// var doc = Doc.Concat(
+    ///     "leading text ",
+    ///     Doc.Concat(
+    ///         "first line", 
+    ///         Doc.LineBreak, "second line",
+    ///         Doc.Concat (
+    ///             Doc.LineBreak, "nested line 1",
+    ///             Doc.LineBreak, "nested line 2"
+    ///         ).Nested(4),  // nested inside aligned
+    ///         Doc.LineBreak, "last line"
+    ///     ).Aligned()
+    /// );
+    /// Console.WriteLine(doc);
+    /// // Output:
+    /// // leading text first line
+    /// //              second line
+    /// //                  nested line 1
+    /// //                  nested line 2
+    /// //              last line
+    /// </code>
+    /// But if an aligned document appears inside a <see cref="Nested(int)"/>
+    /// document, it overrides the nesting level.
+    /// <code doctest="true">
+    /// var doc = Doc.Concat(
+    ///     "leading text ",
+    ///     new Doc[]
+    ///     {
+    ///         "first line",
+    ///         "second line",
+    ///         "third line"
+    ///     }.Separated(Doc.LineBreak)
+    ///         .Aligned()  // aligned inside nested
+    ///         .Nested(4)
+    /// );
+    /// Console.WriteLine(doc);
+    /// // Output:
+    /// // leading text first line
+    /// //              second line
+    /// //              third line
+    /// </code>
+    /// </example>
     public Document<T> Aligned()
         => new AlignedDocument<T>(this);
 
