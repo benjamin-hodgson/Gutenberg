@@ -1,5 +1,6 @@
 using Box = Gutenberg.Box<object>;
 using Doc = Gutenberg.Document<object>;
+using static Gutenberg.Tests.DocumentTestUtil;
 
 namespace Gutenberg.Tests;
 
@@ -209,6 +210,28 @@ public class BoxTests
         Assert.Equal(
             "first line abc\n           def\n           ghi",
             doc.ToString(12).Trim()  // todo: don't render trailing whitespace
+        );
+    }
+
+    [Fact]
+    public async Task TestAnnotations()
+    {
+        var doc = Document<int>.FromBox(
+            Box<int>
+                .FromString("abc\ndef")
+                .Annotated(2)
+                .LeftOf(Box<int>.Transparent(1, 2))
+                .RightOf(Box<int>.Transparent(1, 2))
+        );
+
+        Assert.Equal(
+            " PUSH(2)abcPOP \n PUSH(2)defPOP \n",
+            await ObserveAnnotations(doc)
+        );
+        
+        Assert.Equal(
+            " PUSH(3)abcPOP \n PUSH(3)defPOP \n",
+            await ObserveAnnotations(doc.MapAnnotations(x => x + 1))
         );
     }
 }

@@ -100,26 +100,8 @@ public class SimpleTests
             .FromString("abc")
             .Annotated(2);
 
-        await TestWithMockRenderer(
-            doc,
-            new MockRenderInstruction<int>.PushAnnotation(2),
-            new MockRenderInstruction<int>.Text("abc"),
-            new MockRenderInstruction<int>.PopAnnotation()
-        );
-
-        await TestWithMockRenderer(
-            doc.MapAnnotations(x => x + 1),
-            new MockRenderInstruction<int>.PushAnnotation(3),
-            new MockRenderInstruction<int>.Text("abc"),
-            new MockRenderInstruction<int>.PopAnnotation()
-        );
-
-        await TestWithMockRenderer(
-            doc,
-            x => x + 1,
-            new MockRenderInstruction<int>.PushAnnotation(3),
-            new MockRenderInstruction<int>.Text("abc"),
-            new MockRenderInstruction<int>.PopAnnotation()
-        );
+        Assert.Equal("PUSH(2)abcPOP", await ObserveAnnotations(doc));
+        Assert.Equal("PUSH(3)abcPOP", await ObserveAnnotations(doc.MapAnnotations(x => x + 1)));
+        Assert.Equal("PUSH(3)abcPOP", await ObserveAnnotations(doc, x => x + 1));
     }
 }

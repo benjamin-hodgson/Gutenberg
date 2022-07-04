@@ -2,7 +2,7 @@ using Gutenberg.Rendering;
 
 namespace Gutenberg.Tests;
 
-internal class DocumentTestUtil
+internal static class DocumentTestUtil
 {
     public static Task TestDocument<T>(string expected, Document<T> doc)
         => TestDocument(expected, doc, LayoutOptions.Default);
@@ -16,21 +16,16 @@ internal class DocumentTestUtil
         return Task.CompletedTask;
     }
 
-    public static Task TestWithMockRenderer<T>(
-        Document<T> doc,
-        params MockRenderInstruction<T>[] expectedInstructions
-    ) => TestWithMockRenderer(doc, x => x, expectedInstructions);
+    public static Task<string> ObserveAnnotations<T>(Document<T> doc)
+        => ObserveAnnotations(doc, x => x);
 
-    public static async Task TestWithMockRenderer<T, U>(
+    public static async Task<string> ObserveAnnotations<T, U>(
         Document<T> doc,
-        Func<T, U> mapAnnotations,
-        params MockRenderInstruction<U>[] expectedInstructions
+        Func<T, U> mapAnnotations
     )
     {
-        {
-            var renderer = new MockDocumentRenderer<U>();
-            await doc.Render(renderer.MapAnnotations(mapAnnotations));
-            Assert.Equal(expectedInstructions, renderer.Instructions);
-        }
+        var renderer = new FakeDocumentRenderer<U>();
+        await doc.Render(renderer.MapAnnotations(mapAnnotations));
+        return renderer.ToString();
     }
 }

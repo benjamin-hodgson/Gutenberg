@@ -302,7 +302,10 @@ internal class LayoutEngine<T>
     private async ValueTask WriteNewLine(CancellationToken cancellationToken)
     {
         await _renderer.NewLine(cancellationToken).ConfigureAwait(false);
-        await _renderer.WhiteSpace(_nestingLevel, cancellationToken).ConfigureAwait(false);
+        if (_nestingLevel > 0)
+        {
+            await _renderer.WhiteSpace(_nestingLevel, cancellationToken).ConfigureAwait(false);
+        }
         _lineTextLength = 0;
         _wroteIndentation = _nestingLevel;
     }
