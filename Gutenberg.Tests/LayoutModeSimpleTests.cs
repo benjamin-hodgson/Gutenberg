@@ -1,5 +1,6 @@
-using Doc = Gutenberg.Document<object>;
 using static Gutenberg.Tests.DocumentTestUtil;
+
+using Doc = Gutenberg.Document<object>;
 
 namespace Gutenberg.Tests;
 
@@ -11,6 +12,7 @@ public class LayoutModeSimpleTests
         var doc = Doc.Concat("abc", Doc.LineBreak, "def")
             .Nested(2)
             .Grouped();
+
         await TestDocument(
             "abc\ndef",
             doc,

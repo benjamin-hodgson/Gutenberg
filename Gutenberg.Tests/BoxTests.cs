@@ -1,6 +1,7 @@
+using static Gutenberg.Tests.DocumentTestUtil;
+
 using Box = Gutenberg.Box<object>;
 using Doc = Gutenberg.Document<object>;
-using static Gutenberg.Tests.DocumentTestUtil;
 
 namespace Gutenberg.Tests;
 
@@ -228,7 +229,7 @@ public class BoxTests
             " PUSH(2)abcPOP \n PUSH(2)defPOP \n",
             await ObserveAnnotations(doc)
         );
-        
+
         Assert.Equal(
             " PUSH(3)abcPOP \n PUSH(3)defPOP \n",
             await ObserveAnnotations(doc.MapAnnotations(x => x + 1))
