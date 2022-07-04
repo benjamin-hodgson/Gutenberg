@@ -41,7 +41,7 @@ public class LayoutModeTests
         var expected = "some opening\nwords"
             // block should still be aligned with the end of 'words'
             + string.Join("\n     ", alignedText);
-        
+
         await TestDocument(
             expected,
             Doc.Concat(
@@ -68,7 +68,7 @@ public class LayoutModeTests
             Doc.Reflow("some opening words"),
             alignedDoc
         );
-        
+
         // should agree with default mode
         Assert.Equal(
             doc.ToString(),
