@@ -1051,6 +1051,12 @@ references:
   commentId: F:Gutenberg.LayoutMode.Simple
   fullName: Gutenberg.LayoutMode.Simple
   nameWithType: LayoutMode.Simple
+- uid: Gutenberg.LayoutMode.Smart
+  name: Smart
+  href: Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Smart
+  commentId: F:Gutenberg.LayoutMode.Smart
+  fullName: Gutenberg.LayoutMode.Smart
+  nameWithType: LayoutMode.Smart
 - uid: Gutenberg.LayoutMode.value__
   name: value__
   href: Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_value__

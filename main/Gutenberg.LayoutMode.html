@@ -217,6 +217,95 @@ Console.WriteLine(doc.ToString(options));
                         
         
                 
+                <h4 id="Gutenberg_LayoutMode_Smart"><a href="#Gutenberg_LayoutMode_Smart">Smart</a></h4>
+                <div><p>
+A &quot;smart&quot; layout mode, which can produce better layouts
+than <a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Default">Default</a> under certain circumstances,
+at the expense of some performance.
+</p>
+<p>
+The <a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Default">Default</a> layout mode commits to rendering a
+<a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a> in a certain way if the rest of the
+current line fits within the page width. In other words,
+the <a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Default">Default</a> layout mode has up to one line of
+lookahead.
+</p>
+<p>
+However, this lookahead strategy can sometimes produce inefficient
+layouts when rendering <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Aligned">Aligned()</a>
+blocks. If the first line of an aligned block fits within
+the page width, the default layout mode commits to rendering the
+whole aligned block indented to the current column, even if that
+would cause a line later on in the block to overflow.
+</p>
+<p>
+The <a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Smart">Smart</a> layout mode instructs the layout engine
+to look ahead further than a single line when rendering an
+aligned block; instead it looks ahead to the first de-indent.
+This means the smart layout algorithm might take a
+<a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_LineBreakHint">LineBreakHint</a>s preceding an aligned
+block, if doing so would prevent a line in the aligned block
+from overflowing.
+</p>
+</div>
+                <h5>Declaration</h5>
+                    <pre><code class="lang-csharp hljs">public const LayoutMode Smart</code></pre>
+
+        
+        
+        
+                        <h5>Field Value</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="Gutenberg.LayoutMode.html">LayoutMode</a></p></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+        
+        
+        
+                    <h5 id="Gutenberg_LayoutMode_Smart_remarks"><a href="#Gutenberg_LayoutMode_Smart_remarks">Remarks</a></h5>
+                    <div><p>This layout mode generally performs worse (more backtracking)
+than the default layout mode, but can produce better layouts
+for documents featuring <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Aligned">Aligned()</a> blocks.</p>
+</div>
+        
+                    <h5 id="Gutenberg_LayoutMode_Smart_examples">Examples</h5>
+                <p>In this example, the second line of the aligned block causes an
+overflow in the <a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Default">Default</a> layout mode. However,
+<a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Smart">Smart</a> layout mode decides to take the line break hint
+on the first line in order to prevent the overflow.</p>
+<pre><code>var doc = Doc.LineBreakHint
+    + new Doc[] { &quot;aligned block&quot;, &quot;containing a long line after the first&quot; }
+        .Separated(Doc.LineBreak)
+        .Aligned();
+
+var defaultOptions = LayoutOptions.Default with { PageWidth = new(50) };
+Console.WriteLine((&quot;Default layout mode:&quot; + doc).ToString(defaultOptions));
+Console.WriteLine();
+
+var smartOptions = defaultOptions with { LayoutMode = LayoutMode.Smart };
+Console.WriteLine((&quot;Smart layout mode:&quot; + doc).ToString(smartOptions));
+// Output:
+// Default layout mode: aligned block
+//                      containing a long line after the first
+//
+// Smart layout mode:
+// aligned block
+// containing a long line after the first</code></pre>
+
+                        
+        
+                
                 <h4 id="Gutenberg_LayoutMode_value__"><a href="#Gutenberg_LayoutMode_value__">value__</a></h4>
                 <div></div>
                 <h5>Declaration</h5>
@@ -269,6 +358,7 @@ Console.WriteLine(doc.ToString(options));
                             <ul>
                                     <li><a href="#Gutenberg_LayoutMode_Default">Default</a></li>
                                     <li><a href="#Gutenberg_LayoutMode_Simple">Simple</a></li>
+                                    <li><a href="#Gutenberg_LayoutMode_Smart">Smart</a></li>
                                     <li><a href="#Gutenberg_LayoutMode_value__">value__</a></li>
                             </ul>
                         </li>
