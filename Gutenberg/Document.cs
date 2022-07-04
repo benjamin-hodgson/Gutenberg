@@ -141,6 +141,7 @@ public abstract class Document<T> : IStackItem<T>
         switch (options.LayoutMode)
         {
             case LayoutMode.Default:
+            case LayoutMode.Smart:
                 var engine = new LayoutEngine<T>(options, renderer);
                 return engine.Layout(this, cancellationToken);
             case LayoutMode.Simple:

@@ -10,6 +10,7 @@ internal class ChoicePoint<T> : IStackItem<T>
     public int LineTextLength { get; }
     public bool Flatten { get; }
     public bool CanBacktrack { get; }
+    public int BufferUntilDeIndent { get; }
     // a stack location. gets updated by
     // LayoutEngine upon popping a ChoicePoint
     public int ResumeAt { get; set; }
@@ -21,6 +22,7 @@ internal class ChoicePoint<T> : IStackItem<T>
         int lineTextLength,
         bool flatten,
         bool canBacktrack,
+        int bufferUntilDeIndent,
         int resumeAt
     )
     {
@@ -30,6 +32,7 @@ internal class ChoicePoint<T> : IStackItem<T>
         LineTextLength = lineTextLength;
         Flatten = flatten;
         CanBacktrack = canBacktrack;
+        BufferUntilDeIndent = bufferUntilDeIndent;
         ResumeAt = resumeAt;
     }
 }

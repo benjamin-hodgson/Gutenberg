@@ -15,6 +15,8 @@ internal class LayoutEngine<T>
     private readonly List<IStackItem<T>> _stack = new();
     private bool _canBacktrack = false;  // are there any ChoicePoints on the stack?
 
+    private int _bufferUntilDeIndent = -1;
+
     public LayoutEngine(LayoutOptions options, IDocumentRenderer<T> renderer)
     {
         _options = options;
@@ -47,7 +49,16 @@ internal class LayoutEngine<T>
                     else
                     {
                         _lineBuffer.Add(LayoutInstruction<T>.NewLine);
-                        await Flush(cancellationToken).ConfigureAwait(false);
+                        if (_nestingLevel > 0)
+                        {
+                            _lineBuffer.Add(LayoutInstruction<T>.WhiteSpace(_nestingLevel));
+                        }
+                        _lineTextLength = 0;
+                        _wroteIndentation = _nestingLevel;
+                        if (_bufferUntilDeIndent < 0)
+                        {
+                            await Flush(cancellationToken).ConfigureAwait(false);
+                        }
                     }
                     break;
 
@@ -77,6 +88,8 @@ internal class LayoutEngine<T>
                     }
                     break;
 
+                // fixme: kind of ugly. Shares some logic with Aligned,
+                // and also bypasses the buffer
                 case BoxDocument<T>(var box):
                     var backtrack =
                         (box.Height > 1 && _flatten)  // can't write box in flatten mode
@@ -104,7 +117,13 @@ internal class LayoutEngine<T>
                     for (var i = 0; i < box.Height; i++)
                     {
                         await box.WriteLine(_renderer, i, cancellationToken).ConfigureAwait(false);
-                        await WriteNewLine(cancellationToken).ConfigureAwait(false);
+                        await _renderer.NewLine(cancellationToken).ConfigureAwait(false);
+                        if (_nestingLevel > 0)
+                        {
+                            await _renderer.WhiteSpace(_nestingLevel, cancellationToken).ConfigureAwait(false);
+                        }
+                        _lineTextLength = 0;
+                        _wroteIndentation = _nestingLevel;
                     }
 
                     break;
@@ -130,6 +149,7 @@ internal class LayoutEngine<T>
                         _lineTextLength,
                         _flatten,
                         _canBacktrack,
+                        _bufferUntilDeIndent,
                         GetResumeAt(_stack.Count - 1)
                     ));
                     _canBacktrack = true;
@@ -157,14 +177,21 @@ internal class LayoutEngine<T>
                     Push(flattenedDoc);
                     break;
 
+                // Is it sufficient to _only_ set _bufferUntilDeIndent when
+                // handling an AlignedDocument? Or are there other cases
                 case AlignedDocument<T>(var doc):
+                    var currentColumn = _wroteIndentation + _lineTextLength;
+                    if (_options.LayoutMode == LayoutMode.Smart && _canBacktrack && currentColumn > 0 && _bufferUntilDeIndent < 0)
+                    {
+                        _bufferUntilDeIndent = currentColumn;
+                    }
                     // read from bottom to top, because most recent push is popped first:
                     // 1. set the nesting level to the current location
                     // 2. write the doc
                     // 3. return the nesting level to what it was
                     Push(SetNestingLevel<T>.Create(_nestingLevel));
                     Push(doc);
-                    Push(SetNestingLevel<T>.Create(_wroteIndentation + _lineTextLength));
+                    Push(SetNestingLevel<T>.Create(currentColumn));
                     break;
 
                 case ChoicePoint<T> cp:
@@ -181,6 +208,10 @@ internal class LayoutEngine<T>
                     break;
 
                 case SetNestingLevel<T>(var nestingLevel):
+                    if (nestingLevel < _bufferUntilDeIndent)
+                    {
+                        _bufferUntilDeIndent = -1;
+                    }
                     _nestingLevel = nestingLevel;
                     break;
 
@@ -247,6 +278,7 @@ internal class LayoutEngine<T>
                 _lineTextLength = cp.LineTextLength;
                 _flatten = cp.Flatten;
                 _canBacktrack = cp.CanBacktrack;
+                _bufferUntilDeIndent = cp.BufferUntilDeIndent;
                 return;
             }
         }
@@ -286,7 +318,7 @@ internal class LayoutEngine<T>
                     await _renderer.WhiteSpace(instr.GetWhitespaceAmount(), cancellationToken).ConfigureAwait(false);
                     break;
                 case LayoutInstructionType.NewLine:
-                    await WriteNewLine(cancellationToken).ConfigureAwait(false);
+                    await _renderer.NewLine(cancellationToken).ConfigureAwait(false);
                     break;
                 case LayoutInstructionType.PushAnnotation:
                     await _renderer.PushAnnotation(instr.GetAnnotation(), cancellationToken).ConfigureAwait(false);
@@ -297,16 +329,5 @@ internal class LayoutEngine<T>
             }
         }
         _lineBuffer.Clear();
-    }
-
-    private async ValueTask WriteNewLine(CancellationToken cancellationToken)
-    {
-        await _renderer.NewLine(cancellationToken).ConfigureAwait(false);
-        if (_nestingLevel > 0)
-        {
-            await _renderer.WhiteSpace(_nestingLevel, cancellationToken).ConfigureAwait(false);
-        }
-        _lineTextLength = 0;
-        _wroteIndentation = _nestingLevel;
     }
 }
