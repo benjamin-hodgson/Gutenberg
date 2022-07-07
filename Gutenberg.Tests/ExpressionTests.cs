@@ -1,10 +1,11 @@
 // using Gutenberg.Expression;
-using Op = Gutenberg.Expression.OperatorFactory<object>;
-using BinOp = Gutenberg.Expression.BinaryOperator<object>;
-using UnOp = Gutenberg.Expression.UnaryOperator<object>;
 // using Expr = Gutenberg.Expression.Expression<object>;
 // using Doc = Gutenberg.Document<object>;
 using static Gutenberg.Tests.DocumentTestUtil;
+
+using BinOp = Gutenberg.Expression.BinaryOperator<object>;
+using Op = Gutenberg.Expression.OperatorFactory<object>;
+using UnOp = Gutenberg.Expression.UnaryOperator<object>;
 
 namespace Gutenberg.Tests;
 

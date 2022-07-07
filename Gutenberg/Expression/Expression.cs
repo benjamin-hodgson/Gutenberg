@@ -72,7 +72,7 @@ public abstract class Expression<T> : IPrettyPrintable<T>
     /// </returns>
     public static Expression<T> FromDocument(Document<T> document)
         => new DocumentExpression<T>(document);
-    
+
     /// <summary>
     /// Implicitly converts a <see cref="Document{T}"/>
     /// to an <see cref="Expression{T}"/>.
@@ -117,7 +117,7 @@ internal class OperatorExpression<T> : Expression<T>
         _precedence = precedence;
         _expressions = expressions;
     }
-    
+
     internal override Document<T> ToDocument(PrecedenceState state)
     {
         var docs = Document<T>.Concat(

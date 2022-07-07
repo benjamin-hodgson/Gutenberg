@@ -64,7 +64,7 @@ public static class OperatorFactory<T>
         ArgumentNullException.ThrowIfNull(symbol);
         return Unary(UnaryOperatorType.Prefix, precedence, symbol);
     }
-    
+
     /// <summary>
     /// Creates a postfix <see cref="UnaryOperator{T}"/>
     /// representing the given <paramref name="symbol"/>,
@@ -136,7 +136,7 @@ public static class OperatorFactory<T>
         ArgumentNullException.ThrowIfNull(symbol);
         return new(BinaryOperatorType.NonAssociative, precedence, symbol);
     }
-    
+
     /// <summary>
     /// Creates a left-associative <see cref="BinaryOperator{T}"/>
     /// representing the given <paramref name="symbol"/>,
