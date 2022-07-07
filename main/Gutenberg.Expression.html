@@ -3,10 +3,10 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class LayoutMode
+      <title>Namespace Gutenberg.Expression
      | Gutenberg </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class LayoutMode
+      <meta name="title" content="Namespace Gutenberg.Expression
      | Gutenberg ">
       <meta name="generator" content="docfx 2.59.2.0">
     
@@ -45,9 +45,9 @@
                     </form>
                             <ul id="toc0" class="active active-i">
                                     <li>
-                                            <button type="button" class="link expander active active-i js-expander" aria-controls="toc0_0"></button>
-                                            <a href="Gutenberg.html" title="Gutenberg" class="active active-i">Gutenberg</a>
-                                            <ul id="toc0_0" class="active active-i">
+                                            <button type="button" class="link expander  js-expander" aria-controls="toc0_0"></button>
+                                            <a href="Gutenberg.html" title="Gutenberg" class="">Gutenberg</a>
+                                            <ul id="toc0_0" class="">
                                                     <li>
                                                             <a href="Gutenberg.Alignment.html" title="Alignment" class="">Alignment</a>
                                                     </li>
@@ -67,7 +67,7 @@
                                                             <a href="Gutenberg.IPrettyPrintable-1.html" title="IPrettyPrintable&lt;T&gt;" class="">IPrettyPrintable&lt;T&gt;</a>
                                                     </li>
                                                     <li>
-                                                            <a href="Gutenberg.LayoutMode.html" title="LayoutMode" class="active active-i">LayoutMode</a>
+                                                            <a href="Gutenberg.LayoutMode.html" title="LayoutMode" class="">LayoutMode</a>
                                                     </li>
                                                     <li>
                                                             <a href="Gutenberg.LayoutOptions.html" title="LayoutOptions" class="">LayoutOptions</a>
@@ -78,9 +78,9 @@
                                             </ul>
                                     </li>
                                     <li>
-                                            <button type="button" class="link expander  js-expander" aria-controls="toc0_1"></button>
-                                            <a href="Gutenberg.Expression.html" title="Gutenberg.Expression" class="">Gutenberg.Expression</a>
-                                            <ul id="toc0_1" class="">
+                                            <button type="button" class="link expander active active-i js-expander" aria-controls="toc0_1"></button>
+                                            <a href="Gutenberg.Expression.html" title="Gutenberg.Expression" class="active active-i">Gutenberg.Expression</a>
+                                            <ul id="toc0_1" class="active active-i">
                                                     <li>
                                                             <a href="Gutenberg.Expression.BinaryOperator-1.html" title="BinaryOperator&lt;T&gt;" class="">BinaryOperator&lt;T&gt;</a>
                                                     </li>
@@ -137,234 +137,54 @@
 
             <div class="col columns">
 <article class="col">
-        <h1 id="Gutenberg_LayoutMode"><a href="#Gutenberg_LayoutMode">Class LayoutMode
+        
+        <h1 id="Gutenberg_Expression"><a href="#Gutenberg_Expression">Namespace Gutenberg.Expression
         </a></h1>
-        <div><p>The layout mode</p>
-</div>
-            <h5>Inheritance</h5>
-            <ul>
-                    <li><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></li>
-                <li>LayoutMode</li>
-            </ul>
-        
-        
-        <h5>Declaration</h5>
-        <pre><code class="lang-csharp hljs">public sealed class LayoutMode : Enum</code></pre>
-        
-        
-        
-            <h3 id="fields"><a href="#fields">Fields
+        <div></div>
+        <div></div>
+            <h3 id="classes"><a href="#classes">Classes
         </a></h3>
-
-                
-                <h4 id="Gutenberg_LayoutMode_Default"><a href="#Gutenberg_LayoutMode_Default">Default</a></h4>
-                <div><p>The default layout mode, with one line of lookahead</p>
-</div>
-                <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public const LayoutMode Default</code></pre>
-
-        
-        
-        
-                        <h5>Field Value</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="Gutenberg.LayoutMode.html">LayoutMode</a></p></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-        
-        
-        
-        
-        
-                        
-        
-                
-                <h4 id="Gutenberg_LayoutMode_Simple"><a href="#Gutenberg_LayoutMode_Simple">Simple</a></h4>
-                <div><p>A fast-and-ugly layout mode. Tells the layout engine
-not to collapse any line breaks and to ignore all 
-indentation and annotations. The resulting text contains 
-fewer characters than the <a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Default">Default</a> mode,
-so may be appropriate for machine-readable output in
-indentation-insensitive contexts.</p>
-</div>
-                <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public const LayoutMode Simple</code></pre>
-
-        
-        
-        
-                        <h5>Field Value</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="Gutenberg.LayoutMode.html">LayoutMode</a></p></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-        
-        
-        
-        
-        
-                    <h5 id="Gutenberg_LayoutMode_Simple_examples">Examples</h5>
-                <pre><code>var doc = Doc.Concat(
-    &quot;abc&quot;, Doc.LineBreak,
-    Doc.Concat(&quot;def&quot;, Doc.LineBreak, &quot;ghi&quot;).Nested()
-);
-var options = LayoutOptions.Default with
-{
-   LayoutMode = LayoutMode.Simple
-};
-Console.WriteLine(doc.ToString(options));
-// Output:
-// abc
-// def
-// ghi</code></pre>
-
-                        
-        
-                
-                <h4 id="Gutenberg_LayoutMode_Smart"><a href="#Gutenberg_LayoutMode_Smart">Smart</a></h4>
-                <div><p>
-A &quot;smart&quot; layout mode, which can produce better layouts
-than <a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Default">Default</a> under certain circumstances,
-at the expense of some performance.
+                <h4><a class="xref" href="Gutenberg.Expression.BinaryOperator-1.html">BinaryOperator&lt;T&gt;</a></h4>
+                <section><p>Represents a binary (infix) operator with a given precedence</p>
+</section>
+                <h4><a class="xref" href="Gutenberg.Expression.BinaryOperatorType.html">BinaryOperatorType</a></h4>
+                <section><p>The associativity of the  <a class="xref" href="Gutenberg.Expression.BinaryOperator-1.html">BinaryOperator&lt;T&gt;</a>:
+left-associative, right-associative, or non-associative</p>
+</section>
+                <h4><a class="xref" href="Gutenberg.Expression.Expression-1.html">Expression&lt;T&gt;</a></h4>
+                <section><p>
+Represents an expression composed of operators
+applied to <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>s.
 </p>
 <p>
-The <a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Default">Default</a> layout mode commits to rendering a
-<a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a> in a certain way if the rest of the
-current line fits within the page width. In other words,
-the <a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Default">Default</a> layout mode has up to one line of
-lookahead.
+You can use <a class="xref" href="Gutenberg.Expression.Expression-1.html">Expression&lt;T&gt;</a> to pretty-print
+code in an expression-based language with operators and
+precedence. <a class="xref" href="Gutenberg.Expression.Expression-1.html">Expression&lt;T&gt;</a> will
+automatically insert parentheses into the resulting document
+to create an unambiguous display.
 </p>
 <p>
-However, this lookahead strategy can sometimes produce inefficient
-layouts when rendering <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Aligned">Aligned()</a>
-blocks. If the first line of an aligned block fits within
-the page width, the default layout mode commits to rendering the
-whole aligned block indented to the current column, even if that
-would cause a line later on in the block to overflow.
+To get started, use the <a class="xref" href="Gutenberg.Expression.OperatorFactory-1.html">OperatorFactory&lt;T&gt;</a> 
+to create objects representing each of the operators in
+your language. Then those operators can be applied to 
+<a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>s and other expressions to create
+complex expressions. Finally, when you <a class="xref" href="Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_PrettyPrint">PrettyPrint()</a>
+the expression, it will return a <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a> with
+parentheses inserted in the correct locations.
 </p>
-<p>
-The <a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Smart">Smart</a> layout mode instructs the layout engine
-to look ahead further than a single line when rendering an
-aligned block; instead it looks ahead to the first de-indent.
-This means the smart layout algorithm might take a
-<a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_LineBreakHint">LineBreakHint</a>s preceding an aligned
-block, if doing so would prevent a line in the aligned block
-from overflowing.
-</p>
-</div>
-                <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public const LayoutMode Smart</code></pre>
-
-        
-        
-        
-                        <h5>Field Value</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="Gutenberg.LayoutMode.html">LayoutMode</a></p></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-        
-        
-        
-        
-                    <h5 id="Gutenberg_LayoutMode_Smart_remarks"><a href="#Gutenberg_LayoutMode_Smart_remarks">Remarks</a></h5>
-                    <div><p>This layout mode generally performs worse (more backtracking)
-than the default layout mode, but can produce better layouts
-for documents featuring <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Aligned">Aligned()</a> blocks.</p>
-</div>
-        
-                    <h5 id="Gutenberg_LayoutMode_Smart_examples">Examples</h5>
-                <p>In this example, the second line of the aligned block causes an
-overflow in the <a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Default">Default</a> layout mode. However,
-<a class="xref" href="Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_Smart">Smart</a> layout mode decides to take the line break hint
-on the first line in order to prevent the overflow.</p>
-<pre><code>var doc = Doc.LineBreakHint
-    + new Doc[] { &quot;aligned block&quot;, &quot;containing a long line after the first&quot; }
-        .Separated(Doc.LineBreak)
-        .Aligned();
-
-var defaultOptions = LayoutOptions.Default with { PageWidth = new(50) };
-Console.WriteLine((&quot;Default layout mode:&quot; + doc).ToString(defaultOptions));
-Console.WriteLine();
-
-var smartOptions = defaultOptions with { LayoutMode = LayoutMode.Smart };
-Console.WriteLine((&quot;Smart layout mode:&quot; + doc).ToString(smartOptions));
-// Output:
-// Default layout mode: aligned block
-//                      containing a long line after the first
-//
-// Smart layout mode:
-// aligned block
-// containing a long line after the first</code></pre>
-
-                        
-        
-                
-                <h4 id="Gutenberg_LayoutMode_value__"><a href="#Gutenberg_LayoutMode_value__">value__</a></h4>
-                <div></div>
-                <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public int value__</code></pre>
-
-        
-        
-        
-                        <h5>Field Value</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></p></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-        
-        
-        
-        
-        
-                        
-        
-        
-        
-
-        
-
+</section>
+                <h4><a class="xref" href="Gutenberg.Expression.OperatorFactory-1.html">OperatorFactory&lt;T&gt;</a></h4>
+                <section><p>Methods to create <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a> and
+<a class="xref" href="Gutenberg.Expression.BinaryOperator-1.html">BinaryOperator&lt;T&gt;</a> values.</p>
+</section>
+                <h4><a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a></h4>
+                <section><p>Represents a unary (prefix or postfix)
+operator with a given precedence</p>
+</section>
+                <h4><a class="xref" href="Gutenberg.Expression.UnaryOperatorType.html">UnaryOperatorType</a></h4>
+                <section><p>The type of the <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a>:
+prefix or postfix</p>
+</section>
     </article>
 
 <div class="col col-sm sticky md:hide">
@@ -372,18 +192,19 @@ Console.WriteLine((&quot;Smart layout mode:&quot; + doc).ToString(smartOptions))
     <nav id="local-toc">
         <ul class="active">
             <li>
-                <a class="active" href="#Gutenberg_LayoutMode">Class LayoutMode
+                <a class="active" href="#Gutenberg_Expression">Namespace Gutenberg.Expression
     </a>
                 <ul class="active">
                         <li>
-                            <a href="#fields">Fields
-    </a>
+                            <a href="#classes"></a>
 
                             <ul>
-                                    <li><a href="#Gutenberg_LayoutMode_Default">Default</a></li>
-                                    <li><a href="#Gutenberg_LayoutMode_Simple">Simple</a></li>
-                                    <li><a href="#Gutenberg_LayoutMode_Smart">Smart</a></li>
-                                    <li><a href="#Gutenberg_LayoutMode_value__">value__</a></li>
+                                    <li><a href="#Gutenberg_Expression_BinaryOperator_1">BinaryOperator&lt;T&gt;</a></li>
+                                    <li><a href="#Gutenberg_Expression_BinaryOperatorType">BinaryOperatorType</a></li>
+                                    <li><a href="#Gutenberg_Expression_Expression_1">Expression&lt;T&gt;</a></li>
+                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1">OperatorFactory&lt;T&gt;</a></li>
+                                    <li><a href="#Gutenberg_Expression_UnaryOperator_1">UnaryOperator&lt;T&gt;</a></li>
+                                    <li><a href="#Gutenberg_Expression_UnaryOperatorType">UnaryOperatorType</a></li>
                             </ul>
                         </li>
                 </ul>

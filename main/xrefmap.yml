@@ -918,6 +918,347 @@ references:
   fullName.vb: Gutenberg.DocumentExtensions.SeparatedAndTerminated(Of T)(System.Collections.Generic.IEnumerable(Of Gutenberg.Document(Of T)), Gutenberg.Document(Of T))
   nameWithType: DocumentExtensions.SeparatedAndTerminated<T>(IEnumerable<Document<T>>, Document<T>)
   nameWithType.vb: DocumentExtensions.SeparatedAndTerminated(Of T)(IEnumerable(Of Document(Of T)), Document(Of T))
+- uid: Gutenberg.Expression
+  name: Gutenberg.Expression
+  href: Gutenberg.Expression.html
+  commentId: N:Gutenberg.Expression
+  fullName: Gutenberg.Expression
+  nameWithType: Gutenberg.Expression
+- uid: Gutenberg.Expression.BinaryOperator`1
+  name: BinaryOperator<T>
+  href: Gutenberg.Expression.BinaryOperator-1.html
+  commentId: T:Gutenberg.Expression.BinaryOperator`1
+  name.vb: BinaryOperator(Of T)
+  fullName: Gutenberg.Expression.BinaryOperator<T>
+  fullName.vb: Gutenberg.Expression.BinaryOperator(Of T)
+  nameWithType: BinaryOperator<T>
+  nameWithType.vb: BinaryOperator(Of T)
+- uid: Gutenberg.Expression.BinaryOperator`1.Apply(Gutenberg.Expression.Expression{`0},Gutenberg.Expression.Expression{`0})
+  name: Apply(Expression<T>, Expression<T>)
+  href: Gutenberg.Expression.BinaryOperator-1.html#Gutenberg_Expression_BinaryOperator_1_Apply_Gutenberg_Expression_Expression__0__Gutenberg_Expression_Expression__0__
+  commentId: M:Gutenberg.Expression.BinaryOperator`1.Apply(Gutenberg.Expression.Expression{`0},Gutenberg.Expression.Expression{`0})
+  name.vb: Apply(Expression(Of T), Expression(Of T))
+  fullName: Gutenberg.Expression.BinaryOperator<T>.Apply(Gutenberg.Expression.Expression<T>, Gutenberg.Expression.Expression<T>)
+  fullName.vb: Gutenberg.Expression.BinaryOperator(Of T).Apply(Gutenberg.Expression.Expression(Of T), Gutenberg.Expression.Expression(Of T))
+  nameWithType: BinaryOperator<T>.Apply(Expression<T>, Expression<T>)
+  nameWithType.vb: BinaryOperator(Of T).Apply(Expression(Of T), Expression(Of T))
+- uid: Gutenberg.Expression.BinaryOperator`1.Apply*
+  name: Apply
+  href: Gutenberg.Expression.BinaryOperator-1.html#Gutenberg_Expression_BinaryOperator_1_Apply_
+  commentId: Overload:Gutenberg.Expression.BinaryOperator`1.Apply
+  fullName: Gutenberg.Expression.BinaryOperator<T>.Apply
+  fullName.vb: Gutenberg.Expression.BinaryOperator(Of T).Apply
+  nameWithType: BinaryOperator<T>.Apply
+  nameWithType.vb: BinaryOperator(Of T).Apply
+- uid: Gutenberg.Expression.BinaryOperatorType
+  name: BinaryOperatorType
+  href: Gutenberg.Expression.BinaryOperatorType.html
+  commentId: T:Gutenberg.Expression.BinaryOperatorType
+  fullName: Gutenberg.Expression.BinaryOperatorType
+  nameWithType: BinaryOperatorType
+- uid: Gutenberg.Expression.BinaryOperatorType.LeftAssociative
+  name: LeftAssociative
+  href: Gutenberg.Expression.BinaryOperatorType.html#Gutenberg_Expression_BinaryOperatorType_LeftAssociative
+  commentId: F:Gutenberg.Expression.BinaryOperatorType.LeftAssociative
+  fullName: Gutenberg.Expression.BinaryOperatorType.LeftAssociative
+  nameWithType: BinaryOperatorType.LeftAssociative
+- uid: Gutenberg.Expression.BinaryOperatorType.NonAssociative
+  name: NonAssociative
+  href: Gutenberg.Expression.BinaryOperatorType.html#Gutenberg_Expression_BinaryOperatorType_NonAssociative
+  commentId: F:Gutenberg.Expression.BinaryOperatorType.NonAssociative
+  fullName: Gutenberg.Expression.BinaryOperatorType.NonAssociative
+  nameWithType: BinaryOperatorType.NonAssociative
+- uid: Gutenberg.Expression.BinaryOperatorType.RightAssociative
+  name: RightAssociative
+  href: Gutenberg.Expression.BinaryOperatorType.html#Gutenberg_Expression_BinaryOperatorType_RightAssociative
+  commentId: F:Gutenberg.Expression.BinaryOperatorType.RightAssociative
+  fullName: Gutenberg.Expression.BinaryOperatorType.RightAssociative
+  nameWithType: BinaryOperatorType.RightAssociative
+- uid: Gutenberg.Expression.BinaryOperatorType.value__
+  name: value__
+  href: Gutenberg.Expression.BinaryOperatorType.html#Gutenberg_Expression_BinaryOperatorType_value__
+  commentId: F:Gutenberg.Expression.BinaryOperatorType.value__
+  fullName: Gutenberg.Expression.BinaryOperatorType.value__
+  nameWithType: BinaryOperatorType.value__
+- uid: Gutenberg.Expression.Expression`1
+  name: Expression<T>
+  href: Gutenberg.Expression.Expression-1.html
+  commentId: T:Gutenberg.Expression.Expression`1
+  name.vb: Expression(Of T)
+  fullName: Gutenberg.Expression.Expression<T>
+  fullName.vb: Gutenberg.Expression.Expression(Of T)
+  nameWithType: Expression<T>
+  nameWithType.vb: Expression(Of T)
+- uid: Gutenberg.Expression.Expression`1.#ctor
+  name: Expression()
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1__ctor
+  commentId: M:Gutenberg.Expression.Expression`1.#ctor
+  fullName: Gutenberg.Expression.Expression<T>.Expression()
+  fullName.vb: Gutenberg.Expression.Expression(Of T).Expression()
+  nameWithType: Expression<T>.Expression()
+  nameWithType.vb: Expression(Of T).Expression()
+- uid: Gutenberg.Expression.Expression`1.#ctor*
+  name: Expression
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1__ctor_
+  commentId: Overload:Gutenberg.Expression.Expression`1.#ctor
+  fullName: Gutenberg.Expression.Expression<T>.Expression
+  fullName.vb: Gutenberg.Expression.Expression(Of T).Expression
+  nameWithType: Expression<T>.Expression
+  nameWithType.vb: Expression(Of T).Expression
+- uid: Gutenberg.Expression.Expression`1.FromDocument(Gutenberg.Document{`0})
+  name: FromDocument(Document<T>)
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_FromDocument_Gutenberg_Document__0__
+  commentId: M:Gutenberg.Expression.Expression`1.FromDocument(Gutenberg.Document{`0})
+  name.vb: FromDocument(Document(Of T))
+  fullName: Gutenberg.Expression.Expression<T>.FromDocument(Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.Expression(Of T).FromDocument(Gutenberg.Document(Of T))
+  nameWithType: Expression<T>.FromDocument(Document<T>)
+  nameWithType.vb: Expression(Of T).FromDocument(Document(Of T))
+- uid: Gutenberg.Expression.Expression`1.FromDocument*
+  name: FromDocument
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_FromDocument_
+  commentId: Overload:Gutenberg.Expression.Expression`1.FromDocument
+  fullName: Gutenberg.Expression.Expression<T>.FromDocument
+  fullName.vb: Gutenberg.Expression.Expression(Of T).FromDocument
+  nameWithType: Expression<T>.FromDocument
+  nameWithType.vb: Expression(Of T).FromDocument
+- uid: Gutenberg.Expression.Expression`1.FromString(System.String)
+  name: FromString(String)
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_FromString_System_String_
+  commentId: M:Gutenberg.Expression.Expression`1.FromString(System.String)
+  fullName: Gutenberg.Expression.Expression<T>.FromString(System.String)
+  fullName.vb: Gutenberg.Expression.Expression(Of T).FromString(System.String)
+  nameWithType: Expression<T>.FromString(String)
+  nameWithType.vb: Expression(Of T).FromString(String)
+- uid: Gutenberg.Expression.Expression`1.FromString*
+  name: FromString
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_FromString_
+  commentId: Overload:Gutenberg.Expression.Expression`1.FromString
+  fullName: Gutenberg.Expression.Expression<T>.FromString
+  fullName.vb: Gutenberg.Expression.Expression(Of T).FromString
+  nameWithType: Expression<T>.FromString
+  nameWithType.vb: Expression(Of T).FromString
+- uid: Gutenberg.Expression.Expression`1.op_Implicit(Gutenberg.Document{`0})~Gutenberg.Expression.Expression{`0}
+  name: Implicit(Document<T> to Expression<T>)
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_op_Implicit_Gutenberg_Document__0___Gutenberg_Expression_Expression__0_
+  commentId: M:Gutenberg.Expression.Expression`1.op_Implicit(Gutenberg.Document{`0})~Gutenberg.Expression.Expression{`0}
+  name.vb: Widening(Document(Of T) to Expression(Of T))
+  fullName: Gutenberg.Expression.Expression<T>.Implicit(Gutenberg.Document<T> to Gutenberg.Expression.Expression<T>)
+  fullName.vb: Gutenberg.Expression.Expression(Of T).Widening(Gutenberg.Document(Of T) to Gutenberg.Expression.Expression(Of T))
+  nameWithType: Expression<T>.Implicit(Document<T> to Expression<T>)
+  nameWithType.vb: Expression(Of T).Widening(Document(Of T) to Expression(Of T))
+- uid: Gutenberg.Expression.Expression`1.op_Implicit(System.String)~Gutenberg.Expression.Expression{`0}
+  name: Implicit(String to Expression<T>)
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_op_Implicit_System_String__Gutenberg_Expression_Expression__0_
+  commentId: M:Gutenberg.Expression.Expression`1.op_Implicit(System.String)~Gutenberg.Expression.Expression{`0}
+  name.vb: Widening(String to Expression(Of T))
+  fullName: Gutenberg.Expression.Expression<T>.Implicit(System.String to Gutenberg.Expression.Expression<T>)
+  fullName.vb: Gutenberg.Expression.Expression(Of T).Widening(System.String to Gutenberg.Expression.Expression(Of T))
+  nameWithType: Expression<T>.Implicit(String to Expression<T>)
+  nameWithType.vb: Expression(Of T).Widening(String to Expression(Of T))
+- uid: Gutenberg.Expression.Expression`1.op_Implicit*
+  name: Implicit
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_op_Implicit_
+  commentId: Overload:Gutenberg.Expression.Expression`1.op_Implicit
+  name.vb: Widening
+  fullName: Gutenberg.Expression.Expression<T>.Implicit
+  fullName.vb: Gutenberg.Expression.Expression(Of T).Widening
+  nameWithType: Expression<T>.Implicit
+  nameWithType.vb: Expression(Of T).Widening
+- uid: Gutenberg.Expression.Expression`1.PrettyPrint
+  name: PrettyPrint()
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_PrettyPrint
+  commentId: M:Gutenberg.Expression.Expression`1.PrettyPrint
+  fullName: Gutenberg.Expression.Expression<T>.PrettyPrint()
+  fullName.vb: Gutenberg.Expression.Expression(Of T).PrettyPrint()
+  nameWithType: Expression<T>.PrettyPrint()
+  nameWithType.vb: Expression(Of T).PrettyPrint()
+- uid: Gutenberg.Expression.Expression`1.PrettyPrint*
+  name: PrettyPrint
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_PrettyPrint_
+  commentId: Overload:Gutenberg.Expression.Expression`1.PrettyPrint
+  fullName: Gutenberg.Expression.Expression<T>.PrettyPrint
+  fullName.vb: Gutenberg.Expression.Expression(Of T).PrettyPrint
+  nameWithType: Expression<T>.PrettyPrint
+  nameWithType.vb: Expression(Of T).PrettyPrint
+- uid: Gutenberg.Expression.OperatorFactory`1
+  name: OperatorFactory<T>
+  href: Gutenberg.Expression.OperatorFactory-1.html
+  commentId: T:Gutenberg.Expression.OperatorFactory`1
+  name.vb: OperatorFactory(Of T)
+  fullName: Gutenberg.Expression.OperatorFactory<T>
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T)
+  nameWithType: OperatorFactory<T>
+  nameWithType.vb: OperatorFactory(Of T)
+- uid: Gutenberg.Expression.OperatorFactory`1.Infix(Gutenberg.Expression.BinaryOperatorType,System.Int32,Gutenberg.Document{`0})
+  name: Infix(BinaryOperatorType, Int32, Document<T>)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Infix_Gutenberg_Expression_BinaryOperatorType_System_Int32_Gutenberg_Document__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Infix(Gutenberg.Expression.BinaryOperatorType,System.Int32,Gutenberg.Document{`0})
+  name.vb: Infix(BinaryOperatorType, Int32, Document(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Infix(Gutenberg.Expression.BinaryOperatorType, System.Int32, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Infix(Gutenberg.Expression.BinaryOperatorType, System.Int32, Gutenberg.Document(Of T))
+  nameWithType: OperatorFactory<T>.Infix(BinaryOperatorType, Int32, Document<T>)
+  nameWithType.vb: OperatorFactory(Of T).Infix(BinaryOperatorType, Int32, Document(Of T))
+- uid: Gutenberg.Expression.OperatorFactory`1.Infix*
+  name: Infix
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Infix_
+  commentId: Overload:Gutenberg.Expression.OperatorFactory`1.Infix
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Infix
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Infix
+  nameWithType: OperatorFactory<T>.Infix
+  nameWithType.vb: OperatorFactory(Of T).Infix
+- uid: Gutenberg.Expression.OperatorFactory`1.InfixL(System.Int32,Gutenberg.Document{`0})
+  name: InfixL(Int32, Document<T>)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixL_System_Int32_Gutenberg_Document__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixL(System.Int32,Gutenberg.Document{`0})
+  name.vb: InfixL(Int32, Document(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixL(System.Int32, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixL(System.Int32, Gutenberg.Document(Of T))
+  nameWithType: OperatorFactory<T>.InfixL(Int32, Document<T>)
+  nameWithType.vb: OperatorFactory(Of T).InfixL(Int32, Document(Of T))
+- uid: Gutenberg.Expression.OperatorFactory`1.InfixL*
+  name: InfixL
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixL_
+  commentId: Overload:Gutenberg.Expression.OperatorFactory`1.InfixL
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixL
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixL
+  nameWithType: OperatorFactory<T>.InfixL
+  nameWithType.vb: OperatorFactory(Of T).InfixL
+- uid: Gutenberg.Expression.OperatorFactory`1.InfixN(System.Int32,Gutenberg.Document{`0})
+  name: InfixN(Int32, Document<T>)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixN_System_Int32_Gutenberg_Document__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixN(System.Int32,Gutenberg.Document{`0})
+  name.vb: InfixN(Int32, Document(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixN(System.Int32, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixN(System.Int32, Gutenberg.Document(Of T))
+  nameWithType: OperatorFactory<T>.InfixN(Int32, Document<T>)
+  nameWithType.vb: OperatorFactory(Of T).InfixN(Int32, Document(Of T))
+- uid: Gutenberg.Expression.OperatorFactory`1.InfixN*
+  name: InfixN
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixN_
+  commentId: Overload:Gutenberg.Expression.OperatorFactory`1.InfixN
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixN
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixN
+  nameWithType: OperatorFactory<T>.InfixN
+  nameWithType.vb: OperatorFactory(Of T).InfixN
+- uid: Gutenberg.Expression.OperatorFactory`1.InfixR(System.Int32,Gutenberg.Document{`0})
+  name: InfixR(Int32, Document<T>)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixR_System_Int32_Gutenberg_Document__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixR(System.Int32,Gutenberg.Document{`0})
+  name.vb: InfixR(Int32, Document(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixR(System.Int32, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixR(System.Int32, Gutenberg.Document(Of T))
+  nameWithType: OperatorFactory<T>.InfixR(Int32, Document<T>)
+  nameWithType.vb: OperatorFactory(Of T).InfixR(Int32, Document(Of T))
+- uid: Gutenberg.Expression.OperatorFactory`1.InfixR*
+  name: InfixR
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixR_
+  commentId: Overload:Gutenberg.Expression.OperatorFactory`1.InfixR
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixR
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixR
+  nameWithType: OperatorFactory<T>.InfixR
+  nameWithType.vb: OperatorFactory(Of T).InfixR
+- uid: Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0})
+  name: Postfix(Int32, Document<T>)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0})
+  name.vb: Postfix(Int32, Document(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix(System.Int32, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(System.Int32, Gutenberg.Document(Of T))
+  nameWithType: OperatorFactory<T>.Postfix(Int32, Document<T>)
+  nameWithType.vb: OperatorFactory(Of T).Postfix(Int32, Document(Of T))
+- uid: Gutenberg.Expression.OperatorFactory`1.Postfix*
+  name: Postfix
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_
+  commentId: Overload:Gutenberg.Expression.OperatorFactory`1.Postfix
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix
+  nameWithType: OperatorFactory<T>.Postfix
+  nameWithType.vb: OperatorFactory(Of T).Postfix
+- uid: Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0})
+  name: Prefix(Int32, Document<T>)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0})
+  name.vb: Prefix(Int32, Document(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix(System.Int32, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(System.Int32, Gutenberg.Document(Of T))
+  nameWithType: OperatorFactory<T>.Prefix(Int32, Document<T>)
+  nameWithType.vb: OperatorFactory(Of T).Prefix(Int32, Document(Of T))
+- uid: Gutenberg.Expression.OperatorFactory`1.Prefix*
+  name: Prefix
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_
+  commentId: Overload:Gutenberg.Expression.OperatorFactory`1.Prefix
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix
+  nameWithType: OperatorFactory<T>.Prefix
+  nameWithType.vb: OperatorFactory(Of T).Prefix
+- uid: Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0})
+  name: Unary(UnaryOperatorType, Int32, Document<T>)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0})
+  name.vb: Unary(UnaryOperatorType, Int32, Document(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document(Of T))
+  nameWithType: OperatorFactory<T>.Unary(UnaryOperatorType, Int32, Document<T>)
+  nameWithType.vb: OperatorFactory(Of T).Unary(UnaryOperatorType, Int32, Document(Of T))
+- uid: Gutenberg.Expression.OperatorFactory`1.Unary*
+  name: Unary
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_
+  commentId: Overload:Gutenberg.Expression.OperatorFactory`1.Unary
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary
+  nameWithType: OperatorFactory<T>.Unary
+  nameWithType.vb: OperatorFactory(Of T).Unary
+- uid: Gutenberg.Expression.UnaryOperator`1
+  name: UnaryOperator<T>
+  href: Gutenberg.Expression.UnaryOperator-1.html
+  commentId: T:Gutenberg.Expression.UnaryOperator`1
+  name.vb: UnaryOperator(Of T)
+  fullName: Gutenberg.Expression.UnaryOperator<T>
+  fullName.vb: Gutenberg.Expression.UnaryOperator(Of T)
+  nameWithType: UnaryOperator<T>
+  nameWithType.vb: UnaryOperator(Of T)
+- uid: Gutenberg.Expression.UnaryOperator`1.Apply(Gutenberg.Expression.Expression{`0})
+  name: Apply(Expression<T>)
+  href: Gutenberg.Expression.UnaryOperator-1.html#Gutenberg_Expression_UnaryOperator_1_Apply_Gutenberg_Expression_Expression__0__
+  commentId: M:Gutenberg.Expression.UnaryOperator`1.Apply(Gutenberg.Expression.Expression{`0})
+  name.vb: Apply(Expression(Of T))
+  fullName: Gutenberg.Expression.UnaryOperator<T>.Apply(Gutenberg.Expression.Expression<T>)
+  fullName.vb: Gutenberg.Expression.UnaryOperator(Of T).Apply(Gutenberg.Expression.Expression(Of T))
+  nameWithType: UnaryOperator<T>.Apply(Expression<T>)
+  nameWithType.vb: UnaryOperator(Of T).Apply(Expression(Of T))
+- uid: Gutenberg.Expression.UnaryOperator`1.Apply*
+  name: Apply
+  href: Gutenberg.Expression.UnaryOperator-1.html#Gutenberg_Expression_UnaryOperator_1_Apply_
+  commentId: Overload:Gutenberg.Expression.UnaryOperator`1.Apply
+  fullName: Gutenberg.Expression.UnaryOperator<T>.Apply
+  fullName.vb: Gutenberg.Expression.UnaryOperator(Of T).Apply
+  nameWithType: UnaryOperator<T>.Apply
+  nameWithType.vb: UnaryOperator(Of T).Apply
+- uid: Gutenberg.Expression.UnaryOperatorType
+  name: UnaryOperatorType
+  href: Gutenberg.Expression.UnaryOperatorType.html
+  commentId: T:Gutenberg.Expression.UnaryOperatorType
+  fullName: Gutenberg.Expression.UnaryOperatorType
+  nameWithType: UnaryOperatorType
+- uid: Gutenberg.Expression.UnaryOperatorType.Postfix
+  name: Postfix
+  href: Gutenberg.Expression.UnaryOperatorType.html#Gutenberg_Expression_UnaryOperatorType_Postfix
+  commentId: F:Gutenberg.Expression.UnaryOperatorType.Postfix
+  fullName: Gutenberg.Expression.UnaryOperatorType.Postfix
+  nameWithType: UnaryOperatorType.Postfix
+- uid: Gutenberg.Expression.UnaryOperatorType.Prefix
+  name: Prefix
+  href: Gutenberg.Expression.UnaryOperatorType.html#Gutenberg_Expression_UnaryOperatorType_Prefix
+  commentId: F:Gutenberg.Expression.UnaryOperatorType.Prefix
+  fullName: Gutenberg.Expression.UnaryOperatorType.Prefix
+  nameWithType: UnaryOperatorType.Prefix
+- uid: Gutenberg.Expression.UnaryOperatorType.value__
+  name: value__
+  href: Gutenberg.Expression.UnaryOperatorType.html#Gutenberg_Expression_UnaryOperatorType_value__
+  commentId: F:Gutenberg.Expression.UnaryOperatorType.value__
+  fullName: Gutenberg.Expression.UnaryOperatorType.value__
+  nameWithType: UnaryOperatorType.value__
 - uid: Gutenberg.IDocumentRenderer`1
   name: IDocumentRenderer<T>
   href: Gutenberg.IDocumentRenderer-1.html
