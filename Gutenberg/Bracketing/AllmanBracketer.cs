@@ -1,5 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
-
 namespace Gutenberg.Bracketing;
 
 /// <summary>
@@ -61,13 +59,4 @@ public record AllmanBracketer<T>(
             (Document<T>.ZeroWidthLineBreak + document).NestBy(NestingLevel),
             Document<T>.ZeroWidthLineBreak + ClosingBracket
         ).GroupIf(Group);
-
-    /// <summary>
-    /// An <see cref="IBracketer{T}"/> which uses the Allman
-    /// style with round parentheses (<c>()</c>), and allows
-    /// the bracketed document to be grouped.
-    /// </summary>
-    [SuppressMessage("design", "CA1000")]  // "Do not declare static members on generic types"
-    public static AllmanBracketer<T> Default { get; }
-        = new("(", ")");
 }

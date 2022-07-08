@@ -1,5 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
-
 namespace Gutenberg.Bracketing;
 
 /// <summary>
@@ -59,13 +57,4 @@ public record KernighanRitchieBracketer<T>(
             .NestBy(NestingLevel)
             .Append(Document<T>.ZeroWidthLineBreak + ClosingBracket)
             .GroupIf(Group);
-
-    /// <summary>
-    /// An <see cref="IBracketer{T}"/> which uses the K&amp;R
-    /// style with round parentheses (<c>()</c>), and allows
-    /// the bracketed document to be grouped.
-    /// </summary>
-    [SuppressMessage("design", "CA1000")]  // "Do not declare static members on generic types"
-    public static KernighanRitchieBracketer<T> Default { get; }
-        = new("(", ")");
 }

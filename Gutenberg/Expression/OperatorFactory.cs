@@ -15,6 +15,9 @@ namespace Gutenberg.Expression;
 )]
 public static class OperatorFactory<T>
 {
+    private static readonly IBracketer<T> _defaultBracketer
+        = new KernighanRitchieBracketer<T>("(", ")");
+
     /// <summary>
     /// Creates a <see cref="UnaryOperator{T}"/>
     /// representing the given <paramref name="symbol"/>,
@@ -44,7 +47,7 @@ public static class OperatorFactory<T>
         type,
         precedence,
         symbol,
-        KernighanRitchieBracketer<T>.Default
+        _defaultBracketer
     );
 
     /// <summary>
@@ -108,7 +111,7 @@ public static class OperatorFactory<T>
     public static UnaryOperator<T> Prefix(
         int precedence,
         Document<T> symbol
-    ) => Prefix(precedence, symbol, KernighanRitchieBracketer<T>.Default);
+    ) => Prefix(precedence, symbol, _defaultBracketer);
 
     /// <summary>
     /// Creates a prefix <see cref="UnaryOperator{T}"/>
@@ -160,7 +163,7 @@ public static class OperatorFactory<T>
     /// </returns>
     /// <seealso cref="KernighanRitchieBracketer{T}"/>
     public static UnaryOperator<T> Postfix(int precedence, Document<T> symbol)
-        => Postfix(precedence, symbol, KernighanRitchieBracketer<T>.Default);
+        => Postfix(precedence, symbol, _defaultBracketer);
 
     /// <summary>
     /// Creates a postfix <see cref="UnaryOperator{T}"/>
@@ -223,7 +226,7 @@ public static class OperatorFactory<T>
         type,
         precedence,
         symbol,
-        KernighanRitchieBracketer<T>.Default
+        _defaultBracketer
     );
 
     /// <summary>
@@ -288,7 +291,7 @@ public static class OperatorFactory<T>
         => InfixN(
             precedence,
             symbol,
-            KernighanRitchieBracketer<T>.Default
+            _defaultBracketer
         );
 
     /// <summary>
@@ -337,7 +340,7 @@ public static class OperatorFactory<T>
     /// </returns>
     /// <seealso cref="KernighanRitchieBracketer{T}"/>
     public static BinaryOperator<T> InfixL(int precedence, Document<T> symbol)
-        => InfixL(precedence, symbol, KernighanRitchieBracketer<T>.Default);
+        => InfixL(precedence, symbol, _defaultBracketer);
 
     /// <summary>
     /// Creates a left-associative <see cref="BinaryOperator{T}"/>
@@ -385,7 +388,7 @@ public static class OperatorFactory<T>
     /// </returns>
     /// <seealso cref="KernighanRitchieBracketer{T}"/>
     public static BinaryOperator<T> InfixR(int precedence, Document<T> symbol)
-        => InfixR(precedence, symbol, KernighanRitchieBracketer<T>.Default);
+        => InfixR(precedence, symbol, _defaultBracketer);
 
     /// <summary>
     /// Creates a right-associative <see cref="BinaryOperator{T}"/>
