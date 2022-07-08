@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Alignment.html",
-          "hash": "OC0ANGN4NO5eyxeOWyuuE3FIR9m08ytzC2g1v78F7jw="
+          "hash": "5Y3qdhwKVuW0XHhFnL378wT6PqBZbWI+ASLP8rHOfRQ="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,55 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Box-1.html",
-          "hash": "05lr0QMEGnpA6ZJPdBiES7nVF/jjV/qHwnZTlolMEGY="
+          "hash": "L5VSNODNU/1dhVJpHstiZyRtFDIYoqmkMJq0q/+zSMs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Bracketing.AllmanBracketer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Bracketing.AllmanBracketer-1.html",
+          "hash": "UnlEcAe/e0iK7yhhJYT6xCxdMJb9pz+e64r23Q/arV8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Bracketing.IBracketer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Bracketing.IBracketer-1.html",
+          "hash": "+MQ9YzOKyV54D8urRvo/VBbJIgKW1cqkQlE9SpZjYCU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Bracketing.KernighanRitchieBracketer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Bracketing.KernighanRitchieBracketer-1.html",
+          "hash": "0w9Xz4U97bFEcFV/d/QpE6O2BjAakOBQmO6K+43Te9M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Bracketing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Bracketing.html",
+          "hash": "4JpLBD3xqZUN2CBZfAOtPh8pcjoeSpvO851kwustOco="
         }
       },
       "is_incremental": false,
@@ -42,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Document-1.html",
-          "hash": "dbRbIkLV4O934/FmQaZ2PCgL0kCNGkRbxPbLFOLkTMY="
+          "hash": "8UJ0Zq3cNMkjk2RtBlJ7VjCAiCVMtlvxnNdGkXFCWrY="
         }
       },
       "is_incremental": false,
@@ -54,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.DocumentExtensions.html",
-          "hash": "sJL58Ic9q0lHPcqrsLg+c+cta4cIMeKrACC846gKBrE="
+          "hash": "29vCO+p3e5DcSQLIg73hsMa+aJkEV01wN4NN6xeXtwk="
         }
       },
       "is_incremental": false,
@@ -66,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Expression.BinaryOperator-1.html",
-          "hash": "fJbjYOiXsuTYIG1HRdurZLT1w84CZ6A1xyHtAzecmU8="
+          "hash": "aQQnyBUnomA6LDdzQKTpMqJ5qqAq7Ag8jg+04wLQfzU="
         }
       },
       "is_incremental": false,
@@ -78,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Expression.BinaryOperatorType.html",
-          "hash": "WOWLMgDxZFgTTR0xG223LzwHAMznALLXtiJKT8YtFho="
+          "hash": "6dmna/VIObg3yzHqqhCmdcPOVx42Qei7HrkoI38wQ60="
         }
       },
       "is_incremental": false,
@@ -90,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Expression.Expression-1.html",
-          "hash": "D47WCnrZi7CDKyb3rLgHTmK08xmZx1xU1Y6EQEXFACA="
+          "hash": "uYz1mKOQqfZJ2oY71fQNqG32DyI6qpvuXKL9v25X1KY="
         }
       },
       "is_incremental": false,
@@ -102,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Expression.OperatorFactory-1.html",
-          "hash": "htTrp1dNk9YqTLnZ+1YUUJuJ8TIPVYJUB9Lu3rvk3jA="
+          "hash": "ZXy+/BMB5FUy6TbMD9AgoxQrNV0ujYslSJVw29Z5m2o="
         }
       },
       "is_incremental": false,
@@ -114,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Expression.UnaryOperator-1.html",
-          "hash": "avo61mUcM/GLKDr/PSO0eu/VgomZfwtK9pEll0VRoxw="
+          "hash": "OphXAQzS6gFcFVw6eW4EYtcaT03S4OczE433MUaRXVg="
         }
       },
       "is_incremental": false,
@@ -126,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Expression.UnaryOperatorType.html",
-          "hash": "YOHo1zlR7A0qEvS7joQuRbd5Mv9mfLo9whxwvaucZTU="
+          "hash": "az93jT4M1PpuYAeiXM86ytR2Dh3J1wo7OjDrp+Mn1Fg="
         }
       },
       "is_incremental": false,
@@ -138,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Expression.html",
-          "hash": "5e8FHXv+wKu+1nXbYoPe3SN7SphT4sBnSznQ4Nl+fN4="
+          "hash": "m9JBCI09DIbMmBbLR3jVa+jliyumckT3+c5YYZ8N0Ds="
         }
       },
       "is_incremental": false,
@@ -150,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.IDocumentRenderer-1.html",
-          "hash": "yWa2n4PCBtHRWRd9A+lbFJaU1mnB9BiSOm6mJJ+te6s="
+          "hash": "Sxgr67HyXNgyItgbT6BQphLy1nUUt8dXMyNMJ1kcb4s="
         }
       },
       "is_incremental": false,
@@ -162,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.IPrettyPrintable-1.html",
-          "hash": "VvDlxsNJAXBbZbIZ4+1prCY8oAvYBbaYJQAn14OtDiQ="
+          "hash": "DoDUhtwAhzgVRLA4cJ9VzCz3yB4stVDS9oAsD0qaPpc="
         }
       },
       "is_incremental": false,
@@ -174,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.LayoutMode.html",
-          "hash": "ibrS57X9J3wBmYDjjh3uRkVbLDERf+4YEfJJNSU215w="
+          "hash": "DMYPzpYFe/hUIcnjfGz+sodELnnYrTKYWBGm0lIbvDA="
         }
       },
       "is_incremental": false,
@@ -186,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.LayoutOptions.html",
-          "hash": "uozSN8YbAdEIRD4tSgzKkfI0uK/AfPNevRMz2ANeXDk="
+          "hash": "I9AsK7ch+L3apVskA2EVb8gvDn8pKl1HCedFjPeWRtQ="
         }
       },
       "is_incremental": false,
@@ -198,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.PageWidthOptions.html",
-          "hash": "ImOdXM1f5apGU5k3o+QvmyxK6ToSC05AhM2Dqv2EQDw="
+          "hash": "Iu7h+KKycvutIEe3dOza56waQneLWymGh+QsaMu61wU="
         }
       },
       "is_incremental": false,
@@ -210,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Rendering.ConsoleDocumentRenderer.html",
-          "hash": "+OW5FK/SAAHVVzhR+Us4MyhpPRDo+d9VFUcbPCWlSE0="
+          "hash": "tOX4kwUxLpcGJcIG/lHlFVSriMVlYSYk3EH8LB65tyE="
         }
       },
       "is_incremental": false,
@@ -222,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html",
-          "hash": "lfADo1FFmNoyvnrN7T4b8TYtmbOBuN+McjxSaRHd1Bc="
+          "hash": "K5AUMwcF3X1x7PTg4LamARXlJyKmu3c7Kxb2eZ5WpjU="
         }
       },
       "is_incremental": false,
@@ -234,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html",
-          "hash": "dqV65YVBIC2YpQixvh4En9zCjDRBrp/U/qb0P0B/zEU="
+          "hash": "xlYrpUCZBlN207tG7pO7hVlhAoIltwNAibNnkYgB7w0="
         }
       },
       "is_incremental": false,
@@ -246,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.html",
-          "hash": "rVQRfFz99Ngan+iW/sJtDodmcMd50aHWXIasJnsO4AE="
+          "hash": "rYul4WWvqUn1Qb/LtlmVF4uRwvSG48zJHS75cKe8v0E="
         }
       },
       "is_incremental": false,
@@ -258,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Rendering.DocumentRendererExtensions.html",
-          "hash": "61n9pWCKwhs2m3/3edny9HHMDvybKxK3tbErtGypn4E="
+          "hash": "fIq9xhYZtj92OsMsrEVEE03/TKk5WlVvs2tpnqqM1rU="
         }
       },
       "is_incremental": false,
@@ -270,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html",
-          "hash": "9zy8VmN1flMwFN5/upTYj+tjvMXSRh9Y83Y+AOxbB8A="
+          "hash": "ubahDll3InkxjC4wkW17rXvEIxSQF6oHg5H76aCaGBM="
         }
       },
       "is_incremental": false,
@@ -282,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Rendering.PlainTextDocumentRenderer.html",
-          "hash": "XJ7kUzqccOHd5wgGkE0oPgN5krvIn3jvQthj3PPdeRg="
+          "hash": "7wU7FlP4Hqv+39OUf7z87wH3BzBh9i3h6H6nTvSLqf4="
         }
       },
       "is_incremental": false,
@@ -294,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Rendering.StackMachineDocumentRenderer-1.html",
-          "hash": "I4w5qdU1idoPpVnvQHQhlMOgXFXCc1xuWW9SiBjIUo4="
+          "hash": "2bsA4uS5j+ycSQzyXEpV77ElQ+wVYHW/lKJfE04IGb4="
         }
       },
       "is_incremental": false,
@@ -306,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.Rendering.html",
-          "hash": "qq2u1M+q9EnFSoNRIuj4Om6ADdUHj+6ztpU0nP+logk="
+          "hash": "3KknE39VJe4/rWPXoAyxYSvKAaMqeQEYYThZIkt0gAg="
         }
       },
       "is_incremental": false,
@@ -318,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "Gutenberg.html",
-          "hash": "tCh7Xes9/V9p0kfHws/P0+P03pUjVWOp4cTtygh6Sc8="
+          "hash": "BhRngQ44d/2Xyjibh62Ex/zMUIOGI/it2ZP0oF5h05g="
         }
       },
       "is_incremental": false,
@@ -357,7 +405,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 26,
+          "total_file_count": 30,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
