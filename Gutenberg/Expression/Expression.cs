@@ -1,6 +1,8 @@
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 
+using Gutenberg.Bracketing;
+
 namespace Gutenberg.Expression;
 
 /// <summary>
@@ -108,19 +110,22 @@ internal class OperatorExpression<T> : Expression<T>
 {
     private readonly int _precedence;
     private readonly ImmutableArray<Expression<T>> _expressions;
+    private readonly IBracketer<T> _bracketer;
 
     internal OperatorExpression(
         int precedence,
-        ImmutableArray<Expression<T>> expressions
+        ImmutableArray<Expression<T>> expressions,
+        IBracketer<T> bracketer
     )
     {
         _precedence = precedence;
         _expressions = expressions;
+        _bracketer = bracketer;
     }
 
     internal override Document<T> ToDocument(PrecedenceState state)
     {
-        var docs = Document<T>.Concat(
+        var doc = Document<T>.Concat(
             _expressions.Select(e => e.ToDocument(new PrecedenceState(_precedence, false)))
         );
 
@@ -128,8 +133,8 @@ internal class OperatorExpression<T> : Expression<T>
             || (state.CurrentPrecedence == _precedence && state.PrecedenceTiebreak);
 
         return shouldParenthesise
-            ? Document<T>.Concat("(", docs, ")")
-            : docs;
+            ? _bracketer.Bracket(doc)
+            : doc;
     }
 }
 

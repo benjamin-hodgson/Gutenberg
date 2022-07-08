@@ -1,5 +1,7 @@
 using System.Collections.Immutable;
 
+using Gutenberg.Bracketing;
+
 namespace Gutenberg.Expression;
 
 /// <summary>
@@ -32,22 +34,19 @@ public sealed class UnaryOperator<T>
     private readonly UnaryOperatorType _type;
     private readonly int _precedence;
     private readonly Document<T> _symbol;
+    private readonly IBracketer<T> _bracketer;
 
     internal UnaryOperator(
         UnaryOperatorType type,
         int precedence,
-        Document<T> symbol
+        Document<T> symbol,
+        IBracketer<T> bracketer
     )
     {
-        if (!Enum.IsDefined(type))
-        {
-            throw new ArgumentOutOfRangeException(nameof(type), type, $"Unknown {nameof(UnaryOperatorType)}");
-        }
-        ArgumentNullException.ThrowIfNull(symbol);
-
         _type = type;
         _precedence = precedence;
         _symbol = symbol;
+        _bracketer = bracketer;
     }
 
     /// <summary>
@@ -74,7 +73,8 @@ public sealed class UnaryOperator<T>
                 UnaryOperatorType.Postfix
                     => ImmutableArray.CreateRange(new[] { expression, _symbol }),
                 _ => throw new InvalidOperationException($"Unknown {nameof(UnaryOperatorType)}"),
-            }
+            },
+            _bracketer
         );
     }
 }

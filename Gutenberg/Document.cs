@@ -376,6 +376,10 @@ public abstract class Document<T> : IStackItem<T>
     /// which should be applied to line breaks within the document.
     /// </para>
     /// </summary>
+    /// <remarks>
+    /// An <paramref name="amount"/> of <c>0</c> is equivalent
+    /// to not nesting the document at all.
+    /// </remarks>
     /// <example name="Nesting is not immediate">
     /// A nested document is not "immediately" indented. Rather, the
     /// given amount of nesting is applied to any line breaks within
