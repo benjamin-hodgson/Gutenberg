@@ -467,22 +467,6 @@ references:
   fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Deconstruct
   nameWithType: AllmanBracketer<T>.Deconstruct
   nameWithType.vb: AllmanBracketer(Of T).Deconstruct
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.Default
-  name: Default
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_Default
-  commentId: P:Gutenberg.Bracketing.AllmanBracketer`1.Default
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Default
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Default
-  nameWithType: AllmanBracketer<T>.Default
-  nameWithType.vb: AllmanBracketer(Of T).Default
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.Default*
-  name: Default
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_Default_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.Default
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Default
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Default
-  nameWithType: AllmanBracketer<T>.Default
-  nameWithType.vb: AllmanBracketer(Of T).Default
 - uid: Gutenberg.Bracketing.AllmanBracketer`1.EqualityContract
   name: EqualityContract
   href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_EqualityContract
@@ -781,22 +765,6 @@ references:
   fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Deconstruct
   nameWithType: KernighanRitchieBracketer<T>.Deconstruct
   nameWithType.vb: KernighanRitchieBracketer(Of T).Deconstruct
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.Default
-  name: Default
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_Default
-  commentId: P:Gutenberg.Bracketing.KernighanRitchieBracketer`1.Default
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Default
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Default
-  nameWithType: KernighanRitchieBracketer<T>.Default
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Default
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.Default*
-  name: Default
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_Default_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.Default
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Default
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Default
-  nameWithType: KernighanRitchieBracketer<T>.Default
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Default
 - uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.EqualityContract
   name: EqualityContract
   href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_EqualityContract
