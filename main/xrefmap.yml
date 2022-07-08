@@ -1770,24 +1770,24 @@ references:
   fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixR
   nameWithType: OperatorFactory<T>.InfixR
   nameWithType.vb: OperatorFactory(Of T).InfixR
-- uid: Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0})
-  name: Postfix(Int32, Document<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0})
-  name.vb: Postfix(Int32, Document(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix(System.Int32, Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(System.Int32, Gutenberg.Document(Of T))
-  nameWithType: OperatorFactory<T>.Postfix(Int32, Document<T>)
-  nameWithType.vb: OperatorFactory(Of T).Postfix(Int32, Document(Of T))
-- uid: Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
-  name: Postfix(Int32, Document<T>, IBracketer<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
-  name.vb: Postfix(Int32, Document(Of T), IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix(System.Int32, Gutenberg.Document<T>, Gutenberg.Bracketing.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(System.Int32, Gutenberg.Document(Of T), Gutenberg.Bracketing.IBracketer(Of T))
-  nameWithType: OperatorFactory<T>.Postfix(Int32, Document<T>, IBracketer<T>)
-  nameWithType.vb: OperatorFactory(Of T).Postfix(Int32, Document(Of T), IBracketer(Of T))
+- uid: Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean)
+  name: Postfix(Int32, Document<T>, Boolean)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean)
+  name.vb: Postfix(Int32, Document(Of T), Boolean)
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix(System.Int32, Gutenberg.Document<T>, System.Boolean)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(System.Int32, Gutenberg.Document(Of T), System.Boolean)
+  nameWithType: OperatorFactory<T>.Postfix(Int32, Document<T>, Boolean)
+  nameWithType.vb: OperatorFactory(Of T).Postfix(Int32, Document(Of T), Boolean)
+- uid: Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+  name: Postfix(Int32, Document<T>, Boolean, IBracketer<T>)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+  name.vb: Postfix(Int32, Document(Of T), Boolean, IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix(System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Bracketing.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Bracketing.IBracketer(Of T))
+  nameWithType: OperatorFactory<T>.Postfix(Int32, Document<T>, Boolean, IBracketer<T>)
+  nameWithType.vb: OperatorFactory(Of T).Postfix(Int32, Document(Of T), Boolean, IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Postfix*
   name: Postfix
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_
@@ -1796,24 +1796,24 @@ references:
   fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix
   nameWithType: OperatorFactory<T>.Postfix
   nameWithType.vb: OperatorFactory(Of T).Postfix
-- uid: Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0})
-  name: Prefix(Int32, Document<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0})
-  name.vb: Prefix(Int32, Document(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix(System.Int32, Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(System.Int32, Gutenberg.Document(Of T))
-  nameWithType: OperatorFactory<T>.Prefix(Int32, Document<T>)
-  nameWithType.vb: OperatorFactory(Of T).Prefix(Int32, Document(Of T))
-- uid: Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
-  name: Prefix(Int32, Document<T>, IBracketer<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
-  name.vb: Prefix(Int32, Document(Of T), IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix(System.Int32, Gutenberg.Document<T>, Gutenberg.Bracketing.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(System.Int32, Gutenberg.Document(Of T), Gutenberg.Bracketing.IBracketer(Of T))
-  nameWithType: OperatorFactory<T>.Prefix(Int32, Document<T>, IBracketer<T>)
-  nameWithType.vb: OperatorFactory(Of T).Prefix(Int32, Document(Of T), IBracketer(Of T))
+- uid: Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean)
+  name: Prefix(Int32, Document<T>, Boolean)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean)
+  name.vb: Prefix(Int32, Document(Of T), Boolean)
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix(System.Int32, Gutenberg.Document<T>, System.Boolean)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(System.Int32, Gutenberg.Document(Of T), System.Boolean)
+  nameWithType: OperatorFactory<T>.Prefix(Int32, Document<T>, Boolean)
+  nameWithType.vb: OperatorFactory(Of T).Prefix(Int32, Document(Of T), Boolean)
+- uid: Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+  name: Prefix(Int32, Document<T>, Boolean, IBracketer<T>)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+  name.vb: Prefix(Int32, Document(Of T), Boolean, IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix(System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Bracketing.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Bracketing.IBracketer(Of T))
+  nameWithType: OperatorFactory<T>.Prefix(Int32, Document<T>, Boolean, IBracketer<T>)
+  nameWithType.vb: OperatorFactory(Of T).Prefix(Int32, Document(Of T), Boolean, IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Prefix*
   name: Prefix
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_
@@ -1822,24 +1822,24 @@ references:
   fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix
   nameWithType: OperatorFactory<T>.Prefix
   nameWithType.vb: OperatorFactory(Of T).Prefix
-- uid: Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0})
-  name: Unary(UnaryOperatorType, Int32, Document<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0})
-  name.vb: Unary(UnaryOperatorType, Int32, Document(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document(Of T))
-  nameWithType: OperatorFactory<T>.Unary(UnaryOperatorType, Int32, Document<T>)
-  nameWithType.vb: OperatorFactory(Of T).Unary(UnaryOperatorType, Int32, Document(Of T))
-- uid: Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
-  name: Unary(UnaryOperatorType, Int32, Document<T>, IBracketer<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
-  name.vb: Unary(UnaryOperatorType, Int32, Document(Of T), IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document<T>, Gutenberg.Bracketing.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document(Of T), Gutenberg.Bracketing.IBracketer(Of T))
-  nameWithType: OperatorFactory<T>.Unary(UnaryOperatorType, Int32, Document<T>, IBracketer<T>)
-  nameWithType.vb: OperatorFactory(Of T).Unary(UnaryOperatorType, Int32, Document(Of T), IBracketer(Of T))
+- uid: Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean)
+  name: Unary(UnaryOperatorType, Int32, Document<T>, Boolean)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean)
+  name.vb: Unary(UnaryOperatorType, Int32, Document(Of T), Boolean)
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document<T>, System.Boolean)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document(Of T), System.Boolean)
+  nameWithType: OperatorFactory<T>.Unary(UnaryOperatorType, Int32, Document<T>, Boolean)
+  nameWithType.vb: OperatorFactory(Of T).Unary(UnaryOperatorType, Int32, Document(Of T), Boolean)
+- uid: Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+  name: Unary(UnaryOperatorType, Int32, Document<T>, Boolean, IBracketer<T>)
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+  name.vb: Unary(UnaryOperatorType, Int32, Document(Of T), Boolean, IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Bracketing.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Bracketing.IBracketer(Of T))
+  nameWithType: OperatorFactory<T>.Unary(UnaryOperatorType, Int32, Document<T>, Boolean, IBracketer<T>)
+  nameWithType.vb: OperatorFactory(Of T).Unary(UnaryOperatorType, Int32, Document(Of T), Boolean, IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Unary*
   name: Unary
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_

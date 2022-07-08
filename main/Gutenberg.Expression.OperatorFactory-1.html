@@ -743,7 +743,7 @@ the operator needs to be parenthesised.</p>
         
                 
                 <a id="Gutenberg_Expression_OperatorFactory_1_Postfix_"></a>
-                <h4 id="Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__"><a href="#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__">Postfix(Int32, Document&lt;T&gt;)</a></h4>
+                <h4 id="Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_"><a href="#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_">Postfix(Int32, Document&lt;T&gt;, Boolean)</a></h4>
                 <div><p>Creates a postfix <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a>
 representing the given <code data-dev-comment-type="paramref" class="paramref">symbol</code>,
 with the given <code data-dev-comment-type="paramref" class="paramref">precedence</code>.
@@ -751,7 +751,7 @@ When the expression needs to be surrounded by parentheses,
 the K&amp;R style is used.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Postfix(int precedence, Document&lt;T&gt; symbol)</code></pre>
+                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Postfix(int precedence, Document&lt;T&gt; symbol, bool chainable = false)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -773,6 +773,14 @@ the K&amp;R style is used.</p>
                                     <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
                                     <td><p>symbol</p></td>
                                     <td><p>How to display the <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a></p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p></td>
+                                    <td><p>chainable</p></td>
+                                    <td><p>Whether the operator is chainable. If a non-chainable
+operator is applied multiple times, the inner expressions
+are parenthesised.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -803,13 +811,13 @@ the K&amp;R style is used.</p>
         
                         
         
-                <h5 id="Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0___seealso"><a href="#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0___seealso">See Also</a></h5>
+                <h5 id="Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean__seealso"><a href="#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean__seealso">See Also</a></h5>
                 <div>
                             <div><a class="xref" href="Gutenberg.Bracketing.KernighanRitchieBracketer-1.html">KernighanRitchieBracketer</a>&lt;T&gt;</div>
                 </div>
                 
                 <a id="Gutenberg_Expression_OperatorFactory_1_Postfix_"></a>
-                <h4 id="Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__"><a href="#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__">Postfix(Int32, Document&lt;T&gt;, IBracketer&lt;T&gt;)</a></h4>
+                <h4 id="Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__"><a href="#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__">Postfix(Int32, Document&lt;T&gt;, Boolean, IBracketer&lt;T&gt;)</a></h4>
                 <div><p>Creates a postfix <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a>
 representing the given <code data-dev-comment-type="paramref" class="paramref">symbol</code>,
 with the given <code data-dev-comment-type="paramref" class="paramref">precedence</code>.
@@ -817,7 +825,7 @@ When the expression needs to be surrounded by parentheses,
 <code data-dev-comment-type="paramref" class="paramref">bracketer</code> is used.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Postfix(int precedence, Document&lt;T&gt; symbol, IBracketer&lt;T&gt; bracketer)</code></pre>
+                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Postfix(int precedence, Document&lt;T&gt; symbol, bool chainable, IBracketer&lt;T&gt; bracketer)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -839,6 +847,14 @@ When the expression needs to be surrounded by parentheses,
                                     <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
                                     <td><p>symbol</p></td>
                                     <td><p>How to display the <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a></p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p></td>
+                                    <td><p>chainable</p></td>
+                                    <td><p>Whether the operator is chainable. If a non-chainable
+operator is applied multiple times, the inner expressions
+are parenthesised.</p>
 </td>
                                 </tr>
                                 <tr>
@@ -878,7 +894,7 @@ the operator needs to be parenthesised.</p>
         
                 
                 <a id="Gutenberg_Expression_OperatorFactory_1_Prefix_"></a>
-                <h4 id="Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__"><a href="#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__">Prefix(Int32, Document&lt;T&gt;)</a></h4>
+                <h4 id="Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_"><a href="#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_">Prefix(Int32, Document&lt;T&gt;, Boolean)</a></h4>
                 <div><p>Creates a prefix <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a>
 representing the given <code data-dev-comment-type="paramref" class="paramref">symbol</code>,
 with the given <code data-dev-comment-type="paramref" class="paramref">precedence</code>.
@@ -886,7 +902,7 @@ When the expression needs to be surrounded by parentheses,
 the K&amp;R style is used.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Prefix(int precedence, Document&lt;T&gt; symbol)</code></pre>
+                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Prefix(int precedence, Document&lt;T&gt; symbol, bool chainable = false)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -908,6 +924,14 @@ the K&amp;R style is used.</p>
                                     <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
                                     <td><p>symbol</p></td>
                                     <td><p>How to display the <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a></p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p></td>
+                                    <td><p>chainable</p></td>
+                                    <td><p>Whether the operator is chainable. If a non-chainable
+operator is applied multiple times, the inner expressions
+are parenthesised.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -938,13 +962,13 @@ the K&amp;R style is used.</p>
         
                         
         
-                <h5 id="Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0___seealso"><a href="#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0___seealso">See Also</a></h5>
+                <h5 id="Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean__seealso"><a href="#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean__seealso">See Also</a></h5>
                 <div>
                             <div><a class="xref" href="Gutenberg.Bracketing.KernighanRitchieBracketer-1.html">KernighanRitchieBracketer</a>&lt;T&gt;</div>
                 </div>
                 
                 <a id="Gutenberg_Expression_OperatorFactory_1_Prefix_"></a>
-                <h4 id="Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__"><a href="#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__">Prefix(Int32, Document&lt;T&gt;, IBracketer&lt;T&gt;)</a></h4>
+                <h4 id="Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__"><a href="#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__">Prefix(Int32, Document&lt;T&gt;, Boolean, IBracketer&lt;T&gt;)</a></h4>
                 <div><p>Creates a prefix <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a>
 representing the given <code data-dev-comment-type="paramref" class="paramref">symbol</code>,
 with the given <code data-dev-comment-type="paramref" class="paramref">precedence</code>.
@@ -952,7 +976,7 @@ When the expression needs to be surrounded by parentheses,
 <code data-dev-comment-type="paramref" class="paramref">bracketer</code> is used.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Prefix(int precedence, Document&lt;T&gt; symbol, IBracketer&lt;T&gt; bracketer)</code></pre>
+                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Prefix(int precedence, Document&lt;T&gt; symbol, bool chainable, IBracketer&lt;T&gt; bracketer)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -974,6 +998,14 @@ When the expression needs to be surrounded by parentheses,
                                     <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
                                     <td><p>symbol</p></td>
                                     <td><p>How to display the <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a></p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p></td>
+                                    <td><p>chainable</p></td>
+                                    <td><p>Whether the operator is chainable. If a non-chainable
+operator is applied multiple times, the inner expressions
+are parenthesised.</p>
 </td>
                                 </tr>
                                 <tr>
@@ -1013,7 +1045,7 @@ the operator needs to be parenthesised.</p>
         
                 
                 <a id="Gutenberg_Expression_OperatorFactory_1_Unary_"></a>
-                <h4 id="Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__"><a href="#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__">Unary(UnaryOperatorType, Int32, Document&lt;T&gt;)</a></h4>
+                <h4 id="Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_"><a href="#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_">Unary(UnaryOperatorType, Int32, Document&lt;T&gt;, Boolean)</a></h4>
                 <div><p>Creates a <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a>
 representing the given <code data-dev-comment-type="paramref" class="paramref">symbol</code>,
 with the given <code data-dev-comment-type="paramref" class="paramref">type</code> and
@@ -1022,7 +1054,7 @@ needs to be surrounded by parentheses, the K&amp;R
 style is used.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Unary(UnaryOperatorType type, int precedence, Document&lt;T&gt; symbol)</code></pre>
+                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Unary(UnaryOperatorType type, int precedence, Document&lt;T&gt; symbol, bool chainable = false)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -1050,6 +1082,14 @@ style is used.</p>
                                     <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
                                     <td><p>symbol</p></td>
                                     <td><p>How to display the <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a></p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p></td>
+                                    <td><p>chainable</p></td>
+                                    <td><p>Whether the operator is chainable. If a non-chainable
+operator is applied multiple times, the inner expressions
+are parenthesised.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -1080,13 +1120,13 @@ style is used.</p>
         
                         
         
-                <h5 id="Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0___seealso"><a href="#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0___seealso">See Also</a></h5>
+                <h5 id="Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean__seealso"><a href="#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean__seealso">See Also</a></h5>
                 <div>
                             <div><a class="xref" href="Gutenberg.Bracketing.KernighanRitchieBracketer-1.html">KernighanRitchieBracketer</a>&lt;T&gt;</div>
                 </div>
                 
                 <a id="Gutenberg_Expression_OperatorFactory_1_Unary_"></a>
-                <h4 id="Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__"><a href="#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__">Unary(UnaryOperatorType, Int32, Document&lt;T&gt;, IBracketer&lt;T&gt;)</a></h4>
+                <h4 id="Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__"><a href="#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__">Unary(UnaryOperatorType, Int32, Document&lt;T&gt;, Boolean, IBracketer&lt;T&gt;)</a></h4>
                 <div><p>Creates a <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a>
 representing the given <code data-dev-comment-type="paramref" class="paramref">symbol</code>,
 with the given <code data-dev-comment-type="paramref" class="paramref">type</code> and
@@ -1095,7 +1135,7 @@ needs to be surrounded by parentheses,
 <code data-dev-comment-type="paramref" class="paramref">bracketer</code> is used.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Unary(UnaryOperatorType type, int precedence, Document&lt;T&gt; symbol, IBracketer&lt;T&gt; bracketer)</code></pre>
+                    <pre><code class="lang-csharp hljs">public static UnaryOperator&lt;T&gt; Unary(UnaryOperatorType type, int precedence, Document&lt;T&gt; symbol, bool chainable, IBracketer&lt;T&gt; bracketer)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -1123,6 +1163,14 @@ needs to be surrounded by parentheses,
                                     <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
                                     <td><p>symbol</p></td>
                                     <td><p>How to display the <a class="xref" href="Gutenberg.Expression.UnaryOperator-1.html">UnaryOperator&lt;T&gt;</a></p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p></td>
+                                    <td><p>chainable</p></td>
+                                    <td><p>Whether the operator is chainable. If a non-chainable
+operator is applied multiple times, the inner expressions
+are parenthesised.</p>
 </td>
                                 </tr>
                                 <tr>
@@ -1188,12 +1236,12 @@ the operator needs to be parenthesised.</p>
                                     <li><a href="#Gutenberg_Expression_OperatorFactory_1_InfixN_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__">InfixN(Int32, Document&lt;T&gt;, IBracketer&lt;T&gt;)</a></li>
                                     <li><a href="#Gutenberg_Expression_OperatorFactory_1_InfixR_System_Int32_Gutenberg_Document__0__">InfixR(Int32, Document&lt;T&gt;)</a></li>
                                     <li><a href="#Gutenberg_Expression_OperatorFactory_1_InfixR_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__">InfixR(Int32, Document&lt;T&gt;, IBracketer&lt;T&gt;)</a></li>
-                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__">Postfix(Int32, Document&lt;T&gt;)</a></li>
-                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__">Postfix(Int32, Document&lt;T&gt;, IBracketer&lt;T&gt;)</a></li>
-                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__">Prefix(Int32, Document&lt;T&gt;)</a></li>
-                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__">Prefix(Int32, Document&lt;T&gt;, IBracketer&lt;T&gt;)</a></li>
-                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__">Unary(UnaryOperatorType, Int32, Document&lt;T&gt;)</a></li>
-                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__">Unary(UnaryOperatorType, Int32, Document&lt;T&gt;, IBracketer&lt;T&gt;)</a></li>
+                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_">Postfix(Int32, Document&lt;T&gt;, Boolean)</a></li>
+                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__">Postfix(Int32, Document&lt;T&gt;, Boolean, IBracketer&lt;T&gt;)</a></li>
+                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_">Prefix(Int32, Document&lt;T&gt;, Boolean)</a></li>
+                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__">Prefix(Int32, Document&lt;T&gt;, Boolean, IBracketer&lt;T&gt;)</a></li>
+                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_">Unary(UnaryOperatorType, Int32, Document&lt;T&gt;, Boolean)</a></li>
+                                    <li><a href="#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__">Unary(UnaryOperatorType, Int32, Document&lt;T&gt;, Boolean, IBracketer&lt;T&gt;)</a></li>
                             </ul>
                         </li>
                 </ul>

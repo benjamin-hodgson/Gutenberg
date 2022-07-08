@@ -206,6 +206,21 @@ parentheses inserted in the correct locations.
             </table>
         
         
+            <h5><strong>Examples</strong></h5>
+            <p>Here is an example of a small expression language with
+negation, addition, and equality operators.
+Since <code>!</code> binds tighter (has a higher precedence) than
+<code>==</code>, the example document pretty-prints itself
+with parentheses around the equality expression.</p>
+<pre><code>var not = OperatorFactory&lt;object>.Prefix(7, &quot;!&quot;);
+var plus = OperatorFactory&lt;object>.InfixL(5, &quot; + &quot;);
+var eq = OperatorFactory&lt;object>.InfixL(3, &quot; == &quot;);
+
+var doc = not.Apply(eq.Apply(plus.Apply(&quot;x&quot;, &quot;y&quot;), &quot;z&quot;));
+Console.WriteLine(doc.PrettyPrint());
+// Output:
+// !(x + y == z)</code></pre>
+
         
             <h3 id="constructors"><a href="#constructors">Constructors
         </a></h3>
