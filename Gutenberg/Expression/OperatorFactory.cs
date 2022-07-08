@@ -35,6 +35,11 @@ public static class OperatorFactory<T>
     /// <param name="symbol">
     /// How to display the <see cref="UnaryOperator{T}"/>
     /// </param>
+    /// <param name="chainable">
+    /// Whether the operator is chainable. If a non-chainable
+    /// operator is applied multiple times, the inner expressions
+    /// are parenthesised.
+    /// </param>
     /// <returns>
     /// A <see cref="UnaryOperator{T}"/>.
     /// </returns>
@@ -42,11 +47,13 @@ public static class OperatorFactory<T>
     public static UnaryOperator<T> Unary(
         UnaryOperatorType type,
         int precedence,
-        Document<T> symbol
+        Document<T> symbol,
+        bool chainable = false
     ) => Unary(
         type,
         precedence,
         symbol,
+        chainable,
         _defaultBracketer
     );
 
@@ -67,6 +74,11 @@ public static class OperatorFactory<T>
     /// <param name="symbol">
     /// How to display the <see cref="UnaryOperator{T}"/>
     /// </param>
+    /// <param name="chainable">
+    /// Whether the operator is chainable. If a non-chainable
+    /// operator is applied multiple times, the inner expressions
+    /// are parenthesised.
+    /// </param>
     /// <param name="bracketer">
     /// An <see cref="IBracketer{T}"/> which will be called when
     /// the operator needs to be parenthesised.
@@ -78,6 +90,7 @@ public static class OperatorFactory<T>
         UnaryOperatorType type,
         int precedence,
         Document<T> symbol,
+        bool chainable,
         IBracketer<T> bracketer
     )
     {
@@ -88,7 +101,7 @@ public static class OperatorFactory<T>
         ArgumentNullException.ThrowIfNull(symbol);
         ArgumentNullException.ThrowIfNull(bracketer);
 
-        return new(type, precedence, symbol, bracketer);
+        return new(type, precedence, symbol, chainable, bracketer);
     }
 
     /// <summary>
@@ -104,14 +117,20 @@ public static class OperatorFactory<T>
     /// <param name="symbol">
     /// How to display the <see cref="UnaryOperator{T}"/>
     /// </param>
+    /// <param name="chainable">
+    /// Whether the operator is chainable. If a non-chainable
+    /// operator is applied multiple times, the inner expressions
+    /// are parenthesised.
+    /// </param>
     /// <returns>
     /// A prefix <see cref="UnaryOperator{T}"/>.
     /// </returns>
     /// <seealso cref="KernighanRitchieBracketer{T}"/>
     public static UnaryOperator<T> Prefix(
         int precedence,
-        Document<T> symbol
-    ) => Prefix(precedence, symbol, _defaultBracketer);
+        Document<T> symbol,
+        bool chainable = false
+    ) => Prefix(precedence, symbol, chainable, _defaultBracketer);
 
     /// <summary>
     /// Creates a prefix <see cref="UnaryOperator{T}"/>
@@ -125,6 +144,11 @@ public static class OperatorFactory<T>
     /// </param>
     /// <param name="symbol">
     /// How to display the <see cref="UnaryOperator{T}"/>
+    /// </param>
+    /// <param name="chainable">
+    /// Whether the operator is chainable. If a non-chainable
+    /// operator is applied multiple times, the inner expressions
+    /// are parenthesised.
     /// </param>
     /// <param name="bracketer">
     /// An <see cref="IBracketer{T}"/> which will be called when
@@ -136,13 +160,14 @@ public static class OperatorFactory<T>
     public static UnaryOperator<T> Prefix(
         int precedence,
         Document<T> symbol,
+        bool chainable,
         IBracketer<T> bracketer
     )
     {
         ArgumentNullException.ThrowIfNull(symbol);
         ArgumentNullException.ThrowIfNull(bracketer);
 
-        return Unary(UnaryOperatorType.Prefix, precedence, symbol, bracketer);
+        return Unary(UnaryOperatorType.Prefix, precedence, symbol, chainable, bracketer);
     }
 
     /// <summary>
@@ -158,12 +183,20 @@ public static class OperatorFactory<T>
     /// <param name="symbol">
     /// How to display the <see cref="UnaryOperator{T}"/>
     /// </param>
+    /// <param name="chainable">
+    /// Whether the operator is chainable. If a non-chainable
+    /// operator is applied multiple times, the inner expressions
+    /// are parenthesised.
+    /// </param>
     /// <returns>
     /// A postfix <see cref="UnaryOperator{T}"/>.
     /// </returns>
     /// <seealso cref="KernighanRitchieBracketer{T}"/>
-    public static UnaryOperator<T> Postfix(int precedence, Document<T> symbol)
-        => Postfix(precedence, symbol, _defaultBracketer);
+    public static UnaryOperator<T> Postfix(
+        int precedence,
+        Document<T> symbol,
+        bool chainable = false
+    ) => Postfix(precedence, symbol, chainable, _defaultBracketer);
 
     /// <summary>
     /// Creates a postfix <see cref="UnaryOperator{T}"/>
@@ -177,6 +210,11 @@ public static class OperatorFactory<T>
     /// </param>
     /// <param name="symbol">
     /// How to display the <see cref="UnaryOperator{T}"/>
+    /// </param>
+    /// <param name="chainable">
+    /// Whether the operator is chainable. If a non-chainable
+    /// operator is applied multiple times, the inner expressions
+    /// are parenthesised.
     /// </param>
     /// <param name="bracketer">
     /// An <see cref="IBracketer{T}"/> which will be called when
@@ -188,13 +226,14 @@ public static class OperatorFactory<T>
     public static UnaryOperator<T> Postfix(
         int precedence,
         Document<T> symbol,
+        bool chainable,
         IBracketer<T> bracketer
     )
     {
         ArgumentNullException.ThrowIfNull(symbol);
         ArgumentNullException.ThrowIfNull(bracketer);
 
-        return Unary(UnaryOperatorType.Postfix, precedence, symbol, bracketer);
+        return Unary(UnaryOperatorType.Postfix, precedence, symbol, chainable, bracketer);
     }
 
     /// <summary>
@@ -267,7 +306,7 @@ public static class OperatorFactory<T>
         ArgumentNullException.ThrowIfNull(symbol);
         ArgumentNullException.ThrowIfNull(bracketer);
 
-        return new(BinaryOperatorType.NonAssociative, precedence, symbol, bracketer);
+        return new(type, precedence, symbol, bracketer);
     }
 
     /// <summary>

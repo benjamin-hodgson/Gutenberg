@@ -4,8 +4,17 @@ namespace Gutenberg.Tests;
 
 public class DocumentationTests
 {
+    private const string _preamble = @"
+        using System.Linq;
+        using Gutenberg;
+        using Gutenberg.Bracketing;
+        using Gutenberg.Expression;
+        using Doc = Gutenberg.Document<object>;
+        using Box = Gutenberg.Box<object>;
+    ";
+    
     [Theory]
-    [DocTestData(typeof(Document<>), Preamble = "using System.Linq; using Gutenberg; using Gutenberg.Bracketing; using Doc = Gutenberg.Document<object>; using Box = Gutenberg.Box<object>;")]
+    [DocTestData(typeof(Document<>), Preamble = _preamble)]
     public async Task TestXmlDocs(DocTest test)
     {
         await test.Run();

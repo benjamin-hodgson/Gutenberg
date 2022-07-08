@@ -80,7 +80,7 @@ public sealed class BinaryOperator<T>
                 {
                     left.BumpedIf(_type != BinaryOperatorType.LeftAssociative),
                     _symbol,
-                    right.BumpedIf(_type != BinaryOperatorType.LeftAssociative)
+                    right.BumpedIf(_type != BinaryOperatorType.RightAssociative)
                 }
             ),
             _bracketer

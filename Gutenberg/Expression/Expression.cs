@@ -27,6 +27,23 @@ namespace Gutenberg.Expression;
 /// parentheses inserted in the correct locations.
 /// </para>
 /// </summary>
+/// <example name="ExpressionExample">
+/// Here is an example of a small expression language with
+/// negation, addition, and equality operators.
+/// Since <c>!</c> binds tighter (has a higher precedence) than
+/// <c>==</c>, the example document pretty-prints itself
+/// with parentheses around the equality expression.
+/// <code doctest="true">
+/// var not = OperatorFactory&lt;object&gt;.Prefix(7, "!");
+/// var plus = OperatorFactory&lt;object&gt;.InfixL(5, " + ");
+/// var eq = OperatorFactory&lt;object&gt;.InfixL(3, " == ");
+///
+/// var doc = not.Apply(eq.Apply(plus.Apply("x", "y"), "z"));
+/// Console.WriteLine(doc.PrettyPrint());
+/// // Output:
+/// // !(x + y == z)
+/// </code>
+/// </example>
 /// <typeparam name="T">
 /// The type of annotations in the <see cref="Document{T}"/>s.
 /// </typeparam>
@@ -172,4 +189,3 @@ internal record struct PrecedenceState(
     public static PrecedenceState Default { get; }
         = new(0, false);
 }
-

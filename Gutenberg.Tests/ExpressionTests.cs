@@ -1,6 +1,3 @@
-// using Gutenberg.Expression;
-// using Expr = Gutenberg.Expression.Expression<object>;
-// using Doc = Gutenberg.Document<object>;
 using static Gutenberg.Tests.DocumentTestUtil;
 
 using BinOp = Gutenberg.Expression.BinaryOperator<object>;
@@ -11,23 +8,43 @@ namespace Gutenberg.Tests;
 
 public class ExpressionTests
 {
-    private static readonly UnOp _not = Op.Prefix(6, "!");
+    private static readonly UnOp _not = Op.Prefix(6, "!", chainable: true);
     private static readonly BinOp _plus = Op.InfixL(5, " + ");
-    // private static readonly BinOp _minus = Op.InfixL(5, "-");
-    private static readonly BinOp _gt = Op.InfixL(4, " > ");
-    // private static readonly BinOp _ge = Op.InfixL(4, ">=");
-    // private static readonly BinOp _lt = Op.InfixL(4, "<");
-    // private static readonly BinOp _le = Op.InfixL(4, "<=");
-    // private static readonly BinOp _eq = Op.InfixL(3, "==");
-    // private static readonly BinOp _ne = Op.InfixL(3, "!=");
-    // private static readonly BinOp _and = Op.InfixL(2, "&&");
-    // private static readonly BinOp _or = Op.InfixL(1, "||");
-
+    private static readonly UnOp _incr = Op.Postfix(5, "++");
+    private static readonly BinOp _eq = Op.InfixL(4, " == ");
+    private static readonly BinOp _arr = Op.InfixR(3, " -> ");
 
     [Fact]
-    public async Task TestExpression()
+    public async Task TestInfixL()
     {
-        var expr = _not.Apply(_gt.Apply(_plus.Apply("x", "3"), "5"));
-        await TestDocument("!(x + 3 > 5)", expr.PrettyPrint());
+        var expr = _plus.Apply(
+            _plus.Apply("x", "3"),
+            _plus.Apply(_plus.Apply("5", "y"), "7")
+        );
+        await TestDocument("x + 3 + (5 + y + 7)", expr.PrettyPrint());
+    }
+    
+    [Fact]
+    public async Task TestInfixR()
+    {
+        var expr = _arr.Apply(
+            _arr.Apply("Int", "Bool"),
+            _arr.Apply("[Int]", _arr.Apply("Int", "[Int]"))
+        );
+        await TestDocument("(Int -> Bool) -> [Int] -> Int -> [Int]", expr.PrettyPrint());
+    }
+    
+    [Fact]
+    public async Task TestPrefixChainable()
+    {
+        var expr = _not.Apply(_not.Apply(_eq.Apply("x", "y")));
+        await TestDocument("!!(x == y)", expr.PrettyPrint());
+    }
+    
+    [Fact]
+    public async Task TestPostfixNonChainable()
+    {
+        var expr = _incr.Apply(_incr.Apply("x"));
+        await TestDocument("(x++)++", expr.PrettyPrint());
     }
 }

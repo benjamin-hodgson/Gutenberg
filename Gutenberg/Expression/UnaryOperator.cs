@@ -34,18 +34,21 @@ public sealed class UnaryOperator<T>
     private readonly UnaryOperatorType _type;
     private readonly int _precedence;
     private readonly Document<T> _symbol;
+    private readonly bool _chainable;
     private readonly IBracketer<T> _bracketer;
 
     internal UnaryOperator(
         UnaryOperatorType type,
         int precedence,
         Document<T> symbol,
+        bool chainable,
         IBracketer<T> bracketer
     )
     {
         _type = type;
         _precedence = precedence;
         _symbol = symbol;
+        _chainable = chainable;
         _bracketer = bracketer;
     }
 
@@ -64,14 +67,16 @@ public sealed class UnaryOperator<T>
     {
         ArgumentNullException.ThrowIfNull(expression);
 
+        var expr = expression.BumpedIf(!_chainable);
+
         return new OperatorExpression<T>(
             _precedence,
             _type switch
             {
                 UnaryOperatorType.Prefix
-                    => ImmutableArray.CreateRange(new[] { _symbol, expression }),
+                    => ImmutableArray.CreateRange(new[] { _symbol, expr }),
                 UnaryOperatorType.Postfix
-                    => ImmutableArray.CreateRange(new[] { expression, _symbol }),
+                    => ImmutableArray.CreateRange(new[] { expr, _symbol }),
                 _ => throw new InvalidOperationException($"Unknown {nameof(UnaryOperatorType)}"),
             },
             _bracketer
