@@ -12,7 +12,7 @@ public class DocumentationTests
         using Doc = Gutenberg.Document<object>;
         using Box = Gutenberg.Box<object>;
     ";
-    
+
     [Theory]
     [DocTestData(typeof(Document<>), Preamble = _preamble)]
     public async Task TestXmlDocs(DocTest test)

@@ -23,7 +23,7 @@ public class ExpressionTests
         );
         await TestDocument("x + 3 + (5 + y + 7)", expr.PrettyPrint());
     }
-    
+
     [Fact]
     public async Task TestInfixR()
     {
@@ -33,14 +33,14 @@ public class ExpressionTests
         );
         await TestDocument("(Int -> Bool) -> [Int] -> Int -> [Int]", expr.PrettyPrint());
     }
-    
+
     [Fact]
     public async Task TestPrefixChainable()
     {
         var expr = _not.Apply(_not.Apply(_eq.Apply("x", "y")));
         await TestDocument("!!(x == y)", expr.PrettyPrint());
     }
-    
+
     [Fact]
     public async Task TestPostfixNonChainable()
     {
