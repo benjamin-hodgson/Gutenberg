@@ -46,7 +46,7 @@ public static class OperatorFactory<T>
         symbol,
         KernighanRitchieBracketer<T>.Default
     );
-    
+
     /// <summary>
     /// Creates a <see cref="UnaryOperator{T}"/>
     /// representing the given <paramref name="symbol"/>,
@@ -386,7 +386,7 @@ public static class OperatorFactory<T>
     /// <seealso cref="KernighanRitchieBracketer{T}"/>
     public static BinaryOperator<T> InfixR(int precedence, Document<T> symbol)
         => InfixR(precedence, symbol, KernighanRitchieBracketer<T>.Default);
-    
+
     /// <summary>
     /// Creates a right-associative <see cref="BinaryOperator{T}"/>
     /// representing the given <paramref name="symbol"/>,
