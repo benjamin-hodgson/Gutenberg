@@ -106,7 +106,7 @@ internal class LayoutEngine<T>
                     _nestingLevel = _wroteIndentation + _lineTextLength;
 
                     // need to flush the buffer, since box bypasses it
-                    await Flush(cancellationToken, false).ConfigureAwait(false);
+                    await Flush(cancellationToken, stripTrailingWhitespace: false).ConfigureAwait(false);
 
                     for (var i = 0; i < box.Height; i++)
                     {
@@ -191,7 +191,7 @@ internal class LayoutEngine<T>
                 case ChoicePoint<T> cp:
                     if (cp.ResumeAt < 0)
                     {
-                        goto wroteWholeDoc;
+                        goto done;
                     }
                     var resume = _stack[cp.ResumeAt];
                     cp.ResumeAt -= 1;
@@ -217,7 +217,8 @@ internal class LayoutEngine<T>
             }
         }
 
-        wroteWholeDoc: await Flush(cancellationToken, returnChoicePoints: false).ConfigureAwait(false);
+    done:
+        await Flush(cancellationToken, returnChoicePoints: false).ConfigureAwait(false);
     }
 
     private void Push(IStackItem<T> item) => _stack.Add(item);
