@@ -94,6 +94,16 @@ public class SimpleTests
     }
 
     [Fact]
+    public async Task StripTrailingWhitespace()
+    {
+        await TestDocument(
+            "abc\n\n  def\n",
+            Doc.Concat("abc", Doc.LineBreak, Doc.LineBreak, "def", Doc.LineBreak)
+                .Nested(2)
+        );
+    }
+
+    [Fact]
     public async Task TestAnnotations()
     {
         var doc = Document<int>

@@ -49,27 +49,24 @@ internal class LayoutEngine<T>
                     else
                     {
                         _lineBuffer.Add(LayoutInstruction<T>.NewLine);
-                        if (_nestingLevel > 0)
-                        {
-                            _lineBuffer.Add(LayoutInstruction<T>.WhiteSpace(_nestingLevel));
-                        }
-                        _lineTextLength = 0;
-                        _wroteIndentation = _nestingLevel;
                         if (_bufferUntilDeIndent < 0)
                         {
                             await Flush(cancellationToken).ConfigureAwait(false);
                         }
+                        _lineTextLength = 0;
+
+                        if (_nestingLevel > 0)
+                        {
+                            _lineBuffer.Add(LayoutInstruction<T>.WhiteSpace(_nestingLevel));
+                        }
+                        _wroteIndentation = _nestingLevel;
                     }
                     break;
 
                 case WhiteSpaceDocument<T>(var amount):
                     _lineBuffer.Add(LayoutInstruction<T>.WhiteSpace(amount));
                     _lineTextLength += amount;
-                    if (!_canBacktrack)
-                    {
-                        await Flush(cancellationToken).ConfigureAwait(false);
-                    }
-                    else if (!Fits())
+                    if (_canBacktrack && !Fits())
                     {
                         Backtrack();
                     }
@@ -78,11 +75,7 @@ internal class LayoutEngine<T>
                 case TextDocument<T>(var text):
                     _lineBuffer.Add(LayoutInstruction<T>.Text(text));
                     _lineTextLength += text.Length;
-                    if (!_canBacktrack)
-                    {
-                        await Flush(cancellationToken).ConfigureAwait(false);
-                    }
-                    else if (!Fits())
+                    if (_canBacktrack && !Fits())
                     {
                         Backtrack();
                     }
@@ -112,7 +105,7 @@ internal class LayoutEngine<T>
                     _nestingLevel = _wroteIndentation + _lineTextLength;
 
                     // need to flush the buffer, since box bypasses it
-                    await Flush(cancellationToken).ConfigureAwait(false);
+                    await Flush(cancellationToken, false).ConfigureAwait(false);
 
                     for (var i = 0; i < box.Height; i++)
                     {
@@ -285,7 +278,7 @@ internal class LayoutEngine<T>
         throw new InvalidOperationException("Didn't find a choice point! Please report this as a bug in Gutenberg");
     }
 
-    private async ValueTask Flush(CancellationToken cancellationToken)
+    private async ValueTask Flush(CancellationToken cancellationToken, bool stripTrailingWhitespace = true)
     {
         // commit to all choices since start of line
         for (var i = 0; i < _stack.Count; i++)
@@ -302,26 +295,29 @@ internal class LayoutEngine<T>
         }
         _canBacktrack = false;
 
-        foreach (var instr in _lineBuffer)
+        for (var i = 0; i < _lineBuffer.Count; i++)
         {
             if (cancellationToken.IsCancellationRequested)
             {
                 await ValueTask.FromCanceled(cancellationToken).ConfigureAwait(false);
                 return;
             }
-            switch (instr.GetInstructionType())
+            switch (_lineBuffer[i].GetInstructionType())
             {
                 case LayoutInstructionType.Text:
-                    await _renderer.Text(instr.GetText(), cancellationToken).ConfigureAwait(false);
+                    await _renderer.Text(_lineBuffer[i].GetText(), cancellationToken).ConfigureAwait(false);
                     break;
                 case LayoutInstructionType.WhiteSpace:
-                    await _renderer.WhiteSpace(instr.GetWhitespaceAmount(), cancellationToken).ConfigureAwait(false);
+                    if (!stripTrailingWhitespace || LineContainsTextAfter(i))  // look ahead to determine whether we should strip the whitespace
+                    {
+                        await _renderer.WhiteSpace(_lineBuffer[i].GetWhitespaceAmount(), cancellationToken).ConfigureAwait(false);
+                    }
                     break;
                 case LayoutInstructionType.NewLine:
                     await _renderer.NewLine(cancellationToken).ConfigureAwait(false);
                     break;
                 case LayoutInstructionType.PushAnnotation:
-                    await _renderer.PushAnnotation(instr.GetAnnotation(), cancellationToken).ConfigureAwait(false);
+                    await _renderer.PushAnnotation(_lineBuffer[i].GetAnnotation(), cancellationToken).ConfigureAwait(false);
                     break;
                 case LayoutInstructionType.PopAnnotation:
                     await _renderer.PopAnnotation(cancellationToken).ConfigureAwait(false);
@@ -329,5 +325,21 @@ internal class LayoutEngine<T>
             }
         }
         _lineBuffer.Clear();
+    }
+
+    private bool LineContainsTextAfter(int index)
+    {
+        for (var i = index + 1; i < _lineBuffer.Count; i++)
+        {
+            if (_lineBuffer[i].IsText)
+            {
+                return true;
+            }
+            if (_lineBuffer[i].IsNewLine)
+            {
+                return false;
+            }
+        }
+        return false;
     }
 }

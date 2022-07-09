@@ -29,9 +29,12 @@ internal readonly struct LayoutInstruction<T>
         _length = length;
     }
 
+    public bool IsNewLine => ReferenceEquals(_object, NewLineInstruction.Instance);
+    public bool IsText => _offset >= 0 && _length >= 0;
+
     public LayoutInstructionType GetInstructionType()
     {
-        if (ReferenceEquals(_object, NewLineInstruction.Instance))
+        if (IsNewLine)
         {
             return LayoutInstructionType.NewLine;
         }
@@ -48,7 +51,7 @@ internal readonly struct LayoutInstruction<T>
             // _length >= 0
             return LayoutInstructionType.WhiteSpace;
         }
-        if (_offset >= 0 && _length >= 0)
+        if (IsText)
         {
             if (_object is not string)
             {
