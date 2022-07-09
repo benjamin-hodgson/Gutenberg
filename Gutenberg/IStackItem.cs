@@ -4,37 +4,16 @@ internal interface IStackItem<T> { }
 
 internal class ChoicePoint<T> : IStackItem<T>
 {
-    public Document<T> Fallback { get; }
-    public int NestingLevel { get; }
-    public int BufferedInstructionCount { get; }
-    public int LineTextLength { get; }
-    public bool Flatten { get; }
-    public bool CanBacktrack { get; }
-    public int BufferUntilDeIndent { get; }
+    public Document<T>? Fallback { get; set; }
+    public int NestingLevel { get; set; }
+    public int BufferedInstructionCount { get; set; }
+    public int LineTextLength { get; set; }
+    public bool Flatten { get; set; }
+    public bool CanBacktrack { get; set; }
+    public int BufferUntilDeIndent { get; set; }
     // a stack location. gets updated by
     // LayoutEngine upon popping a ChoicePoint
     public int ResumeAt { get; set; }
-
-    public ChoicePoint(
-        Document<T> fallback,
-        int nestingLevel,
-        int bufferedInstructionCount,
-        int lineTextLength,
-        bool flatten,
-        bool canBacktrack,
-        int bufferUntilDeIndent,
-        int resumeAt
-    )
-    {
-        Fallback = fallback;
-        NestingLevel = nestingLevel;
-        BufferedInstructionCount = bufferedInstructionCount;
-        LineTextLength = lineTextLength;
-        Flatten = flatten;
-        CanBacktrack = canBacktrack;
-        BufferUntilDeIndent = bufferUntilDeIndent;
-        ResumeAt = resumeAt;
-    }
 }
 
 internal class SetNestingLevel<T> : IStackItem<T>

@@ -4,6 +4,7 @@ internal class LayoutEngine<T>
 {
     private readonly LayoutOptions _options;
     private readonly IDocumentRenderer<T> _renderer;
+    private Stack<ChoicePoint<T>>? _choicePointPool;
 
     private bool _flatten = false;
     private int _nestingLevel = 0;
@@ -135,7 +136,7 @@ internal class LayoutEngine<T>
                     break;
 
                 case ChoiceDocument<T>(var first, var second):
-                    Push(new ChoicePoint<T>(
+                    Push(CreateChoicePoint(
                         second,
                         _nestingLevel,
                         _lineBuffer.Count,
@@ -190,9 +191,7 @@ internal class LayoutEngine<T>
                 case ChoicePoint<T> cp:
                     if (cp.ResumeAt < 0)
                     {
-                        // we wrote the whole document
-                        await Flush(cancellationToken).ConfigureAwait(false);
-                        return;
+                        goto wroteWholeDoc;
                     }
                     var resume = _stack[cp.ResumeAt];
                     cp.ResumeAt -= 1;
@@ -218,7 +217,7 @@ internal class LayoutEngine<T>
             }
         }
 
-        await Flush(cancellationToken).ConfigureAwait(false);
+        wroteWholeDoc: await Flush(cancellationToken, returnChoicePoints: false).ConfigureAwait(false);
     }
 
     private void Push(IStackItem<T> item) => _stack.Add(item);
@@ -265,7 +264,7 @@ internal class LayoutEngine<T>
             // ignore resumeAt during failure - want to resume where the choice was
             if (doc is ChoicePoint<T> cp)
             {
-                Push(cp.Fallback);
+                Push(cp.Fallback!);
                 _nestingLevel = cp.NestingLevel;
                 _lineBuffer.RemoveRange(cp.BufferedInstructionCount, _lineBuffer.Count - cp.BufferedInstructionCount);
                 _lineTextLength = cp.LineTextLength;
@@ -278,7 +277,11 @@ internal class LayoutEngine<T>
         throw new InvalidOperationException("Didn't find a choice point! Please report this as a bug in Gutenberg");
     }
 
-    private async ValueTask Flush(CancellationToken cancellationToken, bool stripTrailingWhitespace = true)
+    private async ValueTask Flush(
+        CancellationToken cancellationToken,
+        bool stripTrailingWhitespace = true,
+        bool returnChoicePoints = true
+    )
     {
         // commit to all choices since start of line
         for (var i = 0; i < _stack.Count; i++)
@@ -290,6 +293,10 @@ internal class LayoutEngine<T>
                 for (var j = cp.ResumeAt + 1; j <= i; j++)
                 {
                     _stack[j] = Document<T>.Empty;
+                }
+                if (returnChoicePoints)
+                {
+                    ReturnChoicePoint(cp);
                 }
             }
         }
@@ -341,5 +348,42 @@ internal class LayoutEngine<T>
             }
         }
         return false;
+    }
+
+    private void ReturnChoicePoint(ChoicePoint<T> cp)
+    {
+        cp.Fallback = null;
+        if (_choicePointPool == null)
+        {
+            _choicePointPool = new();
+        }
+        _choicePointPool.Push(cp);
+    }
+
+    private ChoicePoint<T> CreateChoicePoint(
+        Document<T> fallback,
+        int nestingLevel,
+        int bufferedInstructionCount,
+        int lineTextLength,
+        bool flatten,
+        bool canBacktrack,
+        int bufferUntilDeIndent,
+        int resumeAt
+    )
+    {
+        var cp = _choicePointPool?.Count > 0
+            ? _choicePointPool.Pop()
+            : new ChoicePoint<T>();
+
+        cp.Fallback = fallback;
+        cp.NestingLevel = nestingLevel;
+        cp.BufferedInstructionCount = bufferedInstructionCount;
+        cp.LineTextLength = lineTextLength;
+        cp.Flatten = flatten;
+        cp.CanBacktrack = canBacktrack;
+        cp.BufferUntilDeIndent = bufferUntilDeIndent;
+        cp.ResumeAt = resumeAt;
+
+        return cp;
     }
 }
