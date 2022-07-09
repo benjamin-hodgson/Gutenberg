@@ -4,13 +4,13 @@ namespace Gutenberg.Tests;
 
 public class DocumentationTests
 {
-    private const string _preamble = @"
+    private const string _preamble = @$"
         using System.Linq;
-        using Gutenberg;
-        using Gutenberg.Brackets;
-        using Gutenberg.Expression;
-        using Doc = Gutenberg.Document<object>;
-        using Box = Gutenberg.Box<object>;
+        using {nameof(Gutenberg)};
+        using {nameof(Gutenberg)}.{nameof(Brackets)};
+        using {nameof(Gutenberg)}.{nameof(Expression)};
+        using Doc = {nameof(Gutenberg)}.{nameof(Document<object>)}<object>;
+        using Box = {nameof(Gutenberg)}.{nameof(Box<object>)}<object>;
     ";
 
     [Theory]
