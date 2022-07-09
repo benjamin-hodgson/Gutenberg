@@ -3,10 +3,10 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class Alignment
+      <title>Class AllmanBracketer&lt;T&gt;
      | Gutenberg </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class Alignment
+      <meta name="title" content="Class AllmanBracketer&lt;T&gt;
      | Gutenberg ">
       <meta name="generator" content="docfx 2.59.2.0">
     
@@ -45,11 +45,11 @@
                     </form>
                             <ul id="toc0" class="active active-i">
                                     <li>
-                                            <button type="button" class="link expander active active-i js-expander" aria-controls="toc0_0"></button>
-                                            <a href="Gutenberg.html" title="Gutenberg" class="active active-i">Gutenberg</a>
-                                            <ul id="toc0_0" class="active active-i">
+                                            <button type="button" class="link expander  js-expander" aria-controls="toc0_0"></button>
+                                            <a href="Gutenberg.html" title="Gutenberg" class="">Gutenberg</a>
+                                            <ul id="toc0_0" class="">
                                                     <li>
-                                                            <a href="Gutenberg.Alignment.html" title="Alignment" class="active active-i">Alignment</a>
+                                                            <a href="Gutenberg.Alignment.html" title="Alignment" class="">Alignment</a>
                                                     </li>
                                                     <li>
                                                             <a href="Gutenberg.Box-1.html" title="Box&lt;T&gt;" class="">Box&lt;T&gt;</a>
@@ -78,11 +78,11 @@
                                             </ul>
                                     </li>
                                     <li>
-                                            <button type="button" class="link expander  js-expander" aria-controls="toc0_1"></button>
-                                            <a href="Gutenberg.Brackets.html" title="Gutenberg.Brackets" class="">Gutenberg.Brackets</a>
-                                            <ul id="toc0_1" class="">
+                                            <button type="button" class="link expander active active-i js-expander" aria-controls="toc0_1"></button>
+                                            <a href="Gutenberg.Brackets.html" title="Gutenberg.Brackets" class="active active-i">Gutenberg.Brackets</a>
+                                            <ul id="toc0_1" class="active active-i">
                                                     <li>
-                                                            <a href="Gutenberg.Brackets.AllmanBracketer-1.html" title="AllmanBracketer&lt;T&gt;" class="">AllmanBracketer&lt;T&gt;</a>
+                                                            <a href="Gutenberg.Brackets.AllmanBracketer-1.html" title="AllmanBracketer&lt;T&gt;" class="active active-i">AllmanBracketer&lt;T&gt;</a>
                                                     </li>
                                                     <li>
                                                             <a href="Gutenberg.Brackets.IBracketer-1.html" title="IBracketer&lt;T&gt;" class="">IBracketer&lt;T&gt;</a>
@@ -152,51 +152,111 @@
 
             <div class="col columns">
 <article class="col">
-        <h1 id="Gutenberg_Alignment"><a href="#Gutenberg_Alignment">Class Alignment
+        <h1 id="Gutenberg_Brackets_AllmanBracketer_1"><a href="#Gutenberg_Brackets_AllmanBracketer_1">Class AllmanBracketer&lt;T&gt;
         </a></h1>
-        <div><p>How to behave when composing two <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a>es
-with mismatched sizes.</p>
+        <div><p>An <a class="xref" href="Gutenberg.Brackets.IBracketer-1.html">IBracketer&lt;T&gt;</a> which uses the Allman style.</p>
 </div>
             <h5>Inheritance</h5>
             <ul>
                     <li><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></li>
-                <li>Alignment</li>
+                <li>AllmanBracketer&lt;T&gt;</li>
+            </ul>
+            <h5>Implements</h5>
+            <ul>
+                    <li><a class="xref" href="Gutenberg.Brackets.IBracketer-1.html">IBracketer</a>&lt;T&gt;</li>
             </ul>
         
         
         <h5>Declaration</h5>
-        <pre><code class="lang-csharp hljs">public sealed class Alignment : Enum</code></pre>
+        <pre><code class="lang-csharp hljs">public class AllmanBracketer&lt;T&gt; : Object, IBracketer&lt;T&gt;</code></pre>
+            <h5>Type Parameters</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td><p>T</p></td>
+                            <td><p>The type of annotations in the document.</p>
+</td>
+                        </tr>
+                </tbody>
+            </table>
         
+            <h5><strong>Remarks</strong></h5>
+            <div><p>&quot;The Allman style&quot; is the name for the bracketing style
+which is customary in C#. 
+The opening bracket is placed on a new line,
+the contained document is indented, and the closing bracket
+is placed on a new line.</p>
+</div>
         
+            <h5><strong>Examples</strong></h5>
+            <pre><code>var bracketer = new AllmanBracketer&lt;object>(&quot;{&quot;, &quot;}&quot;, false);
+var doc = &quot;header&quot; + bracketer.Bracket(
+    new Doc[] { &quot;line 1&quot;, &quot;line 2&quot; }
+        .Separated(Doc.LineBreak)
+);
+Console.WriteLine(doc);
+// Output:
+// header
+// {
+//     line 1
+//     line 2
+// }</code></pre>
+
         
-            <h3 id="fields"><a href="#fields">Fields
+            <h3 id="constructors"><a href="#constructors">Constructors
         </a></h3>
 
                 
-                <h4 id="Gutenberg_Alignment_CenterEnd"><a href="#Gutenberg_Alignment_CenterEnd">CenterEnd</a></h4>
-                <div><p>Align the smaller box with the centre of the larger one.
-If the box can&apos;t be exactly centred (because the width
-difference is an odd number), align it one character closer
-to the end.</p>
+                <a id="Gutenberg_Brackets_AllmanBracketer_1__ctor_"></a>
+                <h4 id="Gutenberg_Brackets_AllmanBracketer_1__ctor_Gutenberg_Document__0__Gutenberg_Document__0__System_Boolean_System_Nullable_System_Int32__"><a href="#Gutenberg_Brackets_AllmanBracketer_1__ctor_Gutenberg_Document__0__Gutenberg_Document__0__System_Boolean_System_Nullable_System_Int32__">AllmanBracketer(Document&lt;T&gt;, Document&lt;T&gt;, Boolean, Nullable&lt;Int32&gt;)</a></h4>
+                <div><p>Creates an <a class="xref" href="Gutenberg.Brackets.IBracketer-1.html">IBracketer&lt;T&gt;</a> which uses the Allman style.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public const Alignment CenterEnd</code></pre>
+                    <pre><code class="lang-csharp hljs">public AllmanBracketer(Document&lt;T&gt; openingBracket, Document&lt;T&gt; closingBracket, bool group = true, Nullable&lt;int&gt; nestingLevel = null)</code></pre>
 
-        
-        
-        
-                        <h5>Field Value</h5>
+                        <h5>Parameters</h5>
                         <table>
                             <thead>
                                 <tr>
                                     <th>Type</th>
+                                    <th>Name</th>
                                     <th>Description</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="Gutenberg.Alignment.html">Alignment</a></p></td>
-                                    <td></td>
+                                    <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
+                                    <td><p>openingBracket</p></td>
+                                    <td><p>A <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a> representing the opening
+bracket character.</p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
+                                    <td><p>closingBracket</p></td>
+                                    <td><p>A <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a> representing the closing
+bracket character.</p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p></td>
+                                    <td><p>group</p></td>
+                                    <td><p>Whether the resulting <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a> should
+be grouped — that is, whether the document may be
+flattened to a single line if it fits.</p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</p></td>
+                                    <td><p>nestingLevel</p></td>
+                                    <td><p>The amount of indentation to apply to the bracketed document</p>
+</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -205,55 +265,41 @@ to the end.</p>
         
         
         
-                    <h5 id="Gutenberg_Alignment_CenterEnd_examples">Examples</h5>
-                <p>When boxes are being composed vertically,
-the start of the alignment axis is the
-left-hand side of the box.</p>
-<pre><code>var box = Box.FromString(&quot;abcdefgh&quot;)
-    .Above(&quot;ijk&quot;, Alignment.CenterEnd)
-    .WithBorder();
-Console.Write(box.ToString());
-// Output:
-// ┌────────┐
-// │abcdefgh│
-// │   ijk  │
-// └────────┘</code></pre>
-
-                <p>When boxes are being composed horiztonally,
-the start of the alignment axis is the
-top of the box.</p>
-<pre><code>var box = Box.FromString(string.Join(&apos;\n&apos;, &quot;abcdefgh&quot;.AsEnumerable()))
-    .LeftOf(string.Join(&apos;\n&apos;, &quot;ijk&quot;.AsEnumerable()), Alignment.CenterEnd)
-    .WithBorder();
-Console.Write(box.ToString());
-// Output:
-// ┌──┐
-// │a │
-// │b │
-// │c │
-// │di│
-// │ej│
-// │fk│
-// │g │
-// │h │
-// └──┘</code></pre>
-
+        
+        
+        
                         
         
+            <h3 id="methods"><a href="#methods">Methods
+        </a></h3>
+
                 
-                <h4 id="Gutenberg_Alignment_CenterStart"><a href="#Gutenberg_Alignment_CenterStart">CenterStart</a></h4>
-                <div><p>Align the smaller box with the centre of the larger one.
-If the box can&apos;t be exactly centred (because the width
-difference is an odd number), align it one character closer
-to the start.</p>
+                <a id="Gutenberg_Brackets_AllmanBracketer_1_Bracket_"></a>
+                <h4 id="Gutenberg_Brackets_AllmanBracketer_1_Bracket_Gutenberg_Document__0__"><a href="#Gutenberg_Brackets_AllmanBracketer_1_Bracket_Gutenberg_Document__0__">Bracket(Document&lt;T&gt;)</a></h4>
+                <div><p>Surrounds the <code data-dev-comment-type="paramref" class="paramref">document</code> with brackets.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public const Alignment CenterStart</code></pre>
+                    <pre><code class="lang-csharp hljs">public Document&lt;T&gt; Bracket(Document&lt;T&gt; document)</code></pre>
 
+                        <h5>Parameters</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
+                                    <td><p>document</p></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
         
-        
-        
-                        <h5>Field Value</h5>
+                        <h5>Returns</h5>
                         <table>
                             <thead>
                                 <tr>
@@ -263,7 +309,7 @@ to the start.</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="Gutenberg.Alignment.html">Alignment</a></p></td>
+                                    <td><p><a class="xref" href="Gutenberg.Document-1.html">Document</a>&lt;T&gt;</p></td>
                                     <td></td>
                                 </tr>
                             </tbody>
@@ -273,205 +319,15 @@ to the start.</p>
         
         
         
-                    <h5 id="Gutenberg_Alignment_CenterStart_examples">Examples</h5>
-                <p>When boxes are being composed vertically,
-the start of the alignment axis is the
-left-hand side of the box.</p>
-<pre><code>var box = Box.FromString(&quot;abcdefgh&quot;)
-    .Above(&quot;ijk&quot;, Alignment.CenterStart)
-    .WithBorder();
-Console.Write(box.ToString());
-// Output:
-// ┌────────┐
-// │abcdefgh│
-// │  ijk   │
-// └────────┘</code></pre>
-
-                <p>When boxes are being composed horiztonally,
-the start of the alignment axis is the
-top of the box.</p>
-<pre><code>var box = Box.FromString(string.Join(&apos;\n&apos;, &quot;abcdefgh&quot;.AsEnumerable()))
-    .LeftOf(string.Join(&apos;\n&apos;, &quot;ijk&quot;.AsEnumerable()), Alignment.CenterStart)
-    .WithBorder();
-Console.Write(box.ToString());
-// Output:
-// ┌──┐
-// │a │
-// │b │
-// │ci│
-// │dj│
-// │ek│
-// │f │
-// │g │
-// │h │
-// └──┘</code></pre>
-
-                        
-        
-                
-                <h4 id="Gutenberg_Alignment_End"><a href="#Gutenberg_Alignment_End">End</a></h4>
-                <div><p>Align the smaller box with the end (the bottom or right)
-of the larger one.</p>
-</div>
-                <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public const Alignment End</code></pre>
-
-        
-        
-        
-                        <h5>Field Value</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="Gutenberg.Alignment.html">Alignment</a></p></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-        
-        
-        
-        
-        
-                    <h5 id="Gutenberg_Alignment_End_examples">Examples</h5>
-                <p>When boxes are being composed vertically,
-the start of the alignment axis is the
-left-hand side of the box.</p>
-<pre><code>var box = Box.FromString(&quot;abcdefgh&quot;)
-    .Above(&quot;ijk&quot;, Alignment.End)
-    .WithBorder();
-Console.Write(box.ToString());
-// Output:
-// ┌────────┐
-// │abcdefgh│
-// │     ijk│
-// └────────┘</code></pre>
-
-                <p>When boxes are being composed horiztonally,
-the start of the alignment axis is the
-top of the box.</p>
-<pre><code>var box = Box.FromString(string.Join(&apos;\n&apos;, &quot;abcdefgh&quot;.AsEnumerable()))
-    .LeftOf(string.Join(&apos;\n&apos;, &quot;ijk&quot;.AsEnumerable()), Alignment.End)
-    .WithBorder();
-Console.Write(box.ToString());
-// Output:
-// ┌──┐
-// │a │
-// │b │
-// │c │
-// │d │
-// │e │
-// │fi│
-// │gj│
-// │hk│
-// └──┘</code></pre>
-
-                        
-        
-                
-                <h4 id="Gutenberg_Alignment_Start"><a href="#Gutenberg_Alignment_Start">Start</a></h4>
-                <div><p>Align the smaller box with the start (the top or left)
-of the larger one.</p>
-</div>
-                <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public const Alignment Start</code></pre>
-
-        
-        
-        
-                        <h5>Field Value</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="Gutenberg.Alignment.html">Alignment</a></p></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-        
-        
-        
-        
-        
-                    <h5 id="Gutenberg_Alignment_Start_examples">Examples</h5>
-                <p>When boxes are being composed vertically,
-the start of the alignment axis is the
-left-hand side of the box.</p>
-<pre><code>var box = Box.FromString(&quot;abcdefgh&quot;)
-    .Above(&quot;ijk&quot;, Alignment.Start)
-    .WithBorder();
-Console.Write(box.ToString());
-// Output:
-// ┌────────┐
-// │abcdefgh│
-// │ijk     │
-// └────────┘</code></pre>
-
-                <p>When boxes are being composed horiztonally,
-the start of the alignment axis is the
-top of the box.</p>
-<pre><code>var box = Box.FromString(string.Join(&apos;\n&apos;, &quot;abcdefgh&quot;.AsEnumerable()))
-    .LeftOf(string.Join(&apos;\n&apos;, &quot;ijk&quot;.AsEnumerable()), Alignment.Start)
-    .WithBorder();
-Console.Write(box.ToString());
-// Output:
-// ┌──┐
-// │ai│
-// │bj│
-// │ck│
-// │d │
-// │e │
-// │f │
-// │g │
-// │h │
-// └──┘</code></pre>
-
-                        
-        
-                
-                <h4 id="Gutenberg_Alignment_value__"><a href="#Gutenberg_Alignment_value__">value__</a></h4>
-                <div></div>
-                <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public int value__</code></pre>
-
-        
-        
-        
-                        <h5>Field Value</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></p></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-        
-        
-        
         
         
                         
         
         
+        <h3 id="implements"><a href="#implements">Implements</a></h3>
+        <div>
+                <a class="xref" href="Gutenberg.Brackets.IBracketer-1.html">IBracketer&lt;T&gt;</a>
+        </div>
         
 
         
@@ -483,19 +339,23 @@ Console.Write(box.ToString());
     <nav id="local-toc">
         <ul class="active">
             <li>
-                <a class="active" href="#Gutenberg_Alignment">Class Alignment
+                <a class="active" href="#Gutenberg_Brackets_AllmanBracketer_1">Class AllmanBracketer&lt;T&gt;
     </a>
                 <ul class="active">
                         <li>
-                            <a href="#fields">Fields
+                            <a href="#constructors">Constructors
     </a>
 
                             <ul>
-                                    <li><a href="#Gutenberg_Alignment_CenterEnd">CenterEnd</a></li>
-                                    <li><a href="#Gutenberg_Alignment_CenterStart">CenterStart</a></li>
-                                    <li><a href="#Gutenberg_Alignment_End">End</a></li>
-                                    <li><a href="#Gutenberg_Alignment_Start">Start</a></li>
-                                    <li><a href="#Gutenberg_Alignment_value__">value__</a></li>
+                                    <li><a href="#Gutenberg_Brackets_AllmanBracketer_1__ctor_Gutenberg_Document__0__Gutenberg_Document__0__System_Boolean_System_Nullable_System_Int32__">AllmanBracketer(Document&lt;T&gt;, Document&lt;T&gt;, Boolean, Nullable&lt;Int32&gt;)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#methods">Methods
+    </a>
+
+                            <ul>
+                                    <li><a href="#Gutenberg_Brackets_AllmanBracketer_1_Bracket_Gutenberg_Document__0__">Bracket(Document&lt;T&gt;)</a></li>
                             </ul>
                         </li>
                 </ul>

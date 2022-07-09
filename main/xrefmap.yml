@@ -360,582 +360,124 @@ references:
   fullName.vb: Gutenberg.Box(Of T).WithBorder
   nameWithType: Box<T>.WithBorder
   nameWithType.vb: Box(Of T).WithBorder
-- uid: Gutenberg.Bracketing
-  name: Gutenberg.Bracketing
-  href: Gutenberg.Bracketing.html
-  commentId: N:Gutenberg.Bracketing
-  fullName: Gutenberg.Bracketing
-  nameWithType: Gutenberg.Bracketing
-- uid: Gutenberg.Bracketing.AllmanBracketer`1
+- uid: Gutenberg.Brackets
+  name: Gutenberg.Brackets
+  href: Gutenberg.Brackets.html
+  commentId: N:Gutenberg.Brackets
+  fullName: Gutenberg.Brackets
+  nameWithType: Gutenberg.Brackets
+- uid: Gutenberg.Brackets.AllmanBracketer`1
   name: AllmanBracketer<T>
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html
-  commentId: T:Gutenberg.Bracketing.AllmanBracketer`1
+  href: Gutenberg.Brackets.AllmanBracketer-1.html
+  commentId: T:Gutenberg.Brackets.AllmanBracketer`1
   name.vb: AllmanBracketer(Of T)
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T)
+  fullName: Gutenberg.Brackets.AllmanBracketer<T>
+  fullName.vb: Gutenberg.Brackets.AllmanBracketer(Of T)
   nameWithType: AllmanBracketer<T>
   nameWithType.vb: AllmanBracketer(Of T)
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.#ctor(Gutenberg.Bracketing.AllmanBracketer{`0})
-  name: AllmanBracketer(AllmanBracketer<T>)
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1__ctor_Gutenberg_Bracketing_AllmanBracketer__0__
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.#ctor(Gutenberg.Bracketing.AllmanBracketer{`0})
-  name.vb: AllmanBracketer(AllmanBracketer(Of T))
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.AllmanBracketer(Gutenberg.Bracketing.AllmanBracketer<T>)
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).AllmanBracketer(Gutenberg.Bracketing.AllmanBracketer(Of T))
-  nameWithType: AllmanBracketer<T>.AllmanBracketer(AllmanBracketer<T>)
-  nameWithType.vb: AllmanBracketer(Of T).AllmanBracketer(AllmanBracketer(Of T))
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
+- uid: Gutenberg.Brackets.AllmanBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
   name: AllmanBracketer(Document<T>, Document<T>, Boolean, Nullable<Int32>)
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1__ctor_Gutenberg_Document__0__Gutenberg_Document__0__System_Boolean_System_Nullable_System_Int32__
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
+  href: Gutenberg.Brackets.AllmanBracketer-1.html#Gutenberg_Brackets_AllmanBracketer_1__ctor_Gutenberg_Document__0__Gutenberg_Document__0__System_Boolean_System_Nullable_System_Int32__
+  commentId: M:Gutenberg.Brackets.AllmanBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
   name.vb: AllmanBracketer(Document(Of T), Document(Of T), Boolean, Nullable(Of Int32))
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.AllmanBracketer(Gutenberg.Document<T>, Gutenberg.Document<T>, System.Boolean, System.Nullable<System.Int32>)
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).AllmanBracketer(Gutenberg.Document(Of T), Gutenberg.Document(Of T), System.Boolean, System.Nullable(Of System.Int32))
+  fullName: Gutenberg.Brackets.AllmanBracketer<T>.AllmanBracketer(Gutenberg.Document<T>, Gutenberg.Document<T>, System.Boolean, System.Nullable<System.Int32>)
+  fullName.vb: Gutenberg.Brackets.AllmanBracketer(Of T).AllmanBracketer(Gutenberg.Document(Of T), Gutenberg.Document(Of T), System.Boolean, System.Nullable(Of System.Int32))
   nameWithType: AllmanBracketer<T>.AllmanBracketer(Document<T>, Document<T>, Boolean, Nullable<Int32>)
   nameWithType.vb: AllmanBracketer(Of T).AllmanBracketer(Document(Of T), Document(Of T), Boolean, Nullable(Of Int32))
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.#ctor*
+- uid: Gutenberg.Brackets.AllmanBracketer`1.#ctor*
   name: AllmanBracketer
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1__ctor_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.#ctor
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.AllmanBracketer
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).AllmanBracketer
+  href: Gutenberg.Brackets.AllmanBracketer-1.html#Gutenberg_Brackets_AllmanBracketer_1__ctor_
+  commentId: Overload:Gutenberg.Brackets.AllmanBracketer`1.#ctor
+  fullName: Gutenberg.Brackets.AllmanBracketer<T>.AllmanBracketer
+  fullName.vb: Gutenberg.Brackets.AllmanBracketer(Of T).AllmanBracketer
   nameWithType: AllmanBracketer<T>.AllmanBracketer
   nameWithType.vb: AllmanBracketer(Of T).AllmanBracketer
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.{Clone}$
-  name: <Clone>$()
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1__Clone__
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.{Clone}$
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.<Clone>$()
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).<Clone>$()
-  nameWithType: AllmanBracketer<T>.<Clone>$()
-  nameWithType.vb: AllmanBracketer(Of T).<Clone>$()
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.{Clone}$*
-  name: <Clone>$
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1__Clone___
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.{Clone}$
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.<Clone>$
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).<Clone>$
-  nameWithType: AllmanBracketer<T>.<Clone>$
-  nameWithType.vb: AllmanBracketer(Of T).<Clone>$
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.Bracket(Gutenberg.Document{`0})
+- uid: Gutenberg.Brackets.AllmanBracketer`1.Bracket(Gutenberg.Document{`0})
   name: Bracket(Document<T>)
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_Bracket_Gutenberg_Document__0__
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.Bracket(Gutenberg.Document{`0})
+  href: Gutenberg.Brackets.AllmanBracketer-1.html#Gutenberg_Brackets_AllmanBracketer_1_Bracket_Gutenberg_Document__0__
+  commentId: M:Gutenberg.Brackets.AllmanBracketer`1.Bracket(Gutenberg.Document{`0})
   name.vb: Bracket(Document(Of T))
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Bracket(Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Bracket(Gutenberg.Document(Of T))
+  fullName: Gutenberg.Brackets.AllmanBracketer<T>.Bracket(Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Brackets.AllmanBracketer(Of T).Bracket(Gutenberg.Document(Of T))
   nameWithType: AllmanBracketer<T>.Bracket(Document<T>)
   nameWithType.vb: AllmanBracketer(Of T).Bracket(Document(Of T))
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.Bracket*
+- uid: Gutenberg.Brackets.AllmanBracketer`1.Bracket*
   name: Bracket
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_Bracket_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.Bracket
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Bracket
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Bracket
+  href: Gutenberg.Brackets.AllmanBracketer-1.html#Gutenberg_Brackets_AllmanBracketer_1_Bracket_
+  commentId: Overload:Gutenberg.Brackets.AllmanBracketer`1.Bracket
+  fullName: Gutenberg.Brackets.AllmanBracketer<T>.Bracket
+  fullName.vb: Gutenberg.Brackets.AllmanBracketer(Of T).Bracket
   nameWithType: AllmanBracketer<T>.Bracket
   nameWithType.vb: AllmanBracketer(Of T).Bracket
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.ClosingBracket
-  name: ClosingBracket
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_ClosingBracket
-  commentId: P:Gutenberg.Bracketing.AllmanBracketer`1.ClosingBracket
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.ClosingBracket
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).ClosingBracket
-  nameWithType: AllmanBracketer<T>.ClosingBracket
-  nameWithType.vb: AllmanBracketer(Of T).ClosingBracket
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.ClosingBracket*
-  name: ClosingBracket
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_ClosingBracket_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.ClosingBracket
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.ClosingBracket
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).ClosingBracket
-  nameWithType: AllmanBracketer<T>.ClosingBracket
-  nameWithType.vb: AllmanBracketer(Of T).ClosingBracket
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.Deconstruct(Gutenberg.Document{`0}@,Gutenberg.Document{`0}@,System.Boolean@,System.Nullable{System.Int32}@)
-  name: Deconstruct(out Document<T>, out Document<T>, out Boolean, out Nullable<Int32>)
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_Deconstruct_Gutenberg_Document__0___Gutenberg_Document__0___System_Boolean__System_Nullable_System_Int32___
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.Deconstruct(Gutenberg.Document{`0}@,Gutenberg.Document{`0}@,System.Boolean@,System.Nullable{System.Int32}@)
-  name.vb: Deconstruct(ByRef Document(Of T), ByRef Document(Of T), ByRef Boolean, ByRef Nullable(Of Int32))
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Deconstruct(out Gutenberg.Document<T>, out Gutenberg.Document<T>, out System.Boolean, out System.Nullable<System.Int32>)
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Deconstruct(ByRef Gutenberg.Document(Of T), ByRef Gutenberg.Document(Of T), ByRef System.Boolean, ByRef System.Nullable(Of System.Int32))
-  nameWithType: AllmanBracketer<T>.Deconstruct(out Document<T>, out Document<T>, out Boolean, out Nullable<Int32>)
-  nameWithType.vb: AllmanBracketer(Of T).Deconstruct(ByRef Document(Of T), ByRef Document(Of T), ByRef Boolean, ByRef Nullable(Of Int32))
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.Deconstruct*
-  name: Deconstruct
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_Deconstruct_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.Deconstruct
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Deconstruct
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Deconstruct
-  nameWithType: AllmanBracketer<T>.Deconstruct
-  nameWithType.vb: AllmanBracketer(Of T).Deconstruct
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.EqualityContract
-  name: EqualityContract
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_EqualityContract
-  commentId: P:Gutenberg.Bracketing.AllmanBracketer`1.EqualityContract
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.EqualityContract
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).EqualityContract
-  nameWithType: AllmanBracketer<T>.EqualityContract
-  nameWithType.vb: AllmanBracketer(Of T).EqualityContract
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.EqualityContract*
-  name: EqualityContract
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_EqualityContract_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.EqualityContract
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.EqualityContract
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).EqualityContract
-  nameWithType: AllmanBracketer<T>.EqualityContract
-  nameWithType.vb: AllmanBracketer(Of T).EqualityContract
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.Equals(Gutenberg.Bracketing.AllmanBracketer{`0})
-  name: Equals(AllmanBracketer<T>)
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_Equals_Gutenberg_Bracketing_AllmanBracketer__0__
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.Equals(Gutenberg.Bracketing.AllmanBracketer{`0})
-  name.vb: Equals(AllmanBracketer(Of T))
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Equals(Gutenberg.Bracketing.AllmanBracketer<T>)
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Equals(Gutenberg.Bracketing.AllmanBracketer(Of T))
-  nameWithType: AllmanBracketer<T>.Equals(AllmanBracketer<T>)
-  nameWithType.vb: AllmanBracketer(Of T).Equals(AllmanBracketer(Of T))
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.Equals(System.Object)
-  name: Equals(Object)
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_Equals_System_Object_
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.Equals(System.Object)
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Equals(System.Object)
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Equals(System.Object)
-  nameWithType: AllmanBracketer<T>.Equals(Object)
-  nameWithType.vb: AllmanBracketer(Of T).Equals(Object)
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.Equals*
-  name: Equals
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_Equals_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.Equals
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Equals
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Equals
-  nameWithType: AllmanBracketer<T>.Equals
-  nameWithType.vb: AllmanBracketer(Of T).Equals
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.GetHashCode
-  name: GetHashCode()
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_GetHashCode
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.GetHashCode
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.GetHashCode()
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).GetHashCode()
-  nameWithType: AllmanBracketer<T>.GetHashCode()
-  nameWithType.vb: AllmanBracketer(Of T).GetHashCode()
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.GetHashCode*
-  name: GetHashCode
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_GetHashCode_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.GetHashCode
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.GetHashCode
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).GetHashCode
-  nameWithType: AllmanBracketer<T>.GetHashCode
-  nameWithType.vb: AllmanBracketer(Of T).GetHashCode
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.Group
-  name: Group
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_Group
-  commentId: P:Gutenberg.Bracketing.AllmanBracketer`1.Group
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Group
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Group
-  nameWithType: AllmanBracketer<T>.Group
-  nameWithType.vb: AllmanBracketer(Of T).Group
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.Group*
-  name: Group
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_Group_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.Group
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Group
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Group
-  nameWithType: AllmanBracketer<T>.Group
-  nameWithType.vb: AllmanBracketer(Of T).Group
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.NestingLevel
-  name: NestingLevel
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_NestingLevel
-  commentId: P:Gutenberg.Bracketing.AllmanBracketer`1.NestingLevel
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.NestingLevel
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).NestingLevel
-  nameWithType: AllmanBracketer<T>.NestingLevel
-  nameWithType.vb: AllmanBracketer(Of T).NestingLevel
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.NestingLevel*
-  name: NestingLevel
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_NestingLevel_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.NestingLevel
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.NestingLevel
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).NestingLevel
-  nameWithType: AllmanBracketer<T>.NestingLevel
-  nameWithType.vb: AllmanBracketer(Of T).NestingLevel
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.op_Equality(Gutenberg.Bracketing.AllmanBracketer{`0},Gutenberg.Bracketing.AllmanBracketer{`0})
-  name: Equality(AllmanBracketer<T>, AllmanBracketer<T>)
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_op_Equality_Gutenberg_Bracketing_AllmanBracketer__0__Gutenberg_Bracketing_AllmanBracketer__0__
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.op_Equality(Gutenberg.Bracketing.AllmanBracketer{`0},Gutenberg.Bracketing.AllmanBracketer{`0})
-  name.vb: Equality(AllmanBracketer(Of T), AllmanBracketer(Of T))
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Equality(Gutenberg.Bracketing.AllmanBracketer<T>, Gutenberg.Bracketing.AllmanBracketer<T>)
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Equality(Gutenberg.Bracketing.AllmanBracketer(Of T), Gutenberg.Bracketing.AllmanBracketer(Of T))
-  nameWithType: AllmanBracketer<T>.Equality(AllmanBracketer<T>, AllmanBracketer<T>)
-  nameWithType.vb: AllmanBracketer(Of T).Equality(AllmanBracketer(Of T), AllmanBracketer(Of T))
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.op_Equality*
-  name: Equality
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_op_Equality_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.op_Equality
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Equality
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Equality
-  nameWithType: AllmanBracketer<T>.Equality
-  nameWithType.vb: AllmanBracketer(Of T).Equality
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.op_Inequality(Gutenberg.Bracketing.AllmanBracketer{`0},Gutenberg.Bracketing.AllmanBracketer{`0})
-  name: Inequality(AllmanBracketer<T>, AllmanBracketer<T>)
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_op_Inequality_Gutenberg_Bracketing_AllmanBracketer__0__Gutenberg_Bracketing_AllmanBracketer__0__
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.op_Inequality(Gutenberg.Bracketing.AllmanBracketer{`0},Gutenberg.Bracketing.AllmanBracketer{`0})
-  name.vb: Inequality(AllmanBracketer(Of T), AllmanBracketer(Of T))
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Inequality(Gutenberg.Bracketing.AllmanBracketer<T>, Gutenberg.Bracketing.AllmanBracketer<T>)
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Inequality(Gutenberg.Bracketing.AllmanBracketer(Of T), Gutenberg.Bracketing.AllmanBracketer(Of T))
-  nameWithType: AllmanBracketer<T>.Inequality(AllmanBracketer<T>, AllmanBracketer<T>)
-  nameWithType.vb: AllmanBracketer(Of T).Inequality(AllmanBracketer(Of T), AllmanBracketer(Of T))
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.op_Inequality*
-  name: Inequality
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_op_Inequality_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.op_Inequality
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.Inequality
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).Inequality
-  nameWithType: AllmanBracketer<T>.Inequality
-  nameWithType.vb: AllmanBracketer(Of T).Inequality
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.OpeningBracket
-  name: OpeningBracket
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_OpeningBracket
-  commentId: P:Gutenberg.Bracketing.AllmanBracketer`1.OpeningBracket
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.OpeningBracket
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).OpeningBracket
-  nameWithType: AllmanBracketer<T>.OpeningBracket
-  nameWithType.vb: AllmanBracketer(Of T).OpeningBracket
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.OpeningBracket*
-  name: OpeningBracket
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_OpeningBracket_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.OpeningBracket
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.OpeningBracket
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).OpeningBracket
-  nameWithType: AllmanBracketer<T>.OpeningBracket
-  nameWithType.vb: AllmanBracketer(Of T).OpeningBracket
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.PrintMembers(System.Text.StringBuilder)
-  name: PrintMembers(StringBuilder)
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_PrintMembers_System_Text_StringBuilder_
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.PrintMembers(System.Text.StringBuilder)
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.PrintMembers(System.Text.StringBuilder)
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).PrintMembers(System.Text.StringBuilder)
-  nameWithType: AllmanBracketer<T>.PrintMembers(StringBuilder)
-  nameWithType.vb: AllmanBracketer(Of T).PrintMembers(StringBuilder)
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.PrintMembers*
-  name: PrintMembers
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_PrintMembers_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.PrintMembers
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.PrintMembers
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).PrintMembers
-  nameWithType: AllmanBracketer<T>.PrintMembers
-  nameWithType.vb: AllmanBracketer(Of T).PrintMembers
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.ToString
-  name: ToString()
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_ToString
-  commentId: M:Gutenberg.Bracketing.AllmanBracketer`1.ToString
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.ToString()
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).ToString()
-  nameWithType: AllmanBracketer<T>.ToString()
-  nameWithType.vb: AllmanBracketer(Of T).ToString()
-- uid: Gutenberg.Bracketing.AllmanBracketer`1.ToString*
-  name: ToString
-  href: Gutenberg.Bracketing.AllmanBracketer-1.html#Gutenberg_Bracketing_AllmanBracketer_1_ToString_
-  commentId: Overload:Gutenberg.Bracketing.AllmanBracketer`1.ToString
-  fullName: Gutenberg.Bracketing.AllmanBracketer<T>.ToString
-  fullName.vb: Gutenberg.Bracketing.AllmanBracketer(Of T).ToString
-  nameWithType: AllmanBracketer<T>.ToString
-  nameWithType.vb: AllmanBracketer(Of T).ToString
-- uid: Gutenberg.Bracketing.IBracketer`1
+- uid: Gutenberg.Brackets.IBracketer`1
   name: IBracketer<T>
-  href: Gutenberg.Bracketing.IBracketer-1.html
-  commentId: T:Gutenberg.Bracketing.IBracketer`1
+  href: Gutenberg.Brackets.IBracketer-1.html
+  commentId: T:Gutenberg.Brackets.IBracketer`1
   name.vb: IBracketer(Of T)
-  fullName: Gutenberg.Bracketing.IBracketer<T>
-  fullName.vb: Gutenberg.Bracketing.IBracketer(Of T)
+  fullName: Gutenberg.Brackets.IBracketer<T>
+  fullName.vb: Gutenberg.Brackets.IBracketer(Of T)
   nameWithType: IBracketer<T>
   nameWithType.vb: IBracketer(Of T)
-- uid: Gutenberg.Bracketing.IBracketer`1.Bracket(Gutenberg.Document{`0})
+- uid: Gutenberg.Brackets.IBracketer`1.Bracket(Gutenberg.Document{`0})
   name: Bracket(Document<T>)
-  href: Gutenberg.Bracketing.IBracketer-1.html#Gutenberg_Bracketing_IBracketer_1_Bracket_Gutenberg_Document__0__
-  commentId: M:Gutenberg.Bracketing.IBracketer`1.Bracket(Gutenberg.Document{`0})
+  href: Gutenberg.Brackets.IBracketer-1.html#Gutenberg_Brackets_IBracketer_1_Bracket_Gutenberg_Document__0__
+  commentId: M:Gutenberg.Brackets.IBracketer`1.Bracket(Gutenberg.Document{`0})
   name.vb: Bracket(Document(Of T))
-  fullName: Gutenberg.Bracketing.IBracketer<T>.Bracket(Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Bracketing.IBracketer(Of T).Bracket(Gutenberg.Document(Of T))
+  fullName: Gutenberg.Brackets.IBracketer<T>.Bracket(Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Brackets.IBracketer(Of T).Bracket(Gutenberg.Document(Of T))
   nameWithType: IBracketer<T>.Bracket(Document<T>)
   nameWithType.vb: IBracketer(Of T).Bracket(Document(Of T))
-- uid: Gutenberg.Bracketing.IBracketer`1.Bracket*
+- uid: Gutenberg.Brackets.IBracketer`1.Bracket*
   name: Bracket
-  href: Gutenberg.Bracketing.IBracketer-1.html#Gutenberg_Bracketing_IBracketer_1_Bracket_
-  commentId: Overload:Gutenberg.Bracketing.IBracketer`1.Bracket
-  fullName: Gutenberg.Bracketing.IBracketer<T>.Bracket
-  fullName.vb: Gutenberg.Bracketing.IBracketer(Of T).Bracket
+  href: Gutenberg.Brackets.IBracketer-1.html#Gutenberg_Brackets_IBracketer_1_Bracket_
+  commentId: Overload:Gutenberg.Brackets.IBracketer`1.Bracket
+  fullName: Gutenberg.Brackets.IBracketer<T>.Bracket
+  fullName.vb: Gutenberg.Brackets.IBracketer(Of T).Bracket
   nameWithType: IBracketer<T>.Bracket
   nameWithType.vb: IBracketer(Of T).Bracket
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1
+- uid: Gutenberg.Brackets.KernighanRitchieBracketer`1
   name: KernighanRitchieBracketer<T>
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html
-  commentId: T:Gutenberg.Bracketing.KernighanRitchieBracketer`1
+  href: Gutenberg.Brackets.KernighanRitchieBracketer-1.html
+  commentId: T:Gutenberg.Brackets.KernighanRitchieBracketer`1
   name.vb: KernighanRitchieBracketer(Of T)
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T)
+  fullName: Gutenberg.Brackets.KernighanRitchieBracketer<T>
+  fullName.vb: Gutenberg.Brackets.KernighanRitchieBracketer(Of T)
   nameWithType: KernighanRitchieBracketer<T>
   nameWithType.vb: KernighanRitchieBracketer(Of T)
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.#ctor(Gutenberg.Bracketing.KernighanRitchieBracketer{`0})
-  name: KernighanRitchieBracketer(KernighanRitchieBracketer<T>)
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1__ctor_Gutenberg_Bracketing_KernighanRitchieBracketer__0__
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.#ctor(Gutenberg.Bracketing.KernighanRitchieBracketer{`0})
-  name.vb: KernighanRitchieBracketer(KernighanRitchieBracketer(Of T))
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.KernighanRitchieBracketer(Gutenberg.Bracketing.KernighanRitchieBracketer<T>)
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).KernighanRitchieBracketer(Gutenberg.Bracketing.KernighanRitchieBracketer(Of T))
-  nameWithType: KernighanRitchieBracketer<T>.KernighanRitchieBracketer(KernighanRitchieBracketer<T>)
-  nameWithType.vb: KernighanRitchieBracketer(Of T).KernighanRitchieBracketer(KernighanRitchieBracketer(Of T))
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
+- uid: Gutenberg.Brackets.KernighanRitchieBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
   name: KernighanRitchieBracketer(Document<T>, Document<T>, Boolean, Nullable<Int32>)
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1__ctor_Gutenberg_Document__0__Gutenberg_Document__0__System_Boolean_System_Nullable_System_Int32__
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
+  href: Gutenberg.Brackets.KernighanRitchieBracketer-1.html#Gutenberg_Brackets_KernighanRitchieBracketer_1__ctor_Gutenberg_Document__0__Gutenberg_Document__0__System_Boolean_System_Nullable_System_Int32__
+  commentId: M:Gutenberg.Brackets.KernighanRitchieBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
   name.vb: KernighanRitchieBracketer(Document(Of T), Document(Of T), Boolean, Nullable(Of Int32))
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.KernighanRitchieBracketer(Gutenberg.Document<T>, Gutenberg.Document<T>, System.Boolean, System.Nullable<System.Int32>)
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).KernighanRitchieBracketer(Gutenberg.Document(Of T), Gutenberg.Document(Of T), System.Boolean, System.Nullable(Of System.Int32))
+  fullName: Gutenberg.Brackets.KernighanRitchieBracketer<T>.KernighanRitchieBracketer(Gutenberg.Document<T>, Gutenberg.Document<T>, System.Boolean, System.Nullable<System.Int32>)
+  fullName.vb: Gutenberg.Brackets.KernighanRitchieBracketer(Of T).KernighanRitchieBracketer(Gutenberg.Document(Of T), Gutenberg.Document(Of T), System.Boolean, System.Nullable(Of System.Int32))
   nameWithType: KernighanRitchieBracketer<T>.KernighanRitchieBracketer(Document<T>, Document<T>, Boolean, Nullable<Int32>)
   nameWithType.vb: KernighanRitchieBracketer(Of T).KernighanRitchieBracketer(Document(Of T), Document(Of T), Boolean, Nullable(Of Int32))
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.#ctor*
+- uid: Gutenberg.Brackets.KernighanRitchieBracketer`1.#ctor*
   name: KernighanRitchieBracketer
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1__ctor_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.#ctor
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.KernighanRitchieBracketer
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).KernighanRitchieBracketer
+  href: Gutenberg.Brackets.KernighanRitchieBracketer-1.html#Gutenberg_Brackets_KernighanRitchieBracketer_1__ctor_
+  commentId: Overload:Gutenberg.Brackets.KernighanRitchieBracketer`1.#ctor
+  fullName: Gutenberg.Brackets.KernighanRitchieBracketer<T>.KernighanRitchieBracketer
+  fullName.vb: Gutenberg.Brackets.KernighanRitchieBracketer(Of T).KernighanRitchieBracketer
   nameWithType: KernighanRitchieBracketer<T>.KernighanRitchieBracketer
   nameWithType.vb: KernighanRitchieBracketer(Of T).KernighanRitchieBracketer
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.{Clone}$
-  name: <Clone>$()
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1__Clone__
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.{Clone}$
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.<Clone>$()
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).<Clone>$()
-  nameWithType: KernighanRitchieBracketer<T>.<Clone>$()
-  nameWithType.vb: KernighanRitchieBracketer(Of T).<Clone>$()
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.{Clone}$*
-  name: <Clone>$
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1__Clone___
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.{Clone}$
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.<Clone>$
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).<Clone>$
-  nameWithType: KernighanRitchieBracketer<T>.<Clone>$
-  nameWithType.vb: KernighanRitchieBracketer(Of T).<Clone>$
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.Bracket(Gutenberg.Document{`0})
+- uid: Gutenberg.Brackets.KernighanRitchieBracketer`1.Bracket(Gutenberg.Document{`0})
   name: Bracket(Document<T>)
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_Bracket_Gutenberg_Document__0__
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.Bracket(Gutenberg.Document{`0})
+  href: Gutenberg.Brackets.KernighanRitchieBracketer-1.html#Gutenberg_Brackets_KernighanRitchieBracketer_1_Bracket_Gutenberg_Document__0__
+  commentId: M:Gutenberg.Brackets.KernighanRitchieBracketer`1.Bracket(Gutenberg.Document{`0})
   name.vb: Bracket(Document(Of T))
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Bracket(Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Bracket(Gutenberg.Document(Of T))
+  fullName: Gutenberg.Brackets.KernighanRitchieBracketer<T>.Bracket(Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Brackets.KernighanRitchieBracketer(Of T).Bracket(Gutenberg.Document(Of T))
   nameWithType: KernighanRitchieBracketer<T>.Bracket(Document<T>)
   nameWithType.vb: KernighanRitchieBracketer(Of T).Bracket(Document(Of T))
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.Bracket*
+- uid: Gutenberg.Brackets.KernighanRitchieBracketer`1.Bracket*
   name: Bracket
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_Bracket_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.Bracket
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Bracket
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Bracket
+  href: Gutenberg.Brackets.KernighanRitchieBracketer-1.html#Gutenberg_Brackets_KernighanRitchieBracketer_1_Bracket_
+  commentId: Overload:Gutenberg.Brackets.KernighanRitchieBracketer`1.Bracket
+  fullName: Gutenberg.Brackets.KernighanRitchieBracketer<T>.Bracket
+  fullName.vb: Gutenberg.Brackets.KernighanRitchieBracketer(Of T).Bracket
   nameWithType: KernighanRitchieBracketer<T>.Bracket
   nameWithType.vb: KernighanRitchieBracketer(Of T).Bracket
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.ClosingBracket
-  name: ClosingBracket
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_ClosingBracket
-  commentId: P:Gutenberg.Bracketing.KernighanRitchieBracketer`1.ClosingBracket
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.ClosingBracket
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).ClosingBracket
-  nameWithType: KernighanRitchieBracketer<T>.ClosingBracket
-  nameWithType.vb: KernighanRitchieBracketer(Of T).ClosingBracket
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.ClosingBracket*
-  name: ClosingBracket
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_ClosingBracket_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.ClosingBracket
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.ClosingBracket
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).ClosingBracket
-  nameWithType: KernighanRitchieBracketer<T>.ClosingBracket
-  nameWithType.vb: KernighanRitchieBracketer(Of T).ClosingBracket
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.Deconstruct(Gutenberg.Document{`0}@,Gutenberg.Document{`0}@,System.Boolean@,System.Nullable{System.Int32}@)
-  name: Deconstruct(out Document<T>, out Document<T>, out Boolean, out Nullable<Int32>)
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_Deconstruct_Gutenberg_Document__0___Gutenberg_Document__0___System_Boolean__System_Nullable_System_Int32___
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.Deconstruct(Gutenberg.Document{`0}@,Gutenberg.Document{`0}@,System.Boolean@,System.Nullable{System.Int32}@)
-  name.vb: Deconstruct(ByRef Document(Of T), ByRef Document(Of T), ByRef Boolean, ByRef Nullable(Of Int32))
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Deconstruct(out Gutenberg.Document<T>, out Gutenberg.Document<T>, out System.Boolean, out System.Nullable<System.Int32>)
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Deconstruct(ByRef Gutenberg.Document(Of T), ByRef Gutenberg.Document(Of T), ByRef System.Boolean, ByRef System.Nullable(Of System.Int32))
-  nameWithType: KernighanRitchieBracketer<T>.Deconstruct(out Document<T>, out Document<T>, out Boolean, out Nullable<Int32>)
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Deconstruct(ByRef Document(Of T), ByRef Document(Of T), ByRef Boolean, ByRef Nullable(Of Int32))
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.Deconstruct*
-  name: Deconstruct
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_Deconstruct_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.Deconstruct
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Deconstruct
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Deconstruct
-  nameWithType: KernighanRitchieBracketer<T>.Deconstruct
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Deconstruct
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.EqualityContract
-  name: EqualityContract
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_EqualityContract
-  commentId: P:Gutenberg.Bracketing.KernighanRitchieBracketer`1.EqualityContract
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.EqualityContract
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).EqualityContract
-  nameWithType: KernighanRitchieBracketer<T>.EqualityContract
-  nameWithType.vb: KernighanRitchieBracketer(Of T).EqualityContract
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.EqualityContract*
-  name: EqualityContract
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_EqualityContract_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.EqualityContract
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.EqualityContract
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).EqualityContract
-  nameWithType: KernighanRitchieBracketer<T>.EqualityContract
-  nameWithType.vb: KernighanRitchieBracketer(Of T).EqualityContract
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.Equals(Gutenberg.Bracketing.KernighanRitchieBracketer{`0})
-  name: Equals(KernighanRitchieBracketer<T>)
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_Equals_Gutenberg_Bracketing_KernighanRitchieBracketer__0__
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.Equals(Gutenberg.Bracketing.KernighanRitchieBracketer{`0})
-  name.vb: Equals(KernighanRitchieBracketer(Of T))
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Equals(Gutenberg.Bracketing.KernighanRitchieBracketer<T>)
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Equals(Gutenberg.Bracketing.KernighanRitchieBracketer(Of T))
-  nameWithType: KernighanRitchieBracketer<T>.Equals(KernighanRitchieBracketer<T>)
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Equals(KernighanRitchieBracketer(Of T))
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.Equals(System.Object)
-  name: Equals(Object)
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_Equals_System_Object_
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.Equals(System.Object)
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Equals(System.Object)
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Equals(System.Object)
-  nameWithType: KernighanRitchieBracketer<T>.Equals(Object)
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Equals(Object)
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.Equals*
-  name: Equals
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_Equals_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.Equals
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Equals
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Equals
-  nameWithType: KernighanRitchieBracketer<T>.Equals
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Equals
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.GetHashCode
-  name: GetHashCode()
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_GetHashCode
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.GetHashCode
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.GetHashCode()
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).GetHashCode()
-  nameWithType: KernighanRitchieBracketer<T>.GetHashCode()
-  nameWithType.vb: KernighanRitchieBracketer(Of T).GetHashCode()
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.GetHashCode*
-  name: GetHashCode
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_GetHashCode_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.GetHashCode
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.GetHashCode
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).GetHashCode
-  nameWithType: KernighanRitchieBracketer<T>.GetHashCode
-  nameWithType.vb: KernighanRitchieBracketer(Of T).GetHashCode
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.Group
-  name: Group
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_Group
-  commentId: P:Gutenberg.Bracketing.KernighanRitchieBracketer`1.Group
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Group
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Group
-  nameWithType: KernighanRitchieBracketer<T>.Group
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Group
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.Group*
-  name: Group
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_Group_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.Group
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Group
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Group
-  nameWithType: KernighanRitchieBracketer<T>.Group
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Group
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.NestingLevel
-  name: NestingLevel
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_NestingLevel
-  commentId: P:Gutenberg.Bracketing.KernighanRitchieBracketer`1.NestingLevel
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.NestingLevel
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).NestingLevel
-  nameWithType: KernighanRitchieBracketer<T>.NestingLevel
-  nameWithType.vb: KernighanRitchieBracketer(Of T).NestingLevel
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.NestingLevel*
-  name: NestingLevel
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_NestingLevel_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.NestingLevel
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.NestingLevel
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).NestingLevel
-  nameWithType: KernighanRitchieBracketer<T>.NestingLevel
-  nameWithType.vb: KernighanRitchieBracketer(Of T).NestingLevel
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.op_Equality(Gutenberg.Bracketing.KernighanRitchieBracketer{`0},Gutenberg.Bracketing.KernighanRitchieBracketer{`0})
-  name: Equality(KernighanRitchieBracketer<T>, KernighanRitchieBracketer<T>)
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_op_Equality_Gutenberg_Bracketing_KernighanRitchieBracketer__0__Gutenberg_Bracketing_KernighanRitchieBracketer__0__
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.op_Equality(Gutenberg.Bracketing.KernighanRitchieBracketer{`0},Gutenberg.Bracketing.KernighanRitchieBracketer{`0})
-  name.vb: Equality(KernighanRitchieBracketer(Of T), KernighanRitchieBracketer(Of T))
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Equality(Gutenberg.Bracketing.KernighanRitchieBracketer<T>, Gutenberg.Bracketing.KernighanRitchieBracketer<T>)
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Equality(Gutenberg.Bracketing.KernighanRitchieBracketer(Of T), Gutenberg.Bracketing.KernighanRitchieBracketer(Of T))
-  nameWithType: KernighanRitchieBracketer<T>.Equality(KernighanRitchieBracketer<T>, KernighanRitchieBracketer<T>)
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Equality(KernighanRitchieBracketer(Of T), KernighanRitchieBracketer(Of T))
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.op_Equality*
-  name: Equality
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_op_Equality_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.op_Equality
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Equality
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Equality
-  nameWithType: KernighanRitchieBracketer<T>.Equality
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Equality
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.op_Inequality(Gutenberg.Bracketing.KernighanRitchieBracketer{`0},Gutenberg.Bracketing.KernighanRitchieBracketer{`0})
-  name: Inequality(KernighanRitchieBracketer<T>, KernighanRitchieBracketer<T>)
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_op_Inequality_Gutenberg_Bracketing_KernighanRitchieBracketer__0__Gutenberg_Bracketing_KernighanRitchieBracketer__0__
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.op_Inequality(Gutenberg.Bracketing.KernighanRitchieBracketer{`0},Gutenberg.Bracketing.KernighanRitchieBracketer{`0})
-  name.vb: Inequality(KernighanRitchieBracketer(Of T), KernighanRitchieBracketer(Of T))
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Inequality(Gutenberg.Bracketing.KernighanRitchieBracketer<T>, Gutenberg.Bracketing.KernighanRitchieBracketer<T>)
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Inequality(Gutenberg.Bracketing.KernighanRitchieBracketer(Of T), Gutenberg.Bracketing.KernighanRitchieBracketer(Of T))
-  nameWithType: KernighanRitchieBracketer<T>.Inequality(KernighanRitchieBracketer<T>, KernighanRitchieBracketer<T>)
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Inequality(KernighanRitchieBracketer(Of T), KernighanRitchieBracketer(Of T))
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.op_Inequality*
-  name: Inequality
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_op_Inequality_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.op_Inequality
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.Inequality
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).Inequality
-  nameWithType: KernighanRitchieBracketer<T>.Inequality
-  nameWithType.vb: KernighanRitchieBracketer(Of T).Inequality
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.OpeningBracket
-  name: OpeningBracket
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_OpeningBracket
-  commentId: P:Gutenberg.Bracketing.KernighanRitchieBracketer`1.OpeningBracket
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.OpeningBracket
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).OpeningBracket
-  nameWithType: KernighanRitchieBracketer<T>.OpeningBracket
-  nameWithType.vb: KernighanRitchieBracketer(Of T).OpeningBracket
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.OpeningBracket*
-  name: OpeningBracket
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_OpeningBracket_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.OpeningBracket
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.OpeningBracket
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).OpeningBracket
-  nameWithType: KernighanRitchieBracketer<T>.OpeningBracket
-  nameWithType.vb: KernighanRitchieBracketer(Of T).OpeningBracket
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.PrintMembers(System.Text.StringBuilder)
-  name: PrintMembers(StringBuilder)
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_PrintMembers_System_Text_StringBuilder_
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.PrintMembers(System.Text.StringBuilder)
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.PrintMembers(System.Text.StringBuilder)
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).PrintMembers(System.Text.StringBuilder)
-  nameWithType: KernighanRitchieBracketer<T>.PrintMembers(StringBuilder)
-  nameWithType.vb: KernighanRitchieBracketer(Of T).PrintMembers(StringBuilder)
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.PrintMembers*
-  name: PrintMembers
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_PrintMembers_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.PrintMembers
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.PrintMembers
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).PrintMembers
-  nameWithType: KernighanRitchieBracketer<T>.PrintMembers
-  nameWithType.vb: KernighanRitchieBracketer(Of T).PrintMembers
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.ToString
-  name: ToString()
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_ToString
-  commentId: M:Gutenberg.Bracketing.KernighanRitchieBracketer`1.ToString
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.ToString()
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).ToString()
-  nameWithType: KernighanRitchieBracketer<T>.ToString()
-  nameWithType.vb: KernighanRitchieBracketer(Of T).ToString()
-- uid: Gutenberg.Bracketing.KernighanRitchieBracketer`1.ToString*
-  name: ToString
-  href: Gutenberg.Bracketing.KernighanRitchieBracketer-1.html#Gutenberg_Bracketing_KernighanRitchieBracketer_1_ToString_
-  commentId: Overload:Gutenberg.Bracketing.KernighanRitchieBracketer`1.ToString
-  fullName: Gutenberg.Bracketing.KernighanRitchieBracketer<T>.ToString
-  fullName.vb: Gutenberg.Bracketing.KernighanRitchieBracketer(Of T).ToString
-  nameWithType: KernighanRitchieBracketer<T>.ToString
-  nameWithType.vb: KernighanRitchieBracketer(Of T).ToString
 - uid: Gutenberg.Document`1
   name: Document<T>
   href: Gutenberg.Document-1.html
@@ -1675,13 +1217,13 @@ references:
   fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Infix(Gutenberg.Expression.BinaryOperatorType, System.Int32, Gutenberg.Document(Of T))
   nameWithType: OperatorFactory<T>.Infix(BinaryOperatorType, Int32, Document<T>)
   nameWithType.vb: OperatorFactory(Of T).Infix(BinaryOperatorType, Int32, Document(Of T))
-- uid: Gutenberg.Expression.OperatorFactory`1.Infix(Gutenberg.Expression.BinaryOperatorType,System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
+- uid: Gutenberg.Expression.OperatorFactory`1.Infix(Gutenberg.Expression.BinaryOperatorType,System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
   name: Infix(BinaryOperatorType, Int32, Document<T>, IBracketer<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Infix_Gutenberg_Expression_BinaryOperatorType_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.Infix(Gutenberg.Expression.BinaryOperatorType,System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Infix_Gutenberg_Expression_BinaryOperatorType_System_Int32_Gutenberg_Document__0__Gutenberg_Brackets_IBracketer__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Infix(Gutenberg.Expression.BinaryOperatorType,System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
   name.vb: Infix(BinaryOperatorType, Int32, Document(Of T), IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Infix(Gutenberg.Expression.BinaryOperatorType, System.Int32, Gutenberg.Document<T>, Gutenberg.Bracketing.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Infix(Gutenberg.Expression.BinaryOperatorType, System.Int32, Gutenberg.Document(Of T), Gutenberg.Bracketing.IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Infix(Gutenberg.Expression.BinaryOperatorType, System.Int32, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Infix(Gutenberg.Expression.BinaryOperatorType, System.Int32, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
   nameWithType: OperatorFactory<T>.Infix(BinaryOperatorType, Int32, Document<T>, IBracketer<T>)
   nameWithType.vb: OperatorFactory(Of T).Infix(BinaryOperatorType, Int32, Document(Of T), IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Infix*
@@ -1701,13 +1243,13 @@ references:
   fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixL(System.Int32, Gutenberg.Document(Of T))
   nameWithType: OperatorFactory<T>.InfixL(Int32, Document<T>)
   nameWithType.vb: OperatorFactory(Of T).InfixL(Int32, Document(Of T))
-- uid: Gutenberg.Expression.OperatorFactory`1.InfixL(System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
+- uid: Gutenberg.Expression.OperatorFactory`1.InfixL(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
   name: InfixL(Int32, Document<T>, IBracketer<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixL_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixL(System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixL_System_Int32_Gutenberg_Document__0__Gutenberg_Brackets_IBracketer__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixL(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
   name.vb: InfixL(Int32, Document(Of T), IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixL(System.Int32, Gutenberg.Document<T>, Gutenberg.Bracketing.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixL(System.Int32, Gutenberg.Document(Of T), Gutenberg.Bracketing.IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixL(System.Int32, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixL(System.Int32, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
   nameWithType: OperatorFactory<T>.InfixL(Int32, Document<T>, IBracketer<T>)
   nameWithType.vb: OperatorFactory(Of T).InfixL(Int32, Document(Of T), IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixL*
@@ -1727,13 +1269,13 @@ references:
   fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixN(System.Int32, Gutenberg.Document(Of T))
   nameWithType: OperatorFactory<T>.InfixN(Int32, Document<T>)
   nameWithType.vb: OperatorFactory(Of T).InfixN(Int32, Document(Of T))
-- uid: Gutenberg.Expression.OperatorFactory`1.InfixN(System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
+- uid: Gutenberg.Expression.OperatorFactory`1.InfixN(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
   name: InfixN(Int32, Document<T>, IBracketer<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixN_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixN(System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixN_System_Int32_Gutenberg_Document__0__Gutenberg_Brackets_IBracketer__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixN(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
   name.vb: InfixN(Int32, Document(Of T), IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixN(System.Int32, Gutenberg.Document<T>, Gutenberg.Bracketing.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixN(System.Int32, Gutenberg.Document(Of T), Gutenberg.Bracketing.IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixN(System.Int32, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixN(System.Int32, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
   nameWithType: OperatorFactory<T>.InfixN(Int32, Document<T>, IBracketer<T>)
   nameWithType.vb: OperatorFactory(Of T).InfixN(Int32, Document(Of T), IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixN*
@@ -1753,13 +1295,13 @@ references:
   fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixR(System.Int32, Gutenberg.Document(Of T))
   nameWithType: OperatorFactory<T>.InfixR(Int32, Document<T>)
   nameWithType.vb: OperatorFactory(Of T).InfixR(Int32, Document(Of T))
-- uid: Gutenberg.Expression.OperatorFactory`1.InfixR(System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
+- uid: Gutenberg.Expression.OperatorFactory`1.InfixR(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
   name: InfixR(Int32, Document<T>, IBracketer<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixR_System_Int32_Gutenberg_Document__0__Gutenberg_Bracketing_IBracketer__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixR(System.Int32,Gutenberg.Document{`0},Gutenberg.Bracketing.IBracketer{`0})
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixR_System_Int32_Gutenberg_Document__0__Gutenberg_Brackets_IBracketer__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixR(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
   name.vb: InfixR(Int32, Document(Of T), IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixR(System.Int32, Gutenberg.Document<T>, Gutenberg.Bracketing.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixR(System.Int32, Gutenberg.Document(Of T), Gutenberg.Bracketing.IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixR(System.Int32, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixR(System.Int32, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
   nameWithType: OperatorFactory<T>.InfixR(Int32, Document<T>, IBracketer<T>)
   nameWithType.vb: OperatorFactory(Of T).InfixR(Int32, Document(Of T), IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixR*
@@ -1779,13 +1321,13 @@ references:
   fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(System.Int32, Gutenberg.Document(Of T), System.Boolean)
   nameWithType: OperatorFactory<T>.Postfix(Int32, Document<T>, Boolean)
   nameWithType.vb: OperatorFactory(Of T).Postfix(Int32, Document(Of T), Boolean)
-- uid: Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+- uid: Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
   name: Postfix(Int32, Document<T>, Boolean, IBracketer<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Brackets_IBracketer__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
   name.vb: Postfix(Int32, Document(Of T), Boolean, IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix(System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Bracketing.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Bracketing.IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix(System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Brackets.IBracketer(Of T))
   nameWithType: OperatorFactory<T>.Postfix(Int32, Document<T>, Boolean, IBracketer<T>)
   nameWithType.vb: OperatorFactory(Of T).Postfix(Int32, Document(Of T), Boolean, IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Postfix*
@@ -1805,13 +1347,13 @@ references:
   fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(System.Int32, Gutenberg.Document(Of T), System.Boolean)
   nameWithType: OperatorFactory<T>.Prefix(Int32, Document<T>, Boolean)
   nameWithType.vb: OperatorFactory(Of T).Prefix(Int32, Document(Of T), Boolean)
-- uid: Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+- uid: Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
   name: Prefix(Int32, Document<T>, Boolean, IBracketer<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Brackets_IBracketer__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
   name.vb: Prefix(Int32, Document(Of T), Boolean, IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix(System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Bracketing.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Bracketing.IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix(System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Brackets.IBracketer(Of T))
   nameWithType: OperatorFactory<T>.Prefix(Int32, Document<T>, Boolean, IBracketer<T>)
   nameWithType.vb: OperatorFactory(Of T).Prefix(Int32, Document(Of T), Boolean, IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Prefix*
@@ -1831,13 +1373,13 @@ references:
   fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document(Of T), System.Boolean)
   nameWithType: OperatorFactory<T>.Unary(UnaryOperatorType, Int32, Document<T>, Boolean)
   nameWithType.vb: OperatorFactory(Of T).Unary(UnaryOperatorType, Int32, Document(Of T), Boolean)
-- uid: Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+- uid: Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
   name: Unary(UnaryOperatorType, Int32, Document<T>, Boolean, IBracketer<T>)
-  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Bracketing_IBracketer__0__
-  commentId: M:Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Bracketing.IBracketer{`0})
+  href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Brackets_IBracketer__0__
+  commentId: M:Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
   name.vb: Unary(UnaryOperatorType, Int32, Document(Of T), Boolean, IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Bracketing.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Bracketing.IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Brackets.IBracketer(Of T))
   nameWithType: OperatorFactory<T>.Unary(UnaryOperatorType, Int32, Document<T>, Boolean, IBracketer<T>)
   nameWithType.vb: OperatorFactory(Of T).Unary(UnaryOperatorType, Int32, Document(Of T), Boolean, IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Unary*
