@@ -1,6 +1,6 @@
 using System.Collections.Immutable;
 
-using Gutenberg.Bracketing;
+using Gutenberg.Brackets;
 
 namespace Gutenberg.Expression;
 

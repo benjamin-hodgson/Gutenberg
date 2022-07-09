@@ -1,4 +1,4 @@
-namespace Gutenberg.Bracketing;
+namespace Gutenberg.Brackets;
 
 /// <summary>
 /// An interface for objects which know how to surround

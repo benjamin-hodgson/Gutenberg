@@ -1,4 +1,4 @@
-namespace Gutenberg.Bracketing;
+namespace Gutenberg.Brackets;
 
 internal static class BracketHelpers
 {

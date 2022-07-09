@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-using Gutenberg.Bracketing;
+using Gutenberg.Brackets;
 
 namespace Gutenberg.Expression;
 
