@@ -1,3 +1,10 @@
+v1.2.1
+------
+
+### Added
+
+* An option to disable the default "strip trailing whitespace" behaviour
+
 v1.2.0
 ------
 
