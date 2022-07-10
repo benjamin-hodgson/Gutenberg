@@ -11,15 +11,19 @@ namespace Gutenberg;
 /// The default indentation level for calls
 /// to <see cref="Document{T}.Nested()"/>
 /// </param>
+/// <param name="StripTrailingWhitespace">
+/// Whether to strip whitespace from the end of each line
+/// </param>
 public record LayoutOptions(
     PageWidthOptions? PageWidth,
     LayoutMode LayoutMode,
-    int DefaultNesting
+    int DefaultNesting,
+    bool StripTrailingWhitespace
 )
 {
     /// <summary>The default <see cref="LayoutOptions"/></summary>
     public static LayoutOptions Default { get; }
-        = new(new PageWidthOptions(), LayoutMode.Default, 4);
+        = new(new PageWidthOptions(), LayoutMode.Default, 4, true);
 }
 
 /// <summary>

@@ -67,6 +67,10 @@ internal class LayoutEngine<T>
                 case WhiteSpaceDocument<T>(var amount):
                     _lineBuffer.Add(LayoutInstruction<T>.WhiteSpace(amount));
                     _lineTextLength += amount;
+                    if (!_canBacktrack && !_options.StripTrailingWhitespace)
+                    {
+                        await Flush(cancellationToken).ConfigureAwait(false);
+                    }
                     if (_canBacktrack && !Fits())
                     {
                         Backtrack();
@@ -76,6 +80,10 @@ internal class LayoutEngine<T>
                 case TextDocument<T>(var text):
                     _lineBuffer.Add(LayoutInstruction<T>.Text(text));
                     _lineTextLength += text.Length;
+                    if (!_canBacktrack && !_options.StripTrailingWhitespace)
+                    {
+                        await Flush(cancellationToken).ConfigureAwait(false);
+                    }
                     if (_canBacktrack && !Fits())
                     {
                         Backtrack();
@@ -284,6 +292,8 @@ internal class LayoutEngine<T>
         bool returnChoicePoints = true
     )
     {
+        var keepTrailingWhitespace = !stripTrailingWhitespace || !_options.StripTrailingWhitespace;
+
         // commit to all choices since start of line
         for (var i = 0; i < _stack.Count; i++)
         {
@@ -316,7 +326,7 @@ internal class LayoutEngine<T>
                     await _renderer.Text(_lineBuffer[i].GetText(), cancellationToken).ConfigureAwait(false);
                     break;
                 case LayoutInstructionType.WhiteSpace:
-                    if (!stripTrailingWhitespace || LineContainsTextAfter(i))  // look ahead to determine whether we should strip the whitespace
+                    if (keepTrailingWhitespace || LineContainsTextAfter(i))  // look ahead to determine whether we should strip the whitespace
                     {
                         await _renderer.WhiteSpace(_lineBuffer[i].GetWhitespaceAmount(), cancellationToken).ConfigureAwait(false);
                     }

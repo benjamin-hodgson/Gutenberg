@@ -97,9 +97,22 @@ public class SimpleTests
     public async Task StripTrailingWhitespace()
     {
         await TestDocument(
-            "abc\n\n  def\n",
-            Doc.Concat("abc", Doc.LineBreak, Doc.LineBreak, "def", Doc.LineBreak)
+            "abc\n\n  def  \n",
+            // spaces in "def" literal are counted as text by FromString.
+            // https://github.com/benjamin-hodgson/Gutenberg/issues/11
+            Doc.Concat("abc", Doc.LineBreak, Doc.LineBreak, "def  ", Doc.LineBreak)
                 .Nested(2)
+        );
+    }
+
+    [Fact]
+    public async Task DisableStripTrailingWhitespace()
+    {
+        await TestDocument(
+            "abc\n  \n  def  \n  ",
+            Doc.Concat("abc", Doc.LineBreak, Doc.LineBreak, "def  ", Doc.LineBreak)
+                .Nested(2),
+            LayoutOptions.Default with { StripTrailingWhitespace = false }
         );
     }
 
