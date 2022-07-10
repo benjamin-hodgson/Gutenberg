@@ -211,11 +211,11 @@
         
                 
                 <a id="Gutenberg_LayoutOptions__ctor_"></a>
-                <h4 id="Gutenberg_LayoutOptions__ctor_Gutenberg_PageWidthOptions_Gutenberg_LayoutMode_System_Int32_"><a href="#Gutenberg_LayoutOptions__ctor_Gutenberg_PageWidthOptions_Gutenberg_LayoutMode_System_Int32_">LayoutOptions(PageWidthOptions, LayoutMode, Int32)</a></h4>
+                <h4 id="Gutenberg_LayoutOptions__ctor_Gutenberg_PageWidthOptions_Gutenberg_LayoutMode_System_Int32_System_Boolean_"><a href="#Gutenberg_LayoutOptions__ctor_Gutenberg_PageWidthOptions_Gutenberg_LayoutMode_System_Int32_System_Boolean_">LayoutOptions(PageWidthOptions, LayoutMode, Int32, Boolean)</a></h4>
                 <div><p>Options for laying out a <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public LayoutOptions(PageWidthOptions PageWidth, LayoutMode LayoutMode, int DefaultNesting)</code></pre>
+                    <pre><code class="lang-csharp hljs">public LayoutOptions(PageWidthOptions PageWidth, LayoutMode LayoutMode, int DefaultNesting, bool StripTrailingWhitespace)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -244,6 +244,12 @@
                                     <td><p>DefaultNesting</p></td>
                                     <td><p>The default indentation level for calls
 to <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Nested">Nested()</a></p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p></td>
+                                    <td><p>StripTrailingWhitespace</p></td>
+                                    <td><p>Whether to strip whitespace from the end of each line</p>
 </td>
                                 </tr>
                             </tbody>
@@ -426,6 +432,39 @@ to <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Nested">
         
                         
         
+                
+                <a id="Gutenberg_LayoutOptions_StripTrailingWhitespace_"></a>
+                <h4 id="Gutenberg_LayoutOptions_StripTrailingWhitespace"><a href="#Gutenberg_LayoutOptions_StripTrailingWhitespace">StripTrailingWhitespace</a></h4>
+                <div><p>Whether to strip whitespace from the end of each line</p>
+</div>
+                <h5>Declaration</h5>
+                    <pre><code class="lang-csharp hljs">public bool StripTrailingWhitespace { get; set; }</code></pre>
+
+        
+        
+        
+        
+                        <h5>Property Value</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+        
+        
+        
+                        
+        
             <h3 id="methods"><a href="#methods">Methods
         </a></h3>
 
@@ -463,10 +502,10 @@ to <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Nested">
         
                 
                 <a id="Gutenberg_LayoutOptions_Deconstruct_"></a>
-                <h4 id="Gutenberg_LayoutOptions_Deconstruct_Gutenberg_PageWidthOptions__Gutenberg_LayoutMode__System_Int32__"><a href="#Gutenberg_LayoutOptions_Deconstruct_Gutenberg_PageWidthOptions__Gutenberg_LayoutMode__System_Int32__">Deconstruct(out PageWidthOptions, out LayoutMode, out Int32)</a></h4>
+                <h4 id="Gutenberg_LayoutOptions_Deconstruct_Gutenberg_PageWidthOptions__Gutenberg_LayoutMode__System_Int32__System_Boolean__"><a href="#Gutenberg_LayoutOptions_Deconstruct_Gutenberg_PageWidthOptions__Gutenberg_LayoutMode__System_Int32__System_Boolean__">Deconstruct(out PageWidthOptions, out LayoutMode, out Int32, out Boolean)</a></h4>
                 <div></div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public void Deconstruct(out PageWidthOptions PageWidth, out LayoutMode LayoutMode, out int DefaultNesting)</code></pre>
+                    <pre><code class="lang-csharp hljs">public void Deconstruct(out PageWidthOptions PageWidth, out LayoutMode LayoutMode, out int DefaultNesting, out bool StripTrailingWhitespace)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -491,6 +530,11 @@ to <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Nested">
                                 <tr>
                                     <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></p></td>
                                     <td><p>DefaultNesting</p></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></p></td>
+                                    <td><p>StripTrailingWhitespace</p></td>
                                     <td></td>
                                 </tr>
                             </tbody>
@@ -852,7 +896,7 @@ to <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Nested">
 
                             <ul>
                                     <li><a href="#Gutenberg_LayoutOptions__ctor_Gutenberg_LayoutOptions_">LayoutOptions(LayoutOptions)</a></li>
-                                    <li><a href="#Gutenberg_LayoutOptions__ctor_Gutenberg_PageWidthOptions_Gutenberg_LayoutMode_System_Int32_">LayoutOptions(PageWidthOptions, LayoutMode, Int32)</a></li>
+                                    <li><a href="#Gutenberg_LayoutOptions__ctor_Gutenberg_PageWidthOptions_Gutenberg_LayoutMode_System_Int32_System_Boolean_">LayoutOptions(PageWidthOptions, LayoutMode, Int32, Boolean)</a></li>
                             </ul>
                         </li>
                         <li>
@@ -865,6 +909,7 @@ to <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Nested">
                                     <li><a href="#Gutenberg_LayoutOptions_EqualityContract">EqualityContract</a></li>
                                     <li><a href="#Gutenberg_LayoutOptions_LayoutMode">LayoutMode</a></li>
                                     <li><a href="#Gutenberg_LayoutOptions_PageWidth">PageWidth</a></li>
+                                    <li><a href="#Gutenberg_LayoutOptions_StripTrailingWhitespace">StripTrailingWhitespace</a></li>
                             </ul>
                         </li>
                         <li>
@@ -873,7 +918,7 @@ to <a class="xref" href="Gutenberg.Document-1.html#Gutenberg_Document_1_Nested">
 
                             <ul>
                                     <li><a href="#Gutenberg_LayoutOptions__Clone__">&lt;Clone&gt;$()</a></li>
-                                    <li><a href="#Gutenberg_LayoutOptions_Deconstruct_Gutenberg_PageWidthOptions__Gutenberg_LayoutMode__System_Int32__">Deconstruct(out PageWidthOptions, out LayoutMode, out Int32)</a></li>
+                                    <li><a href="#Gutenberg_LayoutOptions_Deconstruct_Gutenberg_PageWidthOptions__Gutenberg_LayoutMode__System_Int32__System_Boolean__">Deconstruct(out PageWidthOptions, out LayoutMode, out Int32, out Boolean)</a></li>
                                     <li><a href="#Gutenberg_LayoutOptions_Equals_Gutenberg_LayoutOptions_">Equals(LayoutOptions)</a></li>
                                     <li><a href="#Gutenberg_LayoutOptions_Equals_System_Object_">Equals(Object)</a></li>
                                     <li><a href="#Gutenberg_LayoutOptions_GetHashCode">GetHashCode()</a></li>

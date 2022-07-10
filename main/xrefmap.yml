@@ -1597,12 +1597,12 @@ references:
   commentId: M:Gutenberg.LayoutOptions.#ctor(Gutenberg.LayoutOptions)
   fullName: Gutenberg.LayoutOptions.LayoutOptions(Gutenberg.LayoutOptions)
   nameWithType: LayoutOptions.LayoutOptions(LayoutOptions)
-- uid: Gutenberg.LayoutOptions.#ctor(Gutenberg.PageWidthOptions,Gutenberg.LayoutMode,System.Int32)
-  name: LayoutOptions(PageWidthOptions, LayoutMode, Int32)
-  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions__ctor_Gutenberg_PageWidthOptions_Gutenberg_LayoutMode_System_Int32_
-  commentId: M:Gutenberg.LayoutOptions.#ctor(Gutenberg.PageWidthOptions,Gutenberg.LayoutMode,System.Int32)
-  fullName: Gutenberg.LayoutOptions.LayoutOptions(Gutenberg.PageWidthOptions, Gutenberg.LayoutMode, System.Int32)
-  nameWithType: LayoutOptions.LayoutOptions(PageWidthOptions, LayoutMode, Int32)
+- uid: Gutenberg.LayoutOptions.#ctor(Gutenberg.PageWidthOptions,Gutenberg.LayoutMode,System.Int32,System.Boolean)
+  name: LayoutOptions(PageWidthOptions, LayoutMode, Int32, Boolean)
+  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions__ctor_Gutenberg_PageWidthOptions_Gutenberg_LayoutMode_System_Int32_System_Boolean_
+  commentId: M:Gutenberg.LayoutOptions.#ctor(Gutenberg.PageWidthOptions,Gutenberg.LayoutMode,System.Int32,System.Boolean)
+  fullName: Gutenberg.LayoutOptions.LayoutOptions(Gutenberg.PageWidthOptions, Gutenberg.LayoutMode, System.Int32, System.Boolean)
+  nameWithType: LayoutOptions.LayoutOptions(PageWidthOptions, LayoutMode, Int32, Boolean)
 - uid: Gutenberg.LayoutOptions.#ctor*
   name: LayoutOptions
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions__ctor_
@@ -1621,15 +1621,15 @@ references:
   commentId: Overload:Gutenberg.LayoutOptions.{Clone}$
   fullName: Gutenberg.LayoutOptions.<Clone>$
   nameWithType: LayoutOptions.<Clone>$
-- uid: Gutenberg.LayoutOptions.Deconstruct(Gutenberg.PageWidthOptions@,Gutenberg.LayoutMode@,System.Int32@)
-  name: Deconstruct(out PageWidthOptions, out LayoutMode, out Int32)
-  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_Deconstruct_Gutenberg_PageWidthOptions__Gutenberg_LayoutMode__System_Int32__
-  commentId: M:Gutenberg.LayoutOptions.Deconstruct(Gutenberg.PageWidthOptions@,Gutenberg.LayoutMode@,System.Int32@)
-  name.vb: Deconstruct(ByRef PageWidthOptions, ByRef LayoutMode, ByRef Int32)
-  fullName: Gutenberg.LayoutOptions.Deconstruct(out Gutenberg.PageWidthOptions, out Gutenberg.LayoutMode, out System.Int32)
-  fullName.vb: Gutenberg.LayoutOptions.Deconstruct(ByRef Gutenberg.PageWidthOptions, ByRef Gutenberg.LayoutMode, ByRef System.Int32)
-  nameWithType: LayoutOptions.Deconstruct(out PageWidthOptions, out LayoutMode, out Int32)
-  nameWithType.vb: LayoutOptions.Deconstruct(ByRef PageWidthOptions, ByRef LayoutMode, ByRef Int32)
+- uid: Gutenberg.LayoutOptions.Deconstruct(Gutenberg.PageWidthOptions@,Gutenberg.LayoutMode@,System.Int32@,System.Boolean@)
+  name: Deconstruct(out PageWidthOptions, out LayoutMode, out Int32, out Boolean)
+  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_Deconstruct_Gutenberg_PageWidthOptions__Gutenberg_LayoutMode__System_Int32__System_Boolean__
+  commentId: M:Gutenberg.LayoutOptions.Deconstruct(Gutenberg.PageWidthOptions@,Gutenberg.LayoutMode@,System.Int32@,System.Boolean@)
+  name.vb: Deconstruct(ByRef PageWidthOptions, ByRef LayoutMode, ByRef Int32, ByRef Boolean)
+  fullName: Gutenberg.LayoutOptions.Deconstruct(out Gutenberg.PageWidthOptions, out Gutenberg.LayoutMode, out System.Int32, out System.Boolean)
+  fullName.vb: Gutenberg.LayoutOptions.Deconstruct(ByRef Gutenberg.PageWidthOptions, ByRef Gutenberg.LayoutMode, ByRef System.Int32, ByRef System.Boolean)
+  nameWithType: LayoutOptions.Deconstruct(out PageWidthOptions, out LayoutMode, out Int32, out Boolean)
+  nameWithType.vb: LayoutOptions.Deconstruct(ByRef PageWidthOptions, ByRef LayoutMode, ByRef Int32, ByRef Boolean)
 - uid: Gutenberg.LayoutOptions.Deconstruct*
   name: Deconstruct
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_Deconstruct_
@@ -1762,6 +1762,18 @@ references:
   commentId: Overload:Gutenberg.LayoutOptions.PrintMembers
   fullName: Gutenberg.LayoutOptions.PrintMembers
   nameWithType: LayoutOptions.PrintMembers
+- uid: Gutenberg.LayoutOptions.StripTrailingWhitespace
+  name: StripTrailingWhitespace
+  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_StripTrailingWhitespace
+  commentId: P:Gutenberg.LayoutOptions.StripTrailingWhitespace
+  fullName: Gutenberg.LayoutOptions.StripTrailingWhitespace
+  nameWithType: LayoutOptions.StripTrailingWhitespace
+- uid: Gutenberg.LayoutOptions.StripTrailingWhitespace*
+  name: StripTrailingWhitespace
+  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_StripTrailingWhitespace_
+  commentId: Overload:Gutenberg.LayoutOptions.StripTrailingWhitespace
+  fullName: Gutenberg.LayoutOptions.StripTrailingWhitespace
+  nameWithType: LayoutOptions.StripTrailingWhitespace
 - uid: Gutenberg.LayoutOptions.ToString
   name: ToString()
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_ToString
