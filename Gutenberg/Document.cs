@@ -178,7 +178,7 @@ public abstract class Document<T> : IStackItem<T>
     {
         using var writer = new StringWriter();
 
-        var task = Render(options, (IDocumentRenderer<T>)new PlainTextDocumentRenderer(writer));
+        var task = Write(options, writer);
 
         // neither of these should ever happen
         if (!task.IsCompleted)
@@ -194,6 +194,51 @@ public abstract class Document<T> : IStackItem<T>
         }
 
         return writer.ToString();
+    }
+
+    /// <summary>
+    /// Lay out the <see cref="Document{T}"/> and write it
+    /// into a <see cref="TextWriter"/>.
+    /// </summary>
+    /// <param name="writer">
+    /// The <see cref="TextWriter"/>
+    /// </param>
+    /// <param name="cancellationToken">
+    /// A <see cref="CancellationToken"/>
+    /// </param>
+    /// <returns>
+    /// A <see cref="ValueTask"/> which will complete when all of
+    /// the <see cref="Document{T}"/>'s text has been written to
+    /// the <paramref name="writer"/>.
+    /// </returns>
+    public ValueTask Write(TextWriter writer, CancellationToken cancellationToken = default)
+    {
+        ArgumentNullException.ThrowIfNull(writer);
+        return Write(LayoutOptions.Default, writer, cancellationToken);
+    }
+
+    /// <summary>
+    /// Lay out the <see cref="Document{T}"/> and write it
+    /// into a <see cref="TextWriter"/>.
+    /// </summary>
+    /// <param name="options">
+    /// The <see cref="LayoutOptions"/>
+    /// </param>
+    /// <param name="writer">
+    /// The <see cref="TextWriter"/>
+    /// </param>
+    /// <param name="cancellationToken">
+    /// A <see cref="CancellationToken"/>
+    /// </param>
+    /// <returns>
+    /// A <see cref="ValueTask"/> which will complete when all of
+    /// the <see cref="Document{T}"/>'s text has been written to
+    /// the <paramref name="writer"/>.
+    /// </returns>
+    public ValueTask Write(LayoutOptions options, TextWriter writer, CancellationToken cancellationToken = default)
+    {
+        ArgumentNullException.ThrowIfNull(writer);
+        return Render(options, new PlainTextDocumentRenderer<T>(writer), cancellationToken);
     }
 
     /// <summary>

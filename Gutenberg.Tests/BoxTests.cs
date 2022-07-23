@@ -235,4 +235,17 @@ public class BoxTests
             await ObserveAnnotations(doc.MapAnnotations(x => x + 1))
         );
     }
+
+    [Fact]
+    public void TestPlainTextDocumentRendererWithValueTypeAnnotation()
+    {
+        var box = Box<int>
+            .FromString("abc\ndef")
+            .Annotated(2)
+            .LeftOf(Box<int>.Transparent(1, 2))
+            .RightOf(Box<int>.Transparent(1, 2));
+
+        // ToString uses a PlainTextDocumentRenderer internally
+        Assert.Equal(" abc \n def \n", box.ToString());
+    }
 }

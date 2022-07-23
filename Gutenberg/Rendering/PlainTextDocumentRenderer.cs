@@ -4,7 +4,7 @@ namespace Gutenberg.Rendering;
 /// An <see cref="IDocumentRenderer{T}"/> which writes to
 /// a <see cref="TextWriter"/> and discards all annotations.
 /// </summary>
-public class PlainTextDocumentRenderer : IDocumentRenderer<object>
+public class PlainTextDocumentRenderer<T> : IDocumentRenderer<T>
 {
     private static readonly ReadOnlyMemory<char> _whitespace
         = new string(' ', 128).AsMemory();
@@ -12,7 +12,7 @@ public class PlainTextDocumentRenderer : IDocumentRenderer<object>
     /// <summary>The output <see cref="TextWriter"/></summary>
     protected TextWriter Writer { get; }
 
-    /// <summary>Create a <see cref="PlainTextDocumentRenderer"/></summary>
+    /// <summary>Create a <see cref="PlainTextDocumentRenderer{T}"/></summary>
     /// <param name="writer">The output <see cref="TextWriter"/></param>
     public PlainTextDocumentRenderer(TextWriter writer)
     {
@@ -46,7 +46,7 @@ public class PlainTextDocumentRenderer : IDocumentRenderer<object>
     }
 
     /// <inheritdoc cref="IDocumentRenderer{T}.PushAnnotation"/>
-    public virtual ValueTask PushAnnotation(object value, CancellationToken cancellationToken = default)
+    public virtual ValueTask PushAnnotation(T value, CancellationToken cancellationToken = default)
         => CompletedOrCancelled(cancellationToken);
 
     /// <inheritdoc cref="IDocumentRenderer{T}.PopAnnotation"/>
@@ -57,4 +57,23 @@ public class PlainTextDocumentRenderer : IDocumentRenderer<object>
         => cancellationToken.IsCancellationRequested
             ? ValueTask.FromCanceled(cancellationToken)
             : ValueTask.CompletedTask;
+}
+
+/// <summary>
+/// An <see cref="IDocumentRenderer{T}"/> which writes to
+/// a <see cref="TextWriter"/> and discards all annotations.
+/// </summary>
+/// <remarks>
+/// This is a convenient subclass of
+/// <see cref="PlainTextDocumentRenderer{T}"/> which
+/// simply sets the type parameter to <see cref="object"/>,
+/// without changing any behaviours.
+/// </remarks>
+public class PlainTextDocumentRenderer : PlainTextDocumentRenderer<object>
+{
+    /// <summary>Create a <see cref="PlainTextDocumentRenderer"/></summary>
+    /// <param name="writer">The output <see cref="TextWriter"/></param>
+    public PlainTextDocumentRenderer(TextWriter writer) : base(writer)
+    {
+    }
 }

@@ -127,4 +127,15 @@ public class SimpleTests
         Assert.Equal("PUSH(3)abcPOP", await ObserveAnnotations(doc.MapAnnotations(x => x + 1)));
         Assert.Equal("PUSH(3)abcPOP", await ObserveAnnotations(doc, x => x + 1));
     }
+
+    [Fact]
+    public async Task TestPlainTextDocumentRendererWithValueTypeAnnotation()
+    {
+        var doc = Document<int>
+            .FromString("abc")
+            .Annotated(2);
+
+        // TestDocument calls ToString, which uses a PlainTextDocumentRenderer
+        await TestDocument("abc", doc);
+    }
 }

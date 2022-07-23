@@ -446,7 +446,8 @@ public abstract class Box<T>
     public override string ToString()
     {
         using var writer = new StringWriter();
-        var task = Render((IDocumentRenderer<T>)new PlainTextDocumentRenderer(writer));
+
+        var task = Write(writer);
 
         // neither of these should ever happen
         if (!task.IsCompleted)
@@ -462,6 +463,26 @@ public abstract class Box<T>
         }
 
         return writer.ToString();
+    }
+
+    /// <summary>
+    /// Write the <see cref="Box{T}"/> into a <see cref="TextWriter"/>.
+    /// </summary>
+    /// <param name="writer">
+    /// The <see cref="TextWriter"/>
+    /// </param>
+    /// <param name="cancellationToken">
+    /// A <see cref="CancellationToken"/>
+    /// </param>
+    /// <returns>
+    /// A <see cref="ValueTask"/> which will complete when
+    /// the <see cref="Box{T}"/> has been written to
+    /// the <paramref name="writer"/>.
+    /// </returns>
+    public ValueTask Write(TextWriter writer, CancellationToken cancellationToken = default)
+    {
+        ArgumentNullException.ThrowIfNull(writer);
+        return Render(new PlainTextDocumentRenderer<T>(writer), cancellationToken);
     }
 
     /// <summary>

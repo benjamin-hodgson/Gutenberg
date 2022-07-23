@@ -1,9 +1,23 @@
+v1.3.0
+------
+
+### Added
+
+* Methods to write a document into a `TextWriter`.
+
+
+### Fixed
+
+* A bug when calling `ToString` on a document annotated with a value type
+
+
 v1.2.1
 ------
 
 ### Added
 
 * An option to disable the default "strip trailing whitespace" behaviour
+
 
 v1.2.0
 ------
