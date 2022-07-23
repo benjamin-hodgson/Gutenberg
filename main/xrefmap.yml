@@ -360,6 +360,22 @@ references:
   fullName.vb: Gutenberg.Box(Of T).WithBorder
   nameWithType: Box<T>.WithBorder
   nameWithType.vb: Box(Of T).WithBorder
+- uid: Gutenberg.Box`1.Write(System.IO.TextWriter,System.Threading.CancellationToken)
+  name: Write(TextWriter, CancellationToken)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Write_System_IO_TextWriter_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Box`1.Write(System.IO.TextWriter,System.Threading.CancellationToken)
+  fullName: Gutenberg.Box<T>.Write(System.IO.TextWriter, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Box(Of T).Write(System.IO.TextWriter, System.Threading.CancellationToken)
+  nameWithType: Box<T>.Write(TextWriter, CancellationToken)
+  nameWithType.vb: Box(Of T).Write(TextWriter, CancellationToken)
+- uid: Gutenberg.Box`1.Write*
+  name: Write
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_Write_
+  commentId: Overload:Gutenberg.Box`1.Write
+  fullName: Gutenberg.Box<T>.Write
+  fullName.vb: Gutenberg.Box(Of T).Write
+  nameWithType: Box<T>.Write
+  nameWithType.vb: Box(Of T).Write
 - uid: Gutenberg.Brackets
   name: Gutenberg.Brackets
   href: Gutenberg.Brackets.html
@@ -968,6 +984,30 @@ references:
   fullName.vb: Gutenberg.Document(Of T).UnsafeFromString
   nameWithType: Document<T>.UnsafeFromString
   nameWithType.vb: Document(Of T).UnsafeFromString
+- uid: Gutenberg.Document`1.Write(Gutenberg.LayoutOptions,System.IO.TextWriter,System.Threading.CancellationToken)
+  name: Write(LayoutOptions, TextWriter, CancellationToken)
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_Write_Gutenberg_LayoutOptions_System_IO_TextWriter_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Document`1.Write(Gutenberg.LayoutOptions,System.IO.TextWriter,System.Threading.CancellationToken)
+  fullName: Gutenberg.Document<T>.Write(Gutenberg.LayoutOptions, System.IO.TextWriter, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Document(Of T).Write(Gutenberg.LayoutOptions, System.IO.TextWriter, System.Threading.CancellationToken)
+  nameWithType: Document<T>.Write(LayoutOptions, TextWriter, CancellationToken)
+  nameWithType.vb: Document(Of T).Write(LayoutOptions, TextWriter, CancellationToken)
+- uid: Gutenberg.Document`1.Write(System.IO.TextWriter,System.Threading.CancellationToken)
+  name: Write(TextWriter, CancellationToken)
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_Write_System_IO_TextWriter_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Document`1.Write(System.IO.TextWriter,System.Threading.CancellationToken)
+  fullName: Gutenberg.Document<T>.Write(System.IO.TextWriter, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Document(Of T).Write(System.IO.TextWriter, System.Threading.CancellationToken)
+  nameWithType: Document<T>.Write(TextWriter, CancellationToken)
+  nameWithType.vb: Document(Of T).Write(TextWriter, CancellationToken)
+- uid: Gutenberg.Document`1.Write*
+  name: Write
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_Write_
+  commentId: Overload:Gutenberg.Document`1.Write
+  fullName: Gutenberg.Document<T>.Write
+  fullName.vb: Gutenberg.Document(Of T).Write
+  nameWithType: Document<T>.Write
+  nameWithType.vb: Document(Of T).Write
 - uid: Gutenberg.Document`1.ZeroWidthLineBreak
   name: ZeroWidthLineBreak
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_ZeroWidthLineBreak
@@ -2631,81 +2671,128 @@ references:
   commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer.#ctor
   fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.PlainTextDocumentRenderer
   nameWithType: PlainTextDocumentRenderer.PlainTextDocumentRenderer
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.NewLine(System.Threading.CancellationToken)
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1
+  name: PlainTextDocumentRenderer<T>
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html
+  commentId: T:Gutenberg.Rendering.PlainTextDocumentRenderer`1
+  name.vb: PlainTextDocumentRenderer(Of T)
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T)
+  nameWithType: PlainTextDocumentRenderer<T>
+  nameWithType.vb: PlainTextDocumentRenderer(Of T)
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.#ctor(System.IO.TextWriter)
+  name: PlainTextDocumentRenderer(TextWriter)
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1__ctor_System_IO_TextWriter_
+  commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer`1.#ctor(System.IO.TextWriter)
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.PlainTextDocumentRenderer(System.IO.TextWriter)
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).PlainTextDocumentRenderer(System.IO.TextWriter)
+  nameWithType: PlainTextDocumentRenderer<T>.PlainTextDocumentRenderer(TextWriter)
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).PlainTextDocumentRenderer(TextWriter)
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.#ctor*
+  name: PlainTextDocumentRenderer
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1__ctor_
+  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer`1.#ctor
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.PlainTextDocumentRenderer
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).PlainTextDocumentRenderer
+  nameWithType: PlainTextDocumentRenderer<T>.PlainTextDocumentRenderer
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).PlainTextDocumentRenderer
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.NewLine(System.Threading.CancellationToken)
   name: NewLine(CancellationToken)
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_NewLine_System_Threading_CancellationToken_
-  commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer.NewLine(System.Threading.CancellationToken)
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.NewLine(System.Threading.CancellationToken)
-  nameWithType: PlainTextDocumentRenderer.NewLine(CancellationToken)
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.NewLine*
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_NewLine_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer`1.NewLine(System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.NewLine(System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).NewLine(System.Threading.CancellationToken)
+  nameWithType: PlainTextDocumentRenderer<T>.NewLine(CancellationToken)
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).NewLine(CancellationToken)
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.NewLine*
   name: NewLine
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_NewLine_
-  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer.NewLine
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.NewLine
-  nameWithType: PlainTextDocumentRenderer.NewLine
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.PopAnnotation(System.Threading.CancellationToken)
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_NewLine_
+  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer`1.NewLine
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.NewLine
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).NewLine
+  nameWithType: PlainTextDocumentRenderer<T>.NewLine
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).NewLine
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.PopAnnotation(System.Threading.CancellationToken)
   name: PopAnnotation(CancellationToken)
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_PopAnnotation_System_Threading_CancellationToken_
-  commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer.PopAnnotation(System.Threading.CancellationToken)
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.PopAnnotation(System.Threading.CancellationToken)
-  nameWithType: PlainTextDocumentRenderer.PopAnnotation(CancellationToken)
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.PopAnnotation*
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_PopAnnotation_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer`1.PopAnnotation(System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.PopAnnotation(System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).PopAnnotation(System.Threading.CancellationToken)
+  nameWithType: PlainTextDocumentRenderer<T>.PopAnnotation(CancellationToken)
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).PopAnnotation(CancellationToken)
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.PopAnnotation*
   name: PopAnnotation
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_PopAnnotation_
-  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer.PopAnnotation
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.PopAnnotation
-  nameWithType: PlainTextDocumentRenderer.PopAnnotation
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.PushAnnotation(System.Object,System.Threading.CancellationToken)
-  name: PushAnnotation(Object, CancellationToken)
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_PushAnnotation_System_Object_System_Threading_CancellationToken_
-  commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer.PushAnnotation(System.Object,System.Threading.CancellationToken)
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.PushAnnotation(System.Object, System.Threading.CancellationToken)
-  nameWithType: PlainTextDocumentRenderer.PushAnnotation(Object, CancellationToken)
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.PushAnnotation*
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_PopAnnotation_
+  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer`1.PopAnnotation
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.PopAnnotation
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).PopAnnotation
+  nameWithType: PlainTextDocumentRenderer<T>.PopAnnotation
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).PopAnnotation
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.PushAnnotation(`0,System.Threading.CancellationToken)
+  name: PushAnnotation(T, CancellationToken)
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_PushAnnotation__0_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer`1.PushAnnotation(`0,System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.PushAnnotation(T, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).PushAnnotation(T, System.Threading.CancellationToken)
+  nameWithType: PlainTextDocumentRenderer<T>.PushAnnotation(T, CancellationToken)
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).PushAnnotation(T, CancellationToken)
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.PushAnnotation*
   name: PushAnnotation
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_PushAnnotation_
-  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer.PushAnnotation
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.PushAnnotation
-  nameWithType: PlainTextDocumentRenderer.PushAnnotation
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_PushAnnotation_
+  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer`1.PushAnnotation
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.PushAnnotation
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).PushAnnotation
+  nameWithType: PlainTextDocumentRenderer<T>.PushAnnotation
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).PushAnnotation
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
   name: Text(ReadOnlyMemory<Char>, CancellationToken)
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_
-  commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer`1.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
   name.vb: Text(ReadOnlyMemory(Of Char), CancellationToken)
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.Text(System.ReadOnlyMemory<System.Char>, System.Threading.CancellationToken)
-  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer.Text(System.ReadOnlyMemory(Of System.Char), System.Threading.CancellationToken)
-  nameWithType: PlainTextDocumentRenderer.Text(ReadOnlyMemory<Char>, CancellationToken)
-  nameWithType.vb: PlainTextDocumentRenderer.Text(ReadOnlyMemory(Of Char), CancellationToken)
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.Text*
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.Text(System.ReadOnlyMemory<System.Char>, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).Text(System.ReadOnlyMemory(Of System.Char), System.Threading.CancellationToken)
+  nameWithType: PlainTextDocumentRenderer<T>.Text(ReadOnlyMemory<Char>, CancellationToken)
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).Text(ReadOnlyMemory(Of Char), CancellationToken)
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.Text*
   name: Text
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_Text_
-  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer.Text
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.Text
-  nameWithType: PlainTextDocumentRenderer.Text
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.WhiteSpace(System.Int32,System.Threading.CancellationToken)
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_Text_
+  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer`1.Text
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.Text
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).Text
+  nameWithType: PlainTextDocumentRenderer<T>.Text
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).Text
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.WhiteSpace(System.Int32,System.Threading.CancellationToken)
   name: WhiteSpace(Int32, CancellationToken)
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_WhiteSpace_System_Int32_System_Threading_CancellationToken_
-  commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer.WhiteSpace(System.Int32,System.Threading.CancellationToken)
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.WhiteSpace(System.Int32, System.Threading.CancellationToken)
-  nameWithType: PlainTextDocumentRenderer.WhiteSpace(Int32, CancellationToken)
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.WhiteSpace*
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_WhiteSpace_System_Int32_System_Threading_CancellationToken_
+  commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer`1.WhiteSpace(System.Int32,System.Threading.CancellationToken)
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.WhiteSpace(System.Int32, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).WhiteSpace(System.Int32, System.Threading.CancellationToken)
+  nameWithType: PlainTextDocumentRenderer<T>.WhiteSpace(Int32, CancellationToken)
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).WhiteSpace(Int32, CancellationToken)
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.WhiteSpace*
   name: WhiteSpace
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_WhiteSpace_
-  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer.WhiteSpace
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.WhiteSpace
-  nameWithType: PlainTextDocumentRenderer.WhiteSpace
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.Writer
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_WhiteSpace_
+  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer`1.WhiteSpace
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.WhiteSpace
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).WhiteSpace
+  nameWithType: PlainTextDocumentRenderer<T>.WhiteSpace
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).WhiteSpace
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.Writer
   name: Writer
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_Writer
-  commentId: P:Gutenberg.Rendering.PlainTextDocumentRenderer.Writer
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.Writer
-  nameWithType: PlainTextDocumentRenderer.Writer
-- uid: Gutenberg.Rendering.PlainTextDocumentRenderer.Writer*
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_Writer
+  commentId: P:Gutenberg.Rendering.PlainTextDocumentRenderer`1.Writer
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.Writer
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).Writer
+  nameWithType: PlainTextDocumentRenderer<T>.Writer
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).Writer
+- uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.Writer*
   name: Writer
-  href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer_Writer_
-  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer.Writer
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.Writer
-  nameWithType: PlainTextDocumentRenderer.Writer
+  href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_Writer_
+  commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer`1.Writer
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.Writer
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).Writer
+  nameWithType: PlainTextDocumentRenderer<T>.Writer
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).Writer
 - uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1
   name: StackMachineDocumentRenderer<T>
   href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html
