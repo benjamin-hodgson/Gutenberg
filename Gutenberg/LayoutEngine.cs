@@ -4,13 +4,18 @@ internal class LayoutEngine<T>
 {
     private readonly LayoutOptions _options;
     private readonly IDocumentRenderer<T> _renderer;
-    private Stack<ChoicePoint<T>>? _choicePointPool;
+    private Stack<ChoicePoint<T>>? _choicePointPool = null;
 
     private bool _flatten = false;
     private int _nestingLevel = 0;
     private int _wroteIndentation = 0;
 
-    private readonly List<LayoutInstruction<T>> _lineBuffer = new();
+    // todo: validate initial capacity of 32 (=512B).
+    // I assume most 80-char lines will fit into 32 instructions
+    // - avg 2.5 chars per instruction seems reasonable but worth
+    // experimenting
+    private LayoutInstruction<T>[] _lineBuffer = new LayoutInstruction<T>[32];
+    private int _lineBufferCount = 0;
     private int _lineTextLength = 0;
 
     private readonly List<IStackItem<T>> _stack = new();
@@ -43,7 +48,7 @@ internal class LayoutEngine<T>
                     }
                     else
                     {
-                        _lineBuffer.Add(LayoutInstruction<T>.NewLine);
+                        Write(LayoutInstruction<T>.NewLine);
                         if (_bufferUntilDeIndent < 0)
                         {
                             await Flush(cancellationToken).ConfigureAwait(false);
@@ -52,14 +57,14 @@ internal class LayoutEngine<T>
 
                         if (_nestingLevel > 0)
                         {
-                            _lineBuffer.Add(LayoutInstruction<T>.WhiteSpace(_nestingLevel));
+                            Write(LayoutInstruction<T>.WhiteSpace(_nestingLevel));
                         }
                         _wroteIndentation = _nestingLevel;
                     }
                     break;
 
                 case WhiteSpaceDocument<T>(var amount):
-                    _lineBuffer.Add(LayoutInstruction<T>.WhiteSpace(amount));
+                    Write(LayoutInstruction<T>.WhiteSpace(amount));
                     _lineTextLength += amount;
                     if (!_canBacktrack && !_options.StripTrailingWhitespace)
                     {
@@ -72,7 +77,7 @@ internal class LayoutEngine<T>
                     break;
 
                 case TextDocument<T>(var text):
-                    _lineBuffer.Add(LayoutInstruction<T>.Text(text));
+                    Write(LayoutInstruction<T>.Text(text));
                     _lineTextLength += text.Length;
                     if (!_canBacktrack && !_options.StripTrailingWhitespace)
                     {
@@ -141,7 +146,7 @@ internal class LayoutEngine<T>
                     Push(CreateChoicePoint(
                         second,
                         _nestingLevel,
-                        _lineBuffer.Count,
+                        _lineBufferCount,
                         _lineTextLength,
                         _flatten,
                         _canBacktrack,
@@ -159,7 +164,7 @@ internal class LayoutEngine<T>
                     break;
 
                 case AnnotatedDocument<T>(var value, var child):
-                    _lineBuffer.Add(LayoutInstruction<T>.PushAnnotation(value));
+                    Write(LayoutInstruction<T>.PushAnnotation(value));
                     Push(PopAnnotation<T>.Instance);
                     Push(child);
                     break;
@@ -210,7 +215,7 @@ internal class LayoutEngine<T>
                     break;
 
                 case PopAnnotation<T>:
-                    _lineBuffer.Add(LayoutInstruction<T>.PopAnnotation);
+                    Write(LayoutInstruction<T>.PopAnnotation);
                     break;
 
                 case EndFlatten<T>:
@@ -235,6 +240,18 @@ internal class LayoutEngine<T>
         item = _stack[^1];
         _stack.RemoveAt(_stack.Count - 1);
         return true;
+    }
+
+    private void Write(LayoutInstruction<T> instruction)
+    {
+        if (_lineBufferCount >= _lineBuffer.Length)
+        {
+            var newBuffer = new LayoutInstruction<T>[_lineBufferCount * 2];
+            Array.Copy(_lineBuffer, newBuffer, _lineBufferCount);
+            _lineBuffer = newBuffer;
+        }
+        _lineBuffer[_lineBufferCount] = instruction;
+        _lineBufferCount++;
     }
 
     private bool Fits()
@@ -262,6 +279,7 @@ internal class LayoutEngine<T>
         {
             throw new InvalidOperationException("Couldn't backtrack! Please report this as a bug in Gutenberg");
         }
+
         while (Pop(out var doc))
         {
             // ignore resumeAt during failure - want to resume where the choice was
@@ -269,7 +287,9 @@ internal class LayoutEngine<T>
             {
                 Push(cp.Fallback!);
                 _nestingLevel = cp.NestingLevel;
-                _lineBuffer.RemoveRange(cp.BufferedInstructionCount, _lineBuffer.Count - cp.BufferedInstructionCount);
+                // see "todo: Clearing _lineBuffer"
+                // Array.Clear(_lineBuffer, cp.LineBufferCount, _lineBufferCount - cp.LineBufferCount);
+                _lineBufferCount = cp.LineBufferCount;
                 _lineTextLength = cp.LineTextLength;
                 _flatten = cp.Flatten;
                 _canBacktrack = cp.CanBacktrack;
@@ -277,17 +297,64 @@ internal class LayoutEngine<T>
                 return;
             }
         }
+
         throw new InvalidOperationException("Didn't find a choice point! Please report this as a bug in Gutenberg");
     }
 
-    private async ValueTask Flush(
+    private ValueTask Flush(
         CancellationToken cancellationToken,
         bool stripTrailingWhitespace = true,
         bool returnChoicePoints = true
     )
     {
+        Commit(returnChoicePoints);
+
         var keepTrailingWhitespace = !stripTrailingWhitespace || !_options.StripTrailingWhitespace;
 
+        var count = _lineBufferCount;
+        _lineBufferCount = 0;
+        
+        // micro-optimisation: It's not common for the
+        // FlushInstruction task to go async, so most of
+        // the time this method can run synchronously
+        // (avoid overhead of building continuation etc).
+        // However, if one of the tasks does go async,
+        // the rest of the loop needs to be async, so
+        // delegate to FlushRemainingInstructions
+        // (which is an async method)
+        for (var i = 0; i < count; i++)
+        {
+            var task = FlushInstruction(i, keepTrailingWhitespace, cancellationToken);
+            if (!task.IsCompleted)
+            {
+                if (i == count - 1)
+                {
+                    // final iteration of the loop anyway,
+                    // so just return the task for awaiting
+                    return task;
+                }
+                return FlushRemainingInstructions(task, i+1, count, keepTrailingWhitespace, cancellationToken);
+            }
+        }
+        
+        // todo: Clearing _lineBuffer
+        // --------------------------
+        // LayoutInstruction contains a managed reference
+        // (either a string, an annotation, or a sentinel).
+        // Would eagerly freeing these references for garbage
+        // collection be worth the cost of zeroing the memory?
+        // My instinct is that it won't be.
+        // (If you do decide to clear the _lineBuffer, don't
+        // forget to handle the early returns in the loop,
+        // and to clear the buffer when backtracking too.)
+        //
+        // Array.Clear(_lineBuffer, 0, _lineBufferCount);
+
+        return ValueTask.CompletedTask;
+    }
+
+    private void Commit(bool returnChoicePoints)
+    {
         // commit to all choices since start of line
         for (var i = 0; i < _stack.Count; i++)
         {
@@ -306,37 +373,49 @@ internal class LayoutEngine<T>
             }
         }
         _canBacktrack = false;
+    }
 
-        for (var i = 0; i < _lineBuffer.Count; i++)
+    private async ValueTask FlushRemainingInstructions(
+        ValueTask firstTask,
+        int start,
+        int count,
+        bool keepTrailingWhitespace,
+        CancellationToken cancellationToken
+    )
+    {
+        await firstTask.ConfigureAwait(false);
+        for (var i = start; i < count; i++)
         {
-            switch (_lineBuffer[i].GetInstructionType())
-            {
-                case LayoutInstructionType.Text:
-                    await _renderer.Text(_lineBuffer[i].GetText(), cancellationToken).ConfigureAwait(false);
-                    break;
-                case LayoutInstructionType.WhiteSpace:
-                    if (keepTrailingWhitespace || LineContainsTextAfter(i))  // look ahead to determine whether we should strip the whitespace
-                    {
-                        await _renderer.WhiteSpace(_lineBuffer[i].GetWhitespaceAmount(), cancellationToken).ConfigureAwait(false);
-                    }
-                    break;
-                case LayoutInstructionType.NewLine:
-                    await _renderer.NewLine(cancellationToken).ConfigureAwait(false);
-                    break;
-                case LayoutInstructionType.PushAnnotation:
-                    await _renderer.PushAnnotation(_lineBuffer[i].GetAnnotation(), cancellationToken).ConfigureAwait(false);
-                    break;
-                case LayoutInstructionType.PopAnnotation:
-                    await _renderer.PopAnnotation(cancellationToken).ConfigureAwait(false);
-                    break;
-            }
+            await FlushInstruction(i, keepTrailingWhitespace, cancellationToken).ConfigureAwait(false);
         }
-        _lineBuffer.Clear();
+    }
+
+    private ValueTask FlushInstruction(int i, bool keepTrailingWhitespace, CancellationToken cancellationToken)
+    {
+        switch (_lineBuffer[i].GetInstructionType())
+        {
+            case LayoutInstructionType.Text:
+                return _renderer.Text(_lineBuffer[i].GetText(), cancellationToken);
+            case LayoutInstructionType.WhiteSpace:
+                if (keepTrailingWhitespace || LineContainsTextAfter(i))  // look ahead to determine whether we should strip the whitespace
+                {
+                    return _renderer.WhiteSpace(_lineBuffer[i].GetWhitespaceAmount(), cancellationToken);
+                }
+                return ValueTask.CompletedTask;
+            case LayoutInstructionType.NewLine:
+                return _renderer.NewLine(cancellationToken);
+            case LayoutInstructionType.PushAnnotation:
+                return _renderer.PushAnnotation(_lineBuffer[i].GetAnnotation(), cancellationToken);
+            case LayoutInstructionType.PopAnnotation:
+                return _renderer.PopAnnotation(cancellationToken);
+            case var t:
+                throw new InvalidOperationException($"Unknown {nameof(LayoutInstructionType)}: {t}. Please report this as a bug in Gutenberg!");
+        }
     }
 
     private bool LineContainsTextAfter(int index)
     {
-        for (var i = index + 1; i < _lineBuffer.Count; i++)
+        for (var i = index + 1; i < _lineBufferCount; i++)
         {
             if (_lineBuffer[i].IsText)
             {
@@ -377,7 +456,7 @@ internal class LayoutEngine<T>
 
         cp.Fallback = fallback;
         cp.NestingLevel = nestingLevel;
-        cp.BufferedInstructionCount = bufferedInstructionCount;
+        cp.LineBufferCount = bufferedInstructionCount;
         cp.LineTextLength = lineTextLength;
         cp.Flatten = flatten;
         cp.CanBacktrack = canBacktrack;

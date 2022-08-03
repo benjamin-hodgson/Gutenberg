@@ -6,7 +6,7 @@ internal class ChoicePoint<T> : IStackItem<T>
 {
     public Document<T>? Fallback { get; set; }
     public int NestingLevel { get; set; }
-    public int BufferedInstructionCount { get; set; }
+    public int LineBufferCount { get; set; }
     public int LineTextLength { get; set; }
     public bool Flatten { get; set; }
     public bool CanBacktrack { get; set; }
