@@ -322,7 +322,7 @@ internal class LayoutEngine<T>
         for (var i = 0; i < _lineBufferCount; i++)
         {
             var task = FlushInstruction(i, keepTrailingWhitespace, cancellationToken);
-            if (!task.IsCompleted)
+            if (!task.IsCompletedSuccessfully)
             {
                 if (i == _lineBufferCount - 1)
                 {
