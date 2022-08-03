@@ -313,7 +313,7 @@ internal class LayoutEngine<T>
 
         var count = _lineBufferCount;
         _lineBufferCount = 0;
-        
+
         // micro-optimisation: It's not common for the
         // FlushInstruction task to go async, so most of
         // the time this method can run synchronously
@@ -333,10 +333,10 @@ internal class LayoutEngine<T>
                     // so just return the task for awaiting
                     return task;
                 }
-                return FlushRemainingInstructions(task, i+1, count, keepTrailingWhitespace, cancellationToken);
+                return FlushRemainingInstructions(task, i + 1, count, keepTrailingWhitespace, cancellationToken);
             }
         }
-        
+
         // todo: Clearing _lineBuffer
         // --------------------------
         // LayoutInstruction contains a managed reference
