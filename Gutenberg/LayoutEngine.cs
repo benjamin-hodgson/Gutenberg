@@ -311,9 +311,6 @@ internal class LayoutEngine<T>
 
         var keepTrailingWhitespace = !stripTrailingWhitespace || !_options.StripTrailingWhitespace;
 
-        var count = _lineBufferCount;
-        _lineBufferCount = 0;
-
         // micro-optimisation: It's not common for the
         // FlushInstruction task to go async, so most of
         // the time this method can run synchronously
@@ -322,18 +319,19 @@ internal class LayoutEngine<T>
         // the rest of the loop needs to be async, so
         // delegate to FlushRemainingInstructions
         // (which is an async method)
-        for (var i = 0; i < count; i++)
+        for (var i = 0; i < _lineBufferCount; i++)
         {
             var task = FlushInstruction(i, keepTrailingWhitespace, cancellationToken);
             if (!task.IsCompleted)
             {
-                if (i == count - 1)
+                if (i == _lineBufferCount - 1)
                 {
                     // final iteration of the loop anyway,
                     // so just return the task for awaiting
+                    _lineBufferCount = 0;
                     return task;
                 }
-                return FlushRemainingInstructions(task, i + 1, count, keepTrailingWhitespace, cancellationToken);
+                return FlushRemainingInstructions(task, i + 1, keepTrailingWhitespace, cancellationToken);
             }
         }
 
@@ -350,6 +348,7 @@ internal class LayoutEngine<T>
         //
         // Array.Clear(_lineBuffer, 0, _lineBufferCount);
 
+        _lineBufferCount = 0;
         return ValueTask.CompletedTask;
     }
 
@@ -378,16 +377,16 @@ internal class LayoutEngine<T>
     private async ValueTask FlushRemainingInstructions(
         ValueTask firstTask,
         int start,
-        int count,
         bool keepTrailingWhitespace,
         CancellationToken cancellationToken
     )
     {
         await firstTask.ConfigureAwait(false);
-        for (var i = start; i < count; i++)
+        for (var i = start; i < _lineBufferCount; i++)
         {
             await FlushInstruction(i, keepTrailingWhitespace, cancellationToken).ConfigureAwait(false);
         }
+        _lineBufferCount = 0;
     }
 
     private ValueTask FlushInstruction(int i, bool keepTrailingWhitespace, CancellationToken cancellationToken)
