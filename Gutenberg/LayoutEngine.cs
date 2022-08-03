@@ -30,12 +30,6 @@ internal class LayoutEngine<T>
 
         while (Pop(out var item))
         {
-            if (cancellationToken.IsCancellationRequested)
-            {
-                await ValueTask.FromCanceled(cancellationToken).ConfigureAwait(false);
-                return;
-            }
-
             switch (item)
             {
                 case EmptyDocument<T>:
@@ -315,11 +309,6 @@ internal class LayoutEngine<T>
 
         for (var i = 0; i < _lineBuffer.Count; i++)
         {
-            if (cancellationToken.IsCancellationRequested)
-            {
-                await ValueTask.FromCanceled(cancellationToken).ConfigureAwait(false);
-                return;
-            }
             switch (_lineBuffer[i].GetInstructionType())
             {
                 case LayoutInstructionType.Text:
