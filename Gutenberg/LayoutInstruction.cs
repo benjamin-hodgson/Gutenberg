@@ -30,6 +30,7 @@ internal readonly struct LayoutInstruction<T>
     }
 
     public bool IsNewLine => ReferenceEquals(_object, NewLineInstruction.Instance);
+
     public bool IsText => _offset >= 0 && _length >= 0;
 
     public LayoutInstructionType GetInstructionType()
@@ -38,44 +39,48 @@ internal readonly struct LayoutInstruction<T>
         {
             return LayoutInstructionType.NewLine;
         }
+
         if (ReferenceEquals(_object, PopAnnotationInstruction.Instance))
         {
             return LayoutInstructionType.PopAnnotation;
         }
+
         if (_offset < 0 && _length < 0)
         {
             return LayoutInstructionType.PushAnnotation;
         }
+
         if (_offset < 0)
         {
             // _length >= 0
             return LayoutInstructionType.WhiteSpace;
         }
+
         if (IsText)
         {
             if (_object is not string)
             {
                 ThrowError();
             }
+
             return LayoutInstructionType.Text;
         }
+
         return ThrowError();
     }
 
-    public ReadOnlyMemory<char> GetText()
-        // nullability: This should only be called if
-        // GetInstructionType returned Text
-        => ((string)_object!).AsMemory(_offset, _length);
+    // nullability: This should only be called if
+    // GetInstructionType returned Text
+    public ReadOnlyMemory<char> GetText() => ((string)_object!).AsMemory(_offset, _length);
 
     public int GetWhitespaceAmount()
         => _length;
 
-    public T GetAnnotation()
-        // nullability: This should only be called if
-        // GetInstructionType returned PushAnnotation.
-        // Any nullness will be inherited from the
-        // T with which this struct was instantiated.
-        => (T)_object!;
+    // nullability: This should only be called if
+    // GetInstructionType returned PushAnnotation.
+    // Any nullness will be inherited from the
+    // T with which this struct was instantiated.
+    public T GetAnnotation() => (T)_object!;
 
     public static LayoutInstruction<T> WhiteSpace(int amount)
         => new(null, -1, amount);
@@ -102,13 +107,20 @@ internal readonly struct LayoutInstruction<T>
 // sentinel values for LayoutInstruction
 internal record NewLineInstruction
 {
-    private NewLineInstruction() { }
+    private NewLineInstruction()
+    {
+    }
+
     public static NewLineInstruction Instance { get; }
         = new NewLineInstruction();
 }
+
 internal record PopAnnotationInstruction
 {
-    private PopAnnotationInstruction() { }
+    private PopAnnotationInstruction()
+    {
+    }
+
     public static PopAnnotationInstruction Instance { get; }
         = new PopAnnotationInstruction();
 }

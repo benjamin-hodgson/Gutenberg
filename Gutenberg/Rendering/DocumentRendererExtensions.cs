@@ -1,7 +1,7 @@
 namespace Gutenberg.Rendering;
 
 /// <summary>
-/// Extension methods for <see cref="IDocumentRenderer{T}"/>
+/// Extension methods for <see cref="IDocumentRenderer{T}"/>.
 /// </summary>
 public static class DocumentRendererExtensions
 {
@@ -18,8 +18,8 @@ public static class DocumentRendererExtensions
     /// The type of annotations accepted by the wrapped
     /// <see cref="IDocumentRenderer{U}"/>.
     /// </typeparam>
-    /// <param name="renderer">The wrapped document renderer</param>
-    /// <param name="selector">The function to apply to the annotations</param>
+    /// <param name="renderer">The wrapped document renderer.</param>
+    /// <param name="selector">The function to apply to the annotations.</param>
     /// <returns>
     /// An <see cref="IDocumentRenderer{T}"/> which wraps an
     /// <paramref name="renderer"/> by applying a
@@ -52,8 +52,8 @@ public static class DocumentRendererExtensions
     /// The type of annotations accepted by the wrapped
     /// <see cref="IDocumentRenderer{U}"/>.
     /// </typeparam>
-    /// <param name="renderer">The wrapped document renderer</param>
-    /// <param name="selector">The function to apply to the annotations</param>
+    /// <param name="renderer">The wrapped document renderer.</param>
+    /// <param name="selector">The function to apply to the annotations.</param>
     /// <returns>
     /// An <see cref="IDocumentRenderer{T}"/> which wraps an
     /// <paramref name="renderer"/> by applying a

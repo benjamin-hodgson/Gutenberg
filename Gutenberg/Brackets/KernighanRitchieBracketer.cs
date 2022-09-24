@@ -52,7 +52,7 @@ public class KernighanRitchieBracketer<T> : IBracketer<T>
     /// flattened to a single line if it fits.
     /// </param>
     /// <param name="nestingLevel">
-    /// The amount of indentation to apply to the bracketed document
+    /// The amount of indentation to apply to the bracketed document.
     /// </param>
     public KernighanRitchieBracketer(
         Document<T> openingBracket,
@@ -66,6 +66,7 @@ public class KernighanRitchieBracketer<T> : IBracketer<T>
         _group = group;
         _nestingLevel = nestingLevel;
     }
+
     /// <inheritdoc cref="IBracketer{T}.Bracket"/>
     public Document<T> Bracket(Document<T> document)
         => Document<T>.Concat(

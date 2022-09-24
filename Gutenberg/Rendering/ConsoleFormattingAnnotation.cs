@@ -6,10 +6,16 @@ namespace Gutenberg.Rendering;
 /// A base class for annotations which the
 /// <see cref="ConsoleDocumentRenderer"/> understands
 /// </summary>
-[SuppressMessage("design", "CA1034")]  // "Do not nest types"
+[SuppressMessage(
+    "design",
+    "CA1034:Do not nest types",
+    Justification = "Purposeful"
+)]
 public abstract record ConsoleFormattingAnnotation
 {
-    private ConsoleFormattingAnnotation() { }
+    private ConsoleFormattingAnnotation()
+    {
+    }
 
     /// <summary>Set the <see cref="Console.ForegroundColor"/></summary>
     /// <param name="Color">The colour</param>

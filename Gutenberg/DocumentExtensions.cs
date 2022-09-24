@@ -10,10 +10,10 @@ public static partial class DocumentExtensions
     /// in <paramref name="documents"/> concatenated together,
     /// with <paramref name="separator"/> in between them.
     /// </summary>
-    /// 
-    /// <typeparam name="T">The type of annotations in the document</typeparam>
-    /// <param name="documents">The documents to concatenate</param>
-    /// <param name="separator">The document to place between each document</param>
+    ///
+    /// <typeparam name="T">The type of annotations in the document.</typeparam>
+    /// <param name="documents">The documents to concatenate.</param>
+    /// <param name="separator">The document to place between each document.</param>
     /// <returns>
     /// A <see cref="Document{T}"/> representing the items
     /// in <paramref name="documents"/> concatenated together,
@@ -48,10 +48,10 @@ public static partial class DocumentExtensions
     /// <c>docs.SeparatedAndTerminated(sep)</c> is equivalent to
     /// <c>documents.Separated(separator).Append(separator)</c>.
     /// </remarks>
-    /// 
-    /// <typeparam name="T">The type of annotations in the document</typeparam>
-    /// <param name="documents">The documents to concatenate</param>
-    /// <param name="separator">The document to place after each document</param>
+    ///
+    /// <typeparam name="T">The type of annotations in the document.</typeparam>
+    /// <param name="documents">The documents to concatenate.</param>
+    /// <param name="separator">The document to place after each document.</param>
     /// <returns>
     /// A <see cref="Document{T}"/> representing the items
     /// in <paramref name="documents"/> concatenated together,
@@ -77,4 +77,3 @@ public static partial class DocumentExtensions
         return documents.Separated(separator).Append(separator);
     }
 }
-

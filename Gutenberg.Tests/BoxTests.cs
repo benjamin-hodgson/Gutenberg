@@ -16,12 +16,14 @@ public class BoxTests
             Assert.Equal(1, box.Height);
             Assert.Equal("abc\n", box.ToString());
         }
+
         {
             var box = Box.FromString("abc\ndef");
             Assert.Equal(3, box.Width);
             Assert.Equal(2, box.Height);
             Assert.Equal("abc\ndef\n", box.ToString());
         }
+
         {
             var box = Box.FromString("abc\ndefghi");
             Assert.Equal(6, box.Width);
@@ -155,7 +157,7 @@ public class BoxTests
         var doc = Doc.FromString("first line ").Append(box);
         Assert.Equal(
             "first line abc\n           def\n           ghi",
-            doc.ToString().Trim()  // todo: don't render trailing whitespace
+            doc.ToString().Trim() // todo: don't render trailing whitespace
         );
     }
 
@@ -166,7 +168,7 @@ public class BoxTests
         var doc = Doc.Concat("first line ", Doc.LineBreak, box);
         Assert.Equal(
             "first line \nabc\ndef\nghi",
-            doc.ToString().Trim()  // todo: don't render trailing whitespace
+            doc.ToString().Trim() // todo: don't render trailing whitespace
         );
     }
 
@@ -177,7 +179,7 @@ public class BoxTests
         var doc = Doc.Concat("first line ", Doc.LineBreak, box).Nested(2);
         Assert.Equal(
             "first line \n  abc\n  def\n  ghi",
-            doc.ToString().Trim()  // todo: don't render trailing whitespace
+            doc.ToString().Trim() // todo: don't render trailing whitespace
         );
     }
 
@@ -188,7 +190,7 @@ public class BoxTests
         var doc = Doc.Concat("first line ", Doc.ZeroWidthLineBreakHint, box);
         Assert.Equal(
             "first line abc\n           def\n           ghi",
-            doc.ToString().Trim()  // todo: don't render trailing whitespace
+            doc.ToString().Trim() // todo: don't render trailing whitespace
         );
     }
 
@@ -199,7 +201,7 @@ public class BoxTests
         var doc = Doc.Concat("first line ", Doc.ZeroWidthLineBreakHint, box);
         Assert.Equal(
             "first line \nabc\ndef\nghi",
-            doc.ToString(12).Trim()  // todo: don't render trailing whitespace
+            doc.ToString(12).Trim() // todo: don't render trailing whitespace
         );
     }
 
@@ -210,7 +212,7 @@ public class BoxTests
         var doc = Doc.Concat("first line ", box);
         Assert.Equal(
             "first line abc\n           def\n           ghi",
-            doc.ToString(12).Trim()  // todo: don't render trailing whitespace
+            doc.ToString(12).Trim() // todo: don't render trailing whitespace
         );
     }
 

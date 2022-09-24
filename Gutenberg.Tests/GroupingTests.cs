@@ -168,9 +168,12 @@ public class GroupingTests
         await TestDocument(
             "abc\ndef\nghi\njkl",
             Doc.Concat(
-                "abc", Doc.LineBreak,
-                "def", Doc.HardLineBreak,
-                "ghi", Doc.LineBreak,
+                "abc",
+                Doc.LineBreak,
+                "def",
+                Doc.HardLineBreak,
+                "ghi",
+                Doc.LineBreak,
                 "jkl"
             ).Grouped()
         );
@@ -258,6 +261,7 @@ public class GroupingTests
             .Select(Doc.FromString)
             .Separated(Doc.LineBreak)
             .Aligned();
+
         // either all line breaks in a group are taken or none of them are
         var expected = "some opening words\nand now\nsome aligned\ntext";
         var doc = Doc.Concat(
@@ -269,6 +273,7 @@ public class GroupingTests
         await TestDocument(expected, doc, 43);
         await TestDocument(expected, doc, 20);
         await TestDocument(expected, doc, 18);
+
         // first line overflows but not much the layout algo can do about it
         await TestDocument(expected, doc, 17);
     }
@@ -291,6 +296,7 @@ public class GroupingTests
 
         await TestDocument(expectedAligned, doc, 43);
         await TestDocument(expectedAligned, doc, 26);
+
         // no indentation if the LineBreakHint is taken
         await TestDocument("some opening words\nand now\nsome aligned\ntext", doc, 25);
     }
@@ -304,6 +310,7 @@ public class GroupingTests
             "and now",
             "some aligned",
             "text",
+
             // this line will overflow (75 + 19 = 94),
             // even though it wouldn't overflow if the
             // layout algorithm had taken one of the
@@ -317,10 +324,10 @@ public class GroupingTests
         var expected = "some opening words "
             + string.Join("\n" + new string(' ', 19), alignedText);
 
+        // put in some optional line breaks - the layout algorithm won't use them
         await TestDocument(
             expected,
             Doc.Concat(
-                // put in some optional line breaks - the layout algorithm won't use them
                 Doc.Reflow("some opening words"),
                 Doc.LineBreakHint,
                 alignedDoc

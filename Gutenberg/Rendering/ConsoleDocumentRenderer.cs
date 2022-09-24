@@ -46,6 +46,7 @@ public class ConsoleDocumentRenderer : IDocumentRenderer<ConsoleFormattingAnnota
             default:
                 throw new ArgumentOutOfRangeException(nameof(value), value, $"Unknown {nameof(ConsoleFormattingAnnotation)}");
         }
+
         return ValueTask.CompletedTask;
     }
 
@@ -62,6 +63,7 @@ public class ConsoleDocumentRenderer : IDocumentRenderer<ConsoleFormattingAnnota
                 Console.BackgroundColor = previousColour;
                 break;
         }
+
         return ValueTask.CompletedTask;
     }
 }

@@ -8,9 +8,10 @@ namespace Gutenberg.Expression;
 /// Methods to create <see cref="UnaryOperator{T}"/> and
 /// <see cref="BinaryOperator{T}"/> values.
 /// </summary>
+/// <typeparam name="T">The type of annotations in the document.</typeparam>
 [SuppressMessage(
     "Design",
-    "CA1000",  // "Do not declare static members on generic types"
+    "CA1000:Do not declare static members on generic types",
     Justification = "This type is designed to be imported under an alias"
 )]
 public static class OperatorFactory<T>
@@ -27,13 +28,13 @@ public static class OperatorFactory<T>
     /// style is used.
     /// </summary>
     /// <param name="type">
-    /// The type of the <see cref="UnaryOperator{T}"/>
+    /// The type of the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="precedence">
-    /// The precedence of the <see cref="UnaryOperator{T}"/>
+    /// The precedence of the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="UnaryOperator{T}"/>
+    /// How to display the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="chainable">
     /// Whether the operator is chainable. If a non-chainable
@@ -66,13 +67,13 @@ public static class OperatorFactory<T>
     /// <paramref name="bracketer"/> is used.
     /// </summary>
     /// <param name="type">
-    /// The type of the <see cref="UnaryOperator{T}"/>
+    /// The type of the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="precedence">
-    /// The precedence of the <see cref="UnaryOperator{T}"/>
+    /// The precedence of the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="UnaryOperator{T}"/>
+    /// How to display the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="chainable">
     /// Whether the operator is chainable. If a non-chainable
@@ -98,6 +99,7 @@ public static class OperatorFactory<T>
         {
             throw new ArgumentOutOfRangeException(nameof(type), type, $"Unknown {nameof(UnaryOperatorType)}");
         }
+
         ArgumentNullException.ThrowIfNull(symbol);
         ArgumentNullException.ThrowIfNull(bracketer);
 
@@ -112,10 +114,10 @@ public static class OperatorFactory<T>
     /// the K&amp;R style is used.
     /// </summary>
     /// <param name="precedence">
-    /// The precedence of the <see cref="UnaryOperator{T}"/>
+    /// The precedence of the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="UnaryOperator{T}"/>
+    /// How to display the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="chainable">
     /// Whether the operator is chainable. If a non-chainable
@@ -140,10 +142,10 @@ public static class OperatorFactory<T>
     /// <paramref name="bracketer"/> is used.
     /// </summary>
     /// <param name="precedence">
-    /// The precedence of the <see cref="UnaryOperator{T}"/>
+    /// The precedence of the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="UnaryOperator{T}"/>
+    /// How to display the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="chainable">
     /// Whether the operator is chainable. If a non-chainable
@@ -178,10 +180,10 @@ public static class OperatorFactory<T>
     /// the K&amp;R style is used.
     /// </summary>
     /// <param name="precedence">
-    /// The precedence of the <see cref="UnaryOperator{T}"/>
+    /// The precedence of the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="UnaryOperator{T}"/>
+    /// How to display the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="chainable">
     /// Whether the operator is chainable. If a non-chainable
@@ -206,10 +208,10 @@ public static class OperatorFactory<T>
     /// <paramref name="bracketer"/> is used.
     /// </summary>
     /// <param name="precedence">
-    /// The precedence of the <see cref="UnaryOperator{T}"/>
+    /// The precedence of the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="UnaryOperator{T}"/>
+    /// How to display the <see cref="UnaryOperator{T}"/>.
     /// </param>
     /// <param name="chainable">
     /// Whether the operator is chainable. If a non-chainable
@@ -245,13 +247,13 @@ public static class OperatorFactory<T>
     /// the K&amp;R style is used.
     /// </summary>
     /// <param name="type">
-    /// The type of the <see cref="BinaryOperator{T}"/>
+    /// The type of the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="precedence">
-    /// The precedence of the <see cref="BinaryOperator{T}"/>
+    /// The precedence of the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="BinaryOperator{T}"/>
+    /// How to display the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <returns>
     /// A <see cref="BinaryOperator{T}"/>.
@@ -277,13 +279,13 @@ public static class OperatorFactory<T>
     /// <paramref name="bracketer"/> is used.
     /// </summary>
     /// <param name="type">
-    /// The type of the <see cref="BinaryOperator{T}"/>
+    /// The type of the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="precedence">
-    /// The precedence of the <see cref="BinaryOperator{T}"/>
+    /// The precedence of the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="BinaryOperator{T}"/>
+    /// How to display the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="bracketer">
     /// An <see cref="IBracketer{T}"/> which will be called when
@@ -303,6 +305,7 @@ public static class OperatorFactory<T>
         {
             throw new ArgumentOutOfRangeException(nameof(type), type, $"Unknown {nameof(BinaryOperatorType)}");
         }
+
         ArgumentNullException.ThrowIfNull(symbol);
         ArgumentNullException.ThrowIfNull(bracketer);
 
@@ -317,10 +320,10 @@ public static class OperatorFactory<T>
     /// the K&amp;R style is used.
     /// </summary>
     /// <param name="precedence">
-    /// The precedence of the <see cref="BinaryOperator{T}"/>
+    /// The precedence of the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="BinaryOperator{T}"/>
+    /// How to display the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <returns>
     /// A non-associative <see cref="BinaryOperator{T}"/>.
@@ -341,10 +344,10 @@ public static class OperatorFactory<T>
     /// <paramref name="bracketer"/> is used.
     /// </summary>
     /// <param name="precedence">
-    /// The precedence of the <see cref="BinaryOperator{T}"/>
+    /// The precedence of the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="BinaryOperator{T}"/>
+    /// How to display the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="bracketer">
     /// An <see cref="IBracketer{T}"/> which will be called when
@@ -369,10 +372,10 @@ public static class OperatorFactory<T>
     /// the K&amp;R style is used.
     /// </summary>
     /// <param name="precedence">
-    /// The precedence of the <see cref="BinaryOperator{T}"/>
+    /// The precedence of the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="BinaryOperator{T}"/>
+    /// How to display the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <returns>
     /// A left-associative <see cref="BinaryOperator{T}"/>.
@@ -389,10 +392,10 @@ public static class OperatorFactory<T>
     /// <paramref name="bracketer"/> is used.
     /// </summary>
     /// <param name="precedence">
-    /// The precedence of the <see cref="BinaryOperator{T}"/>
+    /// The precedence of the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="BinaryOperator{T}"/>
+    /// How to display the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="bracketer">
     /// An <see cref="IBracketer{T}"/> which will be called when
@@ -417,10 +420,10 @@ public static class OperatorFactory<T>
     /// the K&amp;R style is used.
     /// </summary>
     /// <param name="precedence">
-    /// The precedence of the <see cref="BinaryOperator{T}"/>
+    /// The precedence of the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="BinaryOperator{T}"/>
+    /// How to display the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <returns>
     /// A right-associative <see cref="BinaryOperator{T}"/>.
@@ -437,10 +440,10 @@ public static class OperatorFactory<T>
     /// <paramref name="bracketer"/> is used.
     /// </summary>
     /// <param name="precedence">
-    /// The precedence of the <see cref="BinaryOperator{T}"/>
+    /// The precedence of the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="symbol">
-    /// How to display the <see cref="BinaryOperator{T}"/>
+    /// How to display the <see cref="BinaryOperator{T}"/>.
     /// </param>
     /// <param name="bracketer">
     /// An <see cref="IBracketer{T}"/> which will be called when

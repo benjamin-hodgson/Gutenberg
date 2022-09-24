@@ -2,12 +2,16 @@ namespace Gutenberg;
 
 internal class EmptyBox<T> : Box<T>
 {
-    public EmptyBox() : base(0, 0) { }
+    public EmptyBox()
+        : base(0, 0)
+    {
+    }
 
     internal override (Box<T> top, Box<T> bottom) CutHorizontalCore(int lineNumber)
     {
         throw new InvalidOperationException("Tried to cut an empty box. Please report this as a bug in Gutenberg");
     }
+
     internal override (Box<T> left, Box<T> right) CutVerticalCore(int columnNumber)
     {
         throw new InvalidOperationException("Tried to cut an empty box. Please report this as a bug in Gutenberg");
@@ -25,19 +29,25 @@ internal class EmptyBox<T> : Box<T>
 
 internal class TransparentBox<T> : Box<T>
 {
-    public TransparentBox(int width, int height) : base(width, height) { }
+    public TransparentBox(int width, int height)
+        : base(width, height)
+    {
+    }
 
     internal override (Box<T> top, Box<T> bottom) CutHorizontalCore(int lineNumber)
         => (
             new TransparentBox<T>(Width, lineNumber),
             new TransparentBox<T>(Width, Height - lineNumber)
         );
+
     internal override (Box<T> left, Box<T> right) CutVerticalCore(int columnNumber)
         => (
             new TransparentBox<T>(columnNumber, Height),
             new TransparentBox<T>(Width - columnNumber, Height)
         );
+
     internal override Box<T> OverlayCore(Box<T> background) => background;
+
     internal override ValueTask WriteLine(IDocumentRenderer<T> renderer, int lineNumber, CancellationToken cancellationToken)
         => renderer.WhiteSpace(Width, cancellationToken);
 
@@ -49,7 +59,8 @@ internal class TextBox<T> : Box<T>
 {
     public StringSlice Line { get; }
 
-    public TextBox(StringSlice line) : base(line.Length, 1)
+    public TextBox(StringSlice line)
+        : base(line.Length, 1)
     {
         Line = line;
     }
@@ -79,9 +90,11 @@ internal class TextBox<T> : Box<T>
 internal class AnnotatedBox<T> : Box<T>
 {
     public T Value { get; }
+
     public Box<T> Box { get; }
 
-    public AnnotatedBox(T value, Box<T> box) : base(box.Width, box.Height)
+    public AnnotatedBox(T value, Box<T> box)
+        : base(box.Width, box.Height)
     {
         Value = value;
         Box = box;
@@ -98,6 +111,7 @@ internal class AnnotatedBox<T> : Box<T>
         var (left, right) = Box.CutVertical(columnNumber);
         return (left.Annotated(Value), right.Annotated(Value));
     }
+
     internal override Box<T> OverlayCore(Box<T> background)
         => Box.OverlayCore(background).Annotated(Value);
 
@@ -119,9 +133,11 @@ internal class AnnotatedBox<T> : Box<T>
 internal class VConcatBox<T> : Box<T>
 {
     public Box<T> Top { get; }
+
     public Box<T> Bottom { get; }
 
-    public VConcatBox(Box<T> top, Box<T> bottom) : base(AssertEqual(top.Width, bottom.Width), top.Height + bottom.Height)
+    public VConcatBox(Box<T> top, Box<T> bottom)
+        : base(AssertEqual(top.Width, bottom.Width), top.Height + bottom.Height)
     {
         Top = top;
         Bottom = bottom;
@@ -134,6 +150,7 @@ internal class VConcatBox<T> : Box<T>
             var (topTop, topBottom) = Top.CutHorizontal(lineNumber);
             return (topTop, topBottom.Above(Bottom));
         }
+
         var (bottomTop, bottomBottom) = Bottom.CutHorizontal(lineNumber - Top.Height);
         return (Top.Above(bottomTop), bottomBottom);
     }
@@ -169,9 +186,11 @@ internal class VConcatBox<T> : Box<T>
 internal class HConcatBox<T> : Box<T>
 {
     public Box<T> Left { get; }
+
     public Box<T> Right { get; }
 
-    public HConcatBox(Box<T> left, Box<T> right) : base(left.Width + right.Width, AssertEqual(left.Height, right.Height))
+    public HConcatBox(Box<T> left, Box<T> right)
+        : base(left.Width + right.Width, AssertEqual(left.Height, right.Height))
     {
         Left = left;
         Right = right;
@@ -191,6 +210,7 @@ internal class HConcatBox<T> : Box<T>
             var (leftLeft, leftRight) = Left.CutVertical(columnNumber);
             return (leftLeft, leftRight.LeftOf(Right));
         }
+
         var (rightLeft, rightRight) = Right.CutVertical(columnNumber - Left.Width);
         return (Left.LeftOf(rightLeft), rightRight);
     }

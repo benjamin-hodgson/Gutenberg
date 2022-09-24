@@ -13,8 +13,10 @@ internal static class StringExtensions
                 seenLength = i + 1;
             }
         }
+
         yield return new StringSlice(str, seenLength, str.Length - seenLength);
     }
+
     public static IEnumerable<StringSlice> SplitWords(this string str)
     {
         var seenLength = 0;
@@ -26,6 +28,7 @@ internal static class StringExtensions
                 seenLength = i + 1;
             }
         }
+
         yield return new StringSlice(str, seenLength, str.Length - seenLength);
     }
 }

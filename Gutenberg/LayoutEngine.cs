@@ -53,14 +53,17 @@ internal class LayoutEngine<T>
                         {
                             await Flush(cancellationToken).ConfigureAwait(false);
                         }
+
                         _lineTextLength = 0;
 
                         if (_nestingLevel > 0)
                         {
                             Write(LayoutInstruction<T>.WhiteSpace(_nestingLevel));
                         }
+
                         _wroteIndentation = _nestingLevel;
                     }
+
                     break;
 
                 case WhiteSpaceDocument<T>(var amount):
@@ -70,10 +73,12 @@ internal class LayoutEngine<T>
                     {
                         await Flush(cancellationToken).ConfigureAwait(false);
                     }
+
                     if (_canBacktrack && !Fits())
                     {
                         Backtrack();
                     }
+
                     break;
 
                 case TextDocument<T>(var text):
@@ -83,17 +88,20 @@ internal class LayoutEngine<T>
                     {
                         await Flush(cancellationToken).ConfigureAwait(false);
                     }
+
                     if (_canBacktrack && !Fits())
                     {
                         Backtrack();
                     }
+
                     break;
 
                 // fixme: kind of ugly. Shares some logic with Aligned,
                 // and also bypasses the buffer
                 case BoxDocument<T>(var box):
+                    // can't write box in flatten mode
                     var backtrack =
-                        (box.Height > 1 && _flatten)  // can't write box in flatten mode
+                        (box.Height > 1 && _flatten)
                         || (_canBacktrack && !WillFit(box.Width));
 
                     if (backtrack)
@@ -123,6 +131,7 @@ internal class LayoutEngine<T>
                         {
                             await _renderer.WhiteSpace(_nestingLevel, cancellationToken).ConfigureAwait(false);
                         }
+
                         _lineTextLength = 0;
                         _wroteIndentation = _nestingLevel;
                     }
@@ -138,7 +147,8 @@ internal class LayoutEngine<T>
                     Push(_flatten ? ifFlattened : @default);
                     break;
 
-                case ChoiceDocument<T>(FlattenedDocument<T> first, var second):  // Grouped()
+                case ChoiceDocument<T>(FlattenedDocument<T> first, var second):
+                    // Grouped()
                     Push(WillFit(first.FlattenedWidth) ? first : second);
                     break;
 
@@ -175,6 +185,7 @@ internal class LayoutEngine<T>
                         _flatten = true;
                         Push(EndFlatten<T>.Instance);
                     }
+
                     Push(flattenedDoc);
                     break;
 
@@ -186,6 +197,7 @@ internal class LayoutEngine<T>
                     {
                         _bufferUntilDeIndent = currentColumn;
                     }
+
                     // read from bottom to top, because most recent push is popped first:
                     // 1. set the nesting level to the current location
                     // 2. write the doc
@@ -200,6 +212,7 @@ internal class LayoutEngine<T>
                     {
                         goto done;
                     }
+
                     var resume = _stack[cp.ResumeAt];
                     cp.ResumeAt -= 1;
                     Push(cp);
@@ -211,6 +224,7 @@ internal class LayoutEngine<T>
                     {
                         _bufferUntilDeIndent = -1;
                     }
+
                     _nestingLevel = nestingLevel;
                     break;
 
@@ -237,6 +251,7 @@ internal class LayoutEngine<T>
             item = null;
             return false;
         }
+
         item = _stack[^1];
         _stack.RemoveAt(_stack.Count - 1);
         return true;
@@ -250,6 +265,7 @@ internal class LayoutEngine<T>
             Array.Copy(_lineBuffer, newBuffer, _lineBufferCount);
             _lineBuffer = newBuffer;
         }
+
         _lineBuffer[_lineBufferCount] = instruction;
         _lineBufferCount++;
     }
@@ -270,6 +286,7 @@ internal class LayoutEngine<T>
         {
             candidate = cp.ResumeAt;
         }
+
         return candidate;
     }
 
@@ -287,6 +304,7 @@ internal class LayoutEngine<T>
             {
                 Push(cp.Fallback!);
                 _nestingLevel = cp.NestingLevel;
+
                 // see "todo: Clearing _lineBuffer"
                 // Array.Clear(_lineBuffer, cp.LineBufferCount, _lineBufferCount - cp.LineBufferCount);
                 _lineBufferCount = cp.LineBufferCount;
@@ -331,6 +349,7 @@ internal class LayoutEngine<T>
                     _lineBufferCount = 0;
                     return task;
                 }
+
                 return FlushRemainingInstructions(task, i + 1, keepTrailingWhitespace, cancellationToken);
             }
         }
@@ -347,7 +366,6 @@ internal class LayoutEngine<T>
         // and to clear the buffer when backtracking too.)
         //
         // Array.Clear(_lineBuffer, 0, _lineBufferCount);
-
         _lineBufferCount = 0;
         return ValueTask.CompletedTask;
     }
@@ -365,12 +383,14 @@ internal class LayoutEngine<T>
                 {
                     _stack[j] = Document<T>.Empty;
                 }
+
                 if (returnChoicePoints)
                 {
                     ReturnChoicePoint(cp);
                 }
             }
         }
+
         _canBacktrack = false;
     }
 
@@ -386,6 +406,7 @@ internal class LayoutEngine<T>
         {
             await FlushInstruction(i, keepTrailingWhitespace, cancellationToken).ConfigureAwait(false);
         }
+
         _lineBufferCount = 0;
     }
 
@@ -396,10 +417,12 @@ internal class LayoutEngine<T>
             case LayoutInstructionType.Text:
                 return _renderer.Text(_lineBuffer[i].GetText(), cancellationToken);
             case LayoutInstructionType.WhiteSpace:
-                if (keepTrailingWhitespace || LineContainsTextAfter(i))  // look ahead to determine whether we should strip the whitespace
+                // look ahead to determine whether we should strip the whitespace
+                if (keepTrailingWhitespace || LineContainsTextAfter(i))
                 {
                     return _renderer.WhiteSpace(_lineBuffer[i].GetWhitespaceAmount(), cancellationToken);
                 }
+
                 return ValueTask.CompletedTask;
             case LayoutInstructionType.NewLine:
                 return _renderer.NewLine(cancellationToken);
@@ -420,11 +443,13 @@ internal class LayoutEngine<T>
             {
                 return true;
             }
+
             if (_lineBuffer[i].IsNewLine)
             {
                 return false;
             }
         }
+
         return false;
     }
 
@@ -435,6 +460,7 @@ internal class LayoutEngine<T>
         {
             _choicePointPool = new();
         }
+
         _choicePointPool.Push(cp);
     }
 

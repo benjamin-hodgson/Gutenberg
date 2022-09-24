@@ -4,16 +4,19 @@ namespace Gutenberg.Rendering;
 /// An <see cref="IDocumentRenderer{T}"/> which writes to
 /// a <see cref="TextWriter"/> and discards all annotations.
 /// </summary>
+/// <typeparam name="T">
+/// The type of annotations in the document.
+/// </typeparam>
 public class PlainTextDocumentRenderer<T> : IDocumentRenderer<T>
 {
     private static readonly ReadOnlyMemory<char> _whitespace
         = new string(' ', 128).AsMemory();
 
-    /// <summary>The output <see cref="TextWriter"/></summary>
+    /// <summary>The output <see cref="TextWriter"/>.</summary>
     protected TextWriter Writer { get; }
 
-    /// <summary>Create a <see cref="PlainTextDocumentRenderer{T}"/></summary>
-    /// <param name="writer">The output <see cref="TextWriter"/></param>
+    /// <summary>Create a <see cref="PlainTextDocumentRenderer{T}"/>.</summary>
+    /// <param name="writer">The output <see cref="TextWriter"/>.</param>
     public PlainTextDocumentRenderer(TextWriter writer)
     {
         Writer = writer;
@@ -71,9 +74,10 @@ public class PlainTextDocumentRenderer<T> : IDocumentRenderer<T>
 /// </remarks>
 public class PlainTextDocumentRenderer : PlainTextDocumentRenderer<object>
 {
-    /// <summary>Create a <see cref="PlainTextDocumentRenderer"/></summary>
-    /// <param name="writer">The output <see cref="TextWriter"/></param>
-    public PlainTextDocumentRenderer(TextWriter writer) : base(writer)
+    /// <summary>Create a <see cref="PlainTextDocumentRenderer"/>.</summary>
+    /// <param name="writer">The output <see cref="TextWriter"/>.</param>
+    public PlainTextDocumentRenderer(TextWriter writer)
+        : base(writer)
     {
     }
 }

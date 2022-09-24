@@ -5,7 +5,7 @@ namespace Gutenberg.Brackets;
 /// </summary>
 /// <remarks>
 /// "The Allman style" is the name for the bracketing style
-/// which is customary in C#. 
+/// which is customary in C#.
 /// The opening bracket is placed on a new line,
 /// the contained document is indented, and the closing bracket
 /// is placed on a new line.
@@ -53,7 +53,7 @@ public class AllmanBracketer<T> : IBracketer<T>
     /// flattened to a single line if it fits.
     /// </param>
     /// <param name="nestingLevel">
-    /// The amount of indentation to apply to the bracketed document
+    /// The amount of indentation to apply to the bracketed document.
     /// </param>
     public AllmanBracketer(
         Document<T> openingBracket,

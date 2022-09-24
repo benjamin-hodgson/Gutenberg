@@ -12,14 +12,14 @@ namespace Gutenberg;
 /// in a variety of ways. Once laid out, the document can be
 /// rendered by an <see cref="IDocumentRenderer{T}"/>.
 /// </para>
-/// 
+///
 /// <para>
 /// A <see cref="Document{T}"/>'s layout is determined by
 /// the available page width, the locations of line breaks
 /// within the document, and the locations of groups within
 /// the document.
 /// </para>
-/// 
+///
 /// <para>
 /// The page has a certain maximum width
 /// (determined by <see cref="LayoutOptions.PageWidth"/>),
@@ -49,12 +49,12 @@ namespace Gutenberg;
 /// <para>
 /// This class is intended to be imported under an alias,
 /// since typically the type of annotations won't change within your code:
-/// <c>using Doc = Gutenberg.Document&lt;MyAnnotation&gt;;</c>
+/// <c>using Doc = Gutenberg.Document&lt;MyAnnotation&gt;;</c>.
 /// </para>
 /// </summary>
 /// <remarks>
 /// The examples in the documentation for this class are assumed to be preceded by
-/// <c>using Doc = Gutenberg.Document&lt;object&gt;;</c>
+/// <c>using Doc = Gutenberg.Document&lt;object&gt;;</c>.
 /// </remarks>
 /// <typeparam name="T">
 /// The type of annotations in the document.
@@ -98,7 +98,7 @@ public abstract class Document<T> : IStackItem<T>
     /// with the given <paramref name="pageWidth"/>, and
     /// write its text to the <paramref name="renderer"/>.
     /// </summary>
-    /// <param name="pageWidth">The page width</param>
+    /// <param name="pageWidth">The page width.</param>
     /// <param name="renderer">
     /// The <see cref="IDocumentRenderer{T}"/>.
     /// </param>
@@ -121,7 +121,7 @@ public abstract class Document<T> : IStackItem<T>
     /// Lay out the <see cref="Document{T}"/> and write its
     /// text to the <paramref name="renderer"/>.
     /// </summary>
-    /// <param name="options">Options for rendering the document</param>
+    /// <param name="options">Options for rendering the document.</param>
     /// <param name="renderer">
     /// The <see cref="IDocumentRenderer{T}"/>.
     /// </param>
@@ -160,6 +160,7 @@ public abstract class Document<T> : IStackItem<T>
     /// using the default <see cref="LayoutOptions"/>,
     /// and render it as a string.
     /// </summary>
+    /// <returns>A string representation of the document.</returns>
     public override string ToString()
         => ToString(LayoutOptions.Default);
 
@@ -168,12 +169,16 @@ public abstract class Document<T> : IStackItem<T>
     /// with the given <paramref name="pageWidth"/>,
     /// and render it as a string.
     /// </summary>
+    /// <param name="pageWidth">The page width.</param>
+    /// <returns>A string representation of the document.</returns>
     public string ToString(int pageWidth)
         => ToString(LayoutOptions.Default with { PageWidth = new(pageWidth) });
 
     /// <summary>
     /// Lay out the <see cref="Document{T}"/> and render it as a string.
     /// </summary>
+    /// <param name="options">The <see cref="LayoutOptions"/>.</param>
+    /// <returns>A string representation of the document.</returns>
     public string ToString(LayoutOptions options)
     {
         using var writer = new StringWriter();
@@ -185,6 +190,7 @@ public abstract class Document<T> : IStackItem<T>
         {
             throw new InvalidOperationException("ToString went async! Please report this as a bug in Gutenberg");
         }
+
         if (task.IsFaulted)
         {
             throw new InvalidOperationException(
@@ -201,10 +207,10 @@ public abstract class Document<T> : IStackItem<T>
     /// into a <see cref="TextWriter"/>.
     /// </summary>
     /// <param name="writer">
-    /// The <see cref="TextWriter"/>
+    /// The <see cref="TextWriter"/>.
     /// </param>
     /// <param name="cancellationToken">
-    /// A <see cref="CancellationToken"/>
+    /// A <see cref="CancellationToken"/>.
     /// </param>
     /// <returns>
     /// A <see cref="ValueTask"/> which will complete when all of
@@ -222,13 +228,13 @@ public abstract class Document<T> : IStackItem<T>
     /// into a <see cref="TextWriter"/>.
     /// </summary>
     /// <param name="options">
-    /// The <see cref="LayoutOptions"/>
+    /// The <see cref="LayoutOptions"/>.
     /// </param>
     /// <param name="writer">
-    /// The <see cref="TextWriter"/>
+    /// The <see cref="TextWriter"/>.
     /// </param>
     /// <param name="cancellationToken">
-    /// A <see cref="CancellationToken"/>
+    /// A <see cref="CancellationToken"/>.
     /// </param>
     /// <returns>
     /// A <see cref="ValueTask"/> which will complete when all of
@@ -258,7 +264,7 @@ public abstract class Document<T> : IStackItem<T>
     /// </code>
     /// </example>
     /// <param name="other">
-    /// The document to append to this document
+    /// The document to append to this document.
     /// </param>
     /// <returns>
     /// A new <see cref="Document{T}"/> representing
@@ -273,10 +279,12 @@ public abstract class Document<T> : IStackItem<T>
         {
             return other;
         }
+
         if (other is EmptyDocument<T>)
         {
             return this;
         }
+
         return new AppendDocument<T>(this, other);
     }
 
@@ -293,10 +301,10 @@ public abstract class Document<T> : IStackItem<T>
     /// </code>
     /// </example>
     /// <param name="before">
-    /// The document to place before the current document
+    /// The document to place before the current document.
     /// </param>
     /// <param name="after">
-    /// The document to place after the current document
+    /// The document to place after the current document.
     /// </param>
     /// <returns>
     /// A new <see cref="Document{T}"/> representing
@@ -315,7 +323,7 @@ public abstract class Document<T> : IStackItem<T>
     /// Signals that the current <see cref="Document{T}"/>
     /// is eligible to be flattened.
     /// </para>
-    /// 
+    ///
     /// <para>
     /// When the layout algorithm encounters a <see cref="Grouped"/>
     /// region of a document, it attempts to flatten that region by
@@ -407,6 +415,10 @@ public abstract class Document<T> : IStackItem<T>
     /// // ghi jkl
     /// </code>
     /// </example>
+    /// <returns>
+    /// A <see cref="Document{T}"/> representing a
+    /// flattenable version of the current document.
+    /// </returns>
     public Document<T> Grouped()
         => new ChoiceDocument<T>(new FlattenedDocument<T>(this), this);
 
@@ -463,7 +475,7 @@ public abstract class Document<T> : IStackItem<T>
     /// </code>
     /// </example>
     /// <param name="amount">
-    /// The amount by which to increase the document's nesting level
+    /// The amount by which to increase the document's nesting level.
     /// </param>
     /// <returns>
     /// A new <see cref="Document{T}"/> representing the current document
@@ -541,7 +553,7 @@ public abstract class Document<T> : IStackItem<T>
     /// var doc = Doc.Concat(
     ///     "leading text ",
     ///     Doc.Concat(
-    ///         "first line", 
+    ///         "first line",
     ///         Doc.LineBreak, "second line",
     ///         Doc.Concat (
     ///             Doc.LineBreak, "nested line 1",
@@ -579,6 +591,10 @@ public abstract class Document<T> : IStackItem<T>
     /// //              third line
     /// </code>
     /// </example>
+    /// <returns>
+    /// A <see cref="Document{T}"/> representing the
+    /// current document aligned to the current column.
+    /// </returns>
     public Document<T> Aligned()
         => new AlignedDocument<T>(this);
 
@@ -609,8 +625,12 @@ public abstract class Document<T> : IStackItem<T>
     /// </code>
     /// </example>
     /// <param name="indentation">
-    /// The amount of
+    /// The amount of indentation to apply to the document.
     /// </param>
+    /// <returns>
+    /// A <see cref="Document{T}"/> representing the current document
+    /// with the specified amount of <paramref name="indentation"/> applied.
+    /// </returns>
     public Document<T> Indented(int indentation)
         => new WhiteSpaceDocument<T>(indentation).Append(Aligned());
 
@@ -640,6 +660,14 @@ public abstract class Document<T> : IStackItem<T>
     /// //                  third line
     /// </code>
     /// </example>
+    /// <param name="amount">
+    /// The amount of indentation to apply to the document.
+    /// </param>
+    /// <returns>
+    /// A <see cref="Document{T}"/> representing the
+    /// current document with the specified <paramref name="amount"/>
+    /// of indentation applied.
+    /// </returns>
     public Document<T> Hanging(int amount)
         => Nested(amount).Aligned();
 
@@ -647,7 +675,7 @@ public abstract class Document<T> : IStackItem<T>
     /// Apply an annotation to the current <see cref="Document{T}"/>.
     /// The annotation will be passed to the <see cref="IDocumentRenderer{T}"/>.
     /// </summary>
-    /// <param name="value">The annotation</param>
+    /// <param name="value">The annotation.</param>
     /// <returns>
     /// A copy of the current <see cref="Document{T}"/> with an annotation applied.
     /// </returns>
@@ -664,9 +692,10 @@ public abstract class Document<T> : IStackItem<T>
     /// could be laid out, including layouts which would be discarded.
     /// </remarks>
     /// <param name="selector">The function to apply to the annotations.</param>
+    /// <typeparam name="U">The type of annotations in the resulting document.</typeparam>
     /// <returns>
     /// A document with all of the annotations replaced
-    /// with the return value of <paramref name="selector"/>
+    /// with the return value of <paramref name="selector"/>.
     /// </returns>
     public Document<U> MapAnnotations<U>(Func<T, U> selector)
         => MapAnnotationsCore(x => new[] { selector(x) });
@@ -677,9 +706,10 @@ public abstract class Document<T> : IStackItem<T>
     /// the annotations are added in a left-to-right fashion.
     /// </summary>
     /// <param name="selector">The function to apply to the annotations.</param>
+    /// <typeparam name="U">The type of annotations in the resulting document.</typeparam>
     /// <returns>
     /// A document with all of the annotations replaced
-    /// with the return values of <paramref name="selector"/>
+    /// with the return values of <paramref name="selector"/>.
     /// </returns>
     public Document<U> MapAnnotations<U>(Func<T, IEnumerable<U>> selector)
         => MapAnnotationsCore(selector);
@@ -694,9 +724,10 @@ public abstract class Document<T> : IStackItem<T>
     /// could be laid out, including layouts which would be discarded.
     /// </remarks>
     /// <param name="selector">The function to apply to the annotations.</param>
+    /// <typeparam name="U">The type of annotations in the resulting document.</typeparam>
     /// <returns>
     /// A document with all of the annotations replaced
-    /// with the return value of <paramref name="selector"/>
+    /// with the return value of <paramref name="selector"/>.
     /// </returns>
     public Document<U> Select<U>(Func<T, U> selector)
         => MapAnnotations(selector);
@@ -713,7 +744,7 @@ public abstract class Document<T> : IStackItem<T>
     /// Console.WriteLine(doc);
     /// // Output:
     /// // abc
-    /// // 
+    /// //
     /// // def
     /// </code>
     /// </example>
@@ -750,7 +781,7 @@ public abstract class Document<T> : IStackItem<T>
     /// A <see cref="Document{T}"/> which advances to the next line
     /// and indents to the current nesting level.
     /// </para>
-    /// 
+    ///
     /// <para>
     /// When flattened, <see cref="ZeroWidthLineBreak"/> behaves like
     /// <see cref="Empty"/>.
@@ -815,7 +846,7 @@ public abstract class Document<T> : IStackItem<T>
     /// A <see cref="Document{T}"/> which advances to the next line
     /// and indents to the current nesting level.
     /// </para>
-    /// 
+    ///
     /// <para>
     /// When flattened, <see cref="LineBreak"/> is displayed as a
     /// single space.
@@ -879,7 +910,7 @@ public abstract class Document<T> : IStackItem<T>
     /// Creates a <see cref="Document{T}"/> which advances
     /// to the next line and indents to the current nesting level.
     /// </para>
-    /// 
+    ///
     /// <para>
     /// When flattened, the <paramref name="ifFlattened"/> text
     /// is displayed instead.
@@ -932,6 +963,14 @@ public abstract class Document<T> : IStackItem<T>
     /// // def
     /// </code>
     /// </example>
+    /// <param name="ifFlattened">
+    /// A <see cref="Document{T}"/> to render as flattened alternative
+    /// to a newline, if the document gets flattened.
+    /// </param>
+    /// <returns>
+    /// A <see cref="Document{T}"/> which advances
+    /// to the next line and indents to the current nesting level.
+    /// </returns>
     /// <seealso cref="LineBreak"/>
     public static Document<T> LineBreakOr(Document<T> ifFlattened)
     {
@@ -1012,7 +1051,7 @@ public abstract class Document<T> : IStackItem<T>
     /// </code>
     /// </example>
     /// <param name="ifFits">
-    /// The document to render if there's enough space
+    /// The document to render if there's enough space.
     /// </param>
     /// <returns>
     /// A <see cref="Document{T}"/> which behaves like
@@ -1085,7 +1124,7 @@ public abstract class Document<T> : IStackItem<T>
     /// It is your responsibility to ensure that there are no
     /// <c>'\n'</c>s in the input.
     /// </para>
-    /// 
+    ///
     /// <para>
     /// You should probably use <see cref="FromString"/> instead.
     /// </para>
@@ -1128,6 +1167,8 @@ public abstract class Document<T> : IStackItem<T>
     /// between words, so that the text is broken into multiple
     /// lines when it is too wide for the page.
     /// </summary>
+    /// <param name="text">The text to reflow.</param>
+    /// <returns>A <see cref="Document{T}"/> with the text reflowed.</returns>
     public static Document<T> Reflow(string text)
     {
         ArgumentNullException.ThrowIfNull(text);
@@ -1147,7 +1188,7 @@ public abstract class Document<T> : IStackItem<T>
     /// // abcdefghi
     /// </code>
     /// </example>
-    /// <param name="documents">The documents to concatenate</param>
+    /// <param name="documents">The documents to concatenate.</param>
     /// <returns>
     /// A new <see cref="Document{T}"/> representing
     /// the contents of all of <paramref name="documents"/>
@@ -1160,6 +1201,12 @@ public abstract class Document<T> : IStackItem<T>
     }
 
     /// <summary>See <see cref="Concat(Document{T}[])"/>.</summary>
+    /// <param name="documents">The documents to concatenate.</param>
+    /// <returns>
+    /// A new <see cref="Document{T}"/> representing
+    /// the contents of all of <paramref name="documents"/>
+    /// concatenated together.
+    /// </returns>
     public static Document<T> Concat(IEnumerable<Document<T>> documents)
     {
         ArgumentNullException.ThrowIfNull(documents);
@@ -1182,10 +1229,10 @@ public abstract class Document<T> : IStackItem<T>
     /// </code>
     /// </example>
     /// <param name="left">
-    /// The document to append <paramref name="right"/> to
+    /// The document to append <paramref name="right"/> to.
     /// </param>
     /// <param name="right">
-    /// The document to append to <paramref name="left"/>
+    /// The document to append to <paramref name="left"/>.
     /// </param>
     /// <returns>
     /// A new <see cref="Document{T}"/> representing
@@ -1193,7 +1240,11 @@ public abstract class Document<T> : IStackItem<T>
     /// content of <paramref name="right"/>.
     /// </returns>
     /// <seealso cref="Append"/>
-    [SuppressMessage("design", "CA2225", Justification = "It's called Append")]  // "Provide a method named 'Add' as a friendly alternate for operator op_Addition"
+    [SuppressMessage(
+        "design",
+        "CA2225:Provide a method named 'Add' as a friendly alternate for operator op_Addition",
+        Justification = "It's called Append"
+    )]
     public static Document<T> operator +(Document<T> left, Document<T> right)
     {
         ArgumentNullException.ThrowIfNull(left);
@@ -1246,5 +1297,6 @@ public abstract class Document<T> : IStackItem<T>
         => FromBox(value);
 
     internal abstract Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector);
+
     internal abstract ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken);
 }

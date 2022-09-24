@@ -4,7 +4,6 @@ using Doc = Gutenberg.Document<object>;
 
 namespace Gutenberg.Tests;
 
-
 public class LineBreakHintTests
 {
     [Fact]

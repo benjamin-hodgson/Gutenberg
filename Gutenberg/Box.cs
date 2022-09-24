@@ -24,7 +24,7 @@ namespace Gutenberg;
 /// <see cref="Transparent"/> areas, through which background text
 /// will be visible.
 /// </para>
-/// 
+///
 /// <para>
 /// The box may contain annotations - values of type
 /// <typeparamref name="T"/> - which can be interpreted by the
@@ -34,11 +34,11 @@ namespace Gutenberg;
 /// <para>
 /// This class is intended to be imported under an alias,
 /// since typically the type of annotations won't change within your code:
-/// <c>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</c>
+/// <c>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</c>.
 /// </para>
 /// </remarks>
 /// <typeparam name="T">
-/// The type of annotations in the box
+/// The type of annotations in the box.
 /// </typeparam>
 [SuppressMessage(
     "Design",
@@ -69,16 +69,16 @@ public abstract class Box<T>
     /// Creates a new <see cref="Box{T}"/> consisting of this
     /// box with <paramref name="bottom"/> placed below it.
     /// </para>
-    /// 
+    ///
     /// <para>
     /// If either of the boxes is narrower than the other, it will be
     /// padded with a <see cref="Transparent"/> box until the
     /// <see cref="Width"/> matches, according to the chosen
     /// <paramref name="alignment"/>.
     /// </para>
-    /// 
+    ///
     /// <para>
-    /// See the docs for <see cref="Alignment"/> for detailed 
+    /// See the docs for <see cref="Alignment"/> for detailed
     /// examples of how the <paramref name="alignment"/> affects
     /// the layout of the box.
     /// </para>
@@ -97,7 +97,7 @@ public abstract class Box<T>
     /// </code>
     /// </example>
     /// <param name="bottom">
-    /// The <see cref="Box{T}"/> to place below this one
+    /// The <see cref="Box{T}"/> to place below this one.
     /// </param>
     /// <param name="alignment">
     /// How to align the boxes if one is narrower than the other.
@@ -118,16 +118,16 @@ public abstract class Box<T>
     /// Creates a new <see cref="Box{T}"/> consisting of this
     /// box with <paramref name="top"/> placed above it.
     /// </para>
-    /// 
+    ///
     /// <para>
     /// If either of the boxes is narrower than the other, it will be
     /// padded with a <see cref="Transparent"/> box until the
     /// <see cref="Width"/> matches, according to the chosen
     /// <paramref name="alignment"/>.
     /// </para>
-    /// 
+    ///
     /// <para>
-    /// See the docs for <see cref="Alignment"/> for detailed 
+    /// See the docs for <see cref="Alignment"/> for detailed
     /// examples of how the <paramref name="alignment"/> affects
     /// the layout of the box.
     /// </para>
@@ -146,7 +146,7 @@ public abstract class Box<T>
     /// </code>
     /// </example>
     /// <param name="top">
-    /// The <see cref="Box{T}"/> to place above this one
+    /// The <see cref="Box{T}"/> to place above this one.
     /// </param>
     /// <param name="alignment">
     /// How to align the boxes if one is narrower than the other.
@@ -167,16 +167,16 @@ public abstract class Box<T>
     /// Creates a new <see cref="Box{T}"/> consisting of this
     /// box with <paramref name="right"/> placed to its right.
     /// </para>
-    /// 
+    ///
     /// <para>
     /// If either of the boxes is shorter than the other, it will be
     /// padded with a <see cref="Transparent"/> box until the
     /// <see cref="Height"/> matches, according to the chosen
     /// <paramref name="alignment"/>.
     /// </para>
-    /// 
+    ///
     /// <para>
-    /// See the docs for <see cref="Alignment"/> for detailed 
+    /// See the docs for <see cref="Alignment"/> for detailed
     /// examples of how the <paramref name="alignment"/> affects
     /// the layout of the box.
     /// </para>
@@ -196,7 +196,7 @@ public abstract class Box<T>
     /// </code>
     /// </example>
     /// <param name="right">
-    /// The <see cref="Box{T}"/> to place to the right of this one
+    /// The <see cref="Box{T}"/> to place to the right of this one.
     /// </param>
     /// <param name="alignment">
     /// How to align the boxes if one is shorter than the other.
@@ -217,16 +217,16 @@ public abstract class Box<T>
     /// Creates a new <see cref="Box{T}"/> consisting of this
     /// box with <paramref name="left"/> placed to its left.
     /// </para>
-    /// 
+    ///
     /// <para>
     /// If either of the boxes is shorter than the other, it will be
     /// padded with a <see cref="Transparent"/> box until the
     /// <see cref="Height"/> matches, according to the chosen
     /// <paramref name="alignment"/>.
     /// </para>
-    /// 
+    ///
     /// <para>
-    /// See the docs for <see cref="Alignment"/> for detailed 
+    /// See the docs for <see cref="Alignment"/> for detailed
     /// examples of how the <paramref name="alignment"/> affects
     /// the layout of the box.
     /// </para>
@@ -246,7 +246,7 @@ public abstract class Box<T>
     /// </code>
     /// </example>
     /// <param name="left">
-    /// The <see cref="Box{T}"/> to place to the left of this one
+    /// The <see cref="Box{T}"/> to place to the left of this one.
     /// </param>
     /// <param name="alignment">
     /// How to align the boxes if one is shorter than the other.
@@ -274,15 +274,15 @@ public abstract class Box<T>
     /// <see cref="Transparent"/> areas, the <paramref name="background"/>
     /// will be visible through the transparent areas.
     /// </para>
-    /// 
+    ///
     /// <para>
     /// If either box is shorter or narrower than the other, it will be
     /// padded with a <see cref="Transparent"/> box until the sizes match,
     /// according to the chosen <paramref name="alignment"/>.
     /// </para>
-    /// 
+    ///
     /// <para>
-    /// See the docs for <see cref="Alignment"/> for detailed 
+    /// See the docs for <see cref="Alignment"/> for detailed
     /// examples of how the <paramref name="alignment"/> affects
     /// the layout of the box.
     /// </para>
@@ -306,7 +306,7 @@ public abstract class Box<T>
     /// </code>
     /// </example>
     /// <param name="background">
-    /// The <see cref="Box{T}"/> to place behind this one
+    /// The <see cref="Box{T}"/> to place behind this one.
     /// </param>
     /// <param name="alignment">
     /// How to align the boxes if one is smaller than the other.
@@ -334,15 +334,15 @@ public abstract class Box<T>
     /// has <see cref="Transparent"/> areas, the content of this box
     /// will be visible through the transparent areas.
     /// </para>
-    /// 
+    ///
     /// <para>
     /// If either box is shorter or narrower than the other, it will be
     /// padded with a <see cref="Transparent"/> box until the sizes match,
     /// according to the chosen <paramref name="alignment"/>.
     /// </para>
-    /// 
+    ///
     /// <para>
-    /// See the docs for <see cref="Alignment"/> for detailed 
+    /// See the docs for <see cref="Alignment"/> for detailed
     /// examples of how the <paramref name="alignment"/> affects
     /// the layout of the box.
     /// </para>
@@ -366,7 +366,7 @@ public abstract class Box<T>
     /// </code>
     /// </example>
     /// <param name="foreground">
-    /// The <see cref="Box{T}"/> overlay onto this one
+    /// The <see cref="Box{T}"/> overlay onto this one.
     /// </param>
     /// <param name="alignment">
     /// How to align the boxes if one is smaller than the other.
@@ -386,7 +386,7 @@ public abstract class Box<T>
     /// Apply an annotation to the current <see cref="Box{T}"/>.
     /// The annotation will be passed to the <see cref="IDocumentRenderer{T}"/>.
     /// </summary>
-    /// <param name="value">The annotation</param>
+    /// <param name="value">The annotation.</param>
     /// <returns>
     /// A copy of the current <see cref="Box{T}"/> with an annotation applied.
     /// </returns>
@@ -397,9 +397,10 @@ public abstract class Box<T>
     /// Apply a function to all the annotations in the current document.
     /// </summary>
     /// <param name="selector">The function to apply to the annotations.</param>
+    /// <typeparam name="U">The type of annotations in the resulting box.</typeparam>
     /// <returns>
     /// A document with all of the annotations replaced
-    /// with the return value of <paramref name="selector"/>
+    /// with the return value of <paramref name="selector"/>.
     /// </returns>
     public Box<U> Select<U>(Func<T, U> selector)
     {
@@ -411,9 +412,10 @@ public abstract class Box<T>
     /// Apply a function to all the annotations in the current document.
     /// </summary>
     /// <param name="selector">The function to apply to the annotations.</param>
+    /// <typeparam name="U">The type of annotations in the resulting box.</typeparam>
     /// <returns>
     /// A document with all of the annotations replaced
-    /// with the return value of <paramref name="selector"/>
+    /// with the return value of <paramref name="selector"/>.
     /// </returns>
     public Box<U> MapAnnotations<U>(Func<T, U> selector)
     {
@@ -427,9 +429,10 @@ public abstract class Box<T>
     /// the annotations are added in a left-to-right fashion.
     /// </summary>
     /// <param name="selector">The function to apply to the annotations.</param>
+    /// <typeparam name="U">The type of annotations in the resulting box.</typeparam>
     /// <returns>
     /// A document with all of the annotations replaced
-    /// with the return values of <paramref name="selector"/>
+    /// with the return values of <paramref name="selector"/>.
     /// </returns>
     public Box<U> MapAnnotations<U>(Func<T, IEnumerable<U>> selector)
     {
@@ -437,12 +440,13 @@ public abstract class Box<T>
         return MapAnnotationsCore(selector);
     }
 
-    /// <summary>Render this <see cref="Box{T}"/> as a string</summary>
+    /// <summary>Render this <see cref="Box{T}"/> as a string.</summary>
+    /// <returns>A string representation of the box.</returns>
     [SuppressMessage(
         "design",
-        "CA1065",
+        "CA1065:Exceptions should not be raised in this type of method.",
         Justification = "The exceptions are just asserts, they should never be raised"
-    )]  // "Exceptions should not be raised in this type of method."
+    )]
     public override string ToString()
     {
         using var writer = new StringWriter();
@@ -454,6 +458,7 @@ public abstract class Box<T>
         {
             throw new InvalidOperationException("ToString went async! Please report this as a bug in Gutenberg");
         }
+
         if (task.IsFaulted)
         {
             throw new InvalidOperationException(
@@ -469,10 +474,10 @@ public abstract class Box<T>
     /// Write the <see cref="Box{T}"/> into a <see cref="TextWriter"/>.
     /// </summary>
     /// <param name="writer">
-    /// The <see cref="TextWriter"/>
+    /// The <see cref="TextWriter"/>.
     /// </param>
     /// <param name="cancellationToken">
-    /// A <see cref="CancellationToken"/>
+    /// A <see cref="CancellationToken"/>.
     /// </param>
     /// <returns>
     /// A <see cref="ValueTask"/> which will complete when
@@ -489,8 +494,8 @@ public abstract class Box<T>
     /// Write the contents of this <see cref="Box{T}"/> into
     /// the <paramref name="renderer"/>.
     /// </summary>
-    /// <param name="renderer">The renderer</param>
-    /// <param name="cancellationToken">A <see cref="CancellationToken"/></param>
+    /// <param name="renderer">The renderer.</param>
+    /// <param name="cancellationToken">A <see cref="CancellationToken"/>.</param>
     /// <returns>
     /// A <see cref="ValueTask"/> which completes when
     /// the box has been written to the <paramref name="renderer"/>.
@@ -512,19 +517,21 @@ public abstract class Box<T>
     /// another box, the other box will be visible through the
     /// transparent box.
     /// </summary>
-    /// <param name="width">The width of the box</param>
-    /// <param name="height">The height of the box</param>
-    /// <returns>A transparent <see cref="Box{T}"/></returns>
+    /// <param name="width">The width of the box.</param>
+    /// <param name="height">The height of the box.</param>
+    /// <returns>A transparent <see cref="Box{T}"/>.</returns>
     public static Box<T> Transparent(int width, int height)
     {
         if (width < 0)
         {
             throw new ArgumentOutOfRangeException(nameof(width), width, "Width cannot be negative");
         }
+
         if (height < 0)
         {
             throw new ArgumentOutOfRangeException(nameof(height), height, "Height cannot be negative");
         }
+
         return new TransparentBox<T>(width, height);
     }
 
@@ -539,7 +546,7 @@ public abstract class Box<T>
     /// Each line will be left-aligned.
     /// </remarks>
     /// <param name="text">
-    /// The text to place into a <see cref="Box{T}"/>
+    /// The text to place into a <see cref="Box{T}"/>.
     /// </param>
     /// <returns>
     /// A <see cref="Box{T}"/> containing the
@@ -588,11 +595,12 @@ public abstract class Box<T>
     }
 
     /// <summary>
-    /// Implicitly convert a string to a <see cref="Box{T}"/>
+    /// Implicitly convert a string to a <see cref="Box{T}"/>.
     /// </summary>
     /// <remarks>
     /// This implicit conversion is equivalent to <see cref="FromString"/>.
     /// </remarks>
+    /// <param name="str">The string.</param>
     public static implicit operator Box<T>(string str)
     {
         ArgumentNullException.ThrowIfNull(str);
@@ -605,10 +613,12 @@ public abstract class Box<T>
         {
             return bottom;
         }
+
         if (bottom.Height == 0)
         {
             return top;
         }
+
         return new VConcatBox<T>(
             top.PadWidthToAtLeast(bottom.Width, alignment),
             bottom.PadWidthToAtLeast(top.Width, alignment)
@@ -621,10 +631,12 @@ public abstract class Box<T>
         {
             return right;
         }
+
         if (right.Width == 0)
         {
             return left;
         }
+
         return new HConcatBox<T>(
             left.PadHeightToAtLeast(right.Height, alignment),
             right.PadHeightToAtLeast(left.Height, alignment)
@@ -637,10 +649,12 @@ public abstract class Box<T>
         {
             return foreground;
         }
+
         if (foreground.Width == 0 || foreground.Height == 0)
         {
             return background;
         }
+
         var f = foreground
             .PadHeightToAtLeast(background.Height, alignment)
             .PadWidthToAtLeast(background.Width, alignment);
@@ -656,6 +670,7 @@ public abstract class Box<T>
         {
             return this;
         }
+
         var delta = targetHeight - Height;
         var smaller = delta / 2;
         var larger = delta - smaller;
@@ -693,6 +708,7 @@ public abstract class Box<T>
         {
             return this;
         }
+
         var delta = targetWidth - Width;
         var smaller = delta / 2;
         var larger = delta - smaller;
@@ -730,14 +746,17 @@ public abstract class Box<T>
         {
             throw new ArgumentOutOfRangeException(nameof(lineNumber), lineNumber, "Line number out of range. Please report this as a bug in Gutenberg");
         }
+
         if (lineNumber == 0)
         {
             return (Empty, this);
         }
+
         if (lineNumber == Height)
         {
             return (this, Empty);
         }
+
         return CutHorizontalCore(lineNumber);
     }
 
@@ -747,21 +766,28 @@ public abstract class Box<T>
         {
             throw new ArgumentOutOfRangeException(nameof(columnNumber), columnNumber, "Column number out of range. Please report this as a bug in Gutenberg");
         }
+
         if (columnNumber == 0)
         {
             return (Empty, this);
         }
+
         if (columnNumber == Width)
         {
             return (this, Empty);
         }
+
         return CutVerticalCore(columnNumber);
     }
 
     internal abstract (Box<T> top, Box<T> bottom) CutHorizontalCore(int lineNumber);
+
     internal abstract (Box<T> left, Box<T> right) CutVerticalCore(int columnNumber);
+
     internal abstract Box<T> OverlayCore(Box<T> background);
+
     internal abstract ValueTask WriteLine(IDocumentRenderer<T> renderer, int lineNumber, CancellationToken cancellationToken);
+
     internal abstract Box<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector);
 
     private protected static int AssertEqual(int x, int y)
@@ -770,6 +796,7 @@ public abstract class Box<T>
         {
             throw new InvalidOperationException("Tried to compose two boxes with mismatched sizes. Please report this as a bug in Gutenberg");
         }
+
         return x;
     }
 }

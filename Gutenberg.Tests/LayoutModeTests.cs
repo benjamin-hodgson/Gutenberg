@@ -23,23 +23,24 @@ public class LayoutModeTests
     [Fact]
     public async Task TestLayoutModeSmart()
     {
+        // the last line will overflow (75 + 19 = 94),
+        // even though it wouldn't overflow if the
+        // layout algorithm had taken one of the
+        // LineBreakHints in the first line
         var alignedText = new[]
         {
             "and now",
             "some aligned",
             "text",
-            // this line will overflow (75 + 19 = 94),
-            // even though it wouldn't overflow if the
-            // layout algorithm had taken one of the
-            // LineBreakHints in the first line
             "with an unexpectedly long line later on in the block (after the first line)"
         };
         var alignedDoc = alignedText
             .Select(Doc.FromString)
             .Separated(Doc.LineBreak)
             .Aligned();
+
+        // block should still be aligned with the end of 'words'
         var expected = "some opening\nwords"
-            // block should still be aligned with the end of 'words'
             + string.Join("\n     ", alignedText);
 
         await TestDocument(

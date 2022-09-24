@@ -2,7 +2,10 @@ namespace Gutenberg;
 
 internal class EmptyDocument<T> : Document<T>
 {
-    public EmptyDocument() : base(0) { }
+    public EmptyDocument()
+        : base(0)
+    {
+    }
 
     internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => Document<U>.Empty;
@@ -13,7 +16,10 @@ internal class EmptyDocument<T> : Document<T>
 
 internal class LineDocument<T> : Document<T>
 {
-    public LineDocument() : base(null) { }
+    public LineDocument()
+        : base(null)
+    {
+    }
 
     internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => Document<U>.HardLineBreak;
@@ -26,7 +32,8 @@ internal class WhiteSpaceDocument<T> : Document<T>
 {
     public int Amount { get; }
 
-    public WhiteSpaceDocument(int amount) : base(amount)
+    public WhiteSpaceDocument(int amount)
+        : base(amount)
     {
         Amount = amount;
     }
@@ -47,7 +54,8 @@ internal class TextDocument<T> : Document<T>
 {
     public StringSlice Text { get; }
 
-    public TextDocument(StringSlice text) : base(text.Length)
+    public TextDocument(StringSlice text)
+        : base(text.Length)
     {
         Text = text;
     }
@@ -68,7 +76,8 @@ internal class BoxDocument<T> : Document<T>
 {
     public Box<T> Box { get; }
 
-    public BoxDocument(Box<T> box) : base(box.Width)
+    public BoxDocument(Box<T> box)
+        : base(box.Width)
     {
         Box = box;
     }
@@ -80,6 +89,7 @@ internal class BoxDocument<T> : Document<T>
 
     internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => new BoxDocument<U>(Box.MapAnnotationsCore(selector));
+
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Box.Render(renderer, cancellationToken);
 }
@@ -87,9 +97,11 @@ internal class BoxDocument<T> : Document<T>
 internal class AppendDocument<T> : Document<T>
 {
     public Document<T> Left { get; }
+
     public Document<T> Right { get; }
 
-    public AppendDocument(Document<T> left, Document<T> right) : base(AddWidths(left, right))
+    public AppendDocument(Document<T> left, Document<T> right)
+        : base(AddWidths(left, right))
     {
         Left = left;
         Right = right;
@@ -120,9 +132,11 @@ internal class AppendDocument<T> : Document<T>
 internal class AlternativeDocument<T> : Document<T>
 {
     public Document<T> Default { get; }
+
     public Document<T> IfFlattened { get; }
 
-    public AlternativeDocument(Document<T> @default, Document<T> ifFlattened) : base(ifFlattened.FlattenedWidth)
+    public AlternativeDocument(Document<T> @default, Document<T> ifFlattened)
+        : base(ifFlattened.FlattenedWidth)
     {
         Default = @default;
         IfFlattened = ifFlattened;
@@ -147,10 +161,12 @@ internal class AlternativeDocument<T> : Document<T>
 internal class ChoiceDocument<T> : Document<T>
 {
     public Document<T> First { get; }
+
     public Document<T> Second { get; }
 
     // assume first is flatter than second
-    public ChoiceDocument(Document<T> first, Document<T> second) : base(first.FlattenedWidth)
+    public ChoiceDocument(Document<T> first, Document<T> second)
+        : base(first.FlattenedWidth)
     {
         First = first;
         Second = second;
@@ -175,9 +191,11 @@ internal class ChoiceDocument<T> : Document<T>
 internal class NestedDocument<T> : Document<T>
 {
     public int? Indentation { get; }
+
     public Document<T> Doc { get; }
 
-    public NestedDocument(int? indentation, Document<T> doc) : base(doc.FlattenedWidth)
+    public NestedDocument(int? indentation, Document<T> doc)
+        : base(doc.FlattenedWidth)
     {
         Indentation = indentation;
         Doc = doc;
@@ -199,9 +217,11 @@ internal class NestedDocument<T> : Document<T>
 internal class AnnotatedDocument<T> : Document<T>
 {
     public T Value { get; }
+
     public Document<T> Doc { get; }
 
-    public AnnotatedDocument(T value, Document<T> doc) : base(doc.FlattenedWidth)
+    public AnnotatedDocument(T value, Document<T> doc)
+        : base(doc.FlattenedWidth)
     {
         Doc = doc;
         Value = value;
@@ -212,12 +232,14 @@ internal class AnnotatedDocument<T> : Document<T>
         value = Value;
         doc = Doc;
     }
+
     internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => selector(Value)
             .Aggregate(
                 Doc.MapAnnotationsCore(selector),
                 (doc, val) => new AnnotatedDocument<U>(val, doc)
             );
+
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Doc.RenderSimple(renderer, cancellationToken);
 }
@@ -226,7 +248,8 @@ internal class FlattenedDocument<T> : Document<T>
 {
     public Document<T> Document { get; }
 
-    public FlattenedDocument(Document<T> document) : base(document.FlattenedWidth)
+    public FlattenedDocument(Document<T> document)
+        : base(document.FlattenedWidth)
     {
         Document = document;
     }
@@ -238,15 +261,17 @@ internal class FlattenedDocument<T> : Document<T>
 
     internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => new FlattenedDocument<U>(Document.MapAnnotationsCore(selector));
+
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Document.RenderSimple(renderer, cancellationToken);
 }
 
 internal class AlignedDocument<T> : Document<T>
 {
-    public Document<T> Document;
+    public Document<T> Document { get; }
 
-    public AlignedDocument(Document<T> doc) : base(doc.FlattenedWidth)
+    public AlignedDocument(Document<T> doc)
+        : base(doc.FlattenedWidth)
     {
         Document = doc;
     }
@@ -258,6 +283,7 @@ internal class AlignedDocument<T> : Document<T>
 
     internal override Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector)
         => new AlignedDocument<U>(Document.MapAnnotationsCore(selector));
+
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Document.RenderSimple(renderer, cancellationToken);
 }

@@ -11,6 +11,7 @@ internal static class EnumerableExtensions
             {
                 yield return value;
             }
+
             yield return x;
             first = false;
         }

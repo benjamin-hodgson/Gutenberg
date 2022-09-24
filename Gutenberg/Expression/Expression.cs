@@ -18,9 +18,9 @@ namespace Gutenberg.Expression;
 /// to create an unambiguous display.
 /// </para>
 /// <para>
-/// To get started, use the <see cref="OperatorFactory{T}"/> 
+/// To get started, use the <see cref="OperatorFactory{T}"/>
 /// to create objects representing each of the operators in
-/// your language. Then those operators can be applied to 
+/// your language. Then those operators can be applied to .
 /// <see cref="Document{T}"/>s and other expressions to create
 /// complex expressions. Finally, when you <see cref="PrettyPrint"/>
 /// the expression, it will return a <see cref="Document{T}"/> with
@@ -49,21 +49,18 @@ namespace Gutenberg.Expression;
 /// </typeparam>
 [SuppressMessage(
     "Design",
-    "CA1000",  // "Do not declare static members on generic types"
+    "CA1000:Do not declare static members on generic types",
     Justification = "This type is designed to be imported under an alias"
 )]
-[SuppressMessage("Design", "CA1724")]  // "The type name conflicts in whole or in part with the namespace name"
+[SuppressMessage(
+    "Design",
+    "CA1724:The type name conflicts in whole or in part with the namespace name",
+    Justification = "Purposeful"
+)]
 public abstract class Expression<T> : IPrettyPrintable<T>
 {
     /// <inheritdoc cref="IPrettyPrintable{T}.PrettyPrint" />
     public Document<T> PrettyPrint() => ToDocument(PrecedenceState.Default);
-
-    internal abstract Document<T> ToDocument(PrecedenceState state);
-
-    internal Expression<T> Bumped()
-        => new BumpedExpression<T>(this);
-    internal Expression<T> BumpedIf(bool condition)
-        => condition ? Bumped() : this;
 
     /// <summary>
     /// Creates a leaf-level <see cref="Expression{T}"/>
@@ -73,9 +70,9 @@ public abstract class Expression<T> : IPrettyPrintable<T>
     /// <c>Expr.FromString(x)</c> is equivalent to
     /// <c>Expr.FromDocument(Doc.FromString(x))</c>.
     /// </remarks>
-    /// <param name="text">The document</param>
+    /// <param name="text">The document.</param>
     /// <returns>
-    /// An expression representing the <paramref name="text"/>
+    /// An expression representing the <paramref name="text"/>.
     /// </returns>
     /// <seealso cref="FromDocument"/>
     public static Expression<T> FromString(string text)
@@ -85,9 +82,9 @@ public abstract class Expression<T> : IPrettyPrintable<T>
     /// Creates a leaf-level <see cref="Expression{T}"/>
     /// from the given <paramref name="document"/>.
     /// </summary>
-    /// <param name="document">The document</param>
+    /// <param name="document">The document.</param>
     /// <returns>
-    /// An expression representing the <paramref name="document"/>
+    /// An expression representing the <paramref name="document"/>.
     /// </returns>
     public static Expression<T> FromDocument(Document<T> document)
         => new DocumentExpression<T>(document);
@@ -99,9 +96,9 @@ public abstract class Expression<T> : IPrettyPrintable<T>
     /// <remarks>
     /// This conversion is equivalent to <see cref="FromDocument"/>.
     /// </remarks>
-    /// <param name="document">The document</param>
+    /// <param name="document">The document.</param>
     /// <returns>
-    /// An expression representing the <paramref name="document"/>
+    /// An expression representing the <paramref name="document"/>.
     /// </returns>
     /// <seealso cref="FromDocument"/>
     public static implicit operator Expression<T>(Document<T> document)
@@ -114,13 +111,21 @@ public abstract class Expression<T> : IPrettyPrintable<T>
     /// <remarks>
     /// This conversion is equivalent to <see cref="FromString"/>.
     /// </remarks>
-    /// <param name="text">The text</param>
+    /// <param name="text">The text.</param>
     /// <returns>
-    /// An expression representing the <paramref name="text"/>
+    /// An expression representing the <paramref name="text"/>.
     /// </returns>
     /// <seealso cref="FromString"/>
     public static implicit operator Expression<T>(string text)
         => FromString(text);
+
+    internal abstract Document<T> ToDocument(PrecedenceState state);
+
+    internal Expression<T> Bumped()
+        => new BumpedExpression<T>(this);
+
+    internal Expression<T> BumpedIf(bool condition)
+        => condition ? Bumped() : this;
 }
 
 internal class OperatorExpression<T> : Expression<T>

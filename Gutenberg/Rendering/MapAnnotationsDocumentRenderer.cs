@@ -18,9 +18,9 @@ public class MapAnnotationsDocumentRenderer<T, U> : IDocumentRenderer<T>
     private readonly Func<T, ValueTask<U>> _selector;
     private readonly IDocumentRenderer<U> _wrapped;
 
-    /// <summary>Create a <see cref="MapAnnotationsDocumentRenderer{T, U}"/></summary>
-    /// <param name="selector">The function to apply to the annotations</param>
-    /// <param name="wrapped">The wrapped document renderer</param>
+    /// <summary>Creates a <see cref="MapAnnotationsDocumentRenderer{T, U}"/>.</summary>
+    /// <param name="selector">The function to apply to the annotations.</param>
+    /// <param name="wrapped">The wrapped document renderer.</param>
     public MapAnnotationsDocumentRenderer(Func<T, ValueTask<U>> selector, IDocumentRenderer<U> wrapped)
     {
         _selector = selector;

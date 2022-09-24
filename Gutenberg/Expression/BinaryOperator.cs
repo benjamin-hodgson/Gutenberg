@@ -6,7 +6,7 @@ namespace Gutenberg.Expression;
 
 /// <summary>
 /// The associativity of the  <see cref="BinaryOperator{T}"/>:
-/// left-associative, right-associative, or non-associative
+/// left-associative, right-associative, or non-associative.
 /// </summary>
 public enum BinaryOperatorType
 {
@@ -14,10 +14,12 @@ public enum BinaryOperatorType
     /// Denotes a non-associative binary operator
     /// </summary>
     NonAssociative,
+
     /// <summary>
     /// Denotes a left-associative binary operator
     /// </summary>
     LeftAssociative,
+
     /// <summary>
     /// Denotes a right-associative binary operator
     /// </summary>
@@ -25,10 +27,10 @@ public enum BinaryOperatorType
 }
 
 /// <summary>
-/// Represents a binary (infix) operator with a given precedence
+/// Represents a binary (infix) operator with a given precedence.
 /// </summary>
 /// <typeparam name="T">
-/// The type of annotations in the docuemnt
+/// The type of annotations in the document.
 /// </typeparam>
 /// <seealso cref="OperatorFactory{T}"/>
 /// <seealso cref="UnaryOperator{T}"/>
@@ -58,10 +60,10 @@ public sealed class BinaryOperator<T>
     /// and <paramref name="right"/> expressions.
     /// </summary>
     /// <param name="left">
-    /// The left-hand argument of the operator
+    /// The left-hand argument of the operator.
     /// </param>
     /// <param name="right">
-    /// The right-hand argument of the operator
+    /// The right-hand argument of the operator.
     /// </param>
     /// <returns>
     /// An <see cref="Expression{T}"/> representing
@@ -87,4 +89,3 @@ public sealed class BinaryOperator<T>
         );
     }
 }
-

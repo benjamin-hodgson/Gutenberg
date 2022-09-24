@@ -5,7 +5,7 @@ namespace Gutenberg;
 /// a <see cref="Document{T}"/>.
 /// </summary>
 /// <typeparam name="T">
-/// The type of annotations in the document
+/// The type of annotations in the document.
 /// </typeparam>
 public interface IDocumentRenderer<in T>
 {
@@ -17,7 +17,7 @@ public interface IDocumentRenderer<in T>
     /// </param>
     /// <returns>
     /// A <see cref="ValueTask"/> which will complete when the
-    /// line break has been written to the output stream
+    /// line break has been written to the output stream.
     /// </returns>
     ValueTask NewLine(
         CancellationToken cancellationToken = default
@@ -28,14 +28,14 @@ public interface IDocumentRenderer<in T>
     /// blank space into the output stream.
     /// </summary>
     /// <param name="amount">
-    /// The amount of white space to write
+    /// The amount of white space to write.
     /// </param>
     /// <param name="cancellationToken">
     /// A <see cref="CancellationToken"/>.
     /// </param>
     /// <returns>
     /// A <see cref="ValueTask"/> which will complete when the
-    /// white space has been written to the output stream
+    /// white space has been written to the output stream.
     /// </returns>
     ValueTask WhiteSpace(
         int amount,
@@ -43,17 +43,17 @@ public interface IDocumentRenderer<in T>
     );
 
     /// <summary>
-    /// Write some text into the output stream
+    /// Write some text into the output stream.
     /// </summary>
     /// <param name="memory">
-    /// The text to write to the output stream
+    /// The text to write to the output stream.
     /// </param>
     /// <param name="cancellationToken">
     /// A <see cref="CancellationToken"/>.
     /// </param>
     /// <returns>
     /// A <see cref="ValueTask"/> which will complete when the
-    /// text has been written to the output stream
+    /// text has been written to the output stream.
     /// </returns>
     ValueTask Text(
         ReadOnlyMemory<char> memory,
@@ -61,17 +61,17 @@ public interface IDocumentRenderer<in T>
     );
 
     /// <summary>
-    /// Accept an annotation
+    /// Accept an annotation.
     /// </summary>
     /// <param name="value">
-    /// The annotation to push onto the stack
+    /// The annotation to push onto the stack.
     /// </param>
     /// <param name="cancellationToken">
     /// A <see cref="CancellationToken"/>.
     /// </param>
     /// <returns>
     /// A <see cref="ValueTask"/> which will complete when the
-    /// value has been pushed onto the stack
+    /// value has been pushed onto the stack.
     /// </returns>
     ValueTask PushAnnotation(
         T value,
@@ -79,14 +79,14 @@ public interface IDocumentRenderer<in T>
     );
 
     /// <summary>
-    /// Discard the value of a previous call to <see cref="PushAnnotation"/>
+    /// Discard the value of a previous call to <see cref="PushAnnotation"/>.
     /// </summary>
     /// <param name="cancellationToken">
     /// A <see cref="CancellationToken"/>.
     /// </param>
     /// <returns>
     /// A <see cref="ValueTask"/> which will complete when the
-    /// value has been popped from the stack
+    /// value has been popped from the stack.
     /// </returns>
     ValueTask PopAnnotation(CancellationToken cancellationToken = default);
 }

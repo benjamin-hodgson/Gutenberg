@@ -49,6 +49,7 @@ public enum Alignment
     /// </code>
     /// </example>
     Start,
+
     /// <summary>
     /// Align the smaller box with the centre of the larger one.
     /// If the box can't be exactly centred (because the width
@@ -94,6 +95,7 @@ public enum Alignment
     /// </code>
     /// </example>
     CenterStart,
+
     /// <summary>
     /// Align the smaller box with the centre of the larger one.
     /// If the box can't be exactly centred (because the width
@@ -139,6 +141,7 @@ public enum Alignment
     /// </code>
     /// </example>
     CenterEnd,
+
     /// <summary>
     /// Align the smaller box with the end (the bottom or right)
     /// of the larger one.

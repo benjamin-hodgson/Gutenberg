@@ -21,7 +21,7 @@ public record LayoutOptions(
     bool StripTrailingWhitespace
 )
 {
-    /// <summary>The default <see cref="LayoutOptions"/></summary>
+    /// <summary>The default <see cref="LayoutOptions"/>.</summary>
     public static LayoutOptions Default { get; }
         = new(new PageWidthOptions(), LayoutMode.Default, 4, true);
 }
@@ -42,7 +42,7 @@ public record PageWidthOptions(
     double PrintableRatio = 1
 );
 
-/// <summary>The layout mode</summary>
+/// <summary>The layout mode.</summary>
 public enum LayoutMode
 {
     /// <summary>
@@ -52,8 +52,8 @@ public enum LayoutMode
 
     /// <summary>
     /// A fast-and-ugly layout mode. Tells the layout engine
-    /// not to collapse any line breaks and to ignore all 
-    /// indentation and annotations. The resulting text contains 
+    /// not to collapse any line breaks and to ignore all
+    /// indentation and annotations. The resulting text contains
     /// fewer characters than the <see cref="Default"/> mode,
     /// so may be appropriate for machine-readable output in
     /// indentation-insensitive contexts.
@@ -127,7 +127,7 @@ public enum LayoutMode
     /// var defaultOptions = LayoutOptions.Default with { PageWidth = new(50) };
     /// Console.WriteLine(("Default layout mode:" + doc).ToString(defaultOptions));
     /// Console.WriteLine();
-    /// 
+    ///
     /// var smartOptions = defaultOptions with { LayoutMode = LayoutMode.Smart };
     /// Console.WriteLine(("Smart layout mode:" + doc).ToString(smartOptions));
     /// // Output:

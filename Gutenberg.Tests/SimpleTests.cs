@@ -96,10 +96,10 @@ public class SimpleTests
     [Fact]
     public async Task StripTrailingWhitespace()
     {
+        // spaces in "def" literal are counted as text by FromString.
+        // https://github.com/benjamin-hodgson/Gutenberg/issues/11
         await TestDocument(
             "abc\n\n  def  \n",
-            // spaces in "def" literal are counted as text by FromString.
-            // https://github.com/benjamin-hodgson/Gutenberg/issues/11
             Doc.Concat("abc", Doc.LineBreak, Doc.LineBreak, "def  ", Doc.LineBreak)
                 .Nested(2)
         );
