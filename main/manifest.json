@@ -1,0 +1,449 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/runner/work/Gutenberg/Gutenberg/Gutenberg.Docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Alignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Alignment.html",
+          "hash": "0IWvMcLH0xvGA/hSSZ3x8Cf07YnwjM6zNNiYoQmmHco="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Box-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Box-1.html",
+          "hash": "9VDMfVMpCmDCXBYfSwxz4bga5OoxveoUplvxaimr1UQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Brackets.AllmanBracketer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Brackets.AllmanBracketer-1.html",
+          "hash": "w4U5OiK607xLV/rcl1/SgW+btgrUlF7Y0TNxZcL7Xjc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Brackets.IBracketer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Brackets.IBracketer-1.html",
+          "hash": "xjn95dUG2EoGCLfLcRA9J0cv3Ly8XU/fn93Ck8ZrGuU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Brackets.KernighanRitchieBracketer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Brackets.KernighanRitchieBracketer-1.html",
+          "hash": "8m1YZXkOS/zYLpS0wEAf9/pdcXHFkUgyOq+1q4egnT4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Brackets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Brackets.html",
+          "hash": "tv3n46ScqdwPEk4BtZhWOqCDQxXe9gSy7de59vJPpss="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Document-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Document-1.html",
+          "hash": "mswhzj/1RJLFsuy/0iy74TuDOadZofG0FM6hTC8s5zM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.DocumentExtensions.html",
+          "hash": "M8F9g0S9FwW0MdURGlCbX7Ts/Y8SQed1EPb90WHIZoo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.BinaryOperator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.BinaryOperator-1.html",
+          "hash": "ZS/gT4u4JCyDluz9Hc8jmXopjhyCUbrzbSdJIaJKpKM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.BinaryOperatorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.BinaryOperatorType.html",
+          "hash": "r02AoyRqoWKtDb92WDGsjhn3EZwb4eYd24UiDrDSs4w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.Expression-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.Expression-1.html",
+          "hash": "txq1F4NuADwm1fqwrh72WhTNu9KGepp9ALg7y/dZ29c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.OperatorFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.OperatorFactory-1.html",
+          "hash": "bM2OB9TL7pgTSbkzFoOiNyPOhV3F1gmHfoR69XVoI6E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.UnaryOperator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.UnaryOperator-1.html",
+          "hash": "1uJln8EbAAxreIWfQ6XXJ1cwHAKhct6Z+oRecQwPl2g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.UnaryOperatorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.UnaryOperatorType.html",
+          "hash": "0w/jii8rDxR2+3S9SRtXbHhoTrzlztXM87chN8ym8BI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.html",
+          "hash": "6Iaxns9eQbe0bB75wU3XyU25smWPKHtl2iGaSnYzOJM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.IDocumentRenderer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.IDocumentRenderer-1.html",
+          "hash": "A+jUpUO+Rp5Li9GK1fFqDBM6w1XjWRS29kuNRtzB+jQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.IPrettyPrintable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.IPrettyPrintable-1.html",
+          "hash": "5gHtCcz8atACnhIpYv3CFqJnnKecJ0OcmmQS3/KsT1Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.LayoutMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.LayoutMode.html",
+          "hash": "1V3+aM6VyR0+u2iCfLmnvyq6/Enlf0B2bSOxl143Qj8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.LayoutOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.LayoutOptions.html",
+          "hash": "ch3f6zdjKqh3ndgGFfpREDu3hjp8zcQFGzINHJgv13k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.PageWidthOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.PageWidthOptions.html",
+          "hash": "Mr3ztA6SrAMNOaxtInKuhSHQlwD3awS05KXRplZeqUk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.ConsoleDocumentRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.ConsoleDocumentRenderer.html",
+          "hash": "tsBL95/A5v+IuM/NQOEDWcZkSEBIsgAvp5jf/lmQATw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html",
+          "hash": "ANv9INBo9vOzSisKQjtgs00ldK57NkmNU+aVAXcOYSs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html",
+          "hash": "zzz4AyIsGj0+zvMsIfNetEb/tXMxu2QB3UyFMzKJBR0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.html",
+          "hash": "4bfGcJ/zjSVOsdtt33wYsmRAzJziZKdugoL/5+vla+o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.DocumentRendererExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.DocumentRendererExtensions.html",
+          "hash": "af3iuCjkYAyKe/qByfW9rEo36tjuaIOQR77YMmK7y2M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html",
+          "hash": "gmbw0xfPn39lINkIlSyd5IQcWWT1bQ5+Kk8pwlyTVp8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.PlainTextDocumentRenderer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.PlainTextDocumentRenderer-1.html",
+          "hash": "GMoDEtbVOD3ggHUfE4emkTLOs3n0Mv1Lm/t7AFkbxrI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.PlainTextDocumentRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.PlainTextDocumentRenderer.html",
+          "hash": "fCVDy9S3eeQywRMBHfQVv2UVIfHozlWClqwRHk6UnO8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.StackMachineDocumentRenderer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.StackMachineDocumentRenderer-1.html",
+          "hash": "wTe/GLenM67f+cejFkbJtKEocUbi3bHJDaZFewSn3EU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.html",
+          "hash": "5VjICmhB8j2jfw9vus8Q3U3SD1e5OzpmSNokLIvoH2s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.html",
+          "hash": "TPPuo4BqrP16SIdfn7z0CauH/OM7jEwVTW0P9qf6yZg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "ZIsuPvirldZwTlabzCqon1qNJzyhtffeLzTy1F17dP0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 31,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
