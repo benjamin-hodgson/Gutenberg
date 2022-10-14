@@ -30,10 +30,6 @@
         <NoWarn>$(NoWarn);NU1507</NoWarn>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(CI)' != ''">
-        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-    </PropertyGroup>
-
     <ItemGroup>
         <PackageReference Include="Microsoft.SourceLink.GitHub">
             <PrivateAssets>all</PrivateAssets>
