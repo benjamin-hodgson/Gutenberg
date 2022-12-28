@@ -159,12 +159,12 @@
         </a></h1>
         <div><p>An <a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a> which wraps an
 <a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a> by applying an asynchronous
-<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func&lt;T,TResult&gt;</a> to all of the annotations in
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func&lt;T,TResult&gt;</a> to all of the annotations in
 the input <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>.</p>
 </div>
             <h5>Inheritance</h5>
             <ul>
-                    <li><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></li>
+                    <li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></li>
                 <li>MapAnnotationsDocumentRenderer&lt;T, U&gt;</li>
             </ul>
             <h5>Implements</h5>
@@ -206,7 +206,7 @@ the input <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>
                 
                 <a id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2__ctor_"></a>
                 <h4 id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2__ctor_System_Func__0_System_Threading_Tasks_ValueTask__1___Gutenberg_IDocumentRenderer__1__"><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2__ctor_System_Func__0_System_Threading_Tasks_ValueTask__1___Gutenberg_IDocumentRenderer__1__">MapAnnotationsDocumentRenderer(Func&lt;T, ValueTask&lt;U&gt;&gt;, IDocumentRenderer&lt;U&gt;)</a></h4>
-                <div><p>Create a <a class="xref" href="Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html">MapAnnotationsDocumentRenderer&lt;T, U&gt;</a></p>
+                <div><p>Creates a <a class="xref" href="Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html">MapAnnotationsDocumentRenderer&lt;T, U&gt;</a>.</p>
 </div>
                 <h5>Declaration</h5>
                     <pre><code class="lang-csharp hljs">public MapAnnotationsDocumentRenderer(Func&lt;T, ValueTask&lt;U&gt;&gt; selector, IDocumentRenderer&lt;U&gt; wrapped)</code></pre>
@@ -222,15 +222,15 @@ the input <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;U&gt;&gt;</p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;U&gt;&gt;</p></td>
                                     <td><p>selector</p></td>
-                                    <td><p>The function to apply to the annotations</p>
+                                    <td><p>The function to apply to the annotations.</p>
 </td>
                                 </tr>
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer</a>&lt;U&gt;</p></td>
                                     <td><p>wrapped</p></td>
-                                    <td><p>The wrapped document renderer</p>
+                                    <td><p>The wrapped document renderer.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -267,9 +267,9 @@ the input <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
                                     <td><p>cancellationToken</p></td>
-                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
+                                    <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -285,9 +285,9 @@ the input <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
-                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when the
-line break has been written to the output stream</p>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
+                                    <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when the
+line break has been written to the output stream.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -304,7 +304,7 @@ line break has been written to the output stream</p>
                 
                 <a id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PopAnnotation_"></a>
                 <h4 id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PopAnnotation_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PopAnnotation_System_Threading_CancellationToken_">PopAnnotation(CancellationToken)</a></h4>
-                <div><p>Discard the value of a previous call to <a class="xref" href="Gutenberg.IDocumentRenderer-1.html#Gutenberg_IDocumentRenderer_1_PushAnnotation__0_System_Threading_CancellationToken_">PushAnnotation(T, CancellationToken)</a></p>
+                <div><p>Discard the value of a previous call to <a class="xref" href="Gutenberg.IDocumentRenderer-1.html#Gutenberg_IDocumentRenderer_1_PushAnnotation__0_System_Threading_CancellationToken_">PushAnnotation(T, CancellationToken)</a>.</p>
 </div>
                 <h5>Declaration</h5>
                     <pre><code class="lang-csharp hljs">public ValueTask PopAnnotation(CancellationToken cancellationToken = null)</code></pre>
@@ -320,9 +320,9 @@ line break has been written to the output stream</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
                                     <td><p>cancellationToken</p></td>
-                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
+                                    <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -338,9 +338,9 @@ line break has been written to the output stream</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
-                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when the
-value has been popped from the stack</p>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
+                                    <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when the
+value has been popped from the stack.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -357,7 +357,7 @@ value has been popped from the stack</p>
                 
                 <a id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PushAnnotation_"></a>
                 <h4 id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PushAnnotation__0_System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_PushAnnotation__0_System_Threading_CancellationToken_">PushAnnotation(T, CancellationToken)</a></h4>
-                <div><p>Accept an annotation</p>
+                <div><p>Accept an annotation.</p>
 </div>
                 <h5>Declaration</h5>
                     <pre><code class="lang-csharp hljs">public ValueTask PushAnnotation(T value, CancellationToken cancellationToken = null)</code></pre>
@@ -375,13 +375,13 @@ value has been popped from the stack</p>
                                 <tr>
                                     <td><p><span class="xref">T</span></p></td>
                                     <td><p>value</p></td>
-                                    <td><p>The annotation to push onto the stack</p>
+                                    <td><p>The annotation to push onto the stack.</p>
 </td>
                                 </tr>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
                                     <td><p>cancellationToken</p></td>
-                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
+                                    <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -397,9 +397,9 @@ value has been popped from the stack</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
-                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when the
-value has been pushed onto the stack</p>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
+                                    <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when the
+value has been pushed onto the stack.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -416,7 +416,7 @@ value has been pushed onto the stack</p>
                 
                 <a id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_Text_"></a>
                 <h4 id="Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_"><a href="#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_">Text(ReadOnlyMemory&lt;Char&gt;, CancellationToken)</a></h4>
-                <div><p>Write some text into the output stream</p>
+                <div><p>Write some text into the output stream.</p>
 </div>
                 <h5>Declaration</h5>
                     <pre><code class="lang-csharp hljs">public ValueTask Text(ReadOnlyMemory&lt;char&gt; memory, CancellationToken cancellationToken = null)</code></pre>
@@ -432,15 +432,15 @@ value has been pushed onto the stack</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</p></td>
                                     <td><p>memory</p></td>
-                                    <td><p>The text to write to the output stream</p>
+                                    <td><p>The text to write to the output stream.</p>
 </td>
                                 </tr>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
                                     <td><p>cancellationToken</p></td>
-                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
+                                    <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -456,9 +456,9 @@ value has been pushed onto the stack</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
-                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when the
-text has been written to the output stream</p>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
+                                    <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when the
+text has been written to the output stream.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -492,15 +492,15 @@ blank space into the output stream.</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p></td>
                                     <td><p>amount</p></td>
-                                    <td><p>The amount of white space to write</p>
+                                    <td><p>The amount of white space to write.</p>
 </td>
                                 </tr>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></p></td>
                                     <td><p>cancellationToken</p></td>
-                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
+                                    <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a>.</p>
 </td>
                                 </tr>
                             </tbody>
@@ -516,9 +516,9 @@ blank space into the output stream.</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
-                                    <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when the
-white space has been written to the output stream</p>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
+                                    <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when the
+white space has been written to the output stream.</p>
 </td>
                                 </tr>
                             </tbody>
