@@ -2,7 +2,7 @@ using System.Text;
 
 namespace Gutenberg.Tests;
 
-internal class FakeDocumentRenderer<T> : IDocumentRenderer<T>
+internal sealed class FakeDocumentRenderer<T> : IDocumentRenderer<T>
 {
     private readonly StringBuilder _sb = new();
 

@@ -65,7 +65,7 @@ public class TreeTests
     }
 }
 
-internal record Tree(string Name, params Tree[] Children) : IPrettyPrintable<object>
+internal sealed record Tree(string Name, params Tree[] Children) : IPrettyPrintable<object>
 {
     // https://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf,
     // page 3
