@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text;
 
 namespace Gutenberg.Tests;
@@ -28,7 +29,7 @@ internal sealed class FakeDocumentRenderer<T> : IDocumentRenderer<T>
 
     public ValueTask PushAnnotation(T value, CancellationToken cancellationToken = default)
     {
-        _sb.Append($"PUSH({value})");
+        _sb.Append(CultureInfo.InvariantCulture, $"PUSH({value})");
         return ValueTask.CompletedTask;
     }
 

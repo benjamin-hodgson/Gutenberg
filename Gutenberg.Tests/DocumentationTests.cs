@@ -17,6 +17,7 @@ public class DocumentationTests
     [DocTestData(typeof(Document<>), Preamble = _preamble)]
     public async Task TestXmlDocs(DocTest test)
     {
+        ArgumentNullException.ThrowIfNull(test);
         await test.Run();
     }
 }
