@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gutenberg", "Gutenberg\Gute
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gutenberg.Tests", "Gutenberg.Tests\Gutenberg.Tests.csproj", "{766F4B22-220E-4146-8D0C-0041ED4247E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gutenberg.Docs", "Gutenberg.Docs\Gutenberg.Docs.proj", "{F4033431-3532-4B3A-9893-8E3D813666E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{766F4B22-220E-4146-8D0C-0041ED4247E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{766F4B22-220E-4146-8D0C-0041ED4247E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{766F4B22-220E-4146-8D0C-0041ED4247E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4033431-3532-4B3A-9893-8E3D813666E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4033431-3532-4B3A-9893-8E3D813666E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4033431-3532-4B3A-9893-8E3D813666E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4033431-3532-4B3A-9893-8E3D813666E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

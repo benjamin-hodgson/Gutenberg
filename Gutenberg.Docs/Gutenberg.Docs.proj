@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+
+    <PropertyGroup>
+        <IsPackable>false</IsPackable>
+        <RollForward>major</RollForward>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IsDocumentationProject>true</IsDocumentationProject>
+        <DocumentationSiteTitle>Gutenberg</DocumentationSiteTitle>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../Gutenberg/Gutenberg.csproj">
+            <OutputItemType>DocumentationAssembly</OutputItemType>
+        </ProjectReference>
+    </ItemGroup>
+
+</Project>
