@@ -4,25 +4,25 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Class Box&lt;T&gt;
-     | Gutenberg </title>
+ | Gutenberg </title>
         <meta name="viewport" content="width=device-width">
         <meta name="title" content="Class Box&lt;T&gt;
-     | Gutenberg ">
-        <meta name="generator" content="docfx 2.59.2.0">
+ | Gutenberg ">
+        <meta name="generator" content="docfx ">
+
     
-        
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="shortcut" "icon"="" href="/favicon.ico" type="image/x-icon">
-        
+    
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.1.1/out/water.min.css" integrity="sha256-QST90Wzz4PEr5KlclQaOCsjc00FTyf86Wrj41oqZB4w=" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/highlight.css">
-        
+    
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script async="" id="highlightjs-script" src="js/third-party/highlight.js"></script>
         <script defer="" src="js/main.js"></script>
-        
-        
+    
+    
     </head>
     <body>
         <header class="row-space">
@@ -55,10 +55,10 @@
                                                             <a href="Gutenberg.Box-1.html" title="Box&lt;T&gt;" class="active active-i">Box&lt;T&gt;</a>
                                                     </li>
                                                     <li>
-                                                            <a href="Gutenberg.Document-1.html" title="Document&lt;T&gt;" class="">Document&lt;T&gt;</a>
+                                                            <a href="Gutenberg.DocumentExtensions.html" title="DocumentExtensions" class="">DocumentExtensions</a>
                                                     </li>
                                                     <li>
-                                                            <a href="Gutenberg.DocumentExtensions.html" title="DocumentExtensions" class="">DocumentExtensions</a>
+                                                            <a href="Gutenberg.Document-1.html" title="Document&lt;T&gt;" class="">Document&lt;T&gt;</a>
                                                     </li>
                                                     <li>
                                                             <a href="Gutenberg.IDocumentRenderer-1.html" title="IDocumentRenderer&lt;T&gt;" class="">IDocumentRenderer&lt;T&gt;</a>
@@ -97,10 +97,10 @@
                                             <a href="Gutenberg.Expression.html" title="Gutenberg.Expression" class="">Gutenberg.Expression</a>
                                             <ul id="toc0_2" class="">
                                                     <li>
-                                                            <a href="Gutenberg.Expression.BinaryOperator-1.html" title="BinaryOperator&lt;T&gt;" class="">BinaryOperator&lt;T&gt;</a>
+                                                            <a href="Gutenberg.Expression.BinaryOperatorType.html" title="BinaryOperatorType" class="">BinaryOperatorType</a>
                                                     </li>
                                                     <li>
-                                                            <a href="Gutenberg.Expression.BinaryOperatorType.html" title="BinaryOperatorType" class="">BinaryOperatorType</a>
+                                                            <a href="Gutenberg.Expression.BinaryOperator-1.html" title="BinaryOperator&lt;T&gt;" class="">BinaryOperator&lt;T&gt;</a>
                                                     </li>
                                                     <li>
                                                             <a href="Gutenberg.Expression.Expression-1.html" title="Expression&lt;T&gt;" class="">Expression&lt;T&gt;</a>
@@ -109,10 +109,10 @@
                                                             <a href="Gutenberg.Expression.OperatorFactory-1.html" title="OperatorFactory&lt;T&gt;" class="">OperatorFactory&lt;T&gt;</a>
                                                     </li>
                                                     <li>
-                                                            <a href="Gutenberg.Expression.UnaryOperator-1.html" title="UnaryOperator&lt;T&gt;" class="">UnaryOperator&lt;T&gt;</a>
+                                                            <a href="Gutenberg.Expression.UnaryOperatorType.html" title="UnaryOperatorType" class="">UnaryOperatorType</a>
                                                     </li>
                                                     <li>
-                                                            <a href="Gutenberg.Expression.UnaryOperatorType.html" title="UnaryOperatorType" class="">UnaryOperatorType</a>
+                                                            <a href="Gutenberg.Expression.UnaryOperator-1.html" title="UnaryOperator&lt;T&gt;" class="">UnaryOperator&lt;T&gt;</a>
                                                     </li>
                                             </ul>
                                     </li>
@@ -156,20 +156,41 @@
             <div class="col columns">
 <article class="col">
         <h1 id="Gutenberg_Box_1"><a href="#Gutenberg_Box_1">Class Box&lt;T&gt;
-        </a></h1>
+</a></h1>
         <div><p>Represents an immutable two-dimensional rectangular box of text.
 The box can be rendered by an <a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>
 or laid out as part of a <a class="xref" href="Gutenberg.Document-1.html">Document&lt;T&gt;</a>.</p>
 </div>
             <h5>Inheritance</h5>
             <ul>
-                    <li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></li>
+                    <li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></li>
                 <li>Box&lt;T&gt;</li>
             </ul>
-        
-        
+
+            <h5>Inherited Members</h5>
+            <ul>
+                    <li>
+                            <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+                    </li>
+                    <li>
+                            <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+                    </li>
+                    <li>
+                            <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+                    </li>
+                    <li>
+                            <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+                    </li>
+                    <li>
+                            <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+                    </li>
+                    <li>
+                            <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+                    </li>
+            </ul>
+
         <h5>Declaration</h5>
-        <pre><code class="lang-csharp hljs">public abstract class Box&lt;T&gt; : Object</code></pre>
+        <pre><code class="lang- hljs">public abstract class Box&lt;T&gt;</code></pre>
             <h5>Type Parameters</h5>
             <table>
                 <thead>
@@ -186,52 +207,49 @@ or laid out as part of a <a class="xref" href="Gutenberg.Document-1.html">Docume
                         </tr>
                 </tbody>
             </table>
-        
+
             <h5><strong>Remarks</strong></h5>
             <div><p>
 Boxes can be composed spatially to create bigger boxes:
 they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
 <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
 </p>
-
 <p>
 You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
-<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that&apos;s
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
 placed in front of another box will obscure text contained in
 in the background box. Additionally, boxes may contain
-<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(Int32, Int32)</a> areas, through which background text
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
 will be visible.
 </p>
-
 <p>
 The box may contain annotations - values of type
-<code data-dev-comment-type="typeparamref" class="typeparamref">T</code> - which can be interpreted by the
+<code class="typeparamref">T</code> - which can be interpreted by the
 <a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
 </p>
-
 <p>
 This class is intended to be imported under an alias,
-since typically the type of annotations won&apos;t change within your code:
+since typically the type of annotations won't change within your code:
 <code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
 </p>
 </div>
-        
-        
-            <h3 id="properties"><a href="#properties">Properties
-        </a></h3>
 
-                
+
+            <h3 id="properties"><a href="#properties">Properties
+</a></h3>
+
+        
                 <a id="Gutenberg_Box_1_Empty_"></a>
                 <h4 id="Gutenberg_Box_1_Empty"><a href="#Gutenberg_Box_1_Empty">Empty</a></h4>
                 <div><p>An empty box, with zero <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Width">Width</a> and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Height">Height</a>.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public static Box&lt;T&gt; Empty { get; }</code></pre>
+                    <pre><code class="lang- hljs">public static Box&lt;T&gt; Empty { get; }</code></pre>
 
-        
-        
-        
-        
+
+
+
+
                         <h5>Property Value</h5>
                         <table>
                             <thead>
@@ -247,24 +265,49 @@ since typically the type of annotations won&apos;t change within your code:
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-                        
-        
+
+
+
+                    <h5 id="Gutenberg_Box_1_Empty_remarks"><a href="#Gutenberg_Box_1_Empty_remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                 
+
+        
                 <a id="Gutenberg_Box_1_Height_"></a>
                 <h4 id="Gutenberg_Box_1_Height"><a href="#Gutenberg_Box_1_Height">Height</a></h4>
                 <div><p>The width of the <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> in lines.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public int Height { get; }</code></pre>
+                    <pre><code class="lang- hljs">public int Height { get; }</code></pre>
 
-        
-        
-        
-        
+
+
+
+
                         <h5>Property Value</h5>
                         <table>
                             <thead>
@@ -275,29 +318,54 @@ since typically the type of annotations won&apos;t change within your code:
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p></td>
                                     <td></td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-                        
-        
+
+
+
+                    <h5 id="Gutenberg_Box_1_Height_remarks"><a href="#Gutenberg_Box_1_Height_remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                 
+
+        
                 <a id="Gutenberg_Box_1_Width_"></a>
                 <h4 id="Gutenberg_Box_1_Width"><a href="#Gutenberg_Box_1_Width">Width</a></h4>
                 <div><p>The width of the <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> in characters.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public int Width { get; }</code></pre>
+                    <pre><code class="lang- hljs">public int Width { get; }</code></pre>
 
-        
-        
-        
-        
+
+
+
+
                         <h5>Property Value</h5>
                         <table>
                             <thead>
@@ -308,43 +376,66 @@ since typically the type of annotations won&apos;t change within your code:
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p></td>
                                     <td></td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-                        
-        
-            <h3 id="methods"><a href="#methods">Methods
-        </a></h3>
+
+
+
+                    <h5 id="Gutenberg_Box_1_Width_remarks"><a href="#Gutenberg_Box_1_Width_remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
 
                 
+
+            <h3 id="methods"><a href="#methods">Methods
+</a></h3>
+
+        
                 <a id="Gutenberg_Box_1_Above_"></a>
                 <h4 id="Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_"><a href="#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a></h4>
                 <div><p>
 Creates a new <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of this
-box with <code data-dev-comment-type="paramref" class="paramref">bottom</code> placed below it.
+box with <code class="paramref">bottom</code> placed below it.
 </p>
-
 <p>
 If either of the boxes is narrower than the other, it will be
-padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(Int32, Int32)</a> box until the
+padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> box until the
 <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Width">Width</a> matches, according to the chosen
-<code data-dev-comment-type="paramref" class="paramref">alignment</code>.
+<code class="paramref">alignment</code>.
 </p>
-
 <p>
 See the docs for <a class="xref" href="Gutenberg.Alignment.html">Alignment</a> for detailed
-examples of how the <code data-dev-comment-type="paramref" class="paramref">alignment</code> affects
+examples of how the <code class="paramref">alignment</code> affects
 the layout of the box.
 </p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public Box&lt;T&gt; Above(Box&lt;T&gt; bottom, Alignment alignment)</code></pre>
+                    <pre><code class="lang- hljs">public Box&lt;T&gt; Above(Box&lt;T&gt; bottom, Alignment alignment = Alignment.Start)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -370,7 +461,7 @@ the layout of the box.
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -383,21 +474,46 @@ the layout of the box.
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;T&gt;</p></td>
                                     <td><p>A <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of this
-box with <code data-dev-comment-type="paramref" class="paramref">bottom</code> placed below it.</p>
+box with <code class="paramref">bottom</code> placed below it.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment__remarks"><a href="#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment__remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                     <h5 id="Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment__examples">Examples</h5>
-                <pre><code>var box = Box.FromString(&quot;abc&quot;)
-    .Above(&quot;def&quot;)
+        <pre><code class="lang-csharp">var box = Box.FromString("abc")
+    .Above("def")
     .WithBorder();
 Console.Write(box.ToString());
 // Output:
@@ -406,20 +522,20 @@ Console.Write(box.ToString());
 // │def│
 // └───┘</code></pre>
 
-                        
-        
+                
+
                 <h5 id="Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment__seealso"><a href="#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment__seealso">See Also</a></h5>
                 <div>
                             <div><a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a></div>
                 </div>
-                
+        
                 <a id="Gutenberg_Box_1_Annotated_"></a>
                 <h4 id="Gutenberg_Box_1_Annotated__0_"><a href="#Gutenberg_Box_1_Annotated__0_">Annotated(T)</a></h4>
                 <div><p>Apply an annotation to the current <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a>.
 The annotation will be passed to the <a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public Box&lt;T&gt; Annotated(T value)</code></pre>
+                    <pre><code class="lang- hljs">public Box&lt;T&gt; Annotated(T value)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -439,7 +555,7 @@ The annotation will be passed to the <a class="xref" href="Gutenberg.IDocumentRe
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -456,44 +572,66 @@ The annotation will be passed to the <a class="xref" href="Gutenberg.IDocumentRe
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
-                        
-        
+
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_Annotated__0__remarks"><a href="#Gutenberg_Box_1_Annotated__0__remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                 
+
+        
                 <a id="Gutenberg_Box_1_Behind_"></a>
                 <h4 id="Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_"><a href="#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a></h4>
                 <div><p>
 Returns a new <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of
-<code data-dev-comment-type="paramref" class="paramref">foreground</code> overlaid onto this one.
+<code class="paramref">foreground</code> overlaid onto this one.
 </p>
-
 <p>
-Text contained within <code data-dev-comment-type="paramref" class="paramref">foreground</code> will obscure
-any corresponding text in this box. If <code data-dev-comment-type="paramref" class="paramref">foreground</code>
-has <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(Int32, Int32)</a> areas, the content of this box
+Text contained within <code class="paramref">foreground</code> will obscure
+any corresponding text in this box. If <code class="paramref">foreground</code>
+has <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, the content of this box
 will be visible through the transparent areas.
 </p>
-
 <p>
 If either box is shorter or narrower than the other, it will be
-padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(Int32, Int32)</a> box until the sizes match,
-according to the chosen <code data-dev-comment-type="paramref" class="paramref">alignment</code>.
+padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> box until the sizes match,
+according to the chosen <code class="paramref">alignment</code>.
 </p>
-
 <p>
 See the docs for <a class="xref" href="Gutenberg.Alignment.html">Alignment</a> for detailed
-examples of how the <code data-dev-comment-type="paramref" class="paramref">alignment</code> affects
+examples of how the <code class="paramref">alignment</code> affects
 the layout of the box.
 </p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public Box&lt;T&gt; Behind(Box&lt;T&gt; foreground, Alignment alignment)</code></pre>
+                    <pre><code class="lang- hljs">public Box&lt;T&gt; Behind(Box&lt;T&gt; foreground, Alignment alignment = Alignment.Start)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -519,7 +657,7 @@ the layout of the box.
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -532,24 +670,49 @@ the layout of the box.
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;T&gt;</p></td>
                                     <td><p>A <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of the content of
-<code data-dev-comment-type="paramref" class="paramref">foreground</code> overlaid onto this box.</p>
+<code class="paramref">foreground</code> overlaid onto this box.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment__remarks"><a href="#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment__remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                     <h5 id="Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment__examples">Examples</h5>
-                <pre><code>// a box with a transparent window in the centre
+        <pre><code class="lang-csharp">// a box with a transparent window in the centre
 var mask = Box.Transparent(1, 1)
-    .LeftOf(&quot;*&quot;).RightOf(&quot;*&quot;)
-    .Above(&quot;***&quot;).Below(&quot;***&quot;);
-var box = Box.FromString(&quot;abcde\nfghij\nklmno&quot;)
+    .LeftOf("*").RightOf("*")
+    .Above("***").Below("***");
+var box = Box.FromString("abcde\nfghij\nklmno")
     .Behind(mask, Alignment.CenterStart)
     .WithBorder();
 Console.Write(box.ToString());
@@ -560,35 +723,33 @@ Console.Write(box.ToString());
 // │k***o│
 // └─────┘</code></pre>
 
-                        
-        
+                
+
                 <h5 id="Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment__seealso"><a href="#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment__seealso">See Also</a></h5>
                 <div>
                             <div><a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a></div>
                 </div>
-                
+        
                 <a id="Gutenberg_Box_1_Below_"></a>
                 <h4 id="Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_"><a href="#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a></h4>
                 <div><p>
 Creates a new <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of this
-box with <code data-dev-comment-type="paramref" class="paramref">top</code> placed above it.
+box with <code class="paramref">top</code> placed above it.
 </p>
-
 <p>
 If either of the boxes is narrower than the other, it will be
-padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(Int32, Int32)</a> box until the
+padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> box until the
 <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Width">Width</a> matches, according to the chosen
-<code data-dev-comment-type="paramref" class="paramref">alignment</code>.
+<code class="paramref">alignment</code>.
 </p>
-
 <p>
 See the docs for <a class="xref" href="Gutenberg.Alignment.html">Alignment</a> for detailed
-examples of how the <code data-dev-comment-type="paramref" class="paramref">alignment</code> affects
+examples of how the <code class="paramref">alignment</code> affects
 the layout of the box.
 </p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public Box&lt;T&gt; Below(Box&lt;T&gt; top, Alignment alignment)</code></pre>
+                    <pre><code class="lang- hljs">public Box&lt;T&gt; Below(Box&lt;T&gt; top, Alignment alignment = Alignment.Start)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -614,7 +775,7 @@ the layout of the box.
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -627,21 +788,46 @@ the layout of the box.
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;T&gt;</p></td>
                                     <td><p>A <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of this
-box with <code data-dev-comment-type="paramref" class="paramref">top</code> placed above it.</p>
+box with <code class="paramref">top</code> placed above it.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment__remarks"><a href="#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment__remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                     <h5 id="Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment__examples">Examples</h5>
-                <pre><code>var box = Box.FromString(&quot;abc&quot;)
-    .Below(&quot;def&quot;)
+        <pre><code class="lang-csharp">var box = Box.FromString("abc")
+    .Below("def")
     .WithBorder();
 Console.Write(box.ToString());
 // Output:
@@ -650,20 +836,20 @@ Console.Write(box.ToString());
 // │abc│
 // └───┘</code></pre>
 
-                        
-        
+                
+
                 <h5 id="Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment__seealso"><a href="#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment__seealso">See Also</a></h5>
                 <div>
                             <div><a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a></div>
                 </div>
-                
+        
                 <a id="Gutenberg_Box_1_FromString_"></a>
-                <h4 id="Gutenberg_Box_1_FromString_System_String_"><a href="#Gutenberg_Box_1_FromString_System_String_">FromString(String)</a></h4>
+                <h4 id="Gutenberg_Box_1_FromString_System_String_"><a href="#Gutenberg_Box_1_FromString_System_String_">FromString(string)</a></h4>
                 <div><p>Creates a <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> containing the
-specified <code data-dev-comment-type="paramref" class="paramref">text</code>.</p>
+specified <code class="paramref">text</code>.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public static Box&lt;T&gt; FromString(string text)</code></pre>
+                    <pre><code class="lang- hljs">public static Box&lt;T&gt; FromString(string text)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -676,14 +862,14 @@ specified <code data-dev-comment-type="paramref" class="paramref">text</code>.</
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p></td>
                                     <td><p>text</p></td>
                                     <td><p>The text to place into a <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a>.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -696,55 +882,52 @@ specified <code data-dev-comment-type="paramref" class="paramref">text</code>.</
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;T&gt;</p></td>
                                     <td><p>A <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> containing the
-specified <code data-dev-comment-type="paramref" class="paramref">text</code>.</p>
+specified <code class="paramref">text</code>.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
                     <h5 id="Gutenberg_Box_1_FromString_System_String__remarks"><a href="#Gutenberg_Box_1_FromString_System_String__remarks">Remarks</a></h5>
-                    <div><p>If the text contains line breaks, the resulting box&apos;s height
+                    <div><p>If the text contains line breaks, the resulting box's height
 will be equal to the number of lines in the text,
 and its width will be equal to the length of the longest line.
 Each line will be left-aligned.</p>
 </div>
-        
-                        
-        
+
                 
+
+        
                 <a id="Gutenberg_Box_1_InFrontOf_"></a>
                 <h4 id="Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_"><a href="#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a></h4>
                 <div><p>
 Creates a new <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of this
-box overlaid onto <code data-dev-comment-type="paramref" class="paramref">background</code>.
+box overlaid onto <code class="paramref">background</code>.
 </p>
-
 <p>
 Text contained within this box will obscure any corresponding
-text in the <code data-dev-comment-type="paramref" class="paramref">background</code>. If this box has
-<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(Int32, Int32)</a> areas, the <code data-dev-comment-type="paramref" class="paramref">background</code>
+text in the <code class="paramref">background</code>. If this box has
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, the <code class="paramref">background</code>
 will be visible through the transparent areas.
 </p>
-
 <p>
 If either box is shorter or narrower than the other, it will be
-padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(Int32, Int32)</a> box until the sizes match,
-according to the chosen <code data-dev-comment-type="paramref" class="paramref">alignment</code>.
+padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> box until the sizes match,
+according to the chosen <code class="paramref">alignment</code>.
 </p>
-
 <p>
 See the docs for <a class="xref" href="Gutenberg.Alignment.html">Alignment</a> for detailed
-examples of how the <code data-dev-comment-type="paramref" class="paramref">alignment</code> affects
+examples of how the <code class="paramref">alignment</code> affects
 the layout of the box.
 </p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public Box&lt;T&gt; InFrontOf(Box&lt;T&gt; background, Alignment alignment)</code></pre>
+                    <pre><code class="lang- hljs">public Box&lt;T&gt; InFrontOf(Box&lt;T&gt; background, Alignment alignment = Alignment.Start)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -770,7 +953,7 @@ the layout of the box.
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -783,25 +966,50 @@ the layout of the box.
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;T&gt;</p></td>
                                     <td><p>A <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of this
-box overlaid onto <code data-dev-comment-type="paramref" class="paramref">background</code>.</p>
+box overlaid onto <code class="paramref">background</code>.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment__remarks"><a href="#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment__remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                     <h5 id="Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment__examples">Examples</h5>
-                <pre><code>// a box with a transparent window in the centre
+        <pre><code class="lang-csharp">// a box with a transparent window in the centre
 var mask = Box.Transparent(1, 1)
-    .LeftOf(&quot;*&quot;).RightOf(&quot;*&quot;)
-    .Above(&quot;***&quot;).Below(&quot;***&quot;);
+    .LeftOf("*").RightOf("*")
+    .Above("***").Below("***");
 var box = mask
-    .InFrontOf(&quot;abcde\nfghij\nklmno&quot;, Alignment.CenterStart)
+    .InFrontOf("abcde\nfghij\nklmno", Alignment.CenterStart)
     .WithBorder();
 Console.Write(box.ToString());
 // Output:
@@ -811,35 +1019,33 @@ Console.Write(box.ToString());
 // │k***o│
 // └─────┘</code></pre>
 
-                        
-        
+                
+
                 <h5 id="Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment__seealso"><a href="#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment__seealso">See Also</a></h5>
                 <div>
                             <div><a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a></div>
                 </div>
-                
+        
                 <a id="Gutenberg_Box_1_LeftOf_"></a>
                 <h4 id="Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_"><a href="#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a></h4>
                 <div><p>
 Creates a new <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of this
-box with <code data-dev-comment-type="paramref" class="paramref">right</code> placed to its right.
+box with <code class="paramref">right</code> placed to its right.
 </p>
-
 <p>
 If either of the boxes is shorter than the other, it will be
-padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(Int32, Int32)</a> box until the
+padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> box until the
 <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Height">Height</a> matches, according to the chosen
-<code data-dev-comment-type="paramref" class="paramref">alignment</code>.
+<code class="paramref">alignment</code>.
 </p>
-
 <p>
 See the docs for <a class="xref" href="Gutenberg.Alignment.html">Alignment</a> for detailed
-examples of how the <code data-dev-comment-type="paramref" class="paramref">alignment</code> affects
+examples of how the <code class="paramref">alignment</code> affects
 the layout of the box.
 </p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public Box&lt;T&gt; LeftOf(Box&lt;T&gt; right, Alignment alignment)</code></pre>
+                    <pre><code class="lang- hljs">public Box&lt;T&gt; LeftOf(Box&lt;T&gt; right, Alignment alignment = Alignment.Start)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -865,7 +1071,7 @@ the layout of the box.
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -878,21 +1084,46 @@ the layout of the box.
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;T&gt;</p></td>
                                     <td><p>A <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of this
-box with <code data-dev-comment-type="paramref" class="paramref">right</code> placed to the right of it.</p>
+box with <code class="paramref">right</code> placed to the right of it.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment__remarks"><a href="#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment__remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                     <h5 id="Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment__examples">Examples</h5>
-                <pre><code>var box = Box.FromString(string.Join(&apos;\n&apos;, &quot;abc&quot;.AsEnumerable()))
-    .LeftOf(string.Join(&apos;\n&apos;, &quot;def&quot;.AsEnumerable()))
+        <pre><code class="lang-csharp">var box = Box.FromString(string.Join('\n', "abc".AsEnumerable()))
+    .LeftOf(string.Join('\n', "def".AsEnumerable()))
     .WithBorder();
 Console.Write(box.ToString());
 // Output:
@@ -902,82 +1133,13 @@ Console.Write(box.ToString());
 // │cf│
 // └──┘</code></pre>
 
-                        
-        
+                
+
                 <h5 id="Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment__seealso"><a href="#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment__seealso">See Also</a></h5>
                 <div>
                             <div><a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a></div>
                 </div>
-                
-                <a id="Gutenberg_Box_1_MapAnnotations_"></a>
-                <h4 id="Gutenberg_Box_1_MapAnnotations__1_System_Func__0___0__"><a href="#Gutenberg_Box_1_MapAnnotations__1_System_Func__0___0__">MapAnnotations&lt;U&gt;(Func&lt;T, U&gt;)</a></h4>
-                <div><p>Apply a function to all the annotations in the current document.</p>
-</div>
-                <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public Box&lt;U&gt; MapAnnotations&lt;U&gt;(Func&lt;T, U&gt; selector)</code></pre>
-
-                        <h5>Parameters</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, U&gt;</p></td>
-                                    <td><p>selector</p></td>
-                                    <td><p>The function to apply to the annotations.</p>
-</td>
-                                </tr>
-                            </tbody>
-                        </table>
         
-                        <h5>Returns</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;U&gt;</p></td>
-                                    <td><p>A document with all of the annotations replaced
-with the return value of <code data-dev-comment-type="paramref" class="paramref">selector</code>.</p>
-</td>
-                                </tr>
-                            </tbody>
-                        </table>
-        
-                        <h5>Type Parameters</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p>U</p></td>
-                                    <td><p>The type of annotations in the resulting box.</p>
-</td>
-                                </tr>
-                            </tbody>
-                        </table>
-        
-        
-        
-        
-        
-        
-                        
-        
-                
                 <a id="Gutenberg_Box_1_MapAnnotations_"></a>
                 <h4 id="Gutenberg_Box_1_MapAnnotations__1_System_Func__0_System_Collections_Generic_IEnumerable___0___"><a href="#Gutenberg_Box_1_MapAnnotations__1_System_Func__0_System_Collections_Generic_IEnumerable___0___">MapAnnotations&lt;U&gt;(Func&lt;T, IEnumerable&lt;U&gt;&gt;)</a></h4>
                 <div><p>Apply a function to all the annotations in the current document.
@@ -985,7 +1147,7 @@ If the function returns multiple annotations,
 the annotations are added in a left-to-right fashion.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public Box&lt;U&gt; MapAnnotations&lt;U&gt;(Func&lt;T, IEnumerable&lt;U&gt;&gt; selector)</code></pre>
+                    <pre><code class="lang- hljs">public Box&lt;U&gt; MapAnnotations&lt;U&gt;(Func&lt;T, IEnumerable&lt;U&gt;&gt; selector)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -1005,7 +1167,7 @@ the annotations are added in a left-to-right fashion.</p>
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -1018,12 +1180,12 @@ the annotations are added in a left-to-right fashion.</p>
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;U&gt;</p></td>
                                     <td><p>A document with all of the annotations replaced
-with the return values of <code data-dev-comment-type="paramref" class="paramref">selector</code>.</p>
+with the return values of <code class="paramref">selector</code>.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Type Parameters</h5>
                         <table>
                             <thead>
@@ -1040,22 +1202,141 @@ with the return values of <code data-dev-comment-type="paramref" class="paramref
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-                        
-        
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_MapAnnotations__1_System_Func__0_System_Collections_Generic_IEnumerable___0____remarks"><a href="#Gutenberg_Box_1_MapAnnotations__1_System_Func__0_System_Collections_Generic_IEnumerable___0____remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                 
+
+        
+                <a id="Gutenberg_Box_1_MapAnnotations_"></a>
+                <h4 id="Gutenberg_Box_1_MapAnnotations__1_System_Func__0___0__"><a href="#Gutenberg_Box_1_MapAnnotations__1_System_Func__0___0__">MapAnnotations&lt;U&gt;(Func&lt;T, U&gt;)</a></h4>
+                <div><p>Apply a function to all the annotations in the current document.</p>
+</div>
+                <h5>Declaration</h5>
+                    <pre><code class="lang- hljs">public Box&lt;U&gt; MapAnnotations&lt;U&gt;(Func&lt;T, U&gt; selector)</code></pre>
+
+                        <h5>Parameters</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, U&gt;</p></td>
+                                    <td><p>selector</p></td>
+                                    <td><p>The function to apply to the annotations.</p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h5>Returns</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;U&gt;</p></td>
+                                    <td><p>A document with all of the annotations replaced
+with the return value of <code class="paramref">selector</code>.</p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h5>Type Parameters</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p>U</p></td>
+                                    <td><p>The type of annotations in the resulting box.</p>
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_MapAnnotations__1_System_Func__0___0___remarks"><a href="#Gutenberg_Box_1_MapAnnotations__1_System_Func__0___0___remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
+                
+
+        
                 <a id="Gutenberg_Box_1_Render_"></a>
                 <h4 id="Gutenberg_Box_1_Render_Gutenberg_IDocumentRenderer__0__System_Threading_CancellationToken_"><a href="#Gutenberg_Box_1_Render_Gutenberg_IDocumentRenderer__0__System_Threading_CancellationToken_">Render(IDocumentRenderer&lt;T&gt;, CancellationToken)</a></h4>
                 <div><p>Write the contents of this <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> into
-the <code data-dev-comment-type="paramref" class="paramref">renderer</code>.</p>
+the <code class="paramref">renderer</code>.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public ValueTask Render(IDocumentRenderer&lt;T&gt; renderer, CancellationToken cancellationToken = null)</code></pre>
+                    <pre><code class="lang- hljs">public ValueTask Render(IDocumentRenderer&lt;T&gt; renderer, CancellationToken cancellationToken = default)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -1081,7 +1362,7 @@ the <code data-dev-comment-type="paramref" class="paramref">renderer</code>.</p>
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -1094,43 +1375,66 @@ the <code data-dev-comment-type="paramref" class="paramref">renderer</code>.</p>
                                 <tr>
                                     <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
                                     <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which completes when
-the box has been written to the <code data-dev-comment-type="paramref" class="paramref">renderer</code>.</p>
+the box has been written to the <code class="paramref">renderer</code>.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
-                        
-        
+
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_Render_Gutenberg_IDocumentRenderer__0__System_Threading_CancellationToken__remarks"><a href="#Gutenberg_Box_1_Render_Gutenberg_IDocumentRenderer__0__System_Threading_CancellationToken__remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                 
+
+        
                 <a id="Gutenberg_Box_1_RightOf_"></a>
                 <h4 id="Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_"><a href="#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a></h4>
                 <div><p>
 Creates a new <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of this
-box with <code data-dev-comment-type="paramref" class="paramref">left</code> placed to its left.
+box with <code class="paramref">left</code> placed to its left.
 </p>
-
 <p>
 If either of the boxes is shorter than the other, it will be
-padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(Int32, Int32)</a> box until the
+padded with a <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> box until the
 <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Height">Height</a> matches, according to the chosen
-<code data-dev-comment-type="paramref" class="paramref">alignment</code>.
+<code class="paramref">alignment</code>.
 </p>
-
 <p>
 See the docs for <a class="xref" href="Gutenberg.Alignment.html">Alignment</a> for detailed
-examples of how the <code data-dev-comment-type="paramref" class="paramref">alignment</code> affects
+examples of how the <code class="paramref">alignment</code> affects
 the layout of the box.
 </p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public Box&lt;T&gt; RightOf(Box&lt;T&gt; left, Alignment alignment)</code></pre>
+                    <pre><code class="lang- hljs">public Box&lt;T&gt; RightOf(Box&lt;T&gt; left, Alignment alignment = Alignment.Start)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -1156,7 +1460,7 @@ the layout of the box.
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -1169,21 +1473,46 @@ the layout of the box.
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;T&gt;</p></td>
                                     <td><p>A <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of this
-box with <code data-dev-comment-type="paramref" class="paramref">left</code> placed to the left of it.</p>
+box with <code class="paramref">left</code> placed to the left of it.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment__remarks"><a href="#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment__remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                     <h5 id="Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment__examples">Examples</h5>
-                <pre><code>var box = Box.FromString(string.Join(&apos;\n&apos;, &quot;abc&quot;.AsEnumerable()))
-    .RightOf(string.Join(&apos;\n&apos;, &quot;def&quot;.AsEnumerable()))
+        <pre><code class="lang-csharp">var box = Box.FromString(string.Join('\n', "abc".AsEnumerable()))
+    .RightOf(string.Join('\n', "def".AsEnumerable()))
     .WithBorder();
 Console.Write(box.ToString());
 // Output:
@@ -1193,19 +1522,19 @@ Console.Write(box.ToString());
 // │fc│
 // └──┘</code></pre>
 
-                        
-        
+                
+
                 <h5 id="Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment__seealso"><a href="#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment__seealso">See Also</a></h5>
                 <div>
                             <div><a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a></div>
                 </div>
-                
+        
                 <a id="Gutenberg_Box_1_Select_"></a>
                 <h4 id="Gutenberg_Box_1_Select__1_System_Func__0___0__"><a href="#Gutenberg_Box_1_Select__1_System_Func__0___0__">Select&lt;U&gt;(Func&lt;T, U&gt;)</a></h4>
                 <div><p>Apply a function to all the annotations in the current document.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public Box&lt;U&gt; Select&lt;U&gt;(Func&lt;T, U&gt; selector)</code></pre>
+                    <pre><code class="lang- hljs">public Box&lt;U&gt; Select&lt;U&gt;(Func&lt;T, U&gt; selector)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -1225,7 +1554,7 @@ Console.Write(box.ToString());
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -1238,12 +1567,12 @@ Console.Write(box.ToString());
                                 <tr>
                                     <td><p><a class="xref" href="Gutenberg.Box-1.html">Box</a>&lt;U&gt;</p></td>
                                     <td><p>A document with all of the annotations replaced
-with the return value of <code data-dev-comment-type="paramref" class="paramref">selector</code>.</p>
+with the return value of <code class="paramref">selector</code>.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Type Parameters</h5>
                         <table>
                             <thead>
@@ -1260,23 +1589,48 @@ with the return value of <code data-dev-comment-type="paramref" class="paramref"
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-                        
-        
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_Select__1_System_Func__0___0___remarks"><a href="#Gutenberg_Box_1_Select__1_System_Func__0___0___remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                 
+
+        
                 <a id="Gutenberg_Box_1_ToString_"></a>
                 <h4 id="Gutenberg_Box_1_ToString"><a href="#Gutenberg_Box_1_ToString">ToString()</a></h4>
                 <div><p>Render this <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> as a string.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+                    <pre><code class="lang- hljs">public override string ToString()</code></pre>
 
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -1287,31 +1641,58 @@ with the return value of <code data-dev-comment-type="paramref" class="paramref"
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p></td>
                                     <td><p>A string representation of the box.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
-                        
-        
+
+
+
+
+
+                    <h5>Overrides</h5>
+                    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a></div>
+
+                    <h5 id="Gutenberg_Box_1_ToString_remarks"><a href="#Gutenberg_Box_1_ToString_remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                 
+
+        
                 <a id="Gutenberg_Box_1_Transparent_"></a>
-                <h4 id="Gutenberg_Box_1_Transparent_System_Int32_System_Int32_"><a href="#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(Int32, Int32)</a></h4>
+                <h4 id="Gutenberg_Box_1_Transparent_System_Int32_System_Int32_"><a href="#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a></h4>
                 <div><p>Creates a transparent <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> with the
 specified dimensions. If the box is placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a>
 another box, the other box will be visible through the
 transparent box.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public static Box&lt;T&gt; Transparent(int width, int height)</code></pre>
+                    <pre><code class="lang- hljs">public static Box&lt;T&gt; Transparent(int width, int height)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -1324,20 +1705,20 @@ transparent box.</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p></td>
                                     <td><p>width</p></td>
                                     <td><p>The width of the box.</p>
 </td>
                                 </tr>
                                 <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p></td>
                                     <td><p>height</p></td>
                                     <td><p>The height of the box.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -1354,25 +1735,50 @@ transparent box.</p>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
-                        
-        
+
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_Transparent_System_Int32_System_Int32__remarks"><a href="#Gutenberg_Box_1_Transparent_System_Int32_System_Int32__remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                 
+
+        
                 <a id="Gutenberg_Box_1_WithBorder_"></a>
                 <h4 id="Gutenberg_Box_1_WithBorder"><a href="#Gutenberg_Box_1_WithBorder">WithBorder()</a></h4>
                 <div><p>Creates a <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> consisting of the current
 box with a border drawn around it.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public Box&lt;T&gt; WithBorder()</code></pre>
+                    <pre><code class="lang- hljs">public Box&lt;T&gt; WithBorder()</code></pre>
 
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -1390,15 +1796,40 @@ box with a border drawn around it.</p>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_WithBorder_remarks"><a href="#Gutenberg_Box_1_WithBorder_remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
+
                     <h5 id="Gutenberg_Box_1_WithBorder_examples">Examples</h5>
-                <pre><code>var box = Box.FromString(&quot;abc\ndef\nghi&quot;)
+        <pre><code class="lang-csharp">var box = Box.FromString("abc\ndef\nghi")
     .WithBorder();
 Console.Write(box);
 // Output:
@@ -1408,15 +1839,15 @@ Console.Write(box);
 // │ghi│
 // └───┘</code></pre>
 
-                        
-        
                 
+
+        
                 <a id="Gutenberg_Box_1_Write_"></a>
                 <h4 id="Gutenberg_Box_1_Write_System_IO_TextWriter_System_Threading_CancellationToken_"><a href="#Gutenberg_Box_1_Write_System_IO_TextWriter_System_Threading_CancellationToken_">Write(TextWriter, CancellationToken)</a></h4>
                 <div><p>Write the <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a>.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public ValueTask Write(TextWriter writer, CancellationToken cancellationToken = null)</code></pre>
+                    <pre><code class="lang- hljs">public ValueTask Write(TextWriter writer, CancellationToken cancellationToken = default)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -1442,7 +1873,7 @@ Console.Write(box);
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -1456,30 +1887,55 @@ Console.Write(box);
                                     <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></p></td>
                                     <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> which will complete when
 the <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a> has been written to
-the <code data-dev-comment-type="paramref" class="paramref">writer</code>.</p>
+the <code class="paramref">writer</code>.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
-        
-                        
-        
-            <h3 id="operators"><a href="#operators">Operators
-        </a></h3>
+
+
+
+
+
+
+                    <h5 id="Gutenberg_Box_1_Write_System_IO_TextWriter_System_Threading_CancellationToken__remarks"><a href="#Gutenberg_Box_1_Write_System_IO_TextWriter_System_Threading_CancellationToken__remarks">Remarks</a></h5>
+                    <div><p>
+Boxes can be composed spatially to create bigger boxes:
+they can be placed <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a>, <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a>,
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a>, and <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a> one another.
+</p>
+<p>
+You can also put boxes <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a> and
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a> one another. Text contained in a box that's
+placed in front of another box will obscure text contained in
+in the background box. Additionally, boxes may contain
+<a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a> areas, through which background text
+will be visible.
+</p>
+<p>
+The box may contain annotations - values of type
+<code class="typeparamref">T</code> - which can be interpreted by the
+<a class="xref" href="Gutenberg.IDocumentRenderer-1.html">IDocumentRenderer&lt;T&gt;</a>.
+</p>
+<p>
+This class is intended to be imported under an alias,
+since typically the type of annotations won't change within your code:
+<code>using Box = Gutenberg.Box&lt;MyAnnotation&gt;;</code>.
+</p>
+</div>
 
                 
+
+            <h3 id="operators"><a href="#operators">Operators
+</a></h3>
+
+        
                 <a id="Gutenberg_Box_1_op_Implicit_"></a>
-                <h4 id="Gutenberg_Box_1_op_Implicit_System_String__Gutenberg_Box__0_"><a href="#Gutenberg_Box_1_op_Implicit_System_String__Gutenberg_Box__0_">Implicit(String to Box&lt;T&gt;)</a></h4>
+                <h4 id="Gutenberg_Box_1_op_Implicit_System_String__Gutenberg_Box__0_"><a href="#Gutenberg_Box_1_op_Implicit_System_String__Gutenberg_Box__0_">implicit operator Box&lt;T&gt;(string)</a></h4>
                 <div><p>Implicitly convert a string to a <a class="xref" href="Gutenberg.Box-1.html">Box&lt;T&gt;</a>.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang-csharp hljs">public static implicit operator Box&lt;T&gt;(string str)</code></pre>
+                    <pre><code class="lang- hljs">public static implicit operator Box&lt;T&gt;(string str)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -1492,14 +1948,14 @@ the <code data-dev-comment-type="paramref" class="paramref">writer</code>.</p>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></p></td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p></td>
                                     <td><p>str</p></td>
                                     <td><p>The string.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
-        
+
                         <h5>Returns</h5>
                         <table>
                             <thead>
@@ -1515,24 +1971,24 @@ the <code data-dev-comment-type="paramref" class="paramref">writer</code>.</p>
                                 </tr>
                             </tbody>
                         </table>
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
                     <h5 id="Gutenberg_Box_1_op_Implicit_System_String__Gutenberg_Box__0__remarks"><a href="#Gutenberg_Box_1_op_Implicit_System_String__Gutenberg_Box__0__remarks">Remarks</a></h5>
-                    <div><p>This implicit conversion is equivalent to <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_FromString_System_String_">FromString(String)</a>.</p>
+                    <div><p>This implicit conversion is equivalent to <a class="xref" href="Gutenberg.Box-1.html#Gutenberg_Box_1_FromString_System_String_">FromString(string)</a>.</p>
 </div>
-        
-                        
-        
-        
-        
 
-        
+                
 
-    </article>
+
+
+
+
+
+</article>
 
 <div class="col col-sm sticky md:hide">
     <h5>In This Article</h5>
@@ -1540,11 +1996,11 @@ the <code data-dev-comment-type="paramref" class="paramref">writer</code>.</p>
         <ul class="active">
             <li>
                 <a class="active" href="#Gutenberg_Box_1">Class Box&lt;T&gt;
-    </a>
+</a>
                 <ul class="active">
                         <li>
                             <a href="#properties">Properties
-    </a>
+</a>
 
                             <ul>
                                     <li><a href="#Gutenberg_Box_1_Empty">Empty</a></li>
@@ -1554,33 +2010,33 @@ the <code data-dev-comment-type="paramref" class="paramref">writer</code>.</p>
                         </li>
                         <li>
                             <a href="#methods">Methods
-    </a>
+</a>
 
                             <ul>
                                     <li><a href="#Gutenberg_Box_1_Above_Gutenberg_Box__0__Gutenberg_Alignment_">Above(Box&lt;T&gt;, Alignment)</a></li>
                                     <li><a href="#Gutenberg_Box_1_Annotated__0_">Annotated(T)</a></li>
                                     <li><a href="#Gutenberg_Box_1_Behind_Gutenberg_Box__0__Gutenberg_Alignment_">Behind(Box&lt;T&gt;, Alignment)</a></li>
                                     <li><a href="#Gutenberg_Box_1_Below_Gutenberg_Box__0__Gutenberg_Alignment_">Below(Box&lt;T&gt;, Alignment)</a></li>
-                                    <li><a href="#Gutenberg_Box_1_FromString_System_String_">FromString(String)</a></li>
+                                    <li><a href="#Gutenberg_Box_1_FromString_System_String_">FromString(string)</a></li>
                                     <li><a href="#Gutenberg_Box_1_InFrontOf_Gutenberg_Box__0__Gutenberg_Alignment_">InFrontOf(Box&lt;T&gt;, Alignment)</a></li>
                                     <li><a href="#Gutenberg_Box_1_LeftOf_Gutenberg_Box__0__Gutenberg_Alignment_">LeftOf(Box&lt;T&gt;, Alignment)</a></li>
-                                    <li><a href="#Gutenberg_Box_1_MapAnnotations__1_System_Func__0___0__">MapAnnotations&lt;U&gt;(Func&lt;T, U&gt;)</a></li>
                                     <li><a href="#Gutenberg_Box_1_MapAnnotations__1_System_Func__0_System_Collections_Generic_IEnumerable___0___">MapAnnotations&lt;U&gt;(Func&lt;T, IEnumerable&lt;U&gt;&gt;)</a></li>
+                                    <li><a href="#Gutenberg_Box_1_MapAnnotations__1_System_Func__0___0__">MapAnnotations&lt;U&gt;(Func&lt;T, U&gt;)</a></li>
                                     <li><a href="#Gutenberg_Box_1_Render_Gutenberg_IDocumentRenderer__0__System_Threading_CancellationToken_">Render(IDocumentRenderer&lt;T&gt;, CancellationToken)</a></li>
                                     <li><a href="#Gutenberg_Box_1_RightOf_Gutenberg_Box__0__Gutenberg_Alignment_">RightOf(Box&lt;T&gt;, Alignment)</a></li>
                                     <li><a href="#Gutenberg_Box_1_Select__1_System_Func__0___0__">Select&lt;U&gt;(Func&lt;T, U&gt;)</a></li>
                                     <li><a href="#Gutenberg_Box_1_ToString">ToString()</a></li>
-                                    <li><a href="#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(Int32, Int32)</a></li>
+                                    <li><a href="#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_">Transparent(int, int)</a></li>
                                     <li><a href="#Gutenberg_Box_1_WithBorder">WithBorder()</a></li>
                                     <li><a href="#Gutenberg_Box_1_Write_System_IO_TextWriter_System_Threading_CancellationToken_">Write(TextWriter, CancellationToken)</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#operators">Operators
-    </a>
+</a>
 
                             <ul>
-                                    <li><a href="#Gutenberg_Box_1_op_Implicit_System_String__Gutenberg_Box__0_">Implicit(String to Box&lt;T&gt;)</a></li>
+                                    <li><a href="#Gutenberg_Box_1_op_Implicit_System_String__Gutenberg_Box__0_">implicit operator Box&lt;T&gt;(string)</a></li>
                             </ul>
                         </li>
                 </ul>
@@ -1598,5 +2054,5 @@ the <code data-dev-comment-type="paramref" class="paramref">writer</code>.</p>
             <span>Generated by <strong>DocFX</strong></span>
         </footer>
 
-            </body>
+    </body>
 </html>

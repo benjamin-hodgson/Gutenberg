@@ -37,12 +37,6 @@ references:
   commentId: F:Gutenberg.Alignment.Start
   fullName: Gutenberg.Alignment.Start
   nameWithType: Alignment.Start
-- uid: Gutenberg.Alignment.value__
-  name: value__
-  href: Gutenberg.Alignment.html#Gutenberg_Alignment_value__
-  commentId: F:Gutenberg.Alignment.value__
-  fullName: Gutenberg.Alignment.value__
-  nameWithType: Alignment.value__
 - uid: Gutenberg.Box`1
   name: Box<T>
   href: Gutenberg.Box-1.html
@@ -136,12 +130,13 @@ references:
   nameWithType: Box<T>.Empty
   nameWithType.vb: Box(Of T).Empty
 - uid: Gutenberg.Box`1.FromString(System.String)
-  name: FromString(String)
+  name: FromString(string)
   href: Gutenberg.Box-1.html#Gutenberg_Box_1_FromString_System_String_
   commentId: M:Gutenberg.Box`1.FromString(System.String)
-  fullName: Gutenberg.Box<T>.FromString(System.String)
-  fullName.vb: Gutenberg.Box(Of T).FromString(System.String)
-  nameWithType: Box<T>.FromString(String)
+  name.vb: FromString(String)
+  fullName: Gutenberg.Box<T>.FromString(string)
+  fullName.vb: Gutenberg.Box(Of T).FromString(String)
+  nameWithType: Box<T>.FromString(string)
   nameWithType.vb: Box(Of T).FromString(String)
 - uid: Gutenberg.Box`1.FromString*
   name: FromString
@@ -209,15 +204,6 @@ references:
   fullName.vb: Gutenberg.Box(Of T).MapAnnotations
   nameWithType: Box<T>.MapAnnotations
   nameWithType.vb: Box(Of T).MapAnnotations
-- uid: Gutenberg.Box`1.MapAnnotations``1(System.Func{`0,``0})
-  name: MapAnnotations<U>(Func<T, U>)
-  href: Gutenberg.Box-1.html#Gutenberg_Box_1_MapAnnotations__1_System_Func__0___0__
-  commentId: M:Gutenberg.Box`1.MapAnnotations``1(System.Func{`0,``0})
-  name.vb: MapAnnotations(Of U)(Func(Of T, U))
-  fullName: Gutenberg.Box<T>.MapAnnotations<U>(System.Func<T, U>)
-  fullName.vb: Gutenberg.Box(Of T).MapAnnotations(Of U)(System.Func(Of T, U))
-  nameWithType: Box<T>.MapAnnotations<U>(Func<T, U>)
-  nameWithType.vb: Box(Of T).MapAnnotations(Of U)(Func(Of T, U))
 - uid: Gutenberg.Box`1.MapAnnotations``1(System.Func{`0,System.Collections.Generic.IEnumerable{``0}})
   name: MapAnnotations<U>(Func<T, IEnumerable<U>>)
   href: Gutenberg.Box-1.html#Gutenberg_Box_1_MapAnnotations__1_System_Func__0_System_Collections_Generic_IEnumerable___0___
@@ -227,24 +213,15 @@ references:
   fullName.vb: Gutenberg.Box(Of T).MapAnnotations(Of U)(System.Func(Of T, System.Collections.Generic.IEnumerable(Of U)))
   nameWithType: Box<T>.MapAnnotations<U>(Func<T, IEnumerable<U>>)
   nameWithType.vb: Box(Of T).MapAnnotations(Of U)(Func(Of T, IEnumerable(Of U)))
-- uid: Gutenberg.Box`1.op_Implicit(System.String)~Gutenberg.Box{`0}
-  name: Implicit(String to Box<T>)
-  href: Gutenberg.Box-1.html#Gutenberg_Box_1_op_Implicit_System_String__Gutenberg_Box__0_
-  commentId: M:Gutenberg.Box`1.op_Implicit(System.String)~Gutenberg.Box{`0}
-  name.vb: Widening(String to Box(Of T))
-  fullName: Gutenberg.Box<T>.Implicit(System.String to Gutenberg.Box<T>)
-  fullName.vb: Gutenberg.Box(Of T).Widening(System.String to Gutenberg.Box(Of T))
-  nameWithType: Box<T>.Implicit(String to Box<T>)
-  nameWithType.vb: Box(Of T).Widening(String to Box(Of T))
-- uid: Gutenberg.Box`1.op_Implicit*
-  name: Implicit
-  href: Gutenberg.Box-1.html#Gutenberg_Box_1_op_Implicit_
-  commentId: Overload:Gutenberg.Box`1.op_Implicit
-  name.vb: Widening
-  fullName: Gutenberg.Box<T>.Implicit
-  fullName.vb: Gutenberg.Box(Of T).Widening
-  nameWithType: Box<T>.Implicit
-  nameWithType.vb: Box(Of T).Widening
+- uid: Gutenberg.Box`1.MapAnnotations``1(System.Func{`0,``0})
+  name: MapAnnotations<U>(Func<T, U>)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_MapAnnotations__1_System_Func__0___0__
+  commentId: M:Gutenberg.Box`1.MapAnnotations``1(System.Func{`0,``0})
+  name.vb: MapAnnotations(Of U)(Func(Of T, U))
+  fullName: Gutenberg.Box<T>.MapAnnotations<U>(System.Func<T, U>)
+  fullName.vb: Gutenberg.Box(Of T).MapAnnotations(Of U)(System.Func(Of T, U))
+  nameWithType: Box<T>.MapAnnotations<U>(Func<T, U>)
+  nameWithType.vb: Box(Of T).MapAnnotations(Of U)(Func(Of T, U))
 - uid: Gutenberg.Box`1.Render(Gutenberg.IDocumentRenderer{`0},System.Threading.CancellationToken)
   name: Render(IDocumentRenderer<T>, CancellationToken)
   href: Gutenberg.Box-1.html#Gutenberg_Box_1_Render_Gutenberg_IDocumentRenderer__0__System_Threading_CancellationToken_
@@ -313,13 +290,14 @@ references:
   nameWithType: Box<T>.ToString
   nameWithType.vb: Box(Of T).ToString
 - uid: Gutenberg.Box`1.Transparent(System.Int32,System.Int32)
-  name: Transparent(Int32, Int32)
+  name: Transparent(int, int)
   href: Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_System_Int32_System_Int32_
   commentId: M:Gutenberg.Box`1.Transparent(System.Int32,System.Int32)
-  fullName: Gutenberg.Box<T>.Transparent(System.Int32, System.Int32)
-  fullName.vb: Gutenberg.Box(Of T).Transparent(System.Int32, System.Int32)
-  nameWithType: Box<T>.Transparent(Int32, Int32)
-  nameWithType.vb: Box(Of T).Transparent(Int32, Int32)
+  name.vb: Transparent(Integer, Integer)
+  fullName: Gutenberg.Box<T>.Transparent(int, int)
+  fullName.vb: Gutenberg.Box(Of T).Transparent(Integer, Integer)
+  nameWithType: Box<T>.Transparent(int, int)
+  nameWithType.vb: Box(Of T).Transparent(Integer, Integer)
 - uid: Gutenberg.Box`1.Transparent*
   name: Transparent
   href: Gutenberg.Box-1.html#Gutenberg_Box_1_Transparent_
@@ -376,6 +354,25 @@ references:
   fullName.vb: Gutenberg.Box(Of T).Write
   nameWithType: Box<T>.Write
   nameWithType.vb: Box(Of T).Write
+- uid: Gutenberg.Box`1.op_Implicit(System.String)~Gutenberg.Box{`0}
+  name: implicit operator Box<T>(string)
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_op_Implicit_System_String__Gutenberg_Box__0_
+  commentId: M:Gutenberg.Box`1.op_Implicit(System.String)~Gutenberg.Box{`0}
+  name.vb: CType(String)
+  fullName: Gutenberg.Box<T>.implicit operator Gutenberg.Box<T>(string)
+  fullName.vb: Gutenberg.Box(Of T).CType(String)
+  nameWithType: Box<T>.implicit operator Box<T>(string)
+  nameWithType.vb: Box(Of T).CType(String)
+- uid: Gutenberg.Box`1.op_Implicit*
+  name: implicit operator
+  href: Gutenberg.Box-1.html#Gutenberg_Box_1_op_Implicit_
+  commentId: Overload:Gutenberg.Box`1.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Gutenberg.Box<T>.implicit operator
+  fullName.vb: Gutenberg.Box(Of T).CType
+  nameWithType: Box<T>.implicit operator
+  nameWithType.vb: Box(Of T).CType
 - uid: Gutenberg.Brackets
   name: Gutenberg.Brackets
   href: Gutenberg.Brackets.html
@@ -392,22 +389,23 @@ references:
   nameWithType: AllmanBracketer<T>
   nameWithType.vb: AllmanBracketer(Of T)
 - uid: Gutenberg.Brackets.AllmanBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
-  name: AllmanBracketer(Document<T>, Document<T>, Boolean, Nullable<Int32>)
+  name: AllmanBracketer(Document<T>, Document<T>, bool, int?)
   href: Gutenberg.Brackets.AllmanBracketer-1.html#Gutenberg_Brackets_AllmanBracketer_1__ctor_Gutenberg_Document__0__Gutenberg_Document__0__System_Boolean_System_Nullable_System_Int32__
   commentId: M:Gutenberg.Brackets.AllmanBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
-  name.vb: AllmanBracketer(Document(Of T), Document(Of T), Boolean, Nullable(Of Int32))
-  fullName: Gutenberg.Brackets.AllmanBracketer<T>.AllmanBracketer(Gutenberg.Document<T>, Gutenberg.Document<T>, System.Boolean, System.Nullable<System.Int32>)
-  fullName.vb: Gutenberg.Brackets.AllmanBracketer(Of T).AllmanBracketer(Gutenberg.Document(Of T), Gutenberg.Document(Of T), System.Boolean, System.Nullable(Of System.Int32))
-  nameWithType: AllmanBracketer<T>.AllmanBracketer(Document<T>, Document<T>, Boolean, Nullable<Int32>)
-  nameWithType.vb: AllmanBracketer(Of T).AllmanBracketer(Document(Of T), Document(Of T), Boolean, Nullable(Of Int32))
+  name.vb: New(Document(Of T), Document(Of T), Boolean, Integer?)
+  fullName: Gutenberg.Brackets.AllmanBracketer<T>.AllmanBracketer(Gutenberg.Document<T>, Gutenberg.Document<T>, bool, int?)
+  fullName.vb: Gutenberg.Brackets.AllmanBracketer(Of T).New(Gutenberg.Document(Of T), Gutenberg.Document(Of T), Boolean, Integer?)
+  nameWithType: AllmanBracketer<T>.AllmanBracketer(Document<T>, Document<T>, bool, int?)
+  nameWithType.vb: AllmanBracketer(Of T).New(Document(Of T), Document(Of T), Boolean, Integer?)
 - uid: Gutenberg.Brackets.AllmanBracketer`1.#ctor*
   name: AllmanBracketer
   href: Gutenberg.Brackets.AllmanBracketer-1.html#Gutenberg_Brackets_AllmanBracketer_1__ctor_
   commentId: Overload:Gutenberg.Brackets.AllmanBracketer`1.#ctor
+  name.vb: New
   fullName: Gutenberg.Brackets.AllmanBracketer<T>.AllmanBracketer
-  fullName.vb: Gutenberg.Brackets.AllmanBracketer(Of T).AllmanBracketer
+  fullName.vb: Gutenberg.Brackets.AllmanBracketer(Of T).New
   nameWithType: AllmanBracketer<T>.AllmanBracketer
-  nameWithType.vb: AllmanBracketer(Of T).AllmanBracketer
+  nameWithType.vb: AllmanBracketer(Of T).New
 - uid: Gutenberg.Brackets.AllmanBracketer`1.Bracket(Gutenberg.Document{`0})
   name: Bracket(Document<T>)
   href: Gutenberg.Brackets.AllmanBracketer-1.html#Gutenberg_Brackets_AllmanBracketer_1_Bracket_Gutenberg_Document__0__
@@ -461,22 +459,23 @@ references:
   nameWithType: KernighanRitchieBracketer<T>
   nameWithType.vb: KernighanRitchieBracketer(Of T)
 - uid: Gutenberg.Brackets.KernighanRitchieBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
-  name: KernighanRitchieBracketer(Document<T>, Document<T>, Boolean, Nullable<Int32>)
+  name: KernighanRitchieBracketer(Document<T>, Document<T>, bool, int?)
   href: Gutenberg.Brackets.KernighanRitchieBracketer-1.html#Gutenberg_Brackets_KernighanRitchieBracketer_1__ctor_Gutenberg_Document__0__Gutenberg_Document__0__System_Boolean_System_Nullable_System_Int32__
   commentId: M:Gutenberg.Brackets.KernighanRitchieBracketer`1.#ctor(Gutenberg.Document{`0},Gutenberg.Document{`0},System.Boolean,System.Nullable{System.Int32})
-  name.vb: KernighanRitchieBracketer(Document(Of T), Document(Of T), Boolean, Nullable(Of Int32))
-  fullName: Gutenberg.Brackets.KernighanRitchieBracketer<T>.KernighanRitchieBracketer(Gutenberg.Document<T>, Gutenberg.Document<T>, System.Boolean, System.Nullable<System.Int32>)
-  fullName.vb: Gutenberg.Brackets.KernighanRitchieBracketer(Of T).KernighanRitchieBracketer(Gutenberg.Document(Of T), Gutenberg.Document(Of T), System.Boolean, System.Nullable(Of System.Int32))
-  nameWithType: KernighanRitchieBracketer<T>.KernighanRitchieBracketer(Document<T>, Document<T>, Boolean, Nullable<Int32>)
-  nameWithType.vb: KernighanRitchieBracketer(Of T).KernighanRitchieBracketer(Document(Of T), Document(Of T), Boolean, Nullable(Of Int32))
+  name.vb: New(Document(Of T), Document(Of T), Boolean, Integer?)
+  fullName: Gutenberg.Brackets.KernighanRitchieBracketer<T>.KernighanRitchieBracketer(Gutenberg.Document<T>, Gutenberg.Document<T>, bool, int?)
+  fullName.vb: Gutenberg.Brackets.KernighanRitchieBracketer(Of T).New(Gutenberg.Document(Of T), Gutenberg.Document(Of T), Boolean, Integer?)
+  nameWithType: KernighanRitchieBracketer<T>.KernighanRitchieBracketer(Document<T>, Document<T>, bool, int?)
+  nameWithType.vb: KernighanRitchieBracketer(Of T).New(Document(Of T), Document(Of T), Boolean, Integer?)
 - uid: Gutenberg.Brackets.KernighanRitchieBracketer`1.#ctor*
   name: KernighanRitchieBracketer
   href: Gutenberg.Brackets.KernighanRitchieBracketer-1.html#Gutenberg_Brackets_KernighanRitchieBracketer_1__ctor_
   commentId: Overload:Gutenberg.Brackets.KernighanRitchieBracketer`1.#ctor
+  name.vb: New
   fullName: Gutenberg.Brackets.KernighanRitchieBracketer<T>.KernighanRitchieBracketer
-  fullName.vb: Gutenberg.Brackets.KernighanRitchieBracketer(Of T).KernighanRitchieBracketer
+  fullName.vb: Gutenberg.Brackets.KernighanRitchieBracketer(Of T).New
   nameWithType: KernighanRitchieBracketer<T>.KernighanRitchieBracketer
-  nameWithType.vb: KernighanRitchieBracketer(Of T).KernighanRitchieBracketer
+  nameWithType.vb: KernighanRitchieBracketer(Of T).New
 - uid: Gutenberg.Brackets.KernighanRitchieBracketer`1.Bracket(Gutenberg.Document{`0})
   name: Bracket(Document<T>)
   href: Gutenberg.Brackets.KernighanRitchieBracketer-1.html#Gutenberg_Brackets_KernighanRitchieBracketer_1_Bracket_Gutenberg_Document__0__
@@ -494,6 +493,42 @@ references:
   fullName.vb: Gutenberg.Brackets.KernighanRitchieBracketer(Of T).Bracket
   nameWithType: KernighanRitchieBracketer<T>.Bracket
   nameWithType.vb: KernighanRitchieBracketer(Of T).Bracket
+- uid: Gutenberg.DocumentExtensions
+  name: DocumentExtensions
+  href: Gutenberg.DocumentExtensions.html
+  commentId: T:Gutenberg.DocumentExtensions
+  fullName: Gutenberg.DocumentExtensions
+  nameWithType: DocumentExtensions
+- uid: Gutenberg.DocumentExtensions.Separated*
+  name: Separated
+  href: Gutenberg.DocumentExtensions.html#Gutenberg_DocumentExtensions_Separated_
+  commentId: Overload:Gutenberg.DocumentExtensions.Separated
+  fullName: Gutenberg.DocumentExtensions.Separated
+  nameWithType: DocumentExtensions.Separated
+- uid: Gutenberg.DocumentExtensions.SeparatedAndTerminated*
+  name: SeparatedAndTerminated
+  href: Gutenberg.DocumentExtensions.html#Gutenberg_DocumentExtensions_SeparatedAndTerminated_
+  commentId: Overload:Gutenberg.DocumentExtensions.SeparatedAndTerminated
+  fullName: Gutenberg.DocumentExtensions.SeparatedAndTerminated
+  nameWithType: DocumentExtensions.SeparatedAndTerminated
+- uid: Gutenberg.DocumentExtensions.SeparatedAndTerminated``1(System.Collections.Generic.IEnumerable{Gutenberg.Document{``0}},Gutenberg.Document{``0})
+  name: SeparatedAndTerminated<T>(IEnumerable<Document<T>>, Document<T>)
+  href: Gutenberg.DocumentExtensions.html#Gutenberg_DocumentExtensions_SeparatedAndTerminated__1_System_Collections_Generic_IEnumerable_Gutenberg_Document___0___Gutenberg_Document___0__
+  commentId: M:Gutenberg.DocumentExtensions.SeparatedAndTerminated``1(System.Collections.Generic.IEnumerable{Gutenberg.Document{``0}},Gutenberg.Document{``0})
+  name.vb: SeparatedAndTerminated(Of T)(IEnumerable(Of Document(Of T)), Document(Of T))
+  fullName: Gutenberg.DocumentExtensions.SeparatedAndTerminated<T>(System.Collections.Generic.IEnumerable<Gutenberg.Document<T>>, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.DocumentExtensions.SeparatedAndTerminated(Of T)(System.Collections.Generic.IEnumerable(Of Gutenberg.Document(Of T)), Gutenberg.Document(Of T))
+  nameWithType: DocumentExtensions.SeparatedAndTerminated<T>(IEnumerable<Document<T>>, Document<T>)
+  nameWithType.vb: DocumentExtensions.SeparatedAndTerminated(Of T)(IEnumerable(Of Document(Of T)), Document(Of T))
+- uid: Gutenberg.DocumentExtensions.Separated``1(System.Collections.Generic.IEnumerable{Gutenberg.Document{``0}},Gutenberg.Document{``0})
+  name: Separated<T>(IEnumerable<Document<T>>, Document<T>)
+  href: Gutenberg.DocumentExtensions.html#Gutenberg_DocumentExtensions_Separated__1_System_Collections_Generic_IEnumerable_Gutenberg_Document___0___Gutenberg_Document___0__
+  commentId: M:Gutenberg.DocumentExtensions.Separated``1(System.Collections.Generic.IEnumerable{Gutenberg.Document{``0}},Gutenberg.Document{``0})
+  name.vb: Separated(Of T)(IEnumerable(Of Document(Of T)), Document(Of T))
+  fullName: Gutenberg.DocumentExtensions.Separated<T>(System.Collections.Generic.IEnumerable<Gutenberg.Document<T>>, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.DocumentExtensions.Separated(Of T)(System.Collections.Generic.IEnumerable(Of Gutenberg.Document(Of T)), Gutenberg.Document(Of T))
+  nameWithType: DocumentExtensions.Separated<T>(IEnumerable<Document<T>>, Document<T>)
+  nameWithType.vb: DocumentExtensions.Separated(Of T)(IEnumerable(Of Document(Of T)), Document(Of T))
 - uid: Gutenberg.Document`1
   name: Document<T>
   href: Gutenberg.Document-1.html
@@ -570,14 +605,14 @@ references:
   nameWithType: Document<T>.Between
   nameWithType.vb: Document(Of T).Between
 - uid: Gutenberg.Document`1.Concat(Gutenberg.Document{`0}[])
-  name: Concat(Document<T>[])
+  name: Concat(params Document<T>[])
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Concat_Gutenberg_Document__0____
   commentId: M:Gutenberg.Document`1.Concat(Gutenberg.Document{`0}[])
-  name.vb: Concat(Document(Of T)())
-  fullName: Gutenberg.Document<T>.Concat(Gutenberg.Document<T>[])
-  fullName.vb: Gutenberg.Document(Of T).Concat(Gutenberg.Document(Of T)())
-  nameWithType: Document<T>.Concat(Document<T>[])
-  nameWithType.vb: Document(Of T).Concat(Document(Of T)())
+  name.vb: Concat(ParamArray Document(Of T)())
+  fullName: Gutenberg.Document<T>.Concat(params Gutenberg.Document<T>[])
+  fullName.vb: Gutenberg.Document(Of T).Concat(ParamArray Gutenberg.Document(Of T)())
+  nameWithType: Document<T>.Concat(params Document<T>[])
+  nameWithType.vb: Document(Of T).Concat(ParamArray Document(Of T)())
 - uid: Gutenberg.Document`1.Concat(System.Collections.Generic.IEnumerable{Gutenberg.Document{`0}})
   name: Concat(IEnumerable<Document<T>>)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Concat_System_Collections_Generic_IEnumerable_Gutenberg_Document__0___
@@ -629,12 +664,13 @@ references:
   nameWithType: Document<T>.FromBox
   nameWithType.vb: Document(Of T).FromBox
 - uid: Gutenberg.Document`1.FromString(System.String)
-  name: FromString(String)
+  name: FromString(string)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_FromString_System_String_
   commentId: M:Gutenberg.Document`1.FromString(System.String)
-  fullName: Gutenberg.Document<T>.FromString(System.String)
-  fullName.vb: Gutenberg.Document(Of T).FromString(System.String)
-  nameWithType: Document<T>.FromString(String)
+  name.vb: FromString(String)
+  fullName: Gutenberg.Document<T>.FromString(string)
+  fullName.vb: Gutenberg.Document(Of T).FromString(String)
+  nameWithType: Document<T>.FromString(string)
   nameWithType.vb: Document(Of T).FromString(String)
 - uid: Gutenberg.Document`1.FromString*
   name: FromString
@@ -661,13 +697,14 @@ references:
   nameWithType: Document<T>.Grouped
   nameWithType.vb: Document(Of T).Grouped
 - uid: Gutenberg.Document`1.Hanging(System.Int32)
-  name: Hanging(Int32)
+  name: Hanging(int)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Hanging_System_Int32_
   commentId: M:Gutenberg.Document`1.Hanging(System.Int32)
-  fullName: Gutenberg.Document<T>.Hanging(System.Int32)
-  fullName.vb: Gutenberg.Document(Of T).Hanging(System.Int32)
-  nameWithType: Document<T>.Hanging(Int32)
-  nameWithType.vb: Document(Of T).Hanging(Int32)
+  name.vb: Hanging(Integer)
+  fullName: Gutenberg.Document<T>.Hanging(int)
+  fullName.vb: Gutenberg.Document(Of T).Hanging(Integer)
+  nameWithType: Document<T>.Hanging(int)
+  nameWithType.vb: Document(Of T).Hanging(Integer)
 - uid: Gutenberg.Document`1.Hanging*
   name: Hanging
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Hanging_
@@ -693,13 +730,14 @@ references:
   nameWithType: Document<T>.HardLineBreak
   nameWithType.vb: Document(Of T).HardLineBreak
 - uid: Gutenberg.Document`1.Indented(System.Int32)
-  name: Indented(Int32)
+  name: Indented(int)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Indented_System_Int32_
   commentId: M:Gutenberg.Document`1.Indented(System.Int32)
-  fullName: Gutenberg.Document<T>.Indented(System.Int32)
-  fullName.vb: Gutenberg.Document(Of T).Indented(System.Int32)
-  nameWithType: Document<T>.Indented(Int32)
-  nameWithType.vb: Document(Of T).Indented(Int32)
+  name.vb: Indented(Integer)
+  fullName: Gutenberg.Document<T>.Indented(int)
+  fullName.vb: Gutenberg.Document(Of T).Indented(Integer)
+  nameWithType: Document<T>.Indented(int)
+  nameWithType.vb: Document(Of T).Indented(Integer)
 - uid: Gutenberg.Document`1.Indented*
   name: Indented
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Indented_
@@ -782,15 +820,6 @@ references:
   fullName.vb: Gutenberg.Document(Of T).MapAnnotations
   nameWithType: Document<T>.MapAnnotations
   nameWithType.vb: Document(Of T).MapAnnotations
-- uid: Gutenberg.Document`1.MapAnnotations``1(System.Func{`0,``0})
-  name: MapAnnotations<U>(Func<T, U>)
-  href: Gutenberg.Document-1.html#Gutenberg_Document_1_MapAnnotations__1_System_Func__0___0__
-  commentId: M:Gutenberg.Document`1.MapAnnotations``1(System.Func{`0,``0})
-  name.vb: MapAnnotations(Of U)(Func(Of T, U))
-  fullName: Gutenberg.Document<T>.MapAnnotations<U>(System.Func<T, U>)
-  fullName.vb: Gutenberg.Document(Of T).MapAnnotations(Of U)(System.Func(Of T, U))
-  nameWithType: Document<T>.MapAnnotations<U>(Func<T, U>)
-  nameWithType.vb: Document(Of T).MapAnnotations(Of U)(Func(Of T, U))
 - uid: Gutenberg.Document`1.MapAnnotations``1(System.Func{`0,System.Collections.Generic.IEnumerable{``0}})
   name: MapAnnotations<U>(Func<T, IEnumerable<U>>)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_MapAnnotations__1_System_Func__0_System_Collections_Generic_IEnumerable___0___
@@ -800,6 +829,15 @@ references:
   fullName.vb: Gutenberg.Document(Of T).MapAnnotations(Of U)(System.Func(Of T, System.Collections.Generic.IEnumerable(Of U)))
   nameWithType: Document<T>.MapAnnotations<U>(Func<T, IEnumerable<U>>)
   nameWithType.vb: Document(Of T).MapAnnotations(Of U)(Func(Of T, IEnumerable(Of U)))
+- uid: Gutenberg.Document`1.MapAnnotations``1(System.Func{`0,``0})
+  name: MapAnnotations<U>(Func<T, U>)
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_MapAnnotations__1_System_Func__0___0__
+  commentId: M:Gutenberg.Document`1.MapAnnotations``1(System.Func{`0,``0})
+  name.vb: MapAnnotations(Of U)(Func(Of T, U))
+  fullName: Gutenberg.Document<T>.MapAnnotations<U>(System.Func<T, U>)
+  fullName.vb: Gutenberg.Document(Of T).MapAnnotations(Of U)(System.Func(Of T, U))
+  nameWithType: Document<T>.MapAnnotations<U>(Func<T, U>)
+  nameWithType.vb: Document(Of T).MapAnnotations(Of U)(Func(Of T, U))
 - uid: Gutenberg.Document`1.Nested
   name: Nested()
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Nested
@@ -809,13 +847,14 @@ references:
   nameWithType: Document<T>.Nested()
   nameWithType.vb: Document(Of T).Nested()
 - uid: Gutenberg.Document`1.Nested(System.Int32)
-  name: Nested(Int32)
+  name: Nested(int)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Nested_System_Int32_
   commentId: M:Gutenberg.Document`1.Nested(System.Int32)
-  fullName: Gutenberg.Document<T>.Nested(System.Int32)
-  fullName.vb: Gutenberg.Document(Of T).Nested(System.Int32)
-  nameWithType: Document<T>.Nested(Int32)
-  nameWithType.vb: Document(Of T).Nested(Int32)
+  name.vb: Nested(Integer)
+  fullName: Gutenberg.Document<T>.Nested(int)
+  fullName.vb: Gutenberg.Document(Of T).Nested(Integer)
+  nameWithType: Document<T>.Nested(int)
+  nameWithType.vb: Document(Of T).Nested(Integer)
 - uid: Gutenberg.Document`1.Nested*
   name: Nested
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Nested_
@@ -824,57 +863,14 @@ references:
   fullName.vb: Gutenberg.Document(Of T).Nested
   nameWithType: Document<T>.Nested
   nameWithType.vb: Document(Of T).Nested
-- uid: Gutenberg.Document`1.op_Addition(Gutenberg.Document{`0},Gutenberg.Document{`0})
-  name: Addition(Document<T>, Document<T>)
-  href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Addition_Gutenberg_Document__0__Gutenberg_Document__0__
-  commentId: M:Gutenberg.Document`1.op_Addition(Gutenberg.Document{`0},Gutenberg.Document{`0})
-  name.vb: Addition(Document(Of T), Document(Of T))
-  fullName: Gutenberg.Document<T>.Addition(Gutenberg.Document<T>, Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Document(Of T).Addition(Gutenberg.Document(Of T), Gutenberg.Document(Of T))
-  nameWithType: Document<T>.Addition(Document<T>, Document<T>)
-  nameWithType.vb: Document(Of T).Addition(Document(Of T), Document(Of T))
-- uid: Gutenberg.Document`1.op_Addition*
-  name: Addition
-  href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Addition_
-  commentId: Overload:Gutenberg.Document`1.op_Addition
-  fullName: Gutenberg.Document<T>.Addition
-  fullName.vb: Gutenberg.Document(Of T).Addition
-  nameWithType: Document<T>.Addition
-  nameWithType.vb: Document(Of T).Addition
-- uid: Gutenberg.Document`1.op_Implicit(Gutenberg.Box{`0})~Gutenberg.Document{`0}
-  name: Implicit(Box<T> to Document<T>)
-  href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Implicit_Gutenberg_Box__0___Gutenberg_Document__0_
-  commentId: M:Gutenberg.Document`1.op_Implicit(Gutenberg.Box{`0})~Gutenberg.Document{`0}
-  name.vb: Widening(Box(Of T) to Document(Of T))
-  fullName: Gutenberg.Document<T>.Implicit(Gutenberg.Box<T> to Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Document(Of T).Widening(Gutenberg.Box(Of T) to Gutenberg.Document(Of T))
-  nameWithType: Document<T>.Implicit(Box<T> to Document<T>)
-  nameWithType.vb: Document(Of T).Widening(Box(Of T) to Document(Of T))
-- uid: Gutenberg.Document`1.op_Implicit(System.String)~Gutenberg.Document{`0}
-  name: Implicit(String to Document<T>)
-  href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Implicit_System_String__Gutenberg_Document__0_
-  commentId: M:Gutenberg.Document`1.op_Implicit(System.String)~Gutenberg.Document{`0}
-  name.vb: Widening(String to Document(Of T))
-  fullName: Gutenberg.Document<T>.Implicit(System.String to Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Document(Of T).Widening(System.String to Gutenberg.Document(Of T))
-  nameWithType: Document<T>.Implicit(String to Document<T>)
-  nameWithType.vb: Document(Of T).Widening(String to Document(Of T))
-- uid: Gutenberg.Document`1.op_Implicit*
-  name: Implicit
-  href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Implicit_
-  commentId: Overload:Gutenberg.Document`1.op_Implicit
-  name.vb: Widening
-  fullName: Gutenberg.Document<T>.Implicit
-  fullName.vb: Gutenberg.Document(Of T).Widening
-  nameWithType: Document<T>.Implicit
-  nameWithType.vb: Document(Of T).Widening
 - uid: Gutenberg.Document`1.Reflow(System.String)
-  name: Reflow(String)
+  name: Reflow(string)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Reflow_System_String_
   commentId: M:Gutenberg.Document`1.Reflow(System.String)
-  fullName: Gutenberg.Document<T>.Reflow(System.String)
-  fullName.vb: Gutenberg.Document(Of T).Reflow(System.String)
-  nameWithType: Document<T>.Reflow(String)
+  name.vb: Reflow(String)
+  fullName: Gutenberg.Document<T>.Reflow(string)
+  fullName.vb: Gutenberg.Document(Of T).Reflow(String)
+  nameWithType: Document<T>.Reflow(string)
   nameWithType.vb: Document(Of T).Reflow(String)
 - uid: Gutenberg.Document`1.Reflow*
   name: Reflow
@@ -903,14 +899,14 @@ references:
   nameWithType: Document<T>.Render(LayoutOptions, IDocumentRenderer<T>, CancellationToken)
   nameWithType.vb: Document(Of T).Render(LayoutOptions, IDocumentRenderer(Of T), CancellationToken)
 - uid: Gutenberg.Document`1.Render(System.Int32,Gutenberg.IDocumentRenderer{`0},System.Threading.CancellationToken)
-  name: Render(Int32, IDocumentRenderer<T>, CancellationToken)
+  name: Render(int, IDocumentRenderer<T>, CancellationToken)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Render_System_Int32_Gutenberg_IDocumentRenderer__0__System_Threading_CancellationToken_
   commentId: M:Gutenberg.Document`1.Render(System.Int32,Gutenberg.IDocumentRenderer{`0},System.Threading.CancellationToken)
-  name.vb: Render(Int32, IDocumentRenderer(Of T), CancellationToken)
-  fullName: Gutenberg.Document<T>.Render(System.Int32, Gutenberg.IDocumentRenderer<T>, System.Threading.CancellationToken)
-  fullName.vb: Gutenberg.Document(Of T).Render(System.Int32, Gutenberg.IDocumentRenderer(Of T), System.Threading.CancellationToken)
-  nameWithType: Document<T>.Render(Int32, IDocumentRenderer<T>, CancellationToken)
-  nameWithType.vb: Document(Of T).Render(Int32, IDocumentRenderer(Of T), CancellationToken)
+  name.vb: Render(Integer, IDocumentRenderer(Of T), CancellationToken)
+  fullName: Gutenberg.Document<T>.Render(int, Gutenberg.IDocumentRenderer<T>, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Document(Of T).Render(Integer, Gutenberg.IDocumentRenderer(Of T), System.Threading.CancellationToken)
+  nameWithType: Document<T>.Render(int, IDocumentRenderer<T>, CancellationToken)
+  nameWithType.vb: Document(Of T).Render(Integer, IDocumentRenderer(Of T), CancellationToken)
 - uid: Gutenberg.Document`1.Render*
   name: Render
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Render_
@@ -953,13 +949,14 @@ references:
   nameWithType: Document<T>.ToString(LayoutOptions)
   nameWithType.vb: Document(Of T).ToString(LayoutOptions)
 - uid: Gutenberg.Document`1.ToString(System.Int32)
-  name: ToString(Int32)
+  name: ToString(int)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_ToString_System_Int32_
   commentId: M:Gutenberg.Document`1.ToString(System.Int32)
-  fullName: Gutenberg.Document<T>.ToString(System.Int32)
-  fullName.vb: Gutenberg.Document(Of T).ToString(System.Int32)
-  nameWithType: Document<T>.ToString(Int32)
-  nameWithType.vb: Document(Of T).ToString(Int32)
+  name.vb: ToString(Integer)
+  fullName: Gutenberg.Document<T>.ToString(int)
+  fullName.vb: Gutenberg.Document(Of T).ToString(Integer)
+  nameWithType: Document<T>.ToString(int)
+  nameWithType.vb: Document(Of T).ToString(Integer)
 - uid: Gutenberg.Document`1.ToString*
   name: ToString
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_ToString_
@@ -968,22 +965,6 @@ references:
   fullName.vb: Gutenberg.Document(Of T).ToString
   nameWithType: Document<T>.ToString
   nameWithType.vb: Document(Of T).ToString
-- uid: Gutenberg.Document`1.UnsafeFromString(System.String)
-  name: UnsafeFromString(String)
-  href: Gutenberg.Document-1.html#Gutenberg_Document_1_UnsafeFromString_System_String_
-  commentId: M:Gutenberg.Document`1.UnsafeFromString(System.String)
-  fullName: Gutenberg.Document<T>.UnsafeFromString(System.String)
-  fullName.vb: Gutenberg.Document(Of T).UnsafeFromString(System.String)
-  nameWithType: Document<T>.UnsafeFromString(String)
-  nameWithType.vb: Document(Of T).UnsafeFromString(String)
-- uid: Gutenberg.Document`1.UnsafeFromString*
-  name: UnsafeFromString
-  href: Gutenberg.Document-1.html#Gutenberg_Document_1_UnsafeFromString_
-  commentId: Overload:Gutenberg.Document`1.UnsafeFromString
-  fullName: Gutenberg.Document<T>.UnsafeFromString
-  fullName.vb: Gutenberg.Document(Of T).UnsafeFromString
-  nameWithType: Document<T>.UnsafeFromString
-  nameWithType.vb: Document(Of T).UnsafeFromString
 - uid: Gutenberg.Document`1.Write(Gutenberg.LayoutOptions,System.IO.TextWriter,System.Threading.CancellationToken)
   name: Write(LayoutOptions, TextWriter, CancellationToken)
   href: Gutenberg.Document-1.html#Gutenberg_Document_1_Write_Gutenberg_LayoutOptions_System_IO_TextWriter_System_Threading_CancellationToken_
@@ -1040,48 +1021,82 @@ references:
   fullName.vb: Gutenberg.Document(Of T).ZeroWidthLineBreakHint
   nameWithType: Document<T>.ZeroWidthLineBreakHint
   nameWithType.vb: Document(Of T).ZeroWidthLineBreakHint
-- uid: Gutenberg.DocumentExtensions
-  name: DocumentExtensions
-  href: Gutenberg.DocumentExtensions.html
-  commentId: T:Gutenberg.DocumentExtensions
-  fullName: Gutenberg.DocumentExtensions
-  nameWithType: DocumentExtensions
-- uid: Gutenberg.DocumentExtensions.Separated*
-  name: Separated
-  href: Gutenberg.DocumentExtensions.html#Gutenberg_DocumentExtensions_Separated_
-  commentId: Overload:Gutenberg.DocumentExtensions.Separated
-  fullName: Gutenberg.DocumentExtensions.Separated
-  nameWithType: DocumentExtensions.Separated
-- uid: Gutenberg.DocumentExtensions.Separated``1(System.Collections.Generic.IEnumerable{Gutenberg.Document{``0}},Gutenberg.Document{``0})
-  name: Separated<T>(IEnumerable<Document<T>>, Document<T>)
-  href: Gutenberg.DocumentExtensions.html#Gutenberg_DocumentExtensions_Separated__1_System_Collections_Generic_IEnumerable_Gutenberg_Document___0___Gutenberg_Document___0__
-  commentId: M:Gutenberg.DocumentExtensions.Separated``1(System.Collections.Generic.IEnumerable{Gutenberg.Document{``0}},Gutenberg.Document{``0})
-  name.vb: Separated(Of T)(IEnumerable(Of Document(Of T)), Document(Of T))
-  fullName: Gutenberg.DocumentExtensions.Separated<T>(System.Collections.Generic.IEnumerable<Gutenberg.Document<T>>, Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.DocumentExtensions.Separated(Of T)(System.Collections.Generic.IEnumerable(Of Gutenberg.Document(Of T)), Gutenberg.Document(Of T))
-  nameWithType: DocumentExtensions.Separated<T>(IEnumerable<Document<T>>, Document<T>)
-  nameWithType.vb: DocumentExtensions.Separated(Of T)(IEnumerable(Of Document(Of T)), Document(Of T))
-- uid: Gutenberg.DocumentExtensions.SeparatedAndTerminated*
-  name: SeparatedAndTerminated
-  href: Gutenberg.DocumentExtensions.html#Gutenberg_DocumentExtensions_SeparatedAndTerminated_
-  commentId: Overload:Gutenberg.DocumentExtensions.SeparatedAndTerminated
-  fullName: Gutenberg.DocumentExtensions.SeparatedAndTerminated
-  nameWithType: DocumentExtensions.SeparatedAndTerminated
-- uid: Gutenberg.DocumentExtensions.SeparatedAndTerminated``1(System.Collections.Generic.IEnumerable{Gutenberg.Document{``0}},Gutenberg.Document{``0})
-  name: SeparatedAndTerminated<T>(IEnumerable<Document<T>>, Document<T>)
-  href: Gutenberg.DocumentExtensions.html#Gutenberg_DocumentExtensions_SeparatedAndTerminated__1_System_Collections_Generic_IEnumerable_Gutenberg_Document___0___Gutenberg_Document___0__
-  commentId: M:Gutenberg.DocumentExtensions.SeparatedAndTerminated``1(System.Collections.Generic.IEnumerable{Gutenberg.Document{``0}},Gutenberg.Document{``0})
-  name.vb: SeparatedAndTerminated(Of T)(IEnumerable(Of Document(Of T)), Document(Of T))
-  fullName: Gutenberg.DocumentExtensions.SeparatedAndTerminated<T>(System.Collections.Generic.IEnumerable<Gutenberg.Document<T>>, Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.DocumentExtensions.SeparatedAndTerminated(Of T)(System.Collections.Generic.IEnumerable(Of Gutenberg.Document(Of T)), Gutenberg.Document(Of T))
-  nameWithType: DocumentExtensions.SeparatedAndTerminated<T>(IEnumerable<Document<T>>, Document<T>)
-  nameWithType.vb: DocumentExtensions.SeparatedAndTerminated(Of T)(IEnumerable(Of Document(Of T)), Document(Of T))
+- uid: Gutenberg.Document`1.op_Addition(Gutenberg.Document{`0},Gutenberg.Document{`0})
+  name: operator +(Document<T>, Document<T>)
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Addition_Gutenberg_Document__0__Gutenberg_Document__0__
+  commentId: M:Gutenberg.Document`1.op_Addition(Gutenberg.Document{`0},Gutenberg.Document{`0})
+  name.vb: +(Document(Of T), Document(Of T))
+  fullName: Gutenberg.Document<T>.operator +(Gutenberg.Document<T>, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Document(Of T).+(Gutenberg.Document(Of T), Gutenberg.Document(Of T))
+  nameWithType: Document<T>.operator +(Document<T>, Document<T>)
+  nameWithType.vb: Document(Of T).+(Document(Of T), Document(Of T))
+- uid: Gutenberg.Document`1.op_Addition*
+  name: operator +
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Addition_
+  commentId: Overload:Gutenberg.Document`1.op_Addition
+  name.vb: +
+  fullName: Gutenberg.Document<T>.operator +
+  fullName.vb: Gutenberg.Document(Of T).+
+  nameWithType: Document<T>.operator +
+  nameWithType.vb: Document(Of T).+
+- uid: Gutenberg.Document`1.op_Implicit(Gutenberg.Box{`0})~Gutenberg.Document{`0}
+  name: implicit operator Document<T>(Box<T>)
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Implicit_Gutenberg_Box__0___Gutenberg_Document__0_
+  commentId: M:Gutenberg.Document`1.op_Implicit(Gutenberg.Box{`0})~Gutenberg.Document{`0}
+  name.vb: CType(Box(Of T))
+  fullName: Gutenberg.Document<T>.implicit operator Gutenberg.Document<T>(Gutenberg.Box<T>)
+  fullName.vb: Gutenberg.Document(Of T).CType(Gutenberg.Box(Of T))
+  nameWithType: Document<T>.implicit operator Document<T>(Box<T>)
+  nameWithType.vb: Document(Of T).CType(Box(Of T))
+- uid: Gutenberg.Document`1.op_Implicit(System.String)~Gutenberg.Document{`0}
+  name: implicit operator Document<T>(string)
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Implicit_System_String__Gutenberg_Document__0_
+  commentId: M:Gutenberg.Document`1.op_Implicit(System.String)~Gutenberg.Document{`0}
+  name.vb: CType(String)
+  fullName: Gutenberg.Document<T>.implicit operator Gutenberg.Document<T>(string)
+  fullName.vb: Gutenberg.Document(Of T).CType(String)
+  nameWithType: Document<T>.implicit operator Document<T>(string)
+  nameWithType.vb: Document(Of T).CType(String)
+- uid: Gutenberg.Document`1.op_Implicit*
+  name: implicit operator
+  href: Gutenberg.Document-1.html#Gutenberg_Document_1_op_Implicit_
+  commentId: Overload:Gutenberg.Document`1.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Gutenberg.Document<T>.implicit operator
+  fullName.vb: Gutenberg.Document(Of T).CType
+  nameWithType: Document<T>.implicit operator
+  nameWithType.vb: Document(Of T).CType
 - uid: Gutenberg.Expression
   name: Gutenberg.Expression
   href: Gutenberg.Expression.html
   commentId: N:Gutenberg.Expression
   fullName: Gutenberg.Expression
   nameWithType: Gutenberg.Expression
+- uid: Gutenberg.Expression.BinaryOperatorType
+  name: BinaryOperatorType
+  href: Gutenberg.Expression.BinaryOperatorType.html
+  commentId: T:Gutenberg.Expression.BinaryOperatorType
+  fullName: Gutenberg.Expression.BinaryOperatorType
+  nameWithType: BinaryOperatorType
+- uid: Gutenberg.Expression.BinaryOperatorType.LeftAssociative
+  name: LeftAssociative
+  href: Gutenberg.Expression.BinaryOperatorType.html#Gutenberg_Expression_BinaryOperatorType_LeftAssociative
+  commentId: F:Gutenberg.Expression.BinaryOperatorType.LeftAssociative
+  fullName: Gutenberg.Expression.BinaryOperatorType.LeftAssociative
+  nameWithType: BinaryOperatorType.LeftAssociative
+- uid: Gutenberg.Expression.BinaryOperatorType.NonAssociative
+  name: NonAssociative
+  href: Gutenberg.Expression.BinaryOperatorType.html#Gutenberg_Expression_BinaryOperatorType_NonAssociative
+  commentId: F:Gutenberg.Expression.BinaryOperatorType.NonAssociative
+  fullName: Gutenberg.Expression.BinaryOperatorType.NonAssociative
+  nameWithType: BinaryOperatorType.NonAssociative
+- uid: Gutenberg.Expression.BinaryOperatorType.RightAssociative
+  name: RightAssociative
+  href: Gutenberg.Expression.BinaryOperatorType.html#Gutenberg_Expression_BinaryOperatorType_RightAssociative
+  commentId: F:Gutenberg.Expression.BinaryOperatorType.RightAssociative
+  fullName: Gutenberg.Expression.BinaryOperatorType.RightAssociative
+  nameWithType: BinaryOperatorType.RightAssociative
 - uid: Gutenberg.Expression.BinaryOperator`1
   name: BinaryOperator<T>
   href: Gutenberg.Expression.BinaryOperator-1.html
@@ -1108,36 +1123,6 @@ references:
   fullName.vb: Gutenberg.Expression.BinaryOperator(Of T).Apply
   nameWithType: BinaryOperator<T>.Apply
   nameWithType.vb: BinaryOperator(Of T).Apply
-- uid: Gutenberg.Expression.BinaryOperatorType
-  name: BinaryOperatorType
-  href: Gutenberg.Expression.BinaryOperatorType.html
-  commentId: T:Gutenberg.Expression.BinaryOperatorType
-  fullName: Gutenberg.Expression.BinaryOperatorType
-  nameWithType: BinaryOperatorType
-- uid: Gutenberg.Expression.BinaryOperatorType.LeftAssociative
-  name: LeftAssociative
-  href: Gutenberg.Expression.BinaryOperatorType.html#Gutenberg_Expression_BinaryOperatorType_LeftAssociative
-  commentId: F:Gutenberg.Expression.BinaryOperatorType.LeftAssociative
-  fullName: Gutenberg.Expression.BinaryOperatorType.LeftAssociative
-  nameWithType: BinaryOperatorType.LeftAssociative
-- uid: Gutenberg.Expression.BinaryOperatorType.NonAssociative
-  name: NonAssociative
-  href: Gutenberg.Expression.BinaryOperatorType.html#Gutenberg_Expression_BinaryOperatorType_NonAssociative
-  commentId: F:Gutenberg.Expression.BinaryOperatorType.NonAssociative
-  fullName: Gutenberg.Expression.BinaryOperatorType.NonAssociative
-  nameWithType: BinaryOperatorType.NonAssociative
-- uid: Gutenberg.Expression.BinaryOperatorType.RightAssociative
-  name: RightAssociative
-  href: Gutenberg.Expression.BinaryOperatorType.html#Gutenberg_Expression_BinaryOperatorType_RightAssociative
-  commentId: F:Gutenberg.Expression.BinaryOperatorType.RightAssociative
-  fullName: Gutenberg.Expression.BinaryOperatorType.RightAssociative
-  nameWithType: BinaryOperatorType.RightAssociative
-- uid: Gutenberg.Expression.BinaryOperatorType.value__
-  name: value__
-  href: Gutenberg.Expression.BinaryOperatorType.html#Gutenberg_Expression_BinaryOperatorType_value__
-  commentId: F:Gutenberg.Expression.BinaryOperatorType.value__
-  fullName: Gutenberg.Expression.BinaryOperatorType.value__
-  nameWithType: BinaryOperatorType.value__
 - uid: Gutenberg.Expression.Expression`1
   name: Expression<T>
   href: Gutenberg.Expression.Expression-1.html
@@ -1151,18 +1136,20 @@ references:
   name: Expression()
   href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1__ctor
   commentId: M:Gutenberg.Expression.Expression`1.#ctor
+  name.vb: New()
   fullName: Gutenberg.Expression.Expression<T>.Expression()
-  fullName.vb: Gutenberg.Expression.Expression(Of T).Expression()
+  fullName.vb: Gutenberg.Expression.Expression(Of T).New()
   nameWithType: Expression<T>.Expression()
-  nameWithType.vb: Expression(Of T).Expression()
+  nameWithType.vb: Expression(Of T).New()
 - uid: Gutenberg.Expression.Expression`1.#ctor*
   name: Expression
   href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1__ctor_
   commentId: Overload:Gutenberg.Expression.Expression`1.#ctor
+  name.vb: New
   fullName: Gutenberg.Expression.Expression<T>.Expression
-  fullName.vb: Gutenberg.Expression.Expression(Of T).Expression
+  fullName.vb: Gutenberg.Expression.Expression(Of T).New
   nameWithType: Expression<T>.Expression
-  nameWithType.vb: Expression(Of T).Expression
+  nameWithType.vb: Expression(Of T).New
 - uid: Gutenberg.Expression.Expression`1.FromDocument(Gutenberg.Document{`0})
   name: FromDocument(Document<T>)
   href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_FromDocument_Gutenberg_Document__0__
@@ -1181,12 +1168,13 @@ references:
   nameWithType: Expression<T>.FromDocument
   nameWithType.vb: Expression(Of T).FromDocument
 - uid: Gutenberg.Expression.Expression`1.FromString(System.String)
-  name: FromString(String)
+  name: FromString(string)
   href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_FromString_System_String_
   commentId: M:Gutenberg.Expression.Expression`1.FromString(System.String)
-  fullName: Gutenberg.Expression.Expression<T>.FromString(System.String)
-  fullName.vb: Gutenberg.Expression.Expression(Of T).FromString(System.String)
-  nameWithType: Expression<T>.FromString(String)
+  name.vb: FromString(String)
+  fullName: Gutenberg.Expression.Expression<T>.FromString(string)
+  fullName.vb: Gutenberg.Expression.Expression(Of T).FromString(String)
+  nameWithType: Expression<T>.FromString(string)
   nameWithType.vb: Expression(Of T).FromString(String)
 - uid: Gutenberg.Expression.Expression`1.FromString*
   name: FromString
@@ -1196,33 +1184,6 @@ references:
   fullName.vb: Gutenberg.Expression.Expression(Of T).FromString
   nameWithType: Expression<T>.FromString
   nameWithType.vb: Expression(Of T).FromString
-- uid: Gutenberg.Expression.Expression`1.op_Implicit(Gutenberg.Document{`0})~Gutenberg.Expression.Expression{`0}
-  name: Implicit(Document<T> to Expression<T>)
-  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_op_Implicit_Gutenberg_Document__0___Gutenberg_Expression_Expression__0_
-  commentId: M:Gutenberg.Expression.Expression`1.op_Implicit(Gutenberg.Document{`0})~Gutenberg.Expression.Expression{`0}
-  name.vb: Widening(Document(Of T) to Expression(Of T))
-  fullName: Gutenberg.Expression.Expression<T>.Implicit(Gutenberg.Document<T> to Gutenberg.Expression.Expression<T>)
-  fullName.vb: Gutenberg.Expression.Expression(Of T).Widening(Gutenberg.Document(Of T) to Gutenberg.Expression.Expression(Of T))
-  nameWithType: Expression<T>.Implicit(Document<T> to Expression<T>)
-  nameWithType.vb: Expression(Of T).Widening(Document(Of T) to Expression(Of T))
-- uid: Gutenberg.Expression.Expression`1.op_Implicit(System.String)~Gutenberg.Expression.Expression{`0}
-  name: Implicit(String to Expression<T>)
-  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_op_Implicit_System_String__Gutenberg_Expression_Expression__0_
-  commentId: M:Gutenberg.Expression.Expression`1.op_Implicit(System.String)~Gutenberg.Expression.Expression{`0}
-  name.vb: Widening(String to Expression(Of T))
-  fullName: Gutenberg.Expression.Expression<T>.Implicit(System.String to Gutenberg.Expression.Expression<T>)
-  fullName.vb: Gutenberg.Expression.Expression(Of T).Widening(System.String to Gutenberg.Expression.Expression(Of T))
-  nameWithType: Expression<T>.Implicit(String to Expression<T>)
-  nameWithType.vb: Expression(Of T).Widening(String to Expression(Of T))
-- uid: Gutenberg.Expression.Expression`1.op_Implicit*
-  name: Implicit
-  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_op_Implicit_
-  commentId: Overload:Gutenberg.Expression.Expression`1.op_Implicit
-  name.vb: Widening
-  fullName: Gutenberg.Expression.Expression<T>.Implicit
-  fullName.vb: Gutenberg.Expression.Expression(Of T).Widening
-  nameWithType: Expression<T>.Implicit
-  nameWithType.vb: Expression(Of T).Widening
 - uid: Gutenberg.Expression.Expression`1.PrettyPrint
   name: PrettyPrint()
   href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_PrettyPrint
@@ -1239,6 +1200,34 @@ references:
   fullName.vb: Gutenberg.Expression.Expression(Of T).PrettyPrint
   nameWithType: Expression<T>.PrettyPrint
   nameWithType.vb: Expression(Of T).PrettyPrint
+- uid: Gutenberg.Expression.Expression`1.op_Implicit(Gutenberg.Document{`0})~Gutenberg.Expression.Expression{`0}
+  name: implicit operator Expression<T>(Document<T>)
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_op_Implicit_Gutenberg_Document__0___Gutenberg_Expression_Expression__0_
+  commentId: M:Gutenberg.Expression.Expression`1.op_Implicit(Gutenberg.Document{`0})~Gutenberg.Expression.Expression{`0}
+  name.vb: CType(Document(Of T))
+  fullName: Gutenberg.Expression.Expression<T>.implicit operator Gutenberg.Expression.Expression<T>(Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.Expression(Of T).CType(Gutenberg.Document(Of T))
+  nameWithType: Expression<T>.implicit operator Expression<T>(Document<T>)
+  nameWithType.vb: Expression(Of T).CType(Document(Of T))
+- uid: Gutenberg.Expression.Expression`1.op_Implicit(System.String)~Gutenberg.Expression.Expression{`0}
+  name: implicit operator Expression<T>(string)
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_op_Implicit_System_String__Gutenberg_Expression_Expression__0_
+  commentId: M:Gutenberg.Expression.Expression`1.op_Implicit(System.String)~Gutenberg.Expression.Expression{`0}
+  name.vb: CType(String)
+  fullName: Gutenberg.Expression.Expression<T>.implicit operator Gutenberg.Expression.Expression<T>(string)
+  fullName.vb: Gutenberg.Expression.Expression(Of T).CType(String)
+  nameWithType: Expression<T>.implicit operator Expression<T>(string)
+  nameWithType.vb: Expression(Of T).CType(String)
+- uid: Gutenberg.Expression.Expression`1.op_Implicit*
+  name: implicit operator
+  href: Gutenberg.Expression.Expression-1.html#Gutenberg_Expression_Expression_1_op_Implicit_
+  commentId: Overload:Gutenberg.Expression.Expression`1.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Gutenberg.Expression.Expression<T>.implicit operator
+  fullName.vb: Gutenberg.Expression.Expression(Of T).CType
+  nameWithType: Expression<T>.implicit operator
+  nameWithType.vb: Expression(Of T).CType
 - uid: Gutenberg.Expression.OperatorFactory`1
   name: OperatorFactory<T>
   href: Gutenberg.Expression.OperatorFactory-1.html
@@ -1249,23 +1238,23 @@ references:
   nameWithType: OperatorFactory<T>
   nameWithType.vb: OperatorFactory(Of T)
 - uid: Gutenberg.Expression.OperatorFactory`1.Infix(Gutenberg.Expression.BinaryOperatorType,System.Int32,Gutenberg.Document{`0})
-  name: Infix(BinaryOperatorType, Int32, Document<T>)
+  name: Infix(BinaryOperatorType, int, Document<T>)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Infix_Gutenberg_Expression_BinaryOperatorType_System_Int32_Gutenberg_Document__0__
   commentId: M:Gutenberg.Expression.OperatorFactory`1.Infix(Gutenberg.Expression.BinaryOperatorType,System.Int32,Gutenberg.Document{`0})
-  name.vb: Infix(BinaryOperatorType, Int32, Document(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Infix(Gutenberg.Expression.BinaryOperatorType, System.Int32, Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Infix(Gutenberg.Expression.BinaryOperatorType, System.Int32, Gutenberg.Document(Of T))
-  nameWithType: OperatorFactory<T>.Infix(BinaryOperatorType, Int32, Document<T>)
-  nameWithType.vb: OperatorFactory(Of T).Infix(BinaryOperatorType, Int32, Document(Of T))
+  name.vb: Infix(BinaryOperatorType, Integer, Document(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Infix(Gutenberg.Expression.BinaryOperatorType, int, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Infix(Gutenberg.Expression.BinaryOperatorType, Integer, Gutenberg.Document(Of T))
+  nameWithType: OperatorFactory<T>.Infix(BinaryOperatorType, int, Document<T>)
+  nameWithType.vb: OperatorFactory(Of T).Infix(BinaryOperatorType, Integer, Document(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Infix(Gutenberg.Expression.BinaryOperatorType,System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
-  name: Infix(BinaryOperatorType, Int32, Document<T>, IBracketer<T>)
+  name: Infix(BinaryOperatorType, int, Document<T>, IBracketer<T>)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Infix_Gutenberg_Expression_BinaryOperatorType_System_Int32_Gutenberg_Document__0__Gutenberg_Brackets_IBracketer__0__
   commentId: M:Gutenberg.Expression.OperatorFactory`1.Infix(Gutenberg.Expression.BinaryOperatorType,System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
-  name.vb: Infix(BinaryOperatorType, Int32, Document(Of T), IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Infix(Gutenberg.Expression.BinaryOperatorType, System.Int32, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Infix(Gutenberg.Expression.BinaryOperatorType, System.Int32, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
-  nameWithType: OperatorFactory<T>.Infix(BinaryOperatorType, Int32, Document<T>, IBracketer<T>)
-  nameWithType.vb: OperatorFactory(Of T).Infix(BinaryOperatorType, Int32, Document(Of T), IBracketer(Of T))
+  name.vb: Infix(BinaryOperatorType, Integer, Document(Of T), IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Infix(Gutenberg.Expression.BinaryOperatorType, int, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Infix(Gutenberg.Expression.BinaryOperatorType, Integer, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
+  nameWithType: OperatorFactory<T>.Infix(BinaryOperatorType, int, Document<T>, IBracketer<T>)
+  nameWithType.vb: OperatorFactory(Of T).Infix(BinaryOperatorType, Integer, Document(Of T), IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Infix*
   name: Infix
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Infix_
@@ -1275,23 +1264,23 @@ references:
   nameWithType: OperatorFactory<T>.Infix
   nameWithType.vb: OperatorFactory(Of T).Infix
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixL(System.Int32,Gutenberg.Document{`0})
-  name: InfixL(Int32, Document<T>)
+  name: InfixL(int, Document<T>)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixL_System_Int32_Gutenberg_Document__0__
   commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixL(System.Int32,Gutenberg.Document{`0})
-  name.vb: InfixL(Int32, Document(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixL(System.Int32, Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixL(System.Int32, Gutenberg.Document(Of T))
-  nameWithType: OperatorFactory<T>.InfixL(Int32, Document<T>)
-  nameWithType.vb: OperatorFactory(Of T).InfixL(Int32, Document(Of T))
+  name.vb: InfixL(Integer, Document(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixL(int, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixL(Integer, Gutenberg.Document(Of T))
+  nameWithType: OperatorFactory<T>.InfixL(int, Document<T>)
+  nameWithType.vb: OperatorFactory(Of T).InfixL(Integer, Document(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixL(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
-  name: InfixL(Int32, Document<T>, IBracketer<T>)
+  name: InfixL(int, Document<T>, IBracketer<T>)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixL_System_Int32_Gutenberg_Document__0__Gutenberg_Brackets_IBracketer__0__
   commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixL(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
-  name.vb: InfixL(Int32, Document(Of T), IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixL(System.Int32, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixL(System.Int32, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
-  nameWithType: OperatorFactory<T>.InfixL(Int32, Document<T>, IBracketer<T>)
-  nameWithType.vb: OperatorFactory(Of T).InfixL(Int32, Document(Of T), IBracketer(Of T))
+  name.vb: InfixL(Integer, Document(Of T), IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixL(int, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixL(Integer, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
+  nameWithType: OperatorFactory<T>.InfixL(int, Document<T>, IBracketer<T>)
+  nameWithType.vb: OperatorFactory(Of T).InfixL(Integer, Document(Of T), IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixL*
   name: InfixL
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixL_
@@ -1301,23 +1290,23 @@ references:
   nameWithType: OperatorFactory<T>.InfixL
   nameWithType.vb: OperatorFactory(Of T).InfixL
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixN(System.Int32,Gutenberg.Document{`0})
-  name: InfixN(Int32, Document<T>)
+  name: InfixN(int, Document<T>)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixN_System_Int32_Gutenberg_Document__0__
   commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixN(System.Int32,Gutenberg.Document{`0})
-  name.vb: InfixN(Int32, Document(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixN(System.Int32, Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixN(System.Int32, Gutenberg.Document(Of T))
-  nameWithType: OperatorFactory<T>.InfixN(Int32, Document<T>)
-  nameWithType.vb: OperatorFactory(Of T).InfixN(Int32, Document(Of T))
+  name.vb: InfixN(Integer, Document(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixN(int, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixN(Integer, Gutenberg.Document(Of T))
+  nameWithType: OperatorFactory<T>.InfixN(int, Document<T>)
+  nameWithType.vb: OperatorFactory(Of T).InfixN(Integer, Document(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixN(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
-  name: InfixN(Int32, Document<T>, IBracketer<T>)
+  name: InfixN(int, Document<T>, IBracketer<T>)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixN_System_Int32_Gutenberg_Document__0__Gutenberg_Brackets_IBracketer__0__
   commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixN(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
-  name.vb: InfixN(Int32, Document(Of T), IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixN(System.Int32, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixN(System.Int32, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
-  nameWithType: OperatorFactory<T>.InfixN(Int32, Document<T>, IBracketer<T>)
-  nameWithType.vb: OperatorFactory(Of T).InfixN(Int32, Document(Of T), IBracketer(Of T))
+  name.vb: InfixN(Integer, Document(Of T), IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixN(int, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixN(Integer, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
+  nameWithType: OperatorFactory<T>.InfixN(int, Document<T>, IBracketer<T>)
+  nameWithType.vb: OperatorFactory(Of T).InfixN(Integer, Document(Of T), IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixN*
   name: InfixN
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixN_
@@ -1327,23 +1316,23 @@ references:
   nameWithType: OperatorFactory<T>.InfixN
   nameWithType.vb: OperatorFactory(Of T).InfixN
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixR(System.Int32,Gutenberg.Document{`0})
-  name: InfixR(Int32, Document<T>)
+  name: InfixR(int, Document<T>)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixR_System_Int32_Gutenberg_Document__0__
   commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixR(System.Int32,Gutenberg.Document{`0})
-  name.vb: InfixR(Int32, Document(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixR(System.Int32, Gutenberg.Document<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixR(System.Int32, Gutenberg.Document(Of T))
-  nameWithType: OperatorFactory<T>.InfixR(Int32, Document<T>)
-  nameWithType.vb: OperatorFactory(Of T).InfixR(Int32, Document(Of T))
+  name.vb: InfixR(Integer, Document(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixR(int, Gutenberg.Document<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixR(Integer, Gutenberg.Document(Of T))
+  nameWithType: OperatorFactory<T>.InfixR(int, Document<T>)
+  nameWithType.vb: OperatorFactory(Of T).InfixR(Integer, Document(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixR(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
-  name: InfixR(Int32, Document<T>, IBracketer<T>)
+  name: InfixR(int, Document<T>, IBracketer<T>)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixR_System_Int32_Gutenberg_Document__0__Gutenberg_Brackets_IBracketer__0__
   commentId: M:Gutenberg.Expression.OperatorFactory`1.InfixR(System.Int32,Gutenberg.Document{`0},Gutenberg.Brackets.IBracketer{`0})
-  name.vb: InfixR(Int32, Document(Of T), IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixR(System.Int32, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixR(System.Int32, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
-  nameWithType: OperatorFactory<T>.InfixR(Int32, Document<T>, IBracketer<T>)
-  nameWithType.vb: OperatorFactory(Of T).InfixR(Int32, Document(Of T), IBracketer(Of T))
+  name.vb: InfixR(Integer, Document(Of T), IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.InfixR(int, Gutenberg.Document<T>, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).InfixR(Integer, Gutenberg.Document(Of T), Gutenberg.Brackets.IBracketer(Of T))
+  nameWithType: OperatorFactory<T>.InfixR(int, Document<T>, IBracketer<T>)
+  nameWithType.vb: OperatorFactory(Of T).InfixR(Integer, Document(Of T), IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.InfixR*
   name: InfixR
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_InfixR_
@@ -1353,23 +1342,23 @@ references:
   nameWithType: OperatorFactory<T>.InfixR
   nameWithType.vb: OperatorFactory(Of T).InfixR
 - uid: Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean)
-  name: Postfix(Int32, Document<T>, Boolean)
+  name: Postfix(int, Document<T>, bool)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_
   commentId: M:Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean)
-  name.vb: Postfix(Int32, Document(Of T), Boolean)
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix(System.Int32, Gutenberg.Document<T>, System.Boolean)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(System.Int32, Gutenberg.Document(Of T), System.Boolean)
-  nameWithType: OperatorFactory<T>.Postfix(Int32, Document<T>, Boolean)
-  nameWithType.vb: OperatorFactory(Of T).Postfix(Int32, Document(Of T), Boolean)
+  name.vb: Postfix(Integer, Document(Of T), Boolean)
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix(int, Gutenberg.Document<T>, bool)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(Integer, Gutenberg.Document(Of T), Boolean)
+  nameWithType: OperatorFactory<T>.Postfix(int, Document<T>, bool)
+  nameWithType.vb: OperatorFactory(Of T).Postfix(Integer, Document(Of T), Boolean)
 - uid: Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
-  name: Postfix(Int32, Document<T>, Boolean, IBracketer<T>)
+  name: Postfix(int, Document<T>, bool, IBracketer<T>)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Brackets_IBracketer__0__
   commentId: M:Gutenberg.Expression.OperatorFactory`1.Postfix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
-  name.vb: Postfix(Int32, Document(Of T), Boolean, IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix(System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Brackets.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Brackets.IBracketer(Of T))
-  nameWithType: OperatorFactory<T>.Postfix(Int32, Document<T>, Boolean, IBracketer<T>)
-  nameWithType.vb: OperatorFactory(Of T).Postfix(Int32, Document(Of T), Boolean, IBracketer(Of T))
+  name.vb: Postfix(Integer, Document(Of T), Boolean, IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Postfix(int, Gutenberg.Document<T>, bool, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Postfix(Integer, Gutenberg.Document(Of T), Boolean, Gutenberg.Brackets.IBracketer(Of T))
+  nameWithType: OperatorFactory<T>.Postfix(int, Document<T>, bool, IBracketer<T>)
+  nameWithType.vb: OperatorFactory(Of T).Postfix(Integer, Document(Of T), Boolean, IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Postfix*
   name: Postfix
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Postfix_
@@ -1379,23 +1368,23 @@ references:
   nameWithType: OperatorFactory<T>.Postfix
   nameWithType.vb: OperatorFactory(Of T).Postfix
 - uid: Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean)
-  name: Prefix(Int32, Document<T>, Boolean)
+  name: Prefix(int, Document<T>, bool)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_
   commentId: M:Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean)
-  name.vb: Prefix(Int32, Document(Of T), Boolean)
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix(System.Int32, Gutenberg.Document<T>, System.Boolean)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(System.Int32, Gutenberg.Document(Of T), System.Boolean)
-  nameWithType: OperatorFactory<T>.Prefix(Int32, Document<T>, Boolean)
-  nameWithType.vb: OperatorFactory(Of T).Prefix(Int32, Document(Of T), Boolean)
+  name.vb: Prefix(Integer, Document(Of T), Boolean)
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix(int, Gutenberg.Document<T>, bool)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(Integer, Gutenberg.Document(Of T), Boolean)
+  nameWithType: OperatorFactory<T>.Prefix(int, Document<T>, bool)
+  nameWithType.vb: OperatorFactory(Of T).Prefix(Integer, Document(Of T), Boolean)
 - uid: Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
-  name: Prefix(Int32, Document<T>, Boolean, IBracketer<T>)
+  name: Prefix(int, Document<T>, bool, IBracketer<T>)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Brackets_IBracketer__0__
   commentId: M:Gutenberg.Expression.OperatorFactory`1.Prefix(System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
-  name.vb: Prefix(Int32, Document(Of T), Boolean, IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix(System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Brackets.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Brackets.IBracketer(Of T))
-  nameWithType: OperatorFactory<T>.Prefix(Int32, Document<T>, Boolean, IBracketer<T>)
-  nameWithType.vb: OperatorFactory(Of T).Prefix(Int32, Document(Of T), Boolean, IBracketer(Of T))
+  name.vb: Prefix(Integer, Document(Of T), Boolean, IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Prefix(int, Gutenberg.Document<T>, bool, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Prefix(Integer, Gutenberg.Document(Of T), Boolean, Gutenberg.Brackets.IBracketer(Of T))
+  nameWithType: OperatorFactory<T>.Prefix(int, Document<T>, bool, IBracketer<T>)
+  nameWithType.vb: OperatorFactory(Of T).Prefix(Integer, Document(Of T), Boolean, IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Prefix*
   name: Prefix
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Prefix_
@@ -1405,23 +1394,23 @@ references:
   nameWithType: OperatorFactory<T>.Prefix
   nameWithType.vb: OperatorFactory(Of T).Prefix
 - uid: Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean)
-  name: Unary(UnaryOperatorType, Int32, Document<T>, Boolean)
+  name: Unary(UnaryOperatorType, int, Document<T>, bool)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_
   commentId: M:Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean)
-  name.vb: Unary(UnaryOperatorType, Int32, Document(Of T), Boolean)
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document<T>, System.Boolean)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document(Of T), System.Boolean)
-  nameWithType: OperatorFactory<T>.Unary(UnaryOperatorType, Int32, Document<T>, Boolean)
-  nameWithType.vb: OperatorFactory(Of T).Unary(UnaryOperatorType, Int32, Document(Of T), Boolean)
+  name.vb: Unary(UnaryOperatorType, Integer, Document(Of T), Boolean)
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary(Gutenberg.Expression.UnaryOperatorType, int, Gutenberg.Document<T>, bool)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, Integer, Gutenberg.Document(Of T), Boolean)
+  nameWithType: OperatorFactory<T>.Unary(UnaryOperatorType, int, Document<T>, bool)
+  nameWithType.vb: OperatorFactory(Of T).Unary(UnaryOperatorType, Integer, Document(Of T), Boolean)
 - uid: Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
-  name: Unary(UnaryOperatorType, Int32, Document<T>, Boolean, IBracketer<T>)
+  name: Unary(UnaryOperatorType, int, Document<T>, bool, IBracketer<T>)
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_Gutenberg_Expression_UnaryOperatorType_System_Int32_Gutenberg_Document__0__System_Boolean_Gutenberg_Brackets_IBracketer__0__
   commentId: M:Gutenberg.Expression.OperatorFactory`1.Unary(Gutenberg.Expression.UnaryOperatorType,System.Int32,Gutenberg.Document{`0},System.Boolean,Gutenberg.Brackets.IBracketer{`0})
-  name.vb: Unary(UnaryOperatorType, Int32, Document(Of T), Boolean, IBracketer(Of T))
-  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document<T>, System.Boolean, Gutenberg.Brackets.IBracketer<T>)
-  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, System.Int32, Gutenberg.Document(Of T), System.Boolean, Gutenberg.Brackets.IBracketer(Of T))
-  nameWithType: OperatorFactory<T>.Unary(UnaryOperatorType, Int32, Document<T>, Boolean, IBracketer<T>)
-  nameWithType.vb: OperatorFactory(Of T).Unary(UnaryOperatorType, Int32, Document(Of T), Boolean, IBracketer(Of T))
+  name.vb: Unary(UnaryOperatorType, Integer, Document(Of T), Boolean, IBracketer(Of T))
+  fullName: Gutenberg.Expression.OperatorFactory<T>.Unary(Gutenberg.Expression.UnaryOperatorType, int, Gutenberg.Document<T>, bool, Gutenberg.Brackets.IBracketer<T>)
+  fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary(Gutenberg.Expression.UnaryOperatorType, Integer, Gutenberg.Document(Of T), Boolean, Gutenberg.Brackets.IBracketer(Of T))
+  nameWithType: OperatorFactory<T>.Unary(UnaryOperatorType, int, Document<T>, bool, IBracketer<T>)
+  nameWithType.vb: OperatorFactory(Of T).Unary(UnaryOperatorType, Integer, Document(Of T), Boolean, IBracketer(Of T))
 - uid: Gutenberg.Expression.OperatorFactory`1.Unary*
   name: Unary
   href: Gutenberg.Expression.OperatorFactory-1.html#Gutenberg_Expression_OperatorFactory_1_Unary_
@@ -1430,6 +1419,24 @@ references:
   fullName.vb: Gutenberg.Expression.OperatorFactory(Of T).Unary
   nameWithType: OperatorFactory<T>.Unary
   nameWithType.vb: OperatorFactory(Of T).Unary
+- uid: Gutenberg.Expression.UnaryOperatorType
+  name: UnaryOperatorType
+  href: Gutenberg.Expression.UnaryOperatorType.html
+  commentId: T:Gutenberg.Expression.UnaryOperatorType
+  fullName: Gutenberg.Expression.UnaryOperatorType
+  nameWithType: UnaryOperatorType
+- uid: Gutenberg.Expression.UnaryOperatorType.Postfix
+  name: Postfix
+  href: Gutenberg.Expression.UnaryOperatorType.html#Gutenberg_Expression_UnaryOperatorType_Postfix
+  commentId: F:Gutenberg.Expression.UnaryOperatorType.Postfix
+  fullName: Gutenberg.Expression.UnaryOperatorType.Postfix
+  nameWithType: UnaryOperatorType.Postfix
+- uid: Gutenberg.Expression.UnaryOperatorType.Prefix
+  name: Prefix
+  href: Gutenberg.Expression.UnaryOperatorType.html#Gutenberg_Expression_UnaryOperatorType_Prefix
+  commentId: F:Gutenberg.Expression.UnaryOperatorType.Prefix
+  fullName: Gutenberg.Expression.UnaryOperatorType.Prefix
+  nameWithType: UnaryOperatorType.Prefix
 - uid: Gutenberg.Expression.UnaryOperator`1
   name: UnaryOperator<T>
   href: Gutenberg.Expression.UnaryOperator-1.html
@@ -1456,30 +1463,6 @@ references:
   fullName.vb: Gutenberg.Expression.UnaryOperator(Of T).Apply
   nameWithType: UnaryOperator<T>.Apply
   nameWithType.vb: UnaryOperator(Of T).Apply
-- uid: Gutenberg.Expression.UnaryOperatorType
-  name: UnaryOperatorType
-  href: Gutenberg.Expression.UnaryOperatorType.html
-  commentId: T:Gutenberg.Expression.UnaryOperatorType
-  fullName: Gutenberg.Expression.UnaryOperatorType
-  nameWithType: UnaryOperatorType
-- uid: Gutenberg.Expression.UnaryOperatorType.Postfix
-  name: Postfix
-  href: Gutenberg.Expression.UnaryOperatorType.html#Gutenberg_Expression_UnaryOperatorType_Postfix
-  commentId: F:Gutenberg.Expression.UnaryOperatorType.Postfix
-  fullName: Gutenberg.Expression.UnaryOperatorType.Postfix
-  nameWithType: UnaryOperatorType.Postfix
-- uid: Gutenberg.Expression.UnaryOperatorType.Prefix
-  name: Prefix
-  href: Gutenberg.Expression.UnaryOperatorType.html#Gutenberg_Expression_UnaryOperatorType_Prefix
-  commentId: F:Gutenberg.Expression.UnaryOperatorType.Prefix
-  fullName: Gutenberg.Expression.UnaryOperatorType.Prefix
-  nameWithType: UnaryOperatorType.Prefix
-- uid: Gutenberg.Expression.UnaryOperatorType.value__
-  name: value__
-  href: Gutenberg.Expression.UnaryOperatorType.html#Gutenberg_Expression_UnaryOperatorType_value__
-  commentId: F:Gutenberg.Expression.UnaryOperatorType.value__
-  fullName: Gutenberg.Expression.UnaryOperatorType.value__
-  nameWithType: UnaryOperatorType.value__
 - uid: Gutenberg.IDocumentRenderer`1
   name: IDocumentRenderer<T>
   href: Gutenberg.IDocumentRenderer-1.html
@@ -1538,13 +1521,13 @@ references:
   nameWithType: IDocumentRenderer<T>.PushAnnotation
   nameWithType.vb: IDocumentRenderer(Of T).PushAnnotation
 - uid: Gutenberg.IDocumentRenderer`1.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-  name: Text(ReadOnlyMemory<Char>, CancellationToken)
+  name: Text(ReadOnlyMemory<char>, CancellationToken)
   href: Gutenberg.IDocumentRenderer-1.html#Gutenberg_IDocumentRenderer_1_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_
   commentId: M:Gutenberg.IDocumentRenderer`1.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
   name.vb: Text(ReadOnlyMemory(Of Char), CancellationToken)
-  fullName: Gutenberg.IDocumentRenderer<T>.Text(System.ReadOnlyMemory<System.Char>, System.Threading.CancellationToken)
-  fullName.vb: Gutenberg.IDocumentRenderer(Of T).Text(System.ReadOnlyMemory(Of System.Char), System.Threading.CancellationToken)
-  nameWithType: IDocumentRenderer<T>.Text(ReadOnlyMemory<Char>, CancellationToken)
+  fullName: Gutenberg.IDocumentRenderer<T>.Text(System.ReadOnlyMemory<char>, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.IDocumentRenderer(Of T).Text(System.ReadOnlyMemory(Of Char), System.Threading.CancellationToken)
+  nameWithType: IDocumentRenderer<T>.Text(ReadOnlyMemory<char>, CancellationToken)
   nameWithType.vb: IDocumentRenderer(Of T).Text(ReadOnlyMemory(Of Char), CancellationToken)
 - uid: Gutenberg.IDocumentRenderer`1.Text*
   name: Text
@@ -1555,13 +1538,14 @@ references:
   nameWithType: IDocumentRenderer<T>.Text
   nameWithType.vb: IDocumentRenderer(Of T).Text
 - uid: Gutenberg.IDocumentRenderer`1.WhiteSpace(System.Int32,System.Threading.CancellationToken)
-  name: WhiteSpace(Int32, CancellationToken)
+  name: WhiteSpace(int, CancellationToken)
   href: Gutenberg.IDocumentRenderer-1.html#Gutenberg_IDocumentRenderer_1_WhiteSpace_System_Int32_System_Threading_CancellationToken_
   commentId: M:Gutenberg.IDocumentRenderer`1.WhiteSpace(System.Int32,System.Threading.CancellationToken)
-  fullName: Gutenberg.IDocumentRenderer<T>.WhiteSpace(System.Int32, System.Threading.CancellationToken)
-  fullName.vb: Gutenberg.IDocumentRenderer(Of T).WhiteSpace(System.Int32, System.Threading.CancellationToken)
-  nameWithType: IDocumentRenderer<T>.WhiteSpace(Int32, CancellationToken)
-  nameWithType.vb: IDocumentRenderer(Of T).WhiteSpace(Int32, CancellationToken)
+  name.vb: WhiteSpace(Integer, CancellationToken)
+  fullName: Gutenberg.IDocumentRenderer<T>.WhiteSpace(int, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.IDocumentRenderer(Of T).WhiteSpace(Integer, System.Threading.CancellationToken)
+  nameWithType: IDocumentRenderer<T>.WhiteSpace(int, CancellationToken)
+  nameWithType.vb: IDocumentRenderer(Of T).WhiteSpace(Integer, CancellationToken)
 - uid: Gutenberg.IDocumentRenderer`1.WhiteSpace*
   name: WhiteSpace
   href: Gutenberg.IDocumentRenderer-1.html#Gutenberg_IDocumentRenderer_1_WhiteSpace_
@@ -1619,12 +1603,6 @@ references:
   commentId: F:Gutenberg.LayoutMode.Smart
   fullName: Gutenberg.LayoutMode.Smart
   nameWithType: LayoutMode.Smart
-- uid: Gutenberg.LayoutMode.value__
-  name: value__
-  href: Gutenberg.LayoutMode.html#Gutenberg_LayoutMode_value__
-  commentId: F:Gutenberg.LayoutMode.value__
-  fullName: Gutenberg.LayoutMode.value__
-  nameWithType: LayoutMode.value__
 - uid: Gutenberg.LayoutOptions
   name: LayoutOptions
   href: Gutenberg.LayoutOptions.html
@@ -1635,41 +1613,38 @@ references:
   name: LayoutOptions(LayoutOptions)
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions__ctor_Gutenberg_LayoutOptions_
   commentId: M:Gutenberg.LayoutOptions.#ctor(Gutenberg.LayoutOptions)
+  name.vb: New(LayoutOptions)
   fullName: Gutenberg.LayoutOptions.LayoutOptions(Gutenberg.LayoutOptions)
+  fullName.vb: Gutenberg.LayoutOptions.New(Gutenberg.LayoutOptions)
   nameWithType: LayoutOptions.LayoutOptions(LayoutOptions)
+  nameWithType.vb: LayoutOptions.New(LayoutOptions)
 - uid: Gutenberg.LayoutOptions.#ctor(Gutenberg.PageWidthOptions,Gutenberg.LayoutMode,System.Int32,System.Boolean)
-  name: LayoutOptions(PageWidthOptions, LayoutMode, Int32, Boolean)
+  name: LayoutOptions(PageWidthOptions?, LayoutMode, int, bool)
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions__ctor_Gutenberg_PageWidthOptions_Gutenberg_LayoutMode_System_Int32_System_Boolean_
   commentId: M:Gutenberg.LayoutOptions.#ctor(Gutenberg.PageWidthOptions,Gutenberg.LayoutMode,System.Int32,System.Boolean)
-  fullName: Gutenberg.LayoutOptions.LayoutOptions(Gutenberg.PageWidthOptions, Gutenberg.LayoutMode, System.Int32, System.Boolean)
-  nameWithType: LayoutOptions.LayoutOptions(PageWidthOptions, LayoutMode, Int32, Boolean)
+  name.vb: New(PageWidthOptions, LayoutMode, Integer, Boolean)
+  fullName: Gutenberg.LayoutOptions.LayoutOptions(Gutenberg.PageWidthOptions?, Gutenberg.LayoutMode, int, bool)
+  fullName.vb: Gutenberg.LayoutOptions.New(Gutenberg.PageWidthOptions, Gutenberg.LayoutMode, Integer, Boolean)
+  nameWithType: LayoutOptions.LayoutOptions(PageWidthOptions?, LayoutMode, int, bool)
+  nameWithType.vb: LayoutOptions.New(PageWidthOptions, LayoutMode, Integer, Boolean)
 - uid: Gutenberg.LayoutOptions.#ctor*
   name: LayoutOptions
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions__ctor_
   commentId: Overload:Gutenberg.LayoutOptions.#ctor
+  name.vb: New
   fullName: Gutenberg.LayoutOptions.LayoutOptions
+  fullName.vb: Gutenberg.LayoutOptions.New
   nameWithType: LayoutOptions.LayoutOptions
-- uid: Gutenberg.LayoutOptions.{Clone}$
-  name: <Clone>$()
-  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions__Clone__
-  commentId: M:Gutenberg.LayoutOptions.{Clone}$
-  fullName: Gutenberg.LayoutOptions.<Clone>$()
-  nameWithType: LayoutOptions.<Clone>$()
-- uid: Gutenberg.LayoutOptions.{Clone}$*
-  name: <Clone>$
-  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions__Clone___
-  commentId: Overload:Gutenberg.LayoutOptions.{Clone}$
-  fullName: Gutenberg.LayoutOptions.<Clone>$
-  nameWithType: LayoutOptions.<Clone>$
+  nameWithType.vb: LayoutOptions.New
 - uid: Gutenberg.LayoutOptions.Deconstruct(Gutenberg.PageWidthOptions@,Gutenberg.LayoutMode@,System.Int32@,System.Boolean@)
-  name: Deconstruct(out PageWidthOptions, out LayoutMode, out Int32, out Boolean)
+  name: Deconstruct(out PageWidthOptions?, out LayoutMode, out int, out bool)
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_Deconstruct_Gutenberg_PageWidthOptions__Gutenberg_LayoutMode__System_Int32__System_Boolean__
   commentId: M:Gutenberg.LayoutOptions.Deconstruct(Gutenberg.PageWidthOptions@,Gutenberg.LayoutMode@,System.Int32@,System.Boolean@)
-  name.vb: Deconstruct(ByRef PageWidthOptions, ByRef LayoutMode, ByRef Int32, ByRef Boolean)
-  fullName: Gutenberg.LayoutOptions.Deconstruct(out Gutenberg.PageWidthOptions, out Gutenberg.LayoutMode, out System.Int32, out System.Boolean)
-  fullName.vb: Gutenberg.LayoutOptions.Deconstruct(ByRef Gutenberg.PageWidthOptions, ByRef Gutenberg.LayoutMode, ByRef System.Int32, ByRef System.Boolean)
-  nameWithType: LayoutOptions.Deconstruct(out PageWidthOptions, out LayoutMode, out Int32, out Boolean)
-  nameWithType.vb: LayoutOptions.Deconstruct(ByRef PageWidthOptions, ByRef LayoutMode, ByRef Int32, ByRef Boolean)
+  name.vb: Deconstruct(PageWidthOptions, LayoutMode, Integer, Boolean)
+  fullName: Gutenberg.LayoutOptions.Deconstruct(out Gutenberg.PageWidthOptions?, out Gutenberg.LayoutMode, out int, out bool)
+  fullName.vb: Gutenberg.LayoutOptions.Deconstruct(Gutenberg.PageWidthOptions, Gutenberg.LayoutMode, Integer, Boolean)
+  nameWithType: LayoutOptions.Deconstruct(out PageWidthOptions?, out LayoutMode, out int, out bool)
+  nameWithType.vb: LayoutOptions.Deconstruct(PageWidthOptions, LayoutMode, Integer, Boolean)
 - uid: Gutenberg.LayoutOptions.Deconstruct*
   name: Deconstruct
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_Deconstruct_
@@ -1713,17 +1688,23 @@ references:
   fullName: Gutenberg.LayoutOptions.EqualityContract
   nameWithType: LayoutOptions.EqualityContract
 - uid: Gutenberg.LayoutOptions.Equals(Gutenberg.LayoutOptions)
-  name: Equals(LayoutOptions)
+  name: Equals(LayoutOptions?)
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_Equals_Gutenberg_LayoutOptions_
   commentId: M:Gutenberg.LayoutOptions.Equals(Gutenberg.LayoutOptions)
-  fullName: Gutenberg.LayoutOptions.Equals(Gutenberg.LayoutOptions)
-  nameWithType: LayoutOptions.Equals(LayoutOptions)
+  name.vb: Equals(LayoutOptions)
+  fullName: Gutenberg.LayoutOptions.Equals(Gutenberg.LayoutOptions?)
+  fullName.vb: Gutenberg.LayoutOptions.Equals(Gutenberg.LayoutOptions)
+  nameWithType: LayoutOptions.Equals(LayoutOptions?)
+  nameWithType.vb: LayoutOptions.Equals(LayoutOptions)
 - uid: Gutenberg.LayoutOptions.Equals(System.Object)
-  name: Equals(Object)
+  name: Equals(object?)
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_Equals_System_Object_
   commentId: M:Gutenberg.LayoutOptions.Equals(System.Object)
-  fullName: Gutenberg.LayoutOptions.Equals(System.Object)
-  nameWithType: LayoutOptions.Equals(Object)
+  name.vb: Equals(Object)
+  fullName: Gutenberg.LayoutOptions.Equals(object?)
+  fullName.vb: Gutenberg.LayoutOptions.Equals(Object)
+  nameWithType: LayoutOptions.Equals(object?)
+  nameWithType.vb: LayoutOptions.Equals(Object)
 - uid: Gutenberg.LayoutOptions.Equals*
   name: Equals
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_Equals_
@@ -1754,30 +1735,6 @@ references:
   commentId: Overload:Gutenberg.LayoutOptions.LayoutMode
   fullName: Gutenberg.LayoutOptions.LayoutMode
   nameWithType: LayoutOptions.LayoutMode
-- uid: Gutenberg.LayoutOptions.op_Equality(Gutenberg.LayoutOptions,Gutenberg.LayoutOptions)
-  name: Equality(LayoutOptions, LayoutOptions)
-  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_op_Equality_Gutenberg_LayoutOptions_Gutenberg_LayoutOptions_
-  commentId: M:Gutenberg.LayoutOptions.op_Equality(Gutenberg.LayoutOptions,Gutenberg.LayoutOptions)
-  fullName: Gutenberg.LayoutOptions.Equality(Gutenberg.LayoutOptions, Gutenberg.LayoutOptions)
-  nameWithType: LayoutOptions.Equality(LayoutOptions, LayoutOptions)
-- uid: Gutenberg.LayoutOptions.op_Equality*
-  name: Equality
-  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_op_Equality_
-  commentId: Overload:Gutenberg.LayoutOptions.op_Equality
-  fullName: Gutenberg.LayoutOptions.Equality
-  nameWithType: LayoutOptions.Equality
-- uid: Gutenberg.LayoutOptions.op_Inequality(Gutenberg.LayoutOptions,Gutenberg.LayoutOptions)
-  name: Inequality(LayoutOptions, LayoutOptions)
-  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_op_Inequality_Gutenberg_LayoutOptions_Gutenberg_LayoutOptions_
-  commentId: M:Gutenberg.LayoutOptions.op_Inequality(Gutenberg.LayoutOptions,Gutenberg.LayoutOptions)
-  fullName: Gutenberg.LayoutOptions.Inequality(Gutenberg.LayoutOptions, Gutenberg.LayoutOptions)
-  nameWithType: LayoutOptions.Inequality(LayoutOptions, LayoutOptions)
-- uid: Gutenberg.LayoutOptions.op_Inequality*
-  name: Inequality
-  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_op_Inequality_
-  commentId: Overload:Gutenberg.LayoutOptions.op_Inequality
-  fullName: Gutenberg.LayoutOptions.Inequality
-  nameWithType: LayoutOptions.Inequality
 - uid: Gutenberg.LayoutOptions.PageWidth
   name: PageWidth
   href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_PageWidth
@@ -1826,6 +1783,54 @@ references:
   commentId: Overload:Gutenberg.LayoutOptions.ToString
   fullName: Gutenberg.LayoutOptions.ToString
   nameWithType: LayoutOptions.ToString
+- uid: Gutenberg.LayoutOptions.op_Equality(Gutenberg.LayoutOptions,Gutenberg.LayoutOptions)
+  name: operator ==(LayoutOptions?, LayoutOptions?)
+  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_op_Equality_Gutenberg_LayoutOptions_Gutenberg_LayoutOptions_
+  commentId: M:Gutenberg.LayoutOptions.op_Equality(Gutenberg.LayoutOptions,Gutenberg.LayoutOptions)
+  name.vb: =(LayoutOptions, LayoutOptions)
+  fullName: Gutenberg.LayoutOptions.operator ==(Gutenberg.LayoutOptions?, Gutenberg.LayoutOptions?)
+  fullName.vb: Gutenberg.LayoutOptions.=(Gutenberg.LayoutOptions, Gutenberg.LayoutOptions)
+  nameWithType: LayoutOptions.operator ==(LayoutOptions?, LayoutOptions?)
+  nameWithType.vb: LayoutOptions.=(LayoutOptions, LayoutOptions)
+- uid: Gutenberg.LayoutOptions.op_Equality*
+  name: operator ==
+  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_op_Equality_
+  commentId: Overload:Gutenberg.LayoutOptions.op_Equality
+  name.vb: =
+  fullName: Gutenberg.LayoutOptions.operator ==
+  fullName.vb: Gutenberg.LayoutOptions.=
+  nameWithType: LayoutOptions.operator ==
+  nameWithType.vb: LayoutOptions.=
+- uid: Gutenberg.LayoutOptions.op_Inequality(Gutenberg.LayoutOptions,Gutenberg.LayoutOptions)
+  name: operator !=(LayoutOptions?, LayoutOptions?)
+  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_op_Inequality_Gutenberg_LayoutOptions_Gutenberg_LayoutOptions_
+  commentId: M:Gutenberg.LayoutOptions.op_Inequality(Gutenberg.LayoutOptions,Gutenberg.LayoutOptions)
+  name.vb: <>(LayoutOptions, LayoutOptions)
+  fullName: Gutenberg.LayoutOptions.operator !=(Gutenberg.LayoutOptions?, Gutenberg.LayoutOptions?)
+  fullName.vb: Gutenberg.LayoutOptions.<>(Gutenberg.LayoutOptions, Gutenberg.LayoutOptions)
+  nameWithType: LayoutOptions.operator !=(LayoutOptions?, LayoutOptions?)
+  nameWithType.vb: LayoutOptions.<>(LayoutOptions, LayoutOptions)
+- uid: Gutenberg.LayoutOptions.op_Inequality*
+  name: operator !=
+  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions_op_Inequality_
+  commentId: Overload:Gutenberg.LayoutOptions.op_Inequality
+  name.vb: <>
+  fullName: Gutenberg.LayoutOptions.operator !=
+  fullName.vb: Gutenberg.LayoutOptions.<>
+  nameWithType: LayoutOptions.operator !=
+  nameWithType.vb: LayoutOptions.<>
+- uid: Gutenberg.LayoutOptions.{Clone}$
+  name: <Clone>$()
+  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions__Clone__
+  commentId: M:Gutenberg.LayoutOptions.{Clone}$
+  fullName: Gutenberg.LayoutOptions.<Clone>$()
+  nameWithType: LayoutOptions.<Clone>$()
+- uid: Gutenberg.LayoutOptions.{Clone}$*
+  name: <Clone>$
+  href: Gutenberg.LayoutOptions.html#Gutenberg_LayoutOptions__Clone___
+  commentId: Overload:Gutenberg.LayoutOptions.{Clone}$
+  fullName: Gutenberg.LayoutOptions.<Clone>$
+  nameWithType: LayoutOptions.<Clone>$
 - uid: Gutenberg.PageWidthOptions
   name: PageWidthOptions
   href: Gutenberg.PageWidthOptions.html
@@ -1836,41 +1841,38 @@ references:
   name: PageWidthOptions(PageWidthOptions)
   href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions__ctor_Gutenberg_PageWidthOptions_
   commentId: M:Gutenberg.PageWidthOptions.#ctor(Gutenberg.PageWidthOptions)
+  name.vb: New(PageWidthOptions)
   fullName: Gutenberg.PageWidthOptions.PageWidthOptions(Gutenberg.PageWidthOptions)
+  fullName.vb: Gutenberg.PageWidthOptions.New(Gutenberg.PageWidthOptions)
   nameWithType: PageWidthOptions.PageWidthOptions(PageWidthOptions)
+  nameWithType.vb: PageWidthOptions.New(PageWidthOptions)
 - uid: Gutenberg.PageWidthOptions.#ctor(System.Int32,System.Double)
-  name: PageWidthOptions(Int32, Double)
+  name: PageWidthOptions(int, double)
   href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions__ctor_System_Int32_System_Double_
   commentId: M:Gutenberg.PageWidthOptions.#ctor(System.Int32,System.Double)
-  fullName: Gutenberg.PageWidthOptions.PageWidthOptions(System.Int32, System.Double)
-  nameWithType: PageWidthOptions.PageWidthOptions(Int32, Double)
+  name.vb: New(Integer, Double)
+  fullName: Gutenberg.PageWidthOptions.PageWidthOptions(int, double)
+  fullName.vb: Gutenberg.PageWidthOptions.New(Integer, Double)
+  nameWithType: PageWidthOptions.PageWidthOptions(int, double)
+  nameWithType.vb: PageWidthOptions.New(Integer, Double)
 - uid: Gutenberg.PageWidthOptions.#ctor*
   name: PageWidthOptions
   href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions__ctor_
   commentId: Overload:Gutenberg.PageWidthOptions.#ctor
+  name.vb: New
   fullName: Gutenberg.PageWidthOptions.PageWidthOptions
+  fullName.vb: Gutenberg.PageWidthOptions.New
   nameWithType: PageWidthOptions.PageWidthOptions
-- uid: Gutenberg.PageWidthOptions.{Clone}$
-  name: <Clone>$()
-  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions__Clone__
-  commentId: M:Gutenberg.PageWidthOptions.{Clone}$
-  fullName: Gutenberg.PageWidthOptions.<Clone>$()
-  nameWithType: PageWidthOptions.<Clone>$()
-- uid: Gutenberg.PageWidthOptions.{Clone}$*
-  name: <Clone>$
-  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions__Clone___
-  commentId: Overload:Gutenberg.PageWidthOptions.{Clone}$
-  fullName: Gutenberg.PageWidthOptions.<Clone>$
-  nameWithType: PageWidthOptions.<Clone>$
+  nameWithType.vb: PageWidthOptions.New
 - uid: Gutenberg.PageWidthOptions.Deconstruct(System.Int32@,System.Double@)
-  name: Deconstruct(out Int32, out Double)
+  name: Deconstruct(out int, out double)
   href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_Deconstruct_System_Int32__System_Double__
   commentId: M:Gutenberg.PageWidthOptions.Deconstruct(System.Int32@,System.Double@)
-  name.vb: Deconstruct(ByRef Int32, ByRef Double)
-  fullName: Gutenberg.PageWidthOptions.Deconstruct(out System.Int32, out System.Double)
-  fullName.vb: Gutenberg.PageWidthOptions.Deconstruct(ByRef System.Int32, ByRef System.Double)
-  nameWithType: PageWidthOptions.Deconstruct(out Int32, out Double)
-  nameWithType.vb: PageWidthOptions.Deconstruct(ByRef Int32, ByRef Double)
+  name.vb: Deconstruct(Integer, Double)
+  fullName: Gutenberg.PageWidthOptions.Deconstruct(out int, out double)
+  fullName.vb: Gutenberg.PageWidthOptions.Deconstruct(Integer, Double)
+  nameWithType: PageWidthOptions.Deconstruct(out int, out double)
+  nameWithType.vb: PageWidthOptions.Deconstruct(Integer, Double)
 - uid: Gutenberg.PageWidthOptions.Deconstruct*
   name: Deconstruct
   href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_Deconstruct_
@@ -1890,17 +1892,23 @@ references:
   fullName: Gutenberg.PageWidthOptions.EqualityContract
   nameWithType: PageWidthOptions.EqualityContract
 - uid: Gutenberg.PageWidthOptions.Equals(Gutenberg.PageWidthOptions)
-  name: Equals(PageWidthOptions)
+  name: Equals(PageWidthOptions?)
   href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_Equals_Gutenberg_PageWidthOptions_
   commentId: M:Gutenberg.PageWidthOptions.Equals(Gutenberg.PageWidthOptions)
-  fullName: Gutenberg.PageWidthOptions.Equals(Gutenberg.PageWidthOptions)
-  nameWithType: PageWidthOptions.Equals(PageWidthOptions)
+  name.vb: Equals(PageWidthOptions)
+  fullName: Gutenberg.PageWidthOptions.Equals(Gutenberg.PageWidthOptions?)
+  fullName.vb: Gutenberg.PageWidthOptions.Equals(Gutenberg.PageWidthOptions)
+  nameWithType: PageWidthOptions.Equals(PageWidthOptions?)
+  nameWithType.vb: PageWidthOptions.Equals(PageWidthOptions)
 - uid: Gutenberg.PageWidthOptions.Equals(System.Object)
-  name: Equals(Object)
+  name: Equals(object?)
   href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_Equals_System_Object_
   commentId: M:Gutenberg.PageWidthOptions.Equals(System.Object)
-  fullName: Gutenberg.PageWidthOptions.Equals(System.Object)
-  nameWithType: PageWidthOptions.Equals(Object)
+  name.vb: Equals(Object)
+  fullName: Gutenberg.PageWidthOptions.Equals(object?)
+  fullName.vb: Gutenberg.PageWidthOptions.Equals(Object)
+  nameWithType: PageWidthOptions.Equals(object?)
+  nameWithType.vb: PageWidthOptions.Equals(Object)
 - uid: Gutenberg.PageWidthOptions.Equals*
   name: Equals
   href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_Equals_
@@ -1919,30 +1927,6 @@ references:
   commentId: Overload:Gutenberg.PageWidthOptions.GetHashCode
   fullName: Gutenberg.PageWidthOptions.GetHashCode
   nameWithType: PageWidthOptions.GetHashCode
-- uid: Gutenberg.PageWidthOptions.op_Equality(Gutenberg.PageWidthOptions,Gutenberg.PageWidthOptions)
-  name: Equality(PageWidthOptions, PageWidthOptions)
-  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_op_Equality_Gutenberg_PageWidthOptions_Gutenberg_PageWidthOptions_
-  commentId: M:Gutenberg.PageWidthOptions.op_Equality(Gutenberg.PageWidthOptions,Gutenberg.PageWidthOptions)
-  fullName: Gutenberg.PageWidthOptions.Equality(Gutenberg.PageWidthOptions, Gutenberg.PageWidthOptions)
-  nameWithType: PageWidthOptions.Equality(PageWidthOptions, PageWidthOptions)
-- uid: Gutenberg.PageWidthOptions.op_Equality*
-  name: Equality
-  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_op_Equality_
-  commentId: Overload:Gutenberg.PageWidthOptions.op_Equality
-  fullName: Gutenberg.PageWidthOptions.Equality
-  nameWithType: PageWidthOptions.Equality
-- uid: Gutenberg.PageWidthOptions.op_Inequality(Gutenberg.PageWidthOptions,Gutenberg.PageWidthOptions)
-  name: Inequality(PageWidthOptions, PageWidthOptions)
-  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_op_Inequality_Gutenberg_PageWidthOptions_Gutenberg_PageWidthOptions_
-  commentId: M:Gutenberg.PageWidthOptions.op_Inequality(Gutenberg.PageWidthOptions,Gutenberg.PageWidthOptions)
-  fullName: Gutenberg.PageWidthOptions.Inequality(Gutenberg.PageWidthOptions, Gutenberg.PageWidthOptions)
-  nameWithType: PageWidthOptions.Inequality(PageWidthOptions, PageWidthOptions)
-- uid: Gutenberg.PageWidthOptions.op_Inequality*
-  name: Inequality
-  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_op_Inequality_
-  commentId: Overload:Gutenberg.PageWidthOptions.op_Inequality
-  fullName: Gutenberg.PageWidthOptions.Inequality
-  nameWithType: PageWidthOptions.Inequality
 - uid: Gutenberg.PageWidthOptions.PageWidth
   name: PageWidth
   href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_PageWidth
@@ -1955,18 +1939,6 @@ references:
   commentId: Overload:Gutenberg.PageWidthOptions.PageWidth
   fullName: Gutenberg.PageWidthOptions.PageWidth
   nameWithType: PageWidthOptions.PageWidth
-- uid: Gutenberg.PageWidthOptions.PrintableRatio
-  name: PrintableRatio
-  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_PrintableRatio
-  commentId: P:Gutenberg.PageWidthOptions.PrintableRatio
-  fullName: Gutenberg.PageWidthOptions.PrintableRatio
-  nameWithType: PageWidthOptions.PrintableRatio
-- uid: Gutenberg.PageWidthOptions.PrintableRatio*
-  name: PrintableRatio
-  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_PrintableRatio_
-  commentId: Overload:Gutenberg.PageWidthOptions.PrintableRatio
-  fullName: Gutenberg.PageWidthOptions.PrintableRatio
-  nameWithType: PageWidthOptions.PrintableRatio
 - uid: Gutenberg.PageWidthOptions.PrintMembers(System.Text.StringBuilder)
   name: PrintMembers(StringBuilder)
   href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_PrintMembers_System_Text_StringBuilder_
@@ -1979,6 +1951,18 @@ references:
   commentId: Overload:Gutenberg.PageWidthOptions.PrintMembers
   fullName: Gutenberg.PageWidthOptions.PrintMembers
   nameWithType: PageWidthOptions.PrintMembers
+- uid: Gutenberg.PageWidthOptions.PrintableRatio
+  name: PrintableRatio
+  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_PrintableRatio
+  commentId: P:Gutenberg.PageWidthOptions.PrintableRatio
+  fullName: Gutenberg.PageWidthOptions.PrintableRatio
+  nameWithType: PageWidthOptions.PrintableRatio
+- uid: Gutenberg.PageWidthOptions.PrintableRatio*
+  name: PrintableRatio
+  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_PrintableRatio_
+  commentId: Overload:Gutenberg.PageWidthOptions.PrintableRatio
+  fullName: Gutenberg.PageWidthOptions.PrintableRatio
+  nameWithType: PageWidthOptions.PrintableRatio
 - uid: Gutenberg.PageWidthOptions.ToString
   name: ToString()
   href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_ToString
@@ -1991,6 +1975,54 @@ references:
   commentId: Overload:Gutenberg.PageWidthOptions.ToString
   fullName: Gutenberg.PageWidthOptions.ToString
   nameWithType: PageWidthOptions.ToString
+- uid: Gutenberg.PageWidthOptions.op_Equality(Gutenberg.PageWidthOptions,Gutenberg.PageWidthOptions)
+  name: operator ==(PageWidthOptions?, PageWidthOptions?)
+  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_op_Equality_Gutenberg_PageWidthOptions_Gutenberg_PageWidthOptions_
+  commentId: M:Gutenberg.PageWidthOptions.op_Equality(Gutenberg.PageWidthOptions,Gutenberg.PageWidthOptions)
+  name.vb: =(PageWidthOptions, PageWidthOptions)
+  fullName: Gutenberg.PageWidthOptions.operator ==(Gutenberg.PageWidthOptions?, Gutenberg.PageWidthOptions?)
+  fullName.vb: Gutenberg.PageWidthOptions.=(Gutenberg.PageWidthOptions, Gutenberg.PageWidthOptions)
+  nameWithType: PageWidthOptions.operator ==(PageWidthOptions?, PageWidthOptions?)
+  nameWithType.vb: PageWidthOptions.=(PageWidthOptions, PageWidthOptions)
+- uid: Gutenberg.PageWidthOptions.op_Equality*
+  name: operator ==
+  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_op_Equality_
+  commentId: Overload:Gutenberg.PageWidthOptions.op_Equality
+  name.vb: =
+  fullName: Gutenberg.PageWidthOptions.operator ==
+  fullName.vb: Gutenberg.PageWidthOptions.=
+  nameWithType: PageWidthOptions.operator ==
+  nameWithType.vb: PageWidthOptions.=
+- uid: Gutenberg.PageWidthOptions.op_Inequality(Gutenberg.PageWidthOptions,Gutenberg.PageWidthOptions)
+  name: operator !=(PageWidthOptions?, PageWidthOptions?)
+  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_op_Inequality_Gutenberg_PageWidthOptions_Gutenberg_PageWidthOptions_
+  commentId: M:Gutenberg.PageWidthOptions.op_Inequality(Gutenberg.PageWidthOptions,Gutenberg.PageWidthOptions)
+  name.vb: <>(PageWidthOptions, PageWidthOptions)
+  fullName: Gutenberg.PageWidthOptions.operator !=(Gutenberg.PageWidthOptions?, Gutenberg.PageWidthOptions?)
+  fullName.vb: Gutenberg.PageWidthOptions.<>(Gutenberg.PageWidthOptions, Gutenberg.PageWidthOptions)
+  nameWithType: PageWidthOptions.operator !=(PageWidthOptions?, PageWidthOptions?)
+  nameWithType.vb: PageWidthOptions.<>(PageWidthOptions, PageWidthOptions)
+- uid: Gutenberg.PageWidthOptions.op_Inequality*
+  name: operator !=
+  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions_op_Inequality_
+  commentId: Overload:Gutenberg.PageWidthOptions.op_Inequality
+  name.vb: <>
+  fullName: Gutenberg.PageWidthOptions.operator !=
+  fullName.vb: Gutenberg.PageWidthOptions.<>
+  nameWithType: PageWidthOptions.operator !=
+  nameWithType.vb: PageWidthOptions.<>
+- uid: Gutenberg.PageWidthOptions.{Clone}$
+  name: <Clone>$()
+  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions__Clone__
+  commentId: M:Gutenberg.PageWidthOptions.{Clone}$
+  fullName: Gutenberg.PageWidthOptions.<Clone>$()
+  nameWithType: PageWidthOptions.<Clone>$()
+- uid: Gutenberg.PageWidthOptions.{Clone}$*
+  name: <Clone>$
+  href: Gutenberg.PageWidthOptions.html#Gutenberg_PageWidthOptions__Clone___
+  commentId: Overload:Gutenberg.PageWidthOptions.{Clone}$
+  fullName: Gutenberg.PageWidthOptions.<Clone>$
+  nameWithType: PageWidthOptions.<Clone>$
 - uid: Gutenberg.Rendering
   name: Gutenberg.Rendering
   href: Gutenberg.Rendering.html
@@ -2007,14 +2039,20 @@ references:
   name: ConsoleDocumentRenderer()
   href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer__ctor
   commentId: M:Gutenberg.Rendering.ConsoleDocumentRenderer.#ctor
+  name.vb: New()
   fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.ConsoleDocumentRenderer()
+  fullName.vb: Gutenberg.Rendering.ConsoleDocumentRenderer.New()
   nameWithType: ConsoleDocumentRenderer.ConsoleDocumentRenderer()
+  nameWithType.vb: ConsoleDocumentRenderer.New()
 - uid: Gutenberg.Rendering.ConsoleDocumentRenderer.#ctor*
   name: ConsoleDocumentRenderer
   href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer__ctor_
   commentId: Overload:Gutenberg.Rendering.ConsoleDocumentRenderer.#ctor
+  name.vb: New
   fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.ConsoleDocumentRenderer
+  fullName.vb: Gutenberg.Rendering.ConsoleDocumentRenderer.New
   nameWithType: ConsoleDocumentRenderer.ConsoleDocumentRenderer
+  nameWithType.vb: ConsoleDocumentRenderer.New
 - uid: Gutenberg.Rendering.ConsoleDocumentRenderer.NewLine(System.Threading.CancellationToken)
   name: NewLine(CancellationToken)
   href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_NewLine_System_Threading_CancellationToken_
@@ -2052,13 +2090,13 @@ references:
   fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.PushAnnotation
   nameWithType: ConsoleDocumentRenderer.PushAnnotation
 - uid: Gutenberg.Rendering.ConsoleDocumentRenderer.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-  name: Text(ReadOnlyMemory<Char>, CancellationToken)
+  name: Text(ReadOnlyMemory<char>, CancellationToken)
   href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_
   commentId: M:Gutenberg.Rendering.ConsoleDocumentRenderer.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
   name.vb: Text(ReadOnlyMemory(Of Char), CancellationToken)
-  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.Text(System.ReadOnlyMemory<System.Char>, System.Threading.CancellationToken)
-  fullName.vb: Gutenberg.Rendering.ConsoleDocumentRenderer.Text(System.ReadOnlyMemory(Of System.Char), System.Threading.CancellationToken)
-  nameWithType: ConsoleDocumentRenderer.Text(ReadOnlyMemory<Char>, CancellationToken)
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.Text(System.ReadOnlyMemory<char>, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.ConsoleDocumentRenderer.Text(System.ReadOnlyMemory(Of Char), System.Threading.CancellationToken)
+  nameWithType: ConsoleDocumentRenderer.Text(ReadOnlyMemory<char>, CancellationToken)
   nameWithType.vb: ConsoleDocumentRenderer.Text(ReadOnlyMemory(Of Char), CancellationToken)
 - uid: Gutenberg.Rendering.ConsoleDocumentRenderer.Text*
   name: Text
@@ -2067,11 +2105,14 @@ references:
   fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.Text
   nameWithType: ConsoleDocumentRenderer.Text
 - uid: Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace(System.Int32,System.Threading.CancellationToken)
-  name: WhiteSpace(Int32, CancellationToken)
+  name: WhiteSpace(int, CancellationToken)
   href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_WhiteSpace_System_Int32_System_Threading_CancellationToken_
   commentId: M:Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace(System.Int32,System.Threading.CancellationToken)
-  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace(System.Int32, System.Threading.CancellationToken)
-  nameWithType: ConsoleDocumentRenderer.WhiteSpace(Int32, CancellationToken)
+  name.vb: WhiteSpace(Integer, CancellationToken)
+  fullName: Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace(int, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace(Integer, System.Threading.CancellationToken)
+  nameWithType: ConsoleDocumentRenderer.WhiteSpace(int, CancellationToken)
+  nameWithType.vb: ConsoleDocumentRenderer.WhiteSpace(Integer, CancellationToken)
 - uid: Gutenberg.Rendering.ConsoleDocumentRenderer.WhiteSpace*
   name: WhiteSpace
   href: Gutenberg.Rendering.ConsoleDocumentRenderer.html#Gutenberg_Rendering_ConsoleDocumentRenderer_WhiteSpace_
@@ -2088,26 +2129,20 @@ references:
   name: ConsoleFormattingAnnotation(ConsoleFormattingAnnotation)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation__ctor_Gutenberg_Rendering_ConsoleFormattingAnnotation_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.#ctor(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  name.vb: New(ConsoleFormattingAnnotation)
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ConsoleFormattingAnnotation(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.New(Gutenberg.Rendering.ConsoleFormattingAnnotation)
   nameWithType: ConsoleFormattingAnnotation.ConsoleFormattingAnnotation(ConsoleFormattingAnnotation)
+  nameWithType.vb: ConsoleFormattingAnnotation.New(ConsoleFormattingAnnotation)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.#ctor*
   name: ConsoleFormattingAnnotation
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation__ctor_
   commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.#ctor
+  name.vb: New
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ConsoleFormattingAnnotation
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.New
   nameWithType: ConsoleFormattingAnnotation.ConsoleFormattingAnnotation
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$
-  name: <Clone>$()
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation__Clone__
-  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.<Clone>$()
-  nameWithType: ConsoleFormattingAnnotation.<Clone>$()
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$*
-  name: <Clone>$
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation__Clone___
-  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.<Clone>$
-  nameWithType: ConsoleFormattingAnnotation.<Clone>$
+  nameWithType.vb: ConsoleFormattingAnnotation.New
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor
   name: ConsoleFormattingAnnotation.BackgroundColor
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html
@@ -2115,35 +2150,32 @@ references:
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor
   nameWithType: ConsoleFormattingAnnotation.BackgroundColor
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
-  name: BackgroundColor(ConsoleFormattingAnnotation.BackgroundColor)
+  name: BackgroundColor(BackgroundColor)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__ctor_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  name.vb: New(BackgroundColor)
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.New(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
   nameWithType: ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor(ConsoleFormattingAnnotation.BackgroundColor)
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.New(ConsoleFormattingAnnotation.BackgroundColor)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor(System.ConsoleColor)
   name: BackgroundColor(ConsoleColor)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__ctor_System_ConsoleColor_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor(System.ConsoleColor)
+  name.vb: New(ConsoleColor)
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor(System.ConsoleColor)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.New(System.ConsoleColor)
   nameWithType: ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor(ConsoleColor)
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.New(ConsoleColor)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor*
   name: BackgroundColor
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__ctor_
   commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.#ctor
+  name.vb: New
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.New
   nameWithType: ConsoleFormattingAnnotation.BackgroundColor.BackgroundColor
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$
-  name: <Clone>$()
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__Clone__
-  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.<Clone>$()
-  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.<Clone>$()
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$*
-  name: <Clone>$
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__Clone___
-  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.<Clone>$
-  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.<Clone>$
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.New
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Color
   name: Color
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Color
@@ -2160,11 +2192,11 @@ references:
   name: Deconstruct(out ConsoleColor)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Deconstruct_System_ConsoleColor__
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(System.ConsoleColor@)
-  name.vb: Deconstruct(ByRef ConsoleColor)
+  name.vb: Deconstruct(ConsoleColor)
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(out System.ConsoleColor)
-  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(ByRef System.ConsoleColor)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(System.ConsoleColor)
   nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(out ConsoleColor)
-  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(ByRef ConsoleColor)
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.Deconstruct(ConsoleColor)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Deconstruct*
   name: Deconstruct
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Deconstruct_
@@ -2184,23 +2216,32 @@ references:
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.EqualityContract
   nameWithType: ConsoleFormattingAnnotation.BackgroundColor.EqualityContract
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  name: Equals(ConsoleFormattingAnnotation)
+  name: Equals(ConsoleFormattingAnnotation?)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Equals_Gutenberg_Rendering_ConsoleFormattingAnnotation_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equals(ConsoleFormattingAnnotation)
+  name.vb: Equals(ConsoleFormattingAnnotation)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equals(ConsoleFormattingAnnotation?)
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.Equals(ConsoleFormattingAnnotation)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
-  name: Equals(ConsoleFormattingAnnotation.BackgroundColor)
+  name: Equals(BackgroundColor?)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Equals_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
-  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equals(ConsoleFormattingAnnotation.BackgroundColor)
+  name.vb: Equals(BackgroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equals(ConsoleFormattingAnnotation.BackgroundColor?)
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.Equals(ConsoleFormattingAnnotation.BackgroundColor)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(System.Object)
-  name: Equals(Object)
+  name: Equals(object?)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Equals_System_Object_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(System.Object)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(System.Object)
-  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equals(Object)
+  name.vb: Equals(Object)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(object?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals(Object)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equals(object?)
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.Equals(Object)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equals*
   name: Equals
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Equals_
@@ -2219,30 +2260,6 @@ references:
   commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.GetHashCode
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.GetHashCode
   nameWithType: ConsoleFormattingAnnotation.BackgroundColor.GetHashCode
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
-  name: Equality(ConsoleFormattingAnnotation.BackgroundColor, ConsoleFormattingAnnotation.BackgroundColor)
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Equality_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_
-  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
-  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equality(ConsoleFormattingAnnotation.BackgroundColor, ConsoleFormattingAnnotation.BackgroundColor)
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality*
-  name: Equality
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Equality_
-  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Equality
-  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Equality
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
-  name: Inequality(ConsoleFormattingAnnotation.BackgroundColor, ConsoleFormattingAnnotation.BackgroundColor)
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Inequality_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_
-  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
-  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Inequality(ConsoleFormattingAnnotation.BackgroundColor, ConsoleFormattingAnnotation.BackgroundColor)
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality*
-  name: Inequality
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Inequality_
-  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.Inequality
-  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.Inequality
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.PrintMembers(System.Text.StringBuilder)
   name: PrintMembers(StringBuilder)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_PrintMembers_System_Text_StringBuilder_
@@ -2267,6 +2284,54 @@ references:
   commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.ToString
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.ToString
   nameWithType: ConsoleFormattingAnnotation.BackgroundColor.ToString
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  name: operator ==(BackgroundColor?, BackgroundColor?)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Equality_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  name.vb: =(BackgroundColor, BackgroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.operator ==(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor?, Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.=(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.operator ==(ConsoleFormattingAnnotation.BackgroundColor?, ConsoleFormattingAnnotation.BackgroundColor?)
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.=(ConsoleFormattingAnnotation.BackgroundColor, ConsoleFormattingAnnotation.BackgroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality*
+  name: operator ==
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Equality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Equality
+  name.vb: =
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.operator ==
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.=
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.operator ==
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.=
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  name: operator !=(BackgroundColor?, BackgroundColor?)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Inequality_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  name.vb: <>(BackgroundColor, BackgroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.operator !=(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor?, Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.<>(Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor)
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.operator !=(ConsoleFormattingAnnotation.BackgroundColor?, ConsoleFormattingAnnotation.BackgroundColor?)
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.<>(ConsoleFormattingAnnotation.BackgroundColor, ConsoleFormattingAnnotation.BackgroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality*
+  name: operator !=
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor_op_Inequality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.op_Inequality
+  name.vb: <>
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.operator !=
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.<>
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.operator !=
+  nameWithType.vb: ConsoleFormattingAnnotation.BackgroundColor.<>
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$
+  name: <Clone>$()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__Clone__
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.<Clone>$()
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.<Clone>$()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$*
+  name: <Clone>$
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_BackgroundColor__Clone___
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.<Clone>$
+  nameWithType: ConsoleFormattingAnnotation.BackgroundColor.<Clone>$
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.EqualityContract
   name: EqualityContract
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_EqualityContract
@@ -2280,17 +2345,23 @@ references:
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.EqualityContract
   nameWithType: ConsoleFormattingAnnotation.EqualityContract
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  name: Equals(ConsoleFormattingAnnotation)
+  name: Equals(ConsoleFormattingAnnotation?)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_Equals_Gutenberg_Rendering_ConsoleFormattingAnnotation_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  nameWithType: ConsoleFormattingAnnotation.Equals(ConsoleFormattingAnnotation)
+  name.vb: Equals(ConsoleFormattingAnnotation)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  nameWithType: ConsoleFormattingAnnotation.Equals(ConsoleFormattingAnnotation?)
+  nameWithType.vb: ConsoleFormattingAnnotation.Equals(ConsoleFormattingAnnotation)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(System.Object)
-  name: Equals(Object)
+  name: Equals(object?)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_Equals_System_Object_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(System.Object)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(System.Object)
-  nameWithType: ConsoleFormattingAnnotation.Equals(Object)
+  name.vb: Equals(Object)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(object?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals(Object)
+  nameWithType: ConsoleFormattingAnnotation.Equals(object?)
+  nameWithType.vb: ConsoleFormattingAnnotation.Equals(Object)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equals*
   name: Equals
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_Equals_
@@ -2304,35 +2375,32 @@ references:
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor
   nameWithType: ConsoleFormattingAnnotation.ForegroundColor
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
-  name: ForegroundColor(ConsoleFormattingAnnotation.ForegroundColor)
+  name: ForegroundColor(ForegroundColor)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__ctor_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  name.vb: New(ForegroundColor)
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.New(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
   nameWithType: ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor(ConsoleFormattingAnnotation.ForegroundColor)
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.New(ConsoleFormattingAnnotation.ForegroundColor)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor(System.ConsoleColor)
   name: ForegroundColor(ConsoleColor)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__ctor_System_ConsoleColor_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor(System.ConsoleColor)
+  name.vb: New(ConsoleColor)
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor(System.ConsoleColor)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.New(System.ConsoleColor)
   nameWithType: ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor(ConsoleColor)
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.New(ConsoleColor)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor*
   name: ForegroundColor
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__ctor_
   commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.#ctor
+  name.vb: New
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.New
   nameWithType: ConsoleFormattingAnnotation.ForegroundColor.ForegroundColor
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$
-  name: <Clone>$()
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__Clone__
-  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.<Clone>$()
-  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.<Clone>$()
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$*
-  name: <Clone>$
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__Clone___
-  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.<Clone>$
-  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.<Clone>$
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.New
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Color
   name: Color
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Color
@@ -2349,11 +2417,11 @@ references:
   name: Deconstruct(out ConsoleColor)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Deconstruct_System_ConsoleColor__
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(System.ConsoleColor@)
-  name.vb: Deconstruct(ByRef ConsoleColor)
+  name.vb: Deconstruct(ConsoleColor)
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(out System.ConsoleColor)
-  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(ByRef System.ConsoleColor)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(System.ConsoleColor)
   nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(out ConsoleColor)
-  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(ByRef ConsoleColor)
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.Deconstruct(ConsoleColor)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Deconstruct*
   name: Deconstruct
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Deconstruct_
@@ -2373,23 +2441,32 @@ references:
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.EqualityContract
   nameWithType: ConsoleFormattingAnnotation.ForegroundColor.EqualityContract
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  name: Equals(ConsoleFormattingAnnotation)
+  name: Equals(ConsoleFormattingAnnotation?)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Equals_Gutenberg_Rendering_ConsoleFormattingAnnotation_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equals(ConsoleFormattingAnnotation)
+  name.vb: Equals(ConsoleFormattingAnnotation)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equals(ConsoleFormattingAnnotation?)
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.Equals(ConsoleFormattingAnnotation)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
-  name: Equals(ConsoleFormattingAnnotation.ForegroundColor)
+  name: Equals(ForegroundColor?)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Equals_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
-  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equals(ConsoleFormattingAnnotation.ForegroundColor)
+  name.vb: Equals(ForegroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equals(ConsoleFormattingAnnotation.ForegroundColor?)
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.Equals(ConsoleFormattingAnnotation.ForegroundColor)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(System.Object)
-  name: Equals(Object)
+  name: Equals(object?)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Equals_System_Object_
   commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(System.Object)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(System.Object)
-  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equals(Object)
+  name.vb: Equals(Object)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(object?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals(Object)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equals(object?)
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.Equals(Object)
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equals*
   name: Equals
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Equals_
@@ -2408,30 +2485,6 @@ references:
   commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.GetHashCode
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.GetHashCode
   nameWithType: ConsoleFormattingAnnotation.ForegroundColor.GetHashCode
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
-  name: Equality(ConsoleFormattingAnnotation.ForegroundColor, ConsoleFormattingAnnotation.ForegroundColor)
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Equality_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_
-  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
-  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equality(ConsoleFormattingAnnotation.ForegroundColor, ConsoleFormattingAnnotation.ForegroundColor)
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality*
-  name: Equality
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Equality_
-  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Equality
-  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Equality
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
-  name: Inequality(ConsoleFormattingAnnotation.ForegroundColor, ConsoleFormattingAnnotation.ForegroundColor)
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Inequality_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_
-  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
-  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Inequality(ConsoleFormattingAnnotation.ForegroundColor, ConsoleFormattingAnnotation.ForegroundColor)
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality*
-  name: Inequality
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Inequality_
-  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.Inequality
-  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.Inequality
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.PrintMembers(System.Text.StringBuilder)
   name: PrintMembers(StringBuilder)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_PrintMembers_System_Text_StringBuilder_
@@ -2456,6 +2509,54 @@ references:
   commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ToString
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.ToString
   nameWithType: ConsoleFormattingAnnotation.ForegroundColor.ToString
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  name: operator ==(ForegroundColor?, ForegroundColor?)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Equality_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  name.vb: =(ForegroundColor, ForegroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.operator ==(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor?, Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.=(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.operator ==(ConsoleFormattingAnnotation.ForegroundColor?, ConsoleFormattingAnnotation.ForegroundColor?)
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.=(ConsoleFormattingAnnotation.ForegroundColor, ConsoleFormattingAnnotation.ForegroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality*
+  name: operator ==
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Equality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Equality
+  name.vb: =
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.operator ==
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.=
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.operator ==
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.=
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  name: operator !=(ForegroundColor?, ForegroundColor?)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Inequality_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor,Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  name.vb: <>(ForegroundColor, ForegroundColor)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.operator !=(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor?, Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.<>(Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor, Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor)
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.operator !=(ConsoleFormattingAnnotation.ForegroundColor?, ConsoleFormattingAnnotation.ForegroundColor?)
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.<>(ConsoleFormattingAnnotation.ForegroundColor, ConsoleFormattingAnnotation.ForegroundColor)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality*
+  name: operator !=
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor_op_Inequality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.op_Inequality
+  name.vb: <>
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.operator !=
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.<>
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.operator !=
+  nameWithType.vb: ConsoleFormattingAnnotation.ForegroundColor.<>
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$
+  name: <Clone>$()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__Clone__
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.<Clone>$()
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.<Clone>$()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$*
+  name: <Clone>$
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_ForegroundColor__Clone___
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.<Clone>$
+  nameWithType: ConsoleFormattingAnnotation.ForegroundColor.<Clone>$
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.GetHashCode
   name: GetHashCode()
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_GetHashCode
@@ -2468,30 +2569,6 @@ references:
   commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.GetHashCode
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.GetHashCode
   nameWithType: ConsoleFormattingAnnotation.GetHashCode
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  name: Equality(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Equality_Gutenberg_Rendering_ConsoleFormattingAnnotation_Gutenberg_Rendering_ConsoleFormattingAnnotation_
-  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation, Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  nameWithType: ConsoleFormattingAnnotation.Equality(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality*
-  name: Equality
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Equality_
-  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Equality
-  nameWithType: ConsoleFormattingAnnotation.Equality
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  name: Inequality(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Inequality_Gutenberg_Rendering_ConsoleFormattingAnnotation_Gutenberg_Rendering_ConsoleFormattingAnnotation_
-  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation, Gutenberg.Rendering.ConsoleFormattingAnnotation)
-  nameWithType: ConsoleFormattingAnnotation.Inequality(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
-- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality*
-  name: Inequality
-  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Inequality_
-  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality
-  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.Inequality
-  nameWithType: ConsoleFormattingAnnotation.Inequality
 - uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.PrintMembers(System.Text.StringBuilder)
   name: PrintMembers(StringBuilder)
   href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_PrintMembers_System_Text_StringBuilder_
@@ -2516,6 +2593,54 @@ references:
   commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.ToString
   fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.ToString
   nameWithType: ConsoleFormattingAnnotation.ToString
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  name: operator ==(ConsoleFormattingAnnotation?, ConsoleFormattingAnnotation?)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Equality_Gutenberg_Rendering_ConsoleFormattingAnnotation_Gutenberg_Rendering_ConsoleFormattingAnnotation_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  name.vb: =(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.operator ==(Gutenberg.Rendering.ConsoleFormattingAnnotation?, Gutenberg.Rendering.ConsoleFormattingAnnotation?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.=(Gutenberg.Rendering.ConsoleFormattingAnnotation, Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  nameWithType: ConsoleFormattingAnnotation.operator ==(ConsoleFormattingAnnotation?, ConsoleFormattingAnnotation?)
+  nameWithType.vb: ConsoleFormattingAnnotation.=(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality*
+  name: operator ==
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Equality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Equality
+  name.vb: =
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.operator ==
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.=
+  nameWithType: ConsoleFormattingAnnotation.operator ==
+  nameWithType.vb: ConsoleFormattingAnnotation.=
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  name: operator !=(ConsoleFormattingAnnotation?, ConsoleFormattingAnnotation?)
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Inequality_Gutenberg_Rendering_ConsoleFormattingAnnotation_Gutenberg_Rendering_ConsoleFormattingAnnotation_
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality(Gutenberg.Rendering.ConsoleFormattingAnnotation,Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  name.vb: <>(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.operator !=(Gutenberg.Rendering.ConsoleFormattingAnnotation?, Gutenberg.Rendering.ConsoleFormattingAnnotation?)
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.<>(Gutenberg.Rendering.ConsoleFormattingAnnotation, Gutenberg.Rendering.ConsoleFormattingAnnotation)
+  nameWithType: ConsoleFormattingAnnotation.operator !=(ConsoleFormattingAnnotation?, ConsoleFormattingAnnotation?)
+  nameWithType.vb: ConsoleFormattingAnnotation.<>(ConsoleFormattingAnnotation, ConsoleFormattingAnnotation)
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality*
+  name: operator !=
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation_op_Inequality_
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.op_Inequality
+  name.vb: <>
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.operator !=
+  fullName.vb: Gutenberg.Rendering.ConsoleFormattingAnnotation.<>
+  nameWithType: ConsoleFormattingAnnotation.operator !=
+  nameWithType.vb: ConsoleFormattingAnnotation.<>
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$
+  name: <Clone>$()
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation__Clone__
+  commentId: M:Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.<Clone>$()
+  nameWithType: ConsoleFormattingAnnotation.<Clone>$()
+- uid: Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$*
+  name: <Clone>$
+  href: Gutenberg.Rendering.ConsoleFormattingAnnotation.html#Gutenberg_Rendering_ConsoleFormattingAnnotation__Clone___
+  commentId: Overload:Gutenberg.Rendering.ConsoleFormattingAnnotation.{Clone}$
+  fullName: Gutenberg.Rendering.ConsoleFormattingAnnotation.<Clone>$
+  nameWithType: ConsoleFormattingAnnotation.<Clone>$
 - uid: Gutenberg.Rendering.DocumentRendererExtensions
   name: DocumentRendererExtensions
   href: Gutenberg.Rendering.DocumentRendererExtensions.html
@@ -2528,15 +2653,6 @@ references:
   commentId: Overload:Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations
   fullName: Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations
   nameWithType: DocumentRendererExtensions.MapAnnotations
-- uid: Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations``2(Gutenberg.IDocumentRenderer{``1},System.Func{``0,``1})
-  name: MapAnnotations<T, U>(IDocumentRenderer<U>, Func<T, U>)
-  href: Gutenberg.Rendering.DocumentRendererExtensions.html#Gutenberg_Rendering_DocumentRendererExtensions_MapAnnotations__2_Gutenberg_IDocumentRenderer___1__System_Func___0___1__
-  commentId: M:Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations``2(Gutenberg.IDocumentRenderer{``1},System.Func{``0,``1})
-  name.vb: MapAnnotations(Of T, U)(IDocumentRenderer(Of U), Func(Of T, U))
-  fullName: Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations<T, U>(Gutenberg.IDocumentRenderer<U>, System.Func<T, U>)
-  fullName.vb: Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations(Of T, U)(Gutenberg.IDocumentRenderer(Of U), System.Func(Of T, U))
-  nameWithType: DocumentRendererExtensions.MapAnnotations<T, U>(IDocumentRenderer<U>, Func<T, U>)
-  nameWithType.vb: DocumentRendererExtensions.MapAnnotations(Of T, U)(IDocumentRenderer(Of U), Func(Of T, U))
 - uid: Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations``2(Gutenberg.IDocumentRenderer{``1},System.Func{``0,System.Threading.Tasks.ValueTask{``1}})
   name: MapAnnotations<T, U>(IDocumentRenderer<U>, Func<T, ValueTask<U>>)
   href: Gutenberg.Rendering.DocumentRendererExtensions.html#Gutenberg_Rendering_DocumentRendererExtensions_MapAnnotations__2_Gutenberg_IDocumentRenderer___1__System_Func___0_System_Threading_Tasks_ValueTask___1___
@@ -2546,6 +2662,15 @@ references:
   fullName.vb: Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations(Of T, U)(Gutenberg.IDocumentRenderer(Of U), System.Func(Of T, System.Threading.Tasks.ValueTask(Of U)))
   nameWithType: DocumentRendererExtensions.MapAnnotations<T, U>(IDocumentRenderer<U>, Func<T, ValueTask<U>>)
   nameWithType.vb: DocumentRendererExtensions.MapAnnotations(Of T, U)(IDocumentRenderer(Of U), Func(Of T, ValueTask(Of U)))
+- uid: Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations``2(Gutenberg.IDocumentRenderer{``1},System.Func{``0,``1})
+  name: MapAnnotations<T, U>(IDocumentRenderer<U>, Func<T, U>)
+  href: Gutenberg.Rendering.DocumentRendererExtensions.html#Gutenberg_Rendering_DocumentRendererExtensions_MapAnnotations__2_Gutenberg_IDocumentRenderer___1__System_Func___0___1__
+  commentId: M:Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations``2(Gutenberg.IDocumentRenderer{``1},System.Func{``0,``1})
+  name.vb: MapAnnotations(Of T, U)(IDocumentRenderer(Of U), Func(Of T, U))
+  fullName: Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations<T, U>(Gutenberg.IDocumentRenderer<U>, System.Func<T, U>)
+  fullName.vb: Gutenberg.Rendering.DocumentRendererExtensions.MapAnnotations(Of T, U)(Gutenberg.IDocumentRenderer(Of U), System.Func(Of T, U))
+  nameWithType: DocumentRendererExtensions.MapAnnotations<T, U>(IDocumentRenderer<U>, Func<T, U>)
+  nameWithType.vb: DocumentRendererExtensions.MapAnnotations(Of T, U)(IDocumentRenderer(Of U), Func(Of T, U))
 - uid: Gutenberg.Rendering.MapAnnotationsDocumentRenderer`2
   name: MapAnnotationsDocumentRenderer<T, U>
   href: Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html
@@ -2559,19 +2684,20 @@ references:
   name: MapAnnotationsDocumentRenderer(Func<T, ValueTask<U>>, IDocumentRenderer<U>)
   href: Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2__ctor_System_Func__0_System_Threading_Tasks_ValueTask__1___Gutenberg_IDocumentRenderer__1__
   commentId: M:Gutenberg.Rendering.MapAnnotationsDocumentRenderer`2.#ctor(System.Func{`0,System.Threading.Tasks.ValueTask{`1}},Gutenberg.IDocumentRenderer{`1})
-  name.vb: MapAnnotationsDocumentRenderer(Func(Of T, ValueTask(Of U)), IDocumentRenderer(Of U))
+  name.vb: New(Func(Of T, ValueTask(Of U)), IDocumentRenderer(Of U))
   fullName: Gutenberg.Rendering.MapAnnotationsDocumentRenderer<T, U>.MapAnnotationsDocumentRenderer(System.Func<T, System.Threading.Tasks.ValueTask<U>>, Gutenberg.IDocumentRenderer<U>)
-  fullName.vb: Gutenberg.Rendering.MapAnnotationsDocumentRenderer(Of T, U).MapAnnotationsDocumentRenderer(System.Func(Of T, System.Threading.Tasks.ValueTask(Of U)), Gutenberg.IDocumentRenderer(Of U))
+  fullName.vb: Gutenberg.Rendering.MapAnnotationsDocumentRenderer(Of T, U).New(System.Func(Of T, System.Threading.Tasks.ValueTask(Of U)), Gutenberg.IDocumentRenderer(Of U))
   nameWithType: MapAnnotationsDocumentRenderer<T, U>.MapAnnotationsDocumentRenderer(Func<T, ValueTask<U>>, IDocumentRenderer<U>)
-  nameWithType.vb: MapAnnotationsDocumentRenderer(Of T, U).MapAnnotationsDocumentRenderer(Func(Of T, ValueTask(Of U)), IDocumentRenderer(Of U))
+  nameWithType.vb: MapAnnotationsDocumentRenderer(Of T, U).New(Func(Of T, ValueTask(Of U)), IDocumentRenderer(Of U))
 - uid: Gutenberg.Rendering.MapAnnotationsDocumentRenderer`2.#ctor*
   name: MapAnnotationsDocumentRenderer
   href: Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2__ctor_
   commentId: Overload:Gutenberg.Rendering.MapAnnotationsDocumentRenderer`2.#ctor
+  name.vb: New
   fullName: Gutenberg.Rendering.MapAnnotationsDocumentRenderer<T, U>.MapAnnotationsDocumentRenderer
-  fullName.vb: Gutenberg.Rendering.MapAnnotationsDocumentRenderer(Of T, U).MapAnnotationsDocumentRenderer
+  fullName.vb: Gutenberg.Rendering.MapAnnotationsDocumentRenderer(Of T, U).New
   nameWithType: MapAnnotationsDocumentRenderer<T, U>.MapAnnotationsDocumentRenderer
-  nameWithType.vb: MapAnnotationsDocumentRenderer(Of T, U).MapAnnotationsDocumentRenderer
+  nameWithType.vb: MapAnnotationsDocumentRenderer(Of T, U).New
 - uid: Gutenberg.Rendering.MapAnnotationsDocumentRenderer`2.NewLine(System.Threading.CancellationToken)
   name: NewLine(CancellationToken)
   href: Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_NewLine_System_Threading_CancellationToken_
@@ -2621,13 +2747,13 @@ references:
   nameWithType: MapAnnotationsDocumentRenderer<T, U>.PushAnnotation
   nameWithType.vb: MapAnnotationsDocumentRenderer(Of T, U).PushAnnotation
 - uid: Gutenberg.Rendering.MapAnnotationsDocumentRenderer`2.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-  name: Text(ReadOnlyMemory<Char>, CancellationToken)
+  name: Text(ReadOnlyMemory<char>, CancellationToken)
   href: Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_
   commentId: M:Gutenberg.Rendering.MapAnnotationsDocumentRenderer`2.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
   name.vb: Text(ReadOnlyMemory(Of Char), CancellationToken)
-  fullName: Gutenberg.Rendering.MapAnnotationsDocumentRenderer<T, U>.Text(System.ReadOnlyMemory<System.Char>, System.Threading.CancellationToken)
-  fullName.vb: Gutenberg.Rendering.MapAnnotationsDocumentRenderer(Of T, U).Text(System.ReadOnlyMemory(Of System.Char), System.Threading.CancellationToken)
-  nameWithType: MapAnnotationsDocumentRenderer<T, U>.Text(ReadOnlyMemory<Char>, CancellationToken)
+  fullName: Gutenberg.Rendering.MapAnnotationsDocumentRenderer<T, U>.Text(System.ReadOnlyMemory<char>, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.MapAnnotationsDocumentRenderer(Of T, U).Text(System.ReadOnlyMemory(Of Char), System.Threading.CancellationToken)
+  nameWithType: MapAnnotationsDocumentRenderer<T, U>.Text(ReadOnlyMemory<char>, CancellationToken)
   nameWithType.vb: MapAnnotationsDocumentRenderer(Of T, U).Text(ReadOnlyMemory(Of Char), CancellationToken)
 - uid: Gutenberg.Rendering.MapAnnotationsDocumentRenderer`2.Text*
   name: Text
@@ -2638,13 +2764,14 @@ references:
   nameWithType: MapAnnotationsDocumentRenderer<T, U>.Text
   nameWithType.vb: MapAnnotationsDocumentRenderer(Of T, U).Text
 - uid: Gutenberg.Rendering.MapAnnotationsDocumentRenderer`2.WhiteSpace(System.Int32,System.Threading.CancellationToken)
-  name: WhiteSpace(Int32, CancellationToken)
+  name: WhiteSpace(int, CancellationToken)
   href: Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_WhiteSpace_System_Int32_System_Threading_CancellationToken_
   commentId: M:Gutenberg.Rendering.MapAnnotationsDocumentRenderer`2.WhiteSpace(System.Int32,System.Threading.CancellationToken)
-  fullName: Gutenberg.Rendering.MapAnnotationsDocumentRenderer<T, U>.WhiteSpace(System.Int32, System.Threading.CancellationToken)
-  fullName.vb: Gutenberg.Rendering.MapAnnotationsDocumentRenderer(Of T, U).WhiteSpace(System.Int32, System.Threading.CancellationToken)
-  nameWithType: MapAnnotationsDocumentRenderer<T, U>.WhiteSpace(Int32, CancellationToken)
-  nameWithType.vb: MapAnnotationsDocumentRenderer(Of T, U).WhiteSpace(Int32, CancellationToken)
+  name.vb: WhiteSpace(Integer, CancellationToken)
+  fullName: Gutenberg.Rendering.MapAnnotationsDocumentRenderer<T, U>.WhiteSpace(int, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.MapAnnotationsDocumentRenderer(Of T, U).WhiteSpace(Integer, System.Threading.CancellationToken)
+  nameWithType: MapAnnotationsDocumentRenderer<T, U>.WhiteSpace(int, CancellationToken)
+  nameWithType.vb: MapAnnotationsDocumentRenderer(Of T, U).WhiteSpace(Integer, CancellationToken)
 - uid: Gutenberg.Rendering.MapAnnotationsDocumentRenderer`2.WhiteSpace*
   name: WhiteSpace
   href: Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html#Gutenberg_Rendering_MapAnnotationsDocumentRenderer_2_WhiteSpace_
@@ -2663,14 +2790,20 @@ references:
   name: PlainTextDocumentRenderer(TextWriter)
   href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer__ctor_System_IO_TextWriter_
   commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer.#ctor(System.IO.TextWriter)
+  name.vb: New(TextWriter)
   fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.PlainTextDocumentRenderer(System.IO.TextWriter)
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer.New(System.IO.TextWriter)
   nameWithType: PlainTextDocumentRenderer.PlainTextDocumentRenderer(TextWriter)
+  nameWithType.vb: PlainTextDocumentRenderer.New(TextWriter)
 - uid: Gutenberg.Rendering.PlainTextDocumentRenderer.#ctor*
   name: PlainTextDocumentRenderer
   href: Gutenberg.Rendering.PlainTextDocumentRenderer.html#Gutenberg_Rendering_PlainTextDocumentRenderer__ctor_
   commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer.#ctor
+  name.vb: New
   fullName: Gutenberg.Rendering.PlainTextDocumentRenderer.PlainTextDocumentRenderer
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer.New
   nameWithType: PlainTextDocumentRenderer.PlainTextDocumentRenderer
+  nameWithType.vb: PlainTextDocumentRenderer.New
 - uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1
   name: PlainTextDocumentRenderer<T>
   href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html
@@ -2684,18 +2817,20 @@ references:
   name: PlainTextDocumentRenderer(TextWriter)
   href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1__ctor_System_IO_TextWriter_
   commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer`1.#ctor(System.IO.TextWriter)
+  name.vb: New(TextWriter)
   fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.PlainTextDocumentRenderer(System.IO.TextWriter)
-  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).PlainTextDocumentRenderer(System.IO.TextWriter)
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).New(System.IO.TextWriter)
   nameWithType: PlainTextDocumentRenderer<T>.PlainTextDocumentRenderer(TextWriter)
-  nameWithType.vb: PlainTextDocumentRenderer(Of T).PlainTextDocumentRenderer(TextWriter)
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).New(TextWriter)
 - uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.#ctor*
   name: PlainTextDocumentRenderer
   href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1__ctor_
   commentId: Overload:Gutenberg.Rendering.PlainTextDocumentRenderer`1.#ctor
+  name.vb: New
   fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.PlainTextDocumentRenderer
-  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).PlainTextDocumentRenderer
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).New
   nameWithType: PlainTextDocumentRenderer<T>.PlainTextDocumentRenderer
-  nameWithType.vb: PlainTextDocumentRenderer(Of T).PlainTextDocumentRenderer
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).New
 - uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.NewLine(System.Threading.CancellationToken)
   name: NewLine(CancellationToken)
   href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_NewLine_System_Threading_CancellationToken_
@@ -2745,13 +2880,13 @@ references:
   nameWithType: PlainTextDocumentRenderer<T>.PushAnnotation
   nameWithType.vb: PlainTextDocumentRenderer(Of T).PushAnnotation
 - uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-  name: Text(ReadOnlyMemory<Char>, CancellationToken)
+  name: Text(ReadOnlyMemory<char>, CancellationToken)
   href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_
   commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer`1.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
   name.vb: Text(ReadOnlyMemory(Of Char), CancellationToken)
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.Text(System.ReadOnlyMemory<System.Char>, System.Threading.CancellationToken)
-  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).Text(System.ReadOnlyMemory(Of System.Char), System.Threading.CancellationToken)
-  nameWithType: PlainTextDocumentRenderer<T>.Text(ReadOnlyMemory<Char>, CancellationToken)
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.Text(System.ReadOnlyMemory<char>, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).Text(System.ReadOnlyMemory(Of Char), System.Threading.CancellationToken)
+  nameWithType: PlainTextDocumentRenderer<T>.Text(ReadOnlyMemory<char>, CancellationToken)
   nameWithType.vb: PlainTextDocumentRenderer(Of T).Text(ReadOnlyMemory(Of Char), CancellationToken)
 - uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.Text*
   name: Text
@@ -2762,13 +2897,14 @@ references:
   nameWithType: PlainTextDocumentRenderer<T>.Text
   nameWithType.vb: PlainTextDocumentRenderer(Of T).Text
 - uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.WhiteSpace(System.Int32,System.Threading.CancellationToken)
-  name: WhiteSpace(Int32, CancellationToken)
+  name: WhiteSpace(int, CancellationToken)
   href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_WhiteSpace_System_Int32_System_Threading_CancellationToken_
   commentId: M:Gutenberg.Rendering.PlainTextDocumentRenderer`1.WhiteSpace(System.Int32,System.Threading.CancellationToken)
-  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.WhiteSpace(System.Int32, System.Threading.CancellationToken)
-  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).WhiteSpace(System.Int32, System.Threading.CancellationToken)
-  nameWithType: PlainTextDocumentRenderer<T>.WhiteSpace(Int32, CancellationToken)
-  nameWithType.vb: PlainTextDocumentRenderer(Of T).WhiteSpace(Int32, CancellationToken)
+  name.vb: WhiteSpace(Integer, CancellationToken)
+  fullName: Gutenberg.Rendering.PlainTextDocumentRenderer<T>.WhiteSpace(int, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.PlainTextDocumentRenderer(Of T).WhiteSpace(Integer, System.Threading.CancellationToken)
+  nameWithType: PlainTextDocumentRenderer<T>.WhiteSpace(int, CancellationToken)
+  nameWithType.vb: PlainTextDocumentRenderer(Of T).WhiteSpace(Integer, CancellationToken)
 - uid: Gutenberg.Rendering.PlainTextDocumentRenderer`1.WhiteSpace*
   name: WhiteSpace
   href: Gutenberg.Rendering.PlainTextDocumentRenderer-1.html#Gutenberg_Rendering_PlainTextDocumentRenderer_1_WhiteSpace_
@@ -2806,18 +2942,20 @@ references:
   name: StackMachineDocumentRenderer()
   href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1__ctor
   commentId: M:Gutenberg.Rendering.StackMachineDocumentRenderer`1.#ctor
+  name.vb: New()
   fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.StackMachineDocumentRenderer()
-  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).StackMachineDocumentRenderer()
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).New()
   nameWithType: StackMachineDocumentRenderer<T>.StackMachineDocumentRenderer()
-  nameWithType.vb: StackMachineDocumentRenderer(Of T).StackMachineDocumentRenderer()
+  nameWithType.vb: StackMachineDocumentRenderer(Of T).New()
 - uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.#ctor*
   name: StackMachineDocumentRenderer
   href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1__ctor_
   commentId: Overload:Gutenberg.Rendering.StackMachineDocumentRenderer`1.#ctor
+  name.vb: New
   fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.StackMachineDocumentRenderer
-  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).StackMachineDocumentRenderer
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).New
   nameWithType: StackMachineDocumentRenderer<T>.StackMachineDocumentRenderer
-  nameWithType.vb: StackMachineDocumentRenderer(Of T).StackMachineDocumentRenderer
+  nameWithType.vb: StackMachineDocumentRenderer(Of T).New
 - uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.CurrentAnnotation
   name: CurrentAnnotation
   href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_CurrentAnnotation
@@ -2979,13 +3117,13 @@ references:
   nameWithType: StackMachineDocumentRenderer<T>.Stack
   nameWithType.vb: StackMachineDocumentRenderer(Of T).Stack
 - uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
-  name: Text(ReadOnlyMemory<Char>, CancellationToken)
+  name: Text(ReadOnlyMemory<char>, CancellationToken)
   href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_Text_System_ReadOnlyMemory_System_Char__System_Threading_CancellationToken_
   commentId: M:Gutenberg.Rendering.StackMachineDocumentRenderer`1.Text(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)
   name.vb: Text(ReadOnlyMemory(Of Char), CancellationToken)
-  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.Text(System.ReadOnlyMemory<System.Char>, System.Threading.CancellationToken)
-  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).Text(System.ReadOnlyMemory(Of System.Char), System.Threading.CancellationToken)
-  nameWithType: StackMachineDocumentRenderer<T>.Text(ReadOnlyMemory<Char>, CancellationToken)
+  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.Text(System.ReadOnlyMemory<char>, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).Text(System.ReadOnlyMemory(Of Char), System.Threading.CancellationToken)
+  nameWithType: StackMachineDocumentRenderer<T>.Text(ReadOnlyMemory<char>, CancellationToken)
   nameWithType.vb: StackMachineDocumentRenderer(Of T).Text(ReadOnlyMemory(Of Char), CancellationToken)
 - uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.Text*
   name: Text
@@ -2996,13 +3134,14 @@ references:
   nameWithType: StackMachineDocumentRenderer<T>.Text
   nameWithType.vb: StackMachineDocumentRenderer(Of T).Text
 - uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.WhiteSpace(System.Int32,System.Threading.CancellationToken)
-  name: WhiteSpace(Int32, CancellationToken)
+  name: WhiteSpace(int, CancellationToken)
   href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_WhiteSpace_System_Int32_System_Threading_CancellationToken_
   commentId: M:Gutenberg.Rendering.StackMachineDocumentRenderer`1.WhiteSpace(System.Int32,System.Threading.CancellationToken)
-  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.WhiteSpace(System.Int32, System.Threading.CancellationToken)
-  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).WhiteSpace(System.Int32, System.Threading.CancellationToken)
-  nameWithType: StackMachineDocumentRenderer<T>.WhiteSpace(Int32, CancellationToken)
-  nameWithType.vb: StackMachineDocumentRenderer(Of T).WhiteSpace(Int32, CancellationToken)
+  name.vb: WhiteSpace(Integer, CancellationToken)
+  fullName: Gutenberg.Rendering.StackMachineDocumentRenderer<T>.WhiteSpace(int, System.Threading.CancellationToken)
+  fullName.vb: Gutenberg.Rendering.StackMachineDocumentRenderer(Of T).WhiteSpace(Integer, System.Threading.CancellationToken)
+  nameWithType: StackMachineDocumentRenderer<T>.WhiteSpace(int, CancellationToken)
+  nameWithType.vb: StackMachineDocumentRenderer(Of T).WhiteSpace(Integer, CancellationToken)
 - uid: Gutenberg.Rendering.StackMachineDocumentRenderer`1.WhiteSpace*
   name: WhiteSpace
   href: Gutenberg.Rendering.StackMachineDocumentRenderer-1.html#Gutenberg_Rendering_StackMachineDocumentRenderer_1_WhiteSpace_
