@@ -147,11 +147,13 @@ public abstract class Document<T> : IStackItem<T>
             case LayoutMode.Simple:
                 return RenderSimple(renderer, cancellationToken);
             default:
+#pragma warning disable CA2208  // Instantiate argument exceptions correctly
                 throw new ArgumentOutOfRangeException(
                     nameof(options.LayoutMode),
                     options.LayoutMode,
                     $"unknown {nameof(LayoutMode)}"
                 );
+#pragma warning restore CA2208  // Instantiate argument exceptions correctly
         }
     }
 

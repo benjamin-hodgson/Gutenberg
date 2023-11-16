@@ -17,3 +17,4 @@ jobs:
       DOCS_FOLDER: Gutenberg.Docs
     secrets:
       NUGET_KEY: ${{ secrets.NUGET_KEY }}
+      NET8: true
