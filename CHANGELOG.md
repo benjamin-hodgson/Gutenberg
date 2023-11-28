@@ -1,3 +1,15 @@
+v1.3.1
+------
+
+### Added
+
+* Support for SourceLink
+* Support for trimming and AOT deployments
+
+### Changed
+
+* Some optimisations to the layout engine
+
 v1.3.0
 ------
 
