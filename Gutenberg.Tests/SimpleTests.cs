@@ -8,56 +8,56 @@ namespace Gutenberg.Tests;
 public class SimpleTests
 {
     [Fact]
-    public async Task TestEmpty()
+    public void TestEmpty()
     {
-        await TestDocument("", Doc.Empty);
+        TestDocument("", Doc.Empty);
     }
 
     [Fact]
-    public async Task TestFromString()
+    public void TestFromString()
     {
-        await TestDocument("a", Doc.FromString("a"));
-        await TestDocument("abc", Doc.FromString("abc"));
-        await TestDocument("\n", Doc.FromString("\n"));
-        await TestDocument("abc\ndef", Doc.FromString("abc\ndef"));
+        TestDocument("a", Doc.FromString("a"));
+        TestDocument("abc", Doc.FromString("abc"));
+        TestDocument("\n", Doc.FromString("\n"));
+        TestDocument("abc\ndef", Doc.FromString("abc\ndef"));
     }
 
     [Fact]
-    public async Task TestLine()
+    public void TestLine()
     {
-        await TestDocument("\n", Doc.LineBreak);
-        await TestDocument("\n", Doc.ZeroWidthLineBreak);
-        await TestDocument("\n", Doc.LineBreakOr("x"));
+        TestDocument("\n", Doc.LineBreak);
+        TestDocument("\n", Doc.ZeroWidthLineBreak);
+        TestDocument("\n", Doc.LineBreakOr("x"));
     }
 
     [Fact]
-    public async Task TestAppend()
+    public void TestAppend()
     {
-        await TestDocument("abcdef", Doc.FromString("abc").Append("def"));
-        await TestDocument("abc\ndef", Doc.FromString("abc").Append(Doc.LineBreak).Append("def"));
+        TestDocument("abcdef", Doc.FromString("abc").Append("def"));
+        TestDocument("abc\ndef", Doc.FromString("abc").Append(Doc.LineBreak).Append("def"));
     }
 
     [Fact]
-    public async Task TestConcat()
+    public void TestConcat()
     {
-        await TestDocument("abcdefghi", Doc.Concat("abc", "def", "ghi"));
+        TestDocument("abcdefghi", Doc.Concat("abc", "def", "ghi"));
     }
 
     [Fact]
-    public async Task TestBetween()
+    public void TestBetween()
     {
-        await TestDocument("[abc]", Doc.FromString("abc").Between("[", "]"));
+        TestDocument("[abc]", Doc.FromString("abc").Between("[", "]"));
     }
 
     [Fact]
-    public async Task TestSeparated()
+    public void TestSeparated()
     {
-        await TestDocument(
+        TestDocument(
             "abc,def,ghi",
             new Doc[] { "abc", "def", "ghi" }
                 .Separated(",")
         );
-        await TestDocument(
+        TestDocument(
             "abc;def;ghi;",
             new Doc[] { "abc", "def", "ghi" }
                 .SeparatedAndTerminated(";")
@@ -65,27 +65,27 @@ public class SimpleTests
     }
 
     [Fact]
-    public async Task TestNested()
+    public void TestNested()
     {
-        await TestDocument(
+        TestDocument(
             "\n  abc",
             Doc.LineBreak
                 .Append("abc")
                 .Nested(2)
         );
-        await TestDocument(
+        TestDocument(
             "\n  abc",
             Doc.LineBreak
                 .Append("abc")
                 .Nested(),
             LayoutOptions.Default with { DefaultNesting = 2 }
         );
-        await TestDocument(
+        TestDocument(
             "abc\n  def",
             Doc.Concat("abc", Doc.LineBreak, "def")
                 .Nested(2)
         );
-        await TestDocument(
+        TestDocument(
             "abc\n  def",
             Doc.Concat("abc", Doc.LineBreak, "def")
                 .Nested(),
@@ -94,11 +94,11 @@ public class SimpleTests
     }
 
     [Fact]
-    public async Task StripTrailingWhitespace()
+    public void StripTrailingWhitespace()
     {
         // spaces in "def" literal are counted as text by FromString.
         // https://github.com/benjamin-hodgson/Gutenberg/issues/11
-        await TestDocument(
+        TestDocument(
             "abc\n\n  def  \n",
             Doc.Concat("abc", Doc.LineBreak, Doc.LineBreak, "def  ", Doc.LineBreak)
                 .Nested(2)
@@ -106,9 +106,9 @@ public class SimpleTests
     }
 
     [Fact]
-    public async Task DisableStripTrailingWhitespace()
+    public void DisableStripTrailingWhitespace()
     {
-        await TestDocument(
+        TestDocument(
             "abc\n  \n  def  \n  ",
             Doc.Concat("abc", Doc.LineBreak, Doc.LineBreak, "def  ", Doc.LineBreak)
                 .Nested(2),
@@ -129,13 +129,13 @@ public class SimpleTests
     }
 
     [Fact]
-    public async Task TestPlainTextDocumentRendererWithValueTypeAnnotation()
+    public void TestPlainTextDocumentRendererWithValueTypeAnnotation()
     {
         var doc = Document<int>
             .FromString("abc")
             .Annotated(2);
 
         // TestDocument calls ToString, which uses a PlainTextDocumentRenderer
-        await TestDocument("abc", doc);
+        TestDocument("abc", doc);
     }
 }

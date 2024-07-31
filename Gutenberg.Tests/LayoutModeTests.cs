@@ -7,13 +7,13 @@ namespace Gutenberg.Tests;
 public class LayoutModeTests
 {
     [Fact]
-    public async Task TestLayoutModeSimple()
+    public void TestLayoutModeSimple()
     {
         var doc = Doc.Concat("abc", Doc.LineBreak, "def")
             .Nested(2)
             .Grouped();
 
-        await TestDocument(
+        TestDocument(
             "abc\ndef",
             doc,
             LayoutOptions.Default with { LayoutMode = LayoutMode.Simple }
@@ -21,7 +21,7 @@ public class LayoutModeTests
     }
 
     [Fact]
-    public async Task TestLayoutModeSmart()
+    public void TestLayoutModeSmart()
     {
         // the last line will overflow (75 + 19 = 94),
         // even though it wouldn't overflow if the
@@ -43,7 +43,7 @@ public class LayoutModeTests
         var expected = "some opening\nwords"
             + string.Join("\n     ", alignedText);
 
-        await TestDocument(
+        TestDocument(
             expected,
             Doc.Concat(
                 Doc.Reflow("some opening words"),

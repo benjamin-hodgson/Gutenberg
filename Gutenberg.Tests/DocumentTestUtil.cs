@@ -4,16 +4,15 @@ namespace Gutenberg.Tests;
 
 internal static class DocumentTestUtil
 {
-    public static Task TestDocument<T>(string expected, Document<T> doc)
+    public static void TestDocument<T>(string expected, Document<T> doc)
         => TestDocument(expected, doc, LayoutOptions.Default);
 
-    public static Task TestDocument<T>(string expected, Document<T> doc, int pageWidth)
+    public static void TestDocument<T>(string expected, Document<T> doc, int pageWidth)
         => TestDocument(expected, doc, LayoutOptions.Default with { PageWidth = new(pageWidth) });
 
-    public static Task TestDocument<T>(string expected, Document<T> doc, LayoutOptions options)
+    public static void TestDocument<T>(string expected, Document<T> doc, LayoutOptions options)
     {
         Assert.Equal(expected, doc.ToString(options));
-        return Task.CompletedTask;
     }
 
     public static Task<string> ObserveAnnotations<T>(Document<T> doc)

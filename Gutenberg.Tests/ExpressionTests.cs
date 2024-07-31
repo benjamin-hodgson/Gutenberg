@@ -15,36 +15,36 @@ public class ExpressionTests
     private static readonly BinOp _arr = Op.InfixR(3, " -> ");
 
     [Fact]
-    public async Task TestInfixL()
+    public void TestInfixL()
     {
         var expr = _plus.Apply(
             _plus.Apply("x", "3"),
             _plus.Apply(_plus.Apply("5", "y"), "7")
         );
-        await TestDocument("x + 3 + (5 + y + 7)", expr.PrettyPrint());
+        TestDocument("x + 3 + (5 + y + 7)", expr.PrettyPrint());
     }
 
     [Fact]
-    public async Task TestInfixR()
+    public void TestInfixR()
     {
         var expr = _arr.Apply(
             _arr.Apply("Int", "Bool"),
             _arr.Apply("[Int]", _arr.Apply("Int", "[Int]"))
         );
-        await TestDocument("(Int -> Bool) -> [Int] -> Int -> [Int]", expr.PrettyPrint());
+        TestDocument("(Int -> Bool) -> [Int] -> Int -> [Int]", expr.PrettyPrint());
     }
 
     [Fact]
-    public async Task TestPrefixChainable()
+    public void TestPrefixChainable()
     {
         var expr = _not.Apply(_not.Apply(_eq.Apply("x", "y")));
-        await TestDocument("!!(x == y)", expr.PrettyPrint());
+        TestDocument("!!(x == y)", expr.PrettyPrint());
     }
 
     [Fact]
-    public async Task TestPostfixNonChainable()
+    public void TestPostfixNonChainable()
     {
         var expr = _incr.Apply(_incr.Apply("x"));
-        await TestDocument("(x++)++", expr.PrettyPrint());
+        TestDocument("(x++)++", expr.PrettyPrint());
     }
 }

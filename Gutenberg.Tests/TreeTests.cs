@@ -14,11 +14,11 @@ public class TreeTests
     );
 
     [Fact]
-    public async Task TestTree_UnlimitedWidth()
+    public void TestTree_UnlimitedWidth()
     {
         // spill nothing
         var expected = @"aaa[bbbbb[ccc, dd], eee, ffff[gg, hhh, ii]]";
-        await TestDocument(
+        TestDocument(
             expected,
             _tree.PrettyPrint(),
             LayoutOptions.Default with { PageWidth = null }
@@ -26,7 +26,7 @@ public class TreeTests
     }
 
     [Fact]
-    public async Task TestTree_MediumWidth()
+    public void TestTree_MediumWidth()
     {
         // spill the top level
         var expected = @"aaa[
@@ -34,7 +34,7 @@ public class TreeTests
   eee,
   ffff[gg, hhh, ii]
 ]";
-        await TestDocument(
+        TestDocument(
             expected,
             _tree.PrettyPrint(),
             20
@@ -42,7 +42,7 @@ public class TreeTests
     }
 
     [Fact]
-    public async Task TestTree_Narrow()
+    public void TestTree_Narrow()
     {
         // spill everything
         var expected = @"aaa[
@@ -57,7 +57,7 @@ public class TreeTests
     ii
   ]
 ]";
-        await TestDocument(
+        TestDocument(
             expected,
             _tree.PrettyPrint(),
             10
