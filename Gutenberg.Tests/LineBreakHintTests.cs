@@ -72,4 +72,13 @@ public class LineBreakHintTests
         TestDocument("hello\nhere\nare\nsome\nwords", doc, 7);
         TestDocument("hello\nhere\nare\nsome\nwords", doc, 1);  // overflow
     }
+
+    [Fact]
+    public void NestedChoicesThenLaterOverflow()
+    {
+        var doc = Doc.LineBreakHintOr(Doc.ZeroWidthLineBreakHint.Nested(1))
+            .Append(new string('a', 5));
+
+        TestDocument("\n" + new string('a', 5), doc, 4);
+    }
 }
