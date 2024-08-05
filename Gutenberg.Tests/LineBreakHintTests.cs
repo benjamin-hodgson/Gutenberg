@@ -81,4 +81,14 @@ public class LineBreakHintTests
 
         TestDocument("\n" + new string('a', 5), doc, 4);
     }
+
+    [Fact]
+    public void GroupedLineBreakHintThenOverflow()
+    {
+        var doc = Doc.LineBreakHint
+            .Grouped()
+            .Append(new string('a', 5));
+
+        TestDocument("\naaaaa", doc, 4);
+    }
 }

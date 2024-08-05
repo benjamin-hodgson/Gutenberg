@@ -41,7 +41,7 @@ internal class LayoutEngine<T>
                     break;
 
                 case LineDocument<T>:
-                    if (_flatten)
+                    if (_flatten && _canBacktrack)
                     {
                         // can't write a line break in flatten mode
                         Backtrack();
