@@ -74,6 +74,14 @@ public class LineBreakHintTests
     }
 
     [Fact]
+    public void NestedChoices()
+    {
+        var doc = Doc.LineBreakHintOr(Doc.ZeroWidthLineBreakHint.Nested());
+
+        TestDocument("", doc);
+    }
+
+    [Fact]
     public void NestedChoicesThenLaterOverflow()
     {
         var doc = Doc.LineBreakHintOr(Doc.ZeroWidthLineBreakHint.Nested(1))

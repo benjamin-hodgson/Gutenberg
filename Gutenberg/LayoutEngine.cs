@@ -208,12 +208,12 @@ internal class LayoutEngine<T>
                     break;
 
                 case ChoicePoint<T> cp:
-                    if (cp.ResumeAt < 0)
+                    var resumeAt = GetResumeAt(cp.ResumeAt);
+                    if (resumeAt < 0)
                     {
                         goto done;
                     }
 
-                    var resumeAt = GetResumeAt(cp.ResumeAt);
                     var resume = _stack[resumeAt];
                     cp.ResumeAt = resumeAt - 1;
                     Push(cp);
