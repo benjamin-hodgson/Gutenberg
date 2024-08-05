@@ -213,10 +213,11 @@ internal class LayoutEngine<T>
                         goto done;
                     }
 
-                    var resume = _stack[cp.ResumeAt];
-                    cp.ResumeAt -= 1;
+                    var resumeAt = GetResumeAt(cp.ResumeAt);
+                    var resume = _stack[resumeAt];
+                    cp.ResumeAt = resumeAt - 1;
                     Push(cp);
-                    Push(resume is ChoicePoint<T> cp2 ? Copy(cp2) : resume);
+                    Push(resume);
                     break;
 
                 case SetNestingLevel<T>(var nestingLevel):
@@ -464,20 +465,6 @@ internal class LayoutEngine<T>
 
         _choicePointPool.Push(cp);
     }
-
-    // todo: maybe put everything except ResumeAt in
-    // another object to make the copy more efficient?
-    private ChoicePoint<T> Copy(ChoicePoint<T> cp)
-        => CreateChoicePoint(
-            cp.Fallback!,
-            cp.NestingLevel,
-            cp.LineBufferCount,
-            cp.LineTextLength,
-            cp.Flatten,
-            cp.CanBacktrack,
-            cp.BufferUntilDeIndent,
-            cp.ResumeAt
-        );
 
     private ChoicePoint<T> CreateChoicePoint(
         Document<T> fallback,

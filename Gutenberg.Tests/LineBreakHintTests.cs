@@ -79,7 +79,7 @@ public class LineBreakHintTests
         var doc = Doc.LineBreakHintOr(Doc.ZeroWidthLineBreakHint.Nested(1))
             .Append(new string('a', 5));
 
-        TestDocument("\n" + new string('a', 5), doc, 4);
+        TestDocument("\n " + new string('a', 5), doc, 4);
     }
 
     [Fact]
@@ -90,5 +90,19 @@ public class LineBreakHintTests
             .Append(new string('a', 5));
 
         TestDocument("\naaaaa", doc, 4);
+    }
+
+    [Fact]
+    public void TwoLineBreakHintsThenOverflow()
+    {
+        // 1. Attempt to write "abccccc", realise it'll overflow
+        // 2. Backtrack to the "b" and take the line break
+        // 3. Attempt to write "a\n", reach EOL and succeed
+        // 4. Write " ccccc"; allow overflow to occur since there are no more options for laying out this line
+        var d1 = Doc.LineBreakHintOr("a");
+        var d2 = Doc.LineBreakHintOr("b").Nested(1);
+        var d3 = Doc.FromString(new string('c', 5));
+
+        TestDocument("a\n ccccc", d1 + d2 + d3, 4);
     }
 }
