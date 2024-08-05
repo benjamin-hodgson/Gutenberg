@@ -161,7 +161,7 @@ internal class LayoutEngine<T>
                         _flatten,
                         _canBacktrack,
                         _bufferUntilDeIndent,
-                        GetResumeAt(_stack.Count - 1)
+                        _stack.Count - 1
                     ));
                     _canBacktrack = true;
                     Push(first);
