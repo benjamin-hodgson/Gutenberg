@@ -1029,7 +1029,7 @@ public abstract class Document<T> : IStackItem<T>
     /// </code>
     /// </example>
     public static Document<T> ZeroWidthLineBreakHint { get; }
-        = new ChoiceDocument<T>("", HardLineBreak);
+        = new ChoiceDocument<T>(Empty, HardLineBreak);
 
     /// <summary>
     /// A "soft line break". Behaves like <paramref name="ifFits"/>
@@ -1301,4 +1301,10 @@ public abstract class Document<T> : IStackItem<T>
     internal abstract Document<U> MapAnnotationsCore<U>(Func<T, IEnumerable<U>> selector);
 
     internal abstract ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken);
+
+    /// <summary>
+    /// For testing.
+    /// </summary>
+    /// <returns></returns>
+    internal abstract string Display();
 }

@@ -1,4 +1,8 @@
+using CsCheck;
+
 using Gutenberg.Rendering;
+
+using Doc = Gutenberg.Document<object>;
 
 namespace Gutenberg.Tests;
 
@@ -27,4 +31,69 @@ internal static class DocumentTestUtil
         await doc.Render(renderer.MapAnnotations(mapAnnotations));
         return renderer.ToString();
     }
+
+    public static Gen<int> GenSmallInt { get; } = Gen.Int[0, 1024];
+
+    private static readonly Gen<LayoutOptions> _genLayoutOptions
+        = Gen.Select(
+            Gen.Int[10, 150],
+            Gen.Double[0, 1.5],
+            Gen.Enum<LayoutMode>(),
+            Gen.Int[0, 8],
+            Gen.Bool,
+            (w, r, m, n, s) => new LayoutOptions(new PageWidthOptions(w, r), m, n, s));
+
+    private static readonly Gen<Doc> _genSimpleDoc = Gen.OneOf(
+        Gen.Const(Doc.Empty),
+        Gen.Const(Doc.HardLineBreak),
+        GenSmallInt.Select(n => new WhiteSpaceDocument<object>(n)),
+        Gen.String.Select(Doc.FromString)
+    );
+
+    public static Gen<Func<Doc, Doc>> GenNested { get; }
+        = Gen.Recursive<Func<Doc, Doc>>(
+            (depth, rec) =>
+            {
+                var leaf = Gen.Const<Func<Doc, Doc>>(z => z);
+                if (depth == 5)
+                {
+                    return leaf;
+                }
+
+                return Gen.OneOf(
+                    leaf,
+                    _genSimpleDoc.Select<Doc, Func<Doc, Doc>>(d => _ => d),
+                    rec.Select<Func<Doc, Doc>, Func<Doc, Doc>>(d => z => d(z).Grouped()),
+                    rec.Select<Func<Doc, Doc>, Func<Doc, Doc>>(d => z => d(z).Aligned()),
+                    Gen.Select(rec, GenSmallInt).Select<Func<Doc, Doc>, int, Func<Doc, Doc>>((d, n) => z => d(z).Nested(n)),
+                    Gen.Select(rec, rec).Select<Func<Doc, Doc>, Func<Doc, Doc>, Func<Doc, Doc>>((x, y) => z => new AlternativeDocument<object>(x(z), y(z))),
+                    Gen.Select(rec, rec).Select<Func<Doc, Doc>, Func<Doc, Doc>, Func<Doc, Doc>>((x, y) => z => new ChoiceDocument<object>(x(z), y(z))),
+                    Gen.Select(rec, rec).Select<Func<Doc, Doc>, Func<Doc, Doc>, Func<Doc, Doc>>((l, r) => z => l(z).Append(r(z)))
+                );
+            }
+        );
+
+    public static Gen<Doc> GenDoc { get; }
+        = _genSimpleDoc.Select(GenNested, (z, f) => f(z));
+
+    public static void Equivalent<T>(this Gen<T> gen, Func<T, (Doc doc1, Doc doc2)> doc)
+    {
+        var g =
+            from t in gen
+            let docs = doc(t)
+            from f in GenNested
+            from options in _genLayoutOptions
+            select (options, f(docs.doc1), f(docs.doc2));
+
+        g.Sample(
+            (options, doc1, doc2) => Assert.Equal(doc1.ToString(options), doc2.ToString(options)),
+            print: t => $"({t.Item1}, {t.Item2.Display()}, {t.Item3.Display()})"
+        );
+    }
+
+    public static void Equivalent<T1, T2>(this Gen<(T1, T2)> gen, Func<T1, T2, (Doc doc1, Doc doc2)> doc)
+        => gen.Equivalent(t => doc(t.Item1, t.Item2));
+
+    public static void Equivalent<T1, T2, T3>(this Gen<(T1, T2, T3)> gen, Func<T1, T2, T3, (Doc doc1, Doc doc2)> doc)
+        => gen.Equivalent(t => doc(t.Item1, t.Item2, t.Item3));
 }

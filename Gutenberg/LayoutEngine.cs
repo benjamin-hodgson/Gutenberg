@@ -148,7 +148,7 @@ internal class LayoutEngine<T>
                     break;
 
                 case ChoiceDocument<T>(FlattenedDocument<T> first, var second):
-                    // Grouped()
+                    // optimisation for Grouped()
                     Push(WillFit(first.FlattenedWidth) ? first : second);
                     break;
 

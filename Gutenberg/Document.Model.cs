@@ -12,6 +12,9 @@ internal class EmptyDocument<T> : Document<T>
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => ValueTask.CompletedTask;
+
+    internal override string Display()
+        => "Empty";
 }
 
 internal class LineDocument<T> : Document<T>
@@ -26,6 +29,9 @@ internal class LineDocument<T> : Document<T>
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => renderer.NewLine(cancellationToken);
+
+    internal override string Display()
+        => "HardLineBreak";
 }
 
 internal class WhiteSpaceDocument<T> : Document<T>
@@ -48,6 +54,9 @@ internal class WhiteSpaceDocument<T> : Document<T>
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => renderer.WhiteSpace(Amount, cancellationToken);
+
+    internal override string Display()
+        => $"WhiteSpace({Amount})";
 }
 
 internal class TextDocument<T> : Document<T>
@@ -70,6 +79,9 @@ internal class TextDocument<T> : Document<T>
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => renderer.Text(Text.AsMemory(), cancellationToken);
+
+    internal override string Display()
+        => $"Text(\"{Text.AsMemory()}\")";
 }
 
 internal class BoxDocument<T> : Document<T>
@@ -92,6 +104,9 @@ internal class BoxDocument<T> : Document<T>
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Box.Render(renderer, cancellationToken);
+
+    internal override string Display()
+        => $"Box({Box})";
 }
 
 internal class AppendDocument<T> : Document<T>
@@ -127,6 +142,9 @@ internal class AppendDocument<T> : Document<T>
 
     private static int? AddWidths(Document<T> left, Document<T> right)
         => left.FlattenedWidth + right.FlattenedWidth;  // propagate null
+
+    internal override string Display()
+        => $"Append({Left.Display()}, {Right.Display()})";
 }
 
 internal class AlternativeDocument<T> : Document<T>
@@ -156,6 +174,9 @@ internal class AlternativeDocument<T> : Document<T>
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Default.RenderSimple(renderer, cancellationToken);
+
+    internal override string Display()
+        => $"Alt({Default.Display()}, {IfFlattened.Display()})";
 }
 
 internal class ChoiceDocument<T> : Document<T>
@@ -186,6 +207,9 @@ internal class ChoiceDocument<T> : Document<T>
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Second.RenderSimple(renderer, cancellationToken);
+
+    internal override string Display()
+        => $"Choice({First.Display()}, {Second.Display()})";
 }
 
 internal class NestedDocument<T> : Document<T>
@@ -212,6 +236,9 @@ internal class NestedDocument<T> : Document<T>
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Doc.RenderSimple(renderer, cancellationToken);
+
+    internal override string Display()
+        => $"Nested({Indentation}, {Doc.Display()})";
 }
 
 internal class AnnotatedDocument<T> : Document<T>
@@ -242,6 +269,9 @@ internal class AnnotatedDocument<T> : Document<T>
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Doc.RenderSimple(renderer, cancellationToken);
+
+    internal override string Display()
+        => $"Annotated({Value}, {Doc.Display()})";
 }
 
 internal class FlattenedDocument<T> : Document<T>
@@ -264,6 +294,9 @@ internal class FlattenedDocument<T> : Document<T>
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Document.RenderSimple(renderer, cancellationToken);
+
+    internal override string Display()
+        => $"Flattened({Document.Display()})";
 }
 
 internal class AlignedDocument<T> : Document<T>
@@ -286,4 +319,7 @@ internal class AlignedDocument<T> : Document<T>
 
     internal override ValueTask RenderSimple(IDocumentRenderer<T> renderer, CancellationToken cancellationToken)
         => Document.RenderSimple(renderer, cancellationToken);
+
+    internal override string Display()
+        => $"Aligned({Document.Display()})";
 }
