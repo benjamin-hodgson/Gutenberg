@@ -1,0 +1,14 @@
+is_global = true
+
+// Implement IDisposable correctly
+dotnet_diagnostic.CA1063.severity = silent
+
+// Call GC.SuppressFinalize correctly
+dotnet_diagnostic.CA1816.severity = silent
+
+// CS1591: Missing XML comment for publicly visible type or member
+dotnet_diagnostic.CS1591.severity = silent
+
+// CA2007: Consider calling ConfigureAwait on the awaited task
+dotnet_diagnostic.CA2007.severity = silent
+
