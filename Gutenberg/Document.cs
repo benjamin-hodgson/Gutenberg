@@ -1305,6 +1305,6 @@ public abstract class Document<T> : IStackItem<T>
     /// <summary>
     /// For testing.
     /// </summary>
-    /// <returns>The document tree as a string</returns>
+    /// <returns>The document tree as a string.</returns>
     internal abstract string Display();
 }
