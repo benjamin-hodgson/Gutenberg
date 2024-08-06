@@ -34,6 +34,26 @@ public class PropertyTests : IDisposable
     }
 
     [Fact]
+    public void NestedAppendDistrib()
+    {
+        Gen.Select(GenDoc, GenDoc, GenSmallInt)
+            .Equivalent((doc1, doc2, n) => (
+                doc1.Append(doc2).Nested(n),
+                doc1.Nested(n).Append(doc2.Nested(n))
+            ));
+    }
+
+    [Fact]
+    public void NestedChoiceDistrib()
+    {
+        Gen.Select(GenDoc, GenDoc, GenSmallInt)
+            .Equivalent((doc1, doc2, n) => (
+                new ChoiceDocument<object>(doc1, doc2).Nested(n),
+                new ChoiceDocument<object>(doc1.Nested(n), doc2.Nested(n))
+            ));
+    }
+
+    [Fact]
     public void NestedTwice()
     {
         Gen.Select(GenDoc, GenSmallInt, GenSmallInt)
