@@ -162,6 +162,16 @@ public class GroupingTests
     }
 
     [Fact]
+    public void GroupFitsButLaterOverflow()
+    {
+        TestDocument(
+            "ab\ncd",
+            Doc.Concat("ab", Doc.LineBreak, "c").Grouped() + "d",
+            4
+        );
+    }
+
+    [Fact]
     public void LineAndHardLineWhenFits()
     {
         // A group containing a HardLine can never be flattened
