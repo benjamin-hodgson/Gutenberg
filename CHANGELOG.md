@@ -1,7 +1,16 @@
+v1.3.3
+------
+
+### Fixed
+
+* Fixed another bug in the layout engine
+
+
 v1.3.2
 ------
 
 ### Fixed
+
 * Fixed some bugs in the handling of multiple `LineBreakHint`s on a single line
 
 
