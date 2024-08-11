@@ -41,6 +41,7 @@ public class SimpleTests
     public void TestConcat()
     {
         TestDocument("abcdefghi", Doc.Concat("abc", "def", "ghi"));
+        TestDocument(new string('a', 100), Doc.Concat(Enumerable.Repeat(Doc.FromString("a"), 100)));
     }
 
     [Fact]
