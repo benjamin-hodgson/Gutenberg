@@ -18,7 +18,8 @@ internal class LayoutEngine<T>
     private int _lineBufferCount = 0;
     private int _lineTextLength = 0;
 
-    private readonly List<IStackItem<T>> _stack = new();
+    private ArrayCovarianceWrapper<IStackItem<T>>[] _stack = new ArrayCovarianceWrapper<IStackItem<T>>[16];
+    private int _stackHeight = 0;
     private bool _canBacktrack = false;  // are there any ChoicePoints on the stack?
 
     private int _bufferUntilDeIndent = -1;
@@ -156,7 +157,7 @@ internal class LayoutEngine<T>
                         _flatten,
                         _canBacktrack,
                         _bufferUntilDeIndent,
-                        _stack.Count - 1
+                        _stackHeight - 1
                     ));
                     _canBacktrack = true;
                     Push(first);
@@ -209,7 +210,7 @@ internal class LayoutEngine<T>
                         goto done;
                     }
 
-                    var resume = _stack[resumeAt];
+                    var resume = _stack[resumeAt].Value;
                     cp.ResumeAt = resumeAt - 1;
                     Push(cp);
                     Push(resume);
@@ -235,21 +236,32 @@ internal class LayoutEngine<T>
         }
 
     done:
-        await Flush(cancellationToken, returnChoicePoints: false).ConfigureAwait(false);
+        await Flush(cancellationToken, endOfDoc: true).ConfigureAwait(false);
     }
 
-    private void Push(IStackItem<T> item) => _stack.Add(item);
+    private void Push(IStackItem<T> item)
+    {
+        if (_stackHeight == _stack.Length)
+        {
+            var newStack = new ArrayCovarianceWrapper<IStackItem<T>>[_stackHeight * 2];
+            Array.Copy(_stack, newStack, _stackHeight);
+            _stack = newStack;
+        }
+
+        _stack[_stackHeight].Value = item;
+        _stackHeight++;
+    }
 
     private bool Pop(out IStackItem<T>? item)
     {
-        if (_stack!.Count == 0)
+        if (_stackHeight == 0)
         {
             item = null;
             return false;
         }
 
-        item = _stack[^1];
-        _stack.RemoveAt(_stack.Count - 1);
+        _stackHeight--;
+        item = _stack[_stackHeight].Value;
         return true;
     }
 
@@ -278,7 +290,7 @@ internal class LayoutEngine<T>
 
     private int GetResumeAt(int candidate)
     {
-        while (candidate >= 0 && _stack[candidate] is ChoicePoint<T> cp)
+        while (candidate >= 0 && _stack[candidate].Value is ChoicePoint<T> cp)
         {
             candidate = cp.ResumeAt;
         }
@@ -309,6 +321,8 @@ internal class LayoutEngine<T>
                 _canBacktrack = cp.CanBacktrack;
                 _bufferUntilDeIndent = cp.BufferUntilDeIndent;
 
+                ReturnChoicePoint(cp);
+
                 return;
             }
         }
@@ -319,10 +333,16 @@ internal class LayoutEngine<T>
     private ValueTask Flush(
         CancellationToken cancellationToken,
         bool stripTrailingWhitespace = true,
-        bool returnChoicePoints = true
+        bool endOfDoc = false
     )
     {
-        Commit(returnChoicePoints);
+        if (!endOfDoc)
+        {
+            // optimisation: no need to overwrite the
+            // choice points, everything is about to be
+            // dropped anyway
+            Commit();
+        }
 
         var keepTrailingWhitespace = !stripTrailingWhitespace || !_options.StripTrailingWhitespace;
 
@@ -367,24 +387,23 @@ internal class LayoutEngine<T>
         return ValueTask.CompletedTask;
     }
 
-    private void Commit(bool returnChoicePoints)
+    private void Commit()
     {
         // commit to all choices since start of line
-        for (var i = 0; i < _stack.Count; i++)
+        for (var i = 0; i < _stackHeight; i++)
         {
-            if (_stack[i] is ChoicePoint<T> cp)
+            if (_stack[i].Value is ChoicePoint<T> cp)
             {
-                // everything that's between a choice point and its ResumeAt
-                // got written to the buffer
-                for (var j = cp.ResumeAt + 1; j <= i; j++)
-                {
-                    _stack[j] = Document<T>.Empty;
-                }
+                // everything that's between a choice point
+                // and its ResumeAt got written to the buffer
+                Array.Fill(
+                    _stack,
+                    new() { Value = Document<T>.Empty },
+                    cp.ResumeAt + 1,
+                    i - cp.ResumeAt /* include the ChoicePoint itself */
+                );
 
-                if (returnChoicePoints)
-                {
-                    ReturnChoicePoint(cp);
-                }
+                ReturnChoicePoint(cp);
             }
         }
 
