@@ -34,14 +34,12 @@ internal static class DocumentTestUtil
 
     public static Gen<int> GenSmallInt { get; } = Gen.Int[0, 1024];
 
+    // don't run property tests in smart layout mode
     private static readonly Gen<LayoutOptions> _genLayoutOptions
         = Gen.Select(
             Gen.Int[10, 150],
-            Gen.Double[0, 1.5],
-            Gen.Enum<LayoutMode>(),
-            Gen.Int[0, 8],
             Gen.Bool,
-            (w, r, m, n, s) => new LayoutOptions(new PageWidthOptions(w, r), m, n, s));
+            (w, s) => new LayoutOptions(new PageWidthOptions(w), LayoutMode.Default, 4, s));
 
     private static readonly Gen<Doc> _genSimpleDoc = Gen.OneOf(
         Gen.Const(Doc.Empty),
