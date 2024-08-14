@@ -1,3 +1,10 @@
+v1.3.4
+------
+
+### Fixed
+* Fixed occasional quadratic behaviour in the layout engine.
+
+
 v1.3.3
 ------
 
