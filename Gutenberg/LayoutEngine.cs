@@ -387,10 +387,18 @@ internal class LayoutEngine<T>
         return ValueTask.CompletedTask;
     }
 
+    /// <summary>
+    /// Commit to all choices since the start of the line.
+    /// </summary>
     private void Commit()
     {
-        // commit to all choices since start of line
-        for (var i = 0; i < _stackHeight; i++)
+        // Iterating forwards can have quadratic behaviour
+        // - you could end up clearing the same area of the
+        // stack multiple times. Any choice points between
+        // `cp.ResumeAt` and `i` are guaranteed to have
+        // `ResumeAt >= cp.ResumeAt`, so iterating backwards
+        // is safe.
+        for (var i = _stackHeight - 1; i >= 0; i--)
         {
             if (_stack[i].Value is ChoicePoint<T> cp)
             {
@@ -402,6 +410,8 @@ internal class LayoutEngine<T>
                     cp.ResumeAt + 1,
                     i - cp.ResumeAt /* include the ChoicePoint itself */
                 );
+
+                i = cp.ResumeAt;
 
                 ReturnChoicePoint(cp);
             }
