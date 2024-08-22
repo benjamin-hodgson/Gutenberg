@@ -102,3 +102,5 @@ Console.WriteLine(exampleTree.PrettyPrint().ToString(20))
 //   ffff[gg, hhh, ii]
 // ]
 ```
+
+You can read about Gutenberg's internals [on my website](https://www.benjamin.pizza/posts/2024-08-15-prettier-happier-more-imperative.html).
