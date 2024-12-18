@@ -1,10 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
 
+    <PropertyGroup Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net7.0'))">
         <IsAotCompatible>true</IsAotCompatible>
-        <IsTrimmable>true</IsTrimmable>
     </PropertyGroup>
 
     <ItemGroup>

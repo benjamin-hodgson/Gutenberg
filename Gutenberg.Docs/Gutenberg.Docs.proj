@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.Build.NoTargets">
 
     <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
         <IsPackable>false</IsPackable>
         <RollForward>major</RollForward>
     </PropertyGroup>
