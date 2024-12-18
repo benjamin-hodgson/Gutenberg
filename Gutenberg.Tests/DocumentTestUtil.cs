@@ -28,7 +28,7 @@ internal static class DocumentTestUtil
     )
     {
         var renderer = new FakeDocumentRenderer<U>();
-        await doc.Render(renderer.MapAnnotations(mapAnnotations));
+        await doc.Render(renderer.MapAnnotations(mapAnnotations), TestContext.Current.CancellationToken);
         return renderer.ToString();
     }
 

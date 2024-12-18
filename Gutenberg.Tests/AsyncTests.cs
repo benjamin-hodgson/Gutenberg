@@ -16,7 +16,7 @@ public class AsyncTests
         var doc = Doc.Concat(Enumerable.Repeat(Doc.FromString("a"), 4));
         var renderer = new AsyncFakeDocumentRenderer(goAsyncAt);
 
-        await doc.Render(renderer);
+        await doc.Render(renderer, TestContext.Current.CancellationToken);
 
         Assert.Equal(new string('a', 4), renderer.ToString());
     }
