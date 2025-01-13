@@ -33,7 +33,7 @@ public static class DocumentRendererExtensions
     {
         ArgumentNullException.ThrowIfNull(renderer);
         ArgumentNullException.ThrowIfNull(selector);
-        return MapAnnotations(
+        return MapAnnotations<T, U>(
             renderer,
             x => ValueTask.FromResult(selector(x))
         );
