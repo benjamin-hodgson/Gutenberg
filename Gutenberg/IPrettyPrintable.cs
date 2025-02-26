@@ -16,5 +16,5 @@ public interface IPrettyPrintable<T>
     /// A <see cref="Document{T}"/> containing a textual representation
     /// of the current object.
     /// </returns>
-    Document<T> PrettyPrint();
+    public Document<T> PrettyPrint();
 }

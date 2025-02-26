@@ -14,5 +14,5 @@ public interface IBracketer<T>
     /// </summary>
     /// <param name="document">The document.</param>
     /// <returns>The document surrounded with brackets.</returns>
-    Document<T> Bracket(Document<T> document);
+    public Document<T> Bracket(Document<T> document);
 }

@@ -19,7 +19,7 @@ public interface IDocumentRenderer<in T>
     /// A <see cref="ValueTask"/> which will complete when the
     /// line break has been written to the output stream.
     /// </returns>
-    ValueTask NewLine(
+    public ValueTask NewLine(
         CancellationToken cancellationToken = default
     );
 
@@ -37,7 +37,7 @@ public interface IDocumentRenderer<in T>
     /// A <see cref="ValueTask"/> which will complete when the
     /// white space has been written to the output stream.
     /// </returns>
-    ValueTask WhiteSpace(
+    public ValueTask WhiteSpace(
         int amount,
         CancellationToken cancellationToken = default
     );
@@ -55,7 +55,7 @@ public interface IDocumentRenderer<in T>
     /// A <see cref="ValueTask"/> which will complete when the
     /// text has been written to the output stream.
     /// </returns>
-    ValueTask Text(
+    public ValueTask Text(
         ReadOnlyMemory<char> memory,
         CancellationToken cancellationToken = default
     );
@@ -73,7 +73,7 @@ public interface IDocumentRenderer<in T>
     /// A <see cref="ValueTask"/> which will complete when the
     /// value has been pushed onto the stack.
     /// </returns>
-    ValueTask PushAnnotation(
+    public ValueTask PushAnnotation(
         T value,
         CancellationToken cancellationToken = default
     );
@@ -88,5 +88,5 @@ public interface IDocumentRenderer<in T>
     /// A <see cref="ValueTask"/> which will complete when the
     /// value has been popped from the stack.
     /// </returns>
-    ValueTask PopAnnotation(CancellationToken cancellationToken = default);
+    public ValueTask PopAnnotation(CancellationToken cancellationToken = default);
 }
