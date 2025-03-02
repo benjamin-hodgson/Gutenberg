@@ -97,7 +97,13 @@ public class SimpleTests
     [Fact]
     public void StripTrailingWhitespace()
     {
-        // spaces in "def" literal are counted as text by FromString.
+        TestDocument(
+            "\n",
+            Doc.HardLineBreak.Append(Doc.Empty).Nested(2)
+        );
+
+        // debatable: spaces appearing in FromString literals are
+        // counted as text by LineContainsTextAfter.
         // https://github.com/benjamin-hodgson/Gutenberg/issues/11
         TestDocument(
             "abc\n\n  def  \n",

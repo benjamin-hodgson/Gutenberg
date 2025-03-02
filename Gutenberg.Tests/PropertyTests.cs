@@ -17,10 +17,33 @@ public class PropertyTests : IDisposable
     }
 
     [Fact]
+    public void Empty()
+    {
+        Equivalent(Doc.FromString(""), Doc.Empty);
+    }
+
+    [Fact]
+    public void StringRoundtrip()
+    {
+        Gen.String.AlphaNumeric
+            .Sample(s => Doc.FromString(s).ToString() == s);
+    }
+
+    [Fact]
     public void AppendEmpty()
     {
         GenDoc.Equivalent(d => (d, Doc.Empty.Append(d)));
         GenDoc.Equivalent(d => (d, d.Append(Doc.Empty)));
+    }
+
+    [Fact]
+    public void AppendRespectsStringAdd()
+    {
+        Gen.Select(Gen.String.AlphaNumeric, Gen.String.AlphaNumeric)
+            .Equivalent((s1, s2) => (
+                Doc.FromString(s1 + s2),
+                Doc.FromString(s1) + Doc.FromString(s2)
+            ));
     }
 
     [Fact]
@@ -34,6 +57,28 @@ public class PropertyTests : IDisposable
     }
 
     [Fact]
+    public void NestedZero()
+    {
+        GenDoc.Equivalent(d => (d.Nested(0), d));
+    }
+
+    [Fact]
+    public void NestedAdditionDistrib()
+    {
+        Gen.Select(GenDoc, GenSmallInt, GenSmallInt)
+            .Equivalent((doc, x, y) => (
+                doc.Nested(x + y),
+                doc.Nested(x).Nested(y)
+            ));
+    }
+
+    [Fact]
+    public void NestedEmpty()
+    {
+        GenSmallInt.Equivalent(n => (Doc.Empty.Nested(n), Doc.Empty));
+    }
+
+    [Fact]
     public void NestedAppendDistrib()
     {
         Gen.Select(GenDoc, GenDoc, GenSmallInt)
@@ -44,22 +89,22 @@ public class PropertyTests : IDisposable
     }
 
     [Fact]
+    public void NestedString()
+    {
+        Gen.Select(Gen.String.AlphaNumeric, GenSmallInt)
+            .Equivalent((s, n) => (
+                Doc.FromString(s).Nested(n),
+                Doc.FromString(s)
+            ));
+    }
+
+    [Fact]
     public void NestedChoiceDistrib()
     {
         Gen.Select(GenDoc, GenDoc, GenSmallInt)
             .Equivalent((doc1, doc2, n) => (
                 new ChoiceDocument<object>(doc1, doc2).Nested(n),
                 new ChoiceDocument<object>(doc1.Nested(n), doc2.Nested(n))
-            ));
-    }
-
-    [Fact]
-    public void NestedTwice()
-    {
-        Gen.Select(GenDoc, GenSmallInt, GenSmallInt)
-            .Equivalent((doc, x, y) => (
-                doc.Nested(x).Nested(y),
-                doc.Nested(x + y)
             ));
     }
 

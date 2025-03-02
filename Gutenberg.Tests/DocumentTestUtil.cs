@@ -34,12 +34,15 @@ internal static class DocumentTestUtil
 
     public static Gen<int> GenSmallInt { get; } = Gen.Int[0, 1024];
 
-    // don't run property tests in smart layout mode
+    // don't run property tests in smart
+    // layout or StripTrailingWhitespace mode
     private static readonly Gen<LayoutOptions> _genLayoutOptions
-        = Gen.Select(
-            Gen.Int[10, 150],
-            Gen.Bool,
-            (w, s) => new LayoutOptions(new PageWidthOptions(w), LayoutMode.Default, 4, s));
+        = Gen.Int[10, 150].Select(w => new LayoutOptions(
+            new PageWidthOptions(w),
+            LayoutMode.Default,
+            4,
+            StripTrailingWhitespace: false
+        ));
 
     private static readonly Gen<Doc> _genSimpleDoc = Gen.OneOf(
         Gen.Const(Doc.Empty),
@@ -88,6 +91,9 @@ internal static class DocumentTestUtil
             print: t => $"({t.Item1}, {t.Item2.Display()}, {t.Item3.Display()})"
         );
     }
+
+    public static void Equivalent(Doc doc1, Doc doc2)
+        => Gen.Const((object?)null).Equivalent(_ => (doc1, doc2));
 
     public static void Equivalent<T1, T2>(this Gen<(T1, T2)> gen, Func<T1, T2, (Doc doc1, Doc doc2)> doc)
         => gen.Equivalent(t => doc(t.Item1, t.Item2));
