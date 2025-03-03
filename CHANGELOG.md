@@ -1,3 +1,10 @@
+v1.3.5
+------
+
+### Fixed
+* Fixed a bug with forced overflow.
+
+
 v1.3.4
 ------
 
