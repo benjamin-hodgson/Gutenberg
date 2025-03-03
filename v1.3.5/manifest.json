@@ -1,0 +1,339 @@
+{
+  "source_base_path": "/home/runner/work/Gutenberg/Gutenberg/artifacts/obj/Gutenberg.Docs/release",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Alignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Alignment.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Box-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Box-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Brackets.AllmanBracketer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Brackets.AllmanBracketer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Brackets.IBracketer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Brackets.IBracketer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Brackets.KernighanRitchieBracketer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Brackets.KernighanRitchieBracketer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Brackets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Brackets.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Document-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Document-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.DocumentExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.BinaryOperator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.BinaryOperator-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.BinaryOperatorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.BinaryOperatorType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.Expression-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.Expression-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.OperatorFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.OperatorFactory-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.UnaryOperator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.UnaryOperator-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.UnaryOperatorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.UnaryOperatorType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Expression.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Expression.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.IDocumentRenderer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.IDocumentRenderer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.IPrettyPrintable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.IPrettyPrintable-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.LayoutMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.LayoutMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.LayoutOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.LayoutOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.PageWidthOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.PageWidthOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.ConsoleDocumentRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.ConsoleDocumentRenderer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.BackgroundColor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.ForegroundColor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.ConsoleFormattingAnnotation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.DocumentRendererExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.DocumentRendererExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.MapAnnotationsDocumentRenderer-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.PlainTextDocumentRenderer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.PlainTextDocumentRenderer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.PlainTextDocumentRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.PlainTextDocumentRenderer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.StackMachineDocumentRenderer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.StackMachineDocumentRenderer-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.Rendering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.Rendering.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Gutenberg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Gutenberg.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
