@@ -74,6 +74,29 @@ public class LineBreakHintTests
     }
 
     [Fact]
+    public void LineBreakInChoiceAfterForcedOverflow()
+    {
+        // Should take right branch of choice, even though
+        // left branch immediately writes the line break
+        TestDocument(
+            "aaaaaaaaaaa\n",
+            Doc.FromString(new string('a', 11))
+                .Append(Doc.LineBreakHintOr(Doc.HardLineBreak.Append("z"))),
+            10
+        );
+    }
+
+    [Fact]
+    public void ZeroWidthLineBreakHintAfterForcedOverflow()
+    {
+        TestDocument(
+            "aaaaaaaaaaa\n",
+            Doc.FromString(new string('a', 11)).Append(Doc.ZeroWidthLineBreakHint),
+            10
+        );
+    }
+
+    [Fact]
     public void NestedChoices()
     {
         var doc = Doc.LineBreakHintOr(Doc.ZeroWidthLineBreakHint.Nested());

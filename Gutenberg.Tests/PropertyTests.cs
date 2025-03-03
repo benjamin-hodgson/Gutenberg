@@ -16,7 +16,7 @@ public class PropertyTests : IDisposable
         Check.Iter = 1000;
     }
 
-    [Fact(Skip = "has a bug")]
+    [Fact]
     public void Empty()
     {
         Equivalent(Doc.FromString(""), Doc.Empty);

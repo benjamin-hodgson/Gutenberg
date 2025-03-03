@@ -39,10 +39,12 @@ internal class LayoutEngine<T>
             switch (item)
             {
                 case EmptyDocument<T>:
+                    await FlushIfPossible(cancellationToken).ConfigureAwait(false);
+                    BacktrackIfNecessary();
                     break;
 
                 case LineDocument<T>:
-                    if (_flatten && _canBacktrack)
+                    if (_canBacktrack && (_flatten || !Fits()))
                     {
                         // can't write a line break in flatten mode
                         Backtrack();
@@ -70,31 +72,15 @@ internal class LayoutEngine<T>
                 case WhiteSpaceDocument<T>(var amount):
                     Write(LayoutInstruction<T>.WhiteSpace(amount));
                     _lineTextLength += amount;
-                    if (!_canBacktrack && !_options.StripTrailingWhitespace)
-                    {
-                        await Flush(cancellationToken).ConfigureAwait(false);
-                    }
-
-                    if (_canBacktrack && !Fits())
-                    {
-                        Backtrack();
-                    }
-
+                    await FlushIfPossible(cancellationToken).ConfigureAwait(false);
+                    BacktrackIfNecessary();
                     break;
 
                 case TextDocument<T>(var text):
                     Write(LayoutInstruction<T>.Text(text));
                     _lineTextLength += text.Length;
-                    if (!_canBacktrack && !_options.StripTrailingWhitespace)
-                    {
-                        await Flush(cancellationToken).ConfigureAwait(false);
-                    }
-
-                    if (_canBacktrack && !Fits())
-                    {
-                        Backtrack();
-                    }
-
+                    await FlushIfPossible(cancellationToken).ConfigureAwait(false);
+                    BacktrackIfNecessary();
                     break;
 
                 // fixme: kind of ugly. Shares some logic with Aligned,
@@ -263,6 +249,26 @@ internal class LayoutEngine<T>
         _stackHeight--;
         item = _stack[_stackHeight].Value;
         return true;
+    }
+
+    private ValueTask FlushIfPossible(CancellationToken cancellationToken)
+    {
+        // No need to check _bufferUntilDeIndent here,
+        // as we only ever set it if _canBacktrack is true
+        if (!_canBacktrack && !_options.StripTrailingWhitespace)
+        {
+            return Flush(cancellationToken);
+        }
+
+        return ValueTask.CompletedTask;
+    }
+
+    private void BacktrackIfNecessary()
+    {
+        if (_canBacktrack && !Fits())
+        {
+            Backtrack();
+        }
     }
 
     private void Write(LayoutInstruction<T> instruction)
@@ -443,7 +449,8 @@ internal class LayoutEngine<T>
             case LayoutInstructionType.Text:
                 return _renderer.Text(_lineBuffer[i].GetText(), cancellationToken);
             case LayoutInstructionType.WhiteSpace:
-                // look ahead to determine whether we should strip the whitespace
+                // look ahead to determine whether we should strip the whitespace.
+                // todo: is this quadratic?
                 if (keepTrailingWhitespace || LineContainsTextAfter(i))
                 {
                     return _renderer.WhiteSpace(_lineBuffer[i].GetWhitespaceAmount(), cancellationToken);
