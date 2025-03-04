@@ -33,7 +33,12 @@ internal class LayoutEngine<T>
     public async ValueTask Layout(Document<T> document, CancellationToken cancellationToken)
     {
         Push(document);
+        await LayoutCore(cancellationToken).ConfigureAwait(false);
+        await Flush(cancellationToken, endOfDoc: true).ConfigureAwait(false);
+    }
 
+    private async ValueTask LayoutCore(CancellationToken cancellationToken)
+    {
         while (Pop(out var item))
         {
             switch (item)
@@ -193,7 +198,9 @@ internal class LayoutEngine<T>
                     var resumeAt = GetResumeAt(cp.ResumeAt);
                     if (resumeAt < 0)
                     {
-                        goto done;
+                        // First branch of choice point reached
+                        // end of doc - we're done
+                        return;
                     }
 
                     var resume = _stack[resumeAt].Value;
@@ -220,9 +227,6 @@ internal class LayoutEngine<T>
                     break;
             }
         }
-
-    done:
-        await Flush(cancellationToken, endOfDoc: true).ConfigureAwait(false);
     }
 
     private void Push(IStackItem<T> item)
