@@ -1036,14 +1036,14 @@ public abstract class Document<T> : IStackItem<T>
     /// if the resulting output fits the page; otherwise, this behaves
     /// like <see cref="LineBreak"/>.
     /// </summary>
-    /// <example name="ZeroWidthLineBreakHint when fits">
+    /// <example name="LineBreakHintOr when fits">
     /// <code doctest="true">
     /// Console.WriteLine(Doc.Concat("abc", Doc.LineBreakHintOr("|"), "def"));
     /// // Output:
     /// // abc|def
     /// </code>
     /// </example>
-    /// <example name="ZeroWidthLineBreakHint when too wide">
+    /// <example name="LineBreakHintOr when too wide">
     /// <code doctest="true">
     /// var doc = Doc.Concat("abc", Doc.LineBreakHintOr("|"), "def");
     /// Console.WriteLine(doc.ToString(5));

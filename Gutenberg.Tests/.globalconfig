@@ -3,6 +3,9 @@ is_global = true
 // Implement IDisposable correctly
 dotnet_diagnostic.CA1063.severity = silent
 
+// Consider making public types internal
+dotnet_diagnostic.CA1515.severity = silent
+
 // Call GC.SuppressFinalize correctly
 dotnet_diagnostic.CA1816.severity = silent
 

@@ -1,23 +1,23 @@
+using System.Diagnostics.CodeAnalysis;
+
 using Benjamin.Pizza.DocTest;
 
 namespace Gutenberg.Tests;
 
-public class DocumentationTests
+#pragma warning disable SA1010  // Opening square brackets should not be preceded by a space
+[DocTest(
+    typeof(Document<>),
+    Usings = [
+        "System.Linq",
+        $"{nameof(Gutenberg)}",
+        $"{nameof(Gutenberg)}.{nameof(Brackets)}",
+        $"{nameof(Gutenberg)}.{nameof(Expression)}",
+        $"Doc = {nameof(Gutenberg)}.{nameof(Document<object>)}<object>",
+        $"Box = {nameof(Gutenberg)}.{nameof(Box<object>)}<object>",
+    ]
+)]
+#pragma warning restore SA1010  // Opening square brackets should not be preceded by a space
+[SuppressMessage("Design", "CA1052:Static holder types should be Static or NotInheritable", Justification = "Doctest")]
+public partial class DocumentationTests
 {
-    private const string _preamble = @$"
-        using System.Linq;
-        using {nameof(Gutenberg)};
-        using {nameof(Gutenberg)}.{nameof(Brackets)};
-        using {nameof(Gutenberg)}.{nameof(Expression)};
-        using Doc = {nameof(Gutenberg)}.{nameof(Document<object>)}<object>;
-        using Box = {nameof(Gutenberg)}.{nameof(Box<object>)}<object>;
-    ";
-
-    [Theory]
-    [DocTestData(typeof(Document<>), Preamble = _preamble)]
-    public async Task TestXmlDocs(DocTest test)
-    {
-        ArgumentNullException.ThrowIfNull(test);
-        await test.Run();
-    }
 }
