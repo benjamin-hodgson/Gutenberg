@@ -1,0 +1,5 @@
+<Solution>
+    <Project Path="Gutenberg.Docs/Gutenberg.Docs.proj" Type="C#" />
+    <Project Path="Gutenberg.Tests/Gutenberg.Tests.csproj" />
+    <Project Path="Gutenberg/Gutenberg.csproj" />
+</Solution>
