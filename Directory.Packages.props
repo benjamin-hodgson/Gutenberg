@@ -4,7 +4,7 @@
         <PackageVersion Include="Benjamin.Pizza.DocTest" Version="2.0.0-pre3" />
         <PackageVersion Include="CsCheck" Version="4.4.1" />
         <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
-        <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="17.14.2" />
+        <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.0.4" />
         <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport" Version="1.8.4" />
         <PackageVersion Include="xunit.v3" Version="3.0.1" />
     </ItemGroup>
