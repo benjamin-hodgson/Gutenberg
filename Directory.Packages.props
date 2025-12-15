@@ -2,7 +2,7 @@
 
     <ItemGroup>
         <PackageVersion Include="Benjamin.Pizza.DocTest" Version="2.0.0-pre3" />
-        <PackageVersion Include="CsCheck" Version="4.4.1" />
+        <PackageVersion Include="CsCheck" Version="4.5.0" />
         <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
         <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.1.0" />
         <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport" Version="2.0.2" />
